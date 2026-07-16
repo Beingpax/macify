@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Cloudflare
+.wrangler/
+.dev.vars
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Testing and coverage
+coverage/
+playwright-report/
+test-results/
+
+# Logs
+*.log
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
