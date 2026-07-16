@@ -96,4 +96,3 @@ Suggested positioning:
 4. Build the homepage, directory, categories, application pages, and search.
 5. Curate and validate the first 30 applications.
 6. Add community functionality only after the editorial product is established.
-
