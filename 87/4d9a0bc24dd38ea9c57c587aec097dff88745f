@@ -1,0 +1,118 @@
+src/app/dashboard/manage/tags.ts
+  s_fd19c660a6dcee::t_b8492852d4cb99 10,13,27,41
+src/app/editor-login/actions.ts
+  s_fd19c660a6dcee::t_7a017180a93719 1-21
+src/db/schema-auth.ts
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 1-7
+src/styles/editor-login.css
+  s_fd19c660a6dcee::t_7a017180a93719 1-13
+src/app/dashboard/actions/upload-media.ts
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 11,19
+src/app/dashboard/imports/export/route.ts
+  s_fd19c660a6dcee::t_25f8e1e03f7bea 4,14
+src/app/dashboard/media/[...key]/route.ts
+  s_fd19c660a6dcee::t_25f8e1e03f7bea 2,10
+PROJECT_CHECKLIST.md
+  s_fd19c660a6dcee::t_97f42ccec1c62c 37-38,152
+  s_fd19c660a6dcee::t_a504358e5e2e80 74-75
+  s_fd19c660a6dcee::t_98575b2ec6dd64 29,32
+  s_fd19c660a6dcee::t_4f01e8cbec74eb 160
+  s_fd19c660a6dcee::t_a4973e5f43340a 33-34,36,76
+  s_fd19c660a6dcee::t_379cd01dc67e32 35,39-40,77
+src/app/layout.tsx
+  s_fd19c660a6dcee::t_7a017180a93719 19
+src/app/dashboard/actions/publication.ts
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 10,16
+src/app/dashboard/manage/optimize-media.ts
+  s_fd19c660a6dcee::t_b8492852d4cb99 12,17
+PRODUCT.md
+  s_fd19c660a6dcee::t_a504358e5e2e80 47
+scripts/replace-staging-from-local.mjs
+  s_fd19c660a6dcee::t_c2197b904c6a74 1-6,13-16,18-27,29-37,40-54,56-60,62-77,80-83,85-87,93-95
+  s_fd19c660a6dcee::t_d84c8fe13ddbd7 7-12,17,28,38-39,55,61,78-79,84,88-92
+migrations/meta/0007_snapshot.json
+  s_fd19c660a6dcee::t_8a92285ebeaf61 1-930
+RELEASE.md
+  s_fd19c660a6dcee::t_ca7fbd9c7bfdbc 1-63
+package.json
+  s_fd19c660a6dcee::t_c2197b904c6a74 29
+  s_fd19c660a6dcee::t_d84c8fe13ddbd7 30
+src/styles/public-shell.css
+  s_fd19c660a6dcee::t_8394d7744a848a 3,316
+src/styles/public-home-sections.css
+  s_fd19c660a6dcee::t_8394d7744a848a 4
+.dev.vars.example
+  s_fd19c660a6dcee::t_7a017180a93719 2-4
+src/styles/dashboard-shell.css
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 207-209
+src/components/inline-app-search.tsx
+  s_fd19c660a6dcee::t_3f481bc26b5c47 111-113
+src/app/editor-login/login-form.tsx
+  s_fd19c660a6dcee::t_7a017180a93719 1-18
+src/app/dashboard/manage/media.ts
+  s_fd19c660a6dcee::t_b8492852d4cb99 11,14
+src/app/editor-login/page.tsx
+  s_fd19c660a6dcee::t_7a017180a93719 1-7,9-13
+  s_fd19c660a6dcee::t_e559c794a81632 8
+src/components/dashboard-shell.tsx
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 8,11,51
+src/app/dashboard/layout.tsx
+  s_fd19c660a6dcee::t_7a017180a93719 2,9-10
+AGENTS.md
+  s_fd19c660a6dcee::t_a504358e5e2e80 9
+  s_fd19c660a6dcee::t_ca7fbd9c7bfdbc 7-8,27-28,37
+src/app/dashboard/logout-action.ts
+  s_fd19c660a6dcee::t_7a017180a93719 1-9
+src/styles/public-home.css
+  s_fd19c660a6dcee::t_8394d7744a848a 3
+src/app/dashboard/actions/update-application.ts
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 18,24
+src/styles/public-policy.css
+  s_fd19c660a6dcee::t_8394d7744a848a 2,108
+DESIGN.md
+  s_fd19c660a6dcee::t_8394d7744a848a 40-41
+README.md
+  s_fd19c660a6dcee::t_ca7fbd9c7bfdbc 41-42,54
+  s_fd19c660a6dcee::t_379cd01dc67e32 47
+migrations/README.md
+  s_fd19c660a6dcee::t_a504358e5e2e80 34,36
+src/app/robots.ts
+  s_fd19c660a6dcee::t_8bf659b55977b8 2,4-10
+migrations/meta/_journal.json
+  s_fd19c660a6dcee::t_8a92285ebeaf61 53-59
+src/app/dashboard/manage/import-upload.ts
+  s_fd19c660a6dcee::t_b8492852d4cb99 10,13
+src/lib/admin-auth.ts
+  s_fd19c660a6dcee::t_1e958572b6059f 15-20,33-41,44,48,54-55
+  s_fd19c660a6dcee::t_7a017180a93719 1-14,21-32,42-43,45-47,49-53,56-119
+src/app/dashboard/actions/create-application.ts
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 19,25
+migrations/0006_unknown_leader.sql
+  s_fd19c660a6dcee::t_474e671f22d0a6 1-2
+src/db/schema.ts
+  s_fd19c660a6dcee::t_bdf8aa5ae46577 2
+src/styles/public-application.css
+  s_fd19c660a6dcee::t_8394d7744a848a 2
+migrations/0007_condemned_katie_power.sql
+  s_fd19c660a6dcee::t_8a92285ebeaf61 1-7
+src/app/dashboard/manage/import-commit.ts
+  s_fd19c660a6dcee::t_b8492852d4cb99 13,16
+wrangler.jsonc
+  s_fd19c660a6dcee::t_637c67cadbfb15 49-50,56-57,72-73,79-80
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "874d9a0bc24dd38ea9c57c587aec097dff88745f",
+  "prompts": {},
+  "sessions": {
+    "s_fd19c660a6dcee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fe64f-6c74-7ec1-8967-4c08fcbbc7a6",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
