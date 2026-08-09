@@ -1,0 +1,35 @@
+src/styles/public-shell.css
+  s_f404d07b379241::t_7ad898a5f433c0 34,46,52-53,55,93,104,164-165,168,170,172,189
+  s_f404d07b379241::t_73b05b85975ec4 44-45,50,156,160
+src/components/public-site.tsx
+  s_f404d07b379241::t_7ad898a5f433c0 11
+src/styles/public-application.css
+  s_f404d07b379241::t_546e2c6943126c 75,77
+  s_f404d07b379241::t_55e30ad49e0b12 381-384
+  s_f404d07b379241::t_7ad898a5f433c0 72-74,76
+src/components/macify-logo.tsx
+  s_f404d07b379241::t_7ad898a5f433c0 3,6-10
+src/app/api/apps/search/route.ts
+  s_f404d07b379241::t_f12fd065547e71 3-4,16,44-52
+src/styles/responsive.css
+  s_f404d07b379241::t_73b05b85975ec4 27-28,40-41
+src/styles/responsive-small.css
+  s_f404d07b379241::t_73b05b85975ec4 18-19,23
+  s_f404d07b379241::t_7ad898a5f433c0 15,20,22,25,37,40,49
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f740f0b151dcdae87ab8d557df22981693537621",
+  "prompts": {},
+  "sessions": {
+    "s_f404d07b379241": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fe4cf-c503-7d10-8f28-88a598af11fd",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
