@@ -1,0 +1,24 @@
+src/styles/public-shell.css
+  s_9c745bb00ce6f0::t_27215e7e0c0cb4 49,60,105,117,121,123,127-129,156-157,180,184,188,198,217,220
+  s_9c745bb00ce6f0::t_1403fa893ca63e 28,85,142,150,197,200,205,207,232
+src/styles/responsive-small.css
+  s_9c745bb00ce6f0::t_27215e7e0c0cb4 19,24,53,60
+src/styles/responsive.css
+  s_9c745bb00ce6f0::t_1403fa893ca63e 28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "4511b9002f2d07d4f51c685d62f30b2f7e2517d9",
+  "prompts": {},
+  "sessions": {
+    "s_9c745bb00ce6f0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fe9b4-a4ee-7221-862f-f36c33fbd1b4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
