@@ -1,0 +1,23 @@
+src/app/api/realtime-visitors/route.ts
+  s_61eabcb858afb4::t_8594fad5967408 1-47
+src/components/live-visitor-count.tsx
+  s_61eabcb858afb4::t_8594fad5967408 5,13,20,42,44
+.dev.vars.example
+  s_61eabcb858afb4::t_8594fad5967408 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "49082bfe44eeeb3581cc58955d3a053f07bcbf93",
+  "prompts": {},
+  "sessions": {
+    "s_61eabcb858afb4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fcb5f-204e-7ea2-8ebc-75bfdbdab749",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
