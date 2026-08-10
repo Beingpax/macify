@@ -1,0 +1,31 @@
+DESIGN.md
+  s_9c745bb00ce6f0::t_285d9edf4f3381 16
+src/components/public-site.tsx
+  s_9c745bb00ce6f0::t_285d9edf4f3381 13
+src/styles/public-shell.css
+  s_9c745bb00ce6f0::t_8829ddf73ce21c 116,140-143,146-147
+  s_9c745bb00ce6f0::t_285d9edf4f3381 45,53,58,62,65,103,109,112,117,122-123,125-126,134,136-137,144-145,148,173,179,183,193
+  s_9c745bb00ce6f0::t_75e3f23a20a032 63,81-82
+src/styles/responsive.css
+  s_9c745bb00ce6f0::t_285d9edf4f3381 27-30,33-36,38-44,46,63
+  s_9c745bb00ce6f0::t_8829ddf73ce21c 51-52
+src/styles/responsive-small.css
+  s_9c745bb00ce6f0::t_8829ddf73ce21c 42,62
+  s_9c745bb00ce6f0::t_285d9edf4f3381 19,24-26,28-32,34,38,43,51-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "de910030003a436c8459694656323955c5ca358d",
+  "prompts": {},
+  "sessions": {
+    "s_9c745bb00ce6f0": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fe9b4-a4ee-7221-862f-f36c33fbd1b4",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
