@@ -1,0 +1,27 @@
+README.md
+  s_fd19c660a6dcee::t_ec69ba2f815beb 43-44
+RELEASE.md
+  s_fd19c660a6dcee::t_ec69ba2f815beb 5-21,35,57
+AGENTS.md
+  s_fd19c660a6dcee::t_ec69ba2f815beb 9-10
+PROJECT_CHECKLIST.md
+  s_fd19c660a6dcee::t_ec69ba2f815beb 160-161
+package.json
+  s_fd19c660a6dcee::t_ec69ba2f815beb 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "eadebc06e28d0f858d0825b6825841811522cfaf",
+  "prompts": {},
+  "sessions": {
+    "s_fd19c660a6dcee": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019fe64f-6c74-7ec1-8967-4c08fcbbc7a6",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
