@@ -22,7 +22,7 @@
     "catalogue:sync:local": "node scripts/sync-local-catalogue.mjs"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "1.20.2",
+    "@opennextjs/cloudflare": "1.20.6",
     "clsx": "^2.1.1",
     "drizzle-orm": "0.45.2",
     "lucide-react": "1.28.0",
