@@ -1,5 +1,6 @@
 import { and, asc, desc, eq, gte, isNull, lte, sql } from "drizzle-orm";
 import { alias } from "drizzle-orm/sqlite-core";
+import { unstable_cache } from "next/cache";
 import { getDatabase } from "@/db/client";
 import {
   appRelationships,
@@ -10,8 +11,9 @@ import {
   categories,
 } from "@/db/schema";
 import { getAppIcons, publicApplicationFields } from "@/lib/directory-shared";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
 
-export async function getPublishedApplicationBySlug(slug: string) {
+async function queryPublishedApplicationBySlug(slug: string) {
   const database = await getDatabase();
   const applicationRows = await database
     .select(publicApplicationFields)
@@ -118,7 +120,15 @@ export async function getPublishedApplicationBySlug(slug: string) {
   };
 }
 
-export async function getPublishedApplicationSlugs() {
+export async function getPublishedApplicationBySlug(slug: string) {
+  return unstable_cache(
+    () => queryPublishedApplicationBySlug(slug),
+    ["published-application", slug],
+    { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+  )();
+}
+
+async function queryPublishedApplicationSlugs() {
   const database = await getDatabase();
   return database
     .select({ slug: apps.slug, updatedAt: apps.updatedAt })
@@ -126,3 +136,9 @@ export async function getPublishedApplicationSlugs() {
     .where(and(eq(apps.status, "published"), isNull(apps.deletedAt)))
     .orderBy(desc(apps.updatedAt));
 }
+
+export const getPublishedApplicationSlugs = unstable_cache(
+  queryPublishedApplicationSlugs,
+  ["published-application-slugs"],
+  { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+);

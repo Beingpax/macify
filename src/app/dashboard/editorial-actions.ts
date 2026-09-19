@@ -7,6 +7,16 @@ import { z } from "zod";
 import { getDatabase } from "@/db/client";
 import { apps } from "@/db/schema";
 import { requireAdmin } from "@/lib/admin-auth";
+import { invalidatePublicCatalogueCache } from "@/lib/public-cache";
+
+function invalidatePublicCataloguePaths() {
+  invalidatePublicCatalogueCache();
+  revalidatePath("/");
+  revalidatePath("/deals");
+  revalidatePath("/categories", "layout");
+  revalidatePath("/apps/[slug]", "page");
+  revalidatePath("/sitemap.xml");
+}
 
 export async function setFeaturedApplication(formData: FormData) {
   await requireAdmin();
@@ -26,12 +36,8 @@ export async function setFeaturedApplication(formData: FormData) {
     .where(and(eq(apps.id, parsed.data.appId), isNull(apps.deletedAt), featured ? eq(apps.status, "published") : undefined))
     .returning({ id: apps.id });
   if (!updated.length) redirect(`/dashboard/apps/${parsed.data.appId}/edit?featureError=not-published`);
-  revalidatePath("/");
-  revalidatePath("/deals");
-  revalidatePath("/categories", "layout");
-  revalidatePath("/apps/[slug]", "page");
+  invalidatePublicCataloguePaths();
   revalidatePath("/dashboard", "layout");
-  revalidatePath("/sitemap.xml");
   revalidatePath(`/apps/${row[0].slug}`);
   redirect(`/dashboard/apps/${parsed.data.appId}/edit?featured=1`);
 }
@@ -54,9 +60,7 @@ export async function setEditorsPickApplication(formData: FormData) {
     .where(and(eq(apps.id, parsed.data.appId), isNull(apps.deletedAt), editorsPick ? eq(apps.status, "published") : undefined))
     .returning({ id: apps.id });
   if (!updated.length) redirect(`/dashboard/apps/${parsed.data.appId}/edit?editorsPickError=not-published`);
-  revalidatePath("/");
-  revalidatePath("/categories", "layout");
-  revalidatePath("/apps/[slug]", "page");
+  invalidatePublicCataloguePaths();
   revalidatePath("/dashboard", "layout");
   revalidatePath(`/apps/${row[0].slug}`);
   redirect(`/dashboard/apps/${parsed.data.appId}/edit?editorsPick=1`);
@@ -85,12 +89,8 @@ export async function setApplicationPublication(formData: FormData) {
     featuredAt: null,
     updatedAt: now,
   }).where(and(eq(apps.id, parsed.data.appId), isNull(apps.deletedAt)));
-  revalidatePath("/");
-  revalidatePath("/deals");
-  revalidatePath("/categories", "layout");
-  revalidatePath("/apps/[slug]", "page");
+  invalidatePublicCataloguePaths();
   revalidatePath("/dashboard", "layout");
-  revalidatePath("/sitemap.xml");
   revalidatePath(`/apps/${application.slug}`);
   revalidatePath("/dashboard");
   revalidatePath(`/dashboard/apps/${parsed.data.appId}`);

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { EditorsPickSeal, FeaturedSeal } from "@/components/home/featured-seal";
-import Link from "next/link";
+import { IntentPrefetchLink } from "@/components/intent-prefetch-link";
 import { mediaUrl, PublicAppIcon, type PublicAppSummary } from "@/components/public-app-card";
 
 export type DirectoryApp = PublicAppSummary & {
@@ -36,7 +36,7 @@ export function DirectoryAppGrid({ applications }: { applications: DirectoryApp[
             </span>
             <span className="directory-app-copy">
               <span className="directory-app-name">
-                <Link className="directory-app-link" href={`/apps/${app.slug}`} prefetch={false}><strong>{app.name}</strong></Link>
+                <IntentPrefetchLink className="directory-app-link" href={`/apps/${app.slug}`}><strong>{app.name}</strong></IntentPrefetchLink>
                 {app.isFeatured && <FeaturedSeal appName={app.name} />}
                 {app.isEditorsPick && <EditorsPickSeal appName={app.name} />}
               </span>

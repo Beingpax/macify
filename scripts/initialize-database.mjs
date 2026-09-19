@@ -37,6 +37,14 @@ function query(sql) {
   return results.flatMap((result) => result.results);
 }
 
+function ensureCacheMetadata() {
+  run([
+    "d1", "execute", "NEXT_TAG_CACHE_D1", ...scope,
+    "--command",
+    "CREATE TABLE IF NOT EXISTS revalidations (tag TEXT NOT NULL, revalidatedAt INTEGER NOT NULL, stale INTEGER, expire INTEGER DEFAULT NULL, UNIQUE(tag) ON CONFLICT REPLACE)",
+  ]);
+}
+
 const expectedTables = [
   "admin_login_attempts",
   "app_categories",
@@ -51,6 +59,7 @@ const tables = query("SELECT name FROM sqlite_master WHERE type = 'table' AND na
 
 if (tables.length === 0) {
   run(["d1", "execute", "DB", ...scope, "--file", path.join(root, "database", "schema.sql")]);
+  ensureCacheMetadata();
   console.log(`Initialized the ${target === "--production" ? "production" : "local"} database from database/schema.sql.`);
   process.exit(0);
 }
@@ -65,4 +74,5 @@ if (missingTables.length || !appColumns.has("is_editors_pick")) {
   throw new Error(`Database is partially initialized (${problems}). Refusing to apply the fresh-database schema over existing data.`);
 }
 
+ensureCacheMetadata();
 console.log(`The ${target === "--production" ? "production" : "local"} database is already initialized; no schema changes were made.`);

@@ -1,4 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect, useOptimistic, useTransition } from "react";
+import type { MouseEvent } from "react";
 import { DirectoryAppGrid, type DirectoryApp } from "@/components/home/application-directory";
 
 type DirectoryView = "hot" | "trending" | "latest";
@@ -47,13 +52,37 @@ export function ApplicationDirectorySwitcher({
   applications: DirectoryApp[];
   loading?: boolean;
 }) {
+  const router = useRouter();
+  const [selectedView, setSelectedView] = useOptimistic(initialView);
+  const [isPending, startTransition] = useTransition();
+
+  useEffect(() => {
+    if (loading) return;
+    const timeout = window.setTimeout(() => {
+      for (const { view } of directoryViews) {
+        if (view !== initialView) router.prefetch(view === "hot" ? "/" : `/?view=${view}`);
+      }
+    }, 1_000);
+    return () => window.clearTimeout(timeout);
+  }, [initialView, loading, router]);
+
+  function selectView(event: MouseEvent<HTMLAnchorElement>, view: DirectoryView) {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (view === selectedView && !isPending) return;
+    startTransition(() => {
+      setSelectedView(view);
+      router.replace(view === "hot" ? "/" : `/?view=${view}`, { scroll: false });
+    });
+  }
+
   return (
     <section className="home-section application-directory" id="all-apps" aria-labelledby="all-apps-title">
       <div className="directory-heading">
         <h2 id="all-apps-title">Apps worth trying.</h2>
         <nav aria-label="Application ranking" className="directory-view-tabs">
           {directoryViews.map(({ label, view }) => {
-            const isActive = initialView === view;
+            const isActive = selectedView === view;
 
             return (
               <Link
@@ -62,9 +91,8 @@ export function ApplicationDirectorySwitcher({
                 data-view={view}
                 href={view === "hot" ? "/" : `/?view=${view}`}
                 key={view}
-                prefetch={false}
-                replace
-                scroll={false}
+                onClick={(event) => selectView(event, view)}
+                prefetch
               >
                 <span aria-hidden="true" className="directory-view-icon">
                   <DirectoryViewIcon view={view} />
@@ -75,7 +103,8 @@ export function ApplicationDirectorySwitcher({
           })}
         </nav>
       </div>
-      <div aria-live="polite" aria-atomic="false">
+      <div aria-busy={loading || isPending} aria-live="polite" aria-atomic="false" data-pending={isPending ? "true" : undefined}>
+        {isPending && <p className="sr-only" role="status">Updating applications…</p>}
         {loading ? (
           <div aria-busy="true">
             <p className="sr-only" role="status">Loading applications…</p>

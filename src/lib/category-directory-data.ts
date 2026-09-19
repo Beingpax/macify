@@ -1,9 +1,11 @@
 import { and, asc, count, desc, eq, isNull, lte, sql } from "drizzle-orm";
+import { unstable_cache } from "next/cache";
 import { getDatabase } from "@/db/client";
 import { appCategories, apps, categories } from "@/db/schema";
 import { cardFields, getAppIcons, getCardMedia } from "@/lib/directory-shared";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
 
-export async function getPublishedCategoryBySlug(slug: string) {
+async function queryPublishedCategoryBySlug(slug: string) {
   const database = await getDatabase();
   const categoryRows = await database
     .select({ id: categories.id, name: categories.name, slug: categories.slug })
@@ -31,7 +33,15 @@ export async function getPublishedCategoryBySlug(slug: string) {
   };
 }
 
-export async function getPublishedCategorySlugs() {
+export async function getPublishedCategoryBySlug(slug: string) {
+  return unstable_cache(
+    () => queryPublishedCategoryBySlug(slug),
+    ["published-category", slug],
+    { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+  )();
+}
+
+async function queryPublishedCategorySlugs() {
   const database = await getDatabase();
   return database
     .selectDistinct({ slug: categories.slug })
@@ -42,7 +52,13 @@ export async function getPublishedCategorySlugs() {
     .orderBy(asc(categories.slug));
 }
 
-export async function getPublishedCategories() {
+export const getPublishedCategorySlugs = unstable_cache(
+  queryPublishedCategorySlugs,
+  ["published-category-slugs"],
+  { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+);
+
+async function queryPublishedCategories() {
   const database = await getDatabase();
   const rankedApplications = database.select({
     categoryId: appCategories.categoryId,
@@ -88,3 +104,9 @@ export async function getPublishedCategories() {
     applications: applicationsByCategory.get(category.id) ?? [],
   }));
 }
+
+export const getPublishedCategories = unstable_cache(
+  queryPublishedCategories,
+  ["published-categories"],
+  { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+);

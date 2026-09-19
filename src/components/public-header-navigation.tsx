@@ -50,7 +50,6 @@ export function PublicHeaderNavigation({ contributionGuideUrl }: { contributionG
         <nav className="public-navigation" aria-label="Primary navigation">
           <Link className="public-home-link" href="/" onClick={() => setOpen(false)}>Home</Link>
           <Link className="public-deals-link" href="/deals" onClick={() => setOpen(false)}>Deals</Link>
-          <Link className="public-categories-link" href="/categories" onClick={() => setOpen(false)}>Categories</Link>
           <a className="public-surprise-link" href="/surprise" onClick={() => setOpen(false)} aria-label="Surprise me with an app">
             <span className="public-navigation-icon" aria-hidden="true"><Shuffle size={15} /></span>
             <span className="public-navigation-label">Surprise me</span>

@@ -1,4 +1,5 @@
 import { and, asc, count, desc, eq, gte, inArray, isNull, sql, type SQL } from "drizzle-orm";
+import { unstable_cache } from "next/cache";
 import { getDatabase } from "@/db/client";
 import { appCategories, apps, categories } from "@/db/schema";
 import {
@@ -11,6 +12,7 @@ import {
   HOMEPAGE_APPLICATION_SLUGS,
   homepageApplicationPosition,
 } from "@/lib/homepage-application-order";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
 
 type HomepageView = "hot" | "trending" | "latest";
 const homepageApplicationLimit = 50;
@@ -37,7 +39,7 @@ function searchConditions(filters?: DirectorySearchFilters) {
   return conditions;
 }
 
-export async function getHomepageDirectoryData(filters?: DirectorySearchFilters, view: HomepageView = "hot") {
+async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view: HomepageView = "hot") {
   const database = await getDatabase();
   const latestPublishedAt = new Date(Date.now() - latestApplicationWindowMs);
   const [fallbackRecords, analyticsVisits, trendingFeaturedRecords] = await Promise.all([
@@ -144,8 +146,24 @@ export async function getHomepageDirectoryData(filters?: DirectorySearchFilters,
   };
 }
 
+function utcDayKey() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+export async function getHomepageDirectoryData(filters?: DirectorySearchFilters, view: HomepageView = "hot") {
+  // Search is user-specific and stays live. Hot changes only when catalogue
+  // data changes; Trending and Latest receive a new lazy snapshot each UTC day.
+  if (filters) return queryHomepageDirectoryData(filters, view);
+  const snapshot = view === "hot" ? "catalogue" : utcDayKey();
+  return unstable_cache(
+    () => queryHomepageDirectoryData(undefined, view),
+    ["homepage-directory", view, snapshot],
+    { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+  )();
+}
+
 // Keep hero artwork independent of optional ranking analytics.
-export async function getHomepageHeroData() {
+async function queryHomepageHeroData() {
   const database = await getDatabase();
   const records = await database.select(cardFields).from(apps).where(and(
     eq(apps.status, "published"),
@@ -159,3 +177,9 @@ export async function getHomepageHeroData() {
     preview: previews.get(record.id) ?? null,
   }));
 }
+
+export const getHomepageHeroData = unstable_cache(
+  queryHomepageHeroData,
+  ["homepage-hero"],
+  { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+);

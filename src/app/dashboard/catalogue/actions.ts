@@ -20,6 +20,7 @@ import { ingestCatalogueItem } from "@/lib/catalogue-ingestion";
 import { dealManifestSchema } from "@/lib/deal-manifest";
 import { publicationStatus } from "@/lib/catalogue-publication-guard";
 import { requireAdmin } from "@/lib/admin-auth";
+import { invalidatePublicCatalogueCache } from "@/lib/public-cache";
 
 const decisionSchema = z.object({
   revisionId: z.uuid(),
@@ -350,6 +351,7 @@ async function applyCatalogueDecision(revisionId: string, intent: DecisionIntent
 }
 
 function revalidateCataloguePaths() {
+  invalidatePublicCatalogueCache();
   revalidatePath("/");
   revalidatePath("/deals");
   revalidatePath("/dashboard", "layout");
