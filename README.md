@@ -33,6 +33,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [ActivityWatch](https://macify.app/apps/activitywatch) | Open-source time tracking that keeps its data local. | Free |
 | [Alcove](https://macify.app/apps/alcove) | Your Dynamic Island for Mac. | Paid · $13.99 one-time purchase |
 | [Alfred](https://macify.app/apps/alfred) | Boost your efficiency with hotkeys, keywords, text expansion and more. | Freemium · £34 one-time purchase |
+| [Anarlog](https://macify.app/apps/anarlog) | A local-first AI notepad for private meetings. | Freemium · $15/month or $150/year for Pro |
 | [Antinote](https://macify.app/apps/antinote) | Notes, but smaller. | Paid · $5 one-time purchase |
 | [Anybox](https://macify.app/apps/anybox) | A modern bookmark manager for macOS and iOS. | Freemium · From $1.99/month |
 | [Balance](https://macify.app/apps/balance) | Focus and time tracking for macOS. | Freemium · $4.99/month, $49.99/year, or $149.99 one-time purchase |
@@ -64,6 +65,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Expenses](https://macify.app/apps/expenses) | Simple expense tracking. | Freemium · From $1.99/month, $14.99/year, or $39.99 one-time purchase |
 | [Fantastical](https://macify.app/apps/fantastical) | Calendar and tasks, reimagined. | Freemium · $4.75/month billed annually or $6.99/month |
 | [ForkLift](https://macify.app/apps/forklift) | Dual-pane file management and transfers for Mac. | Paid · From $19.95 one-time purchase |
+| [Glance](https://macify.app/apps/glance) | Unlock your Mac with on-device facial recognition. | Free |
 | [Glyph](https://macify.app/apps/glyph) | A better Markdown app for your projects. | Paid · $24.99 one-time purchase |
 | [HandBrake](https://macify.app/apps/handbrake) | The open source video transcoder. | Free |
 | [iA Writer](https://macify.app/apps/ia-writer) | A focused Markdown writing environment for Mac. | Paid · $49.99 one-time purchase |
@@ -74,6 +76,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [LookAway](https://macify.app/apps/lookaway) | Smart Break Reminder App for Mac. | Paid · $19 one-time purchase |
 | [Lunar](https://macify.app/apps/lunar) | The defacto app for controlling monitors. | Freemium · $23 one-time purchase |
 | [Mac Mouse Fix](https://macify.app/apps/mac-mouse-fix) | Make your mouse better. | Freemium · $2.99 one-time purchase |
+| [Maccy](https://macify.app/apps/maccy) | A lightweight, keyboard-first clipboard manager for macOS. | Free |
 | [MacWhisper](https://macify.app/apps/macwhisper) | Transcribe audio files into text with ease. | Freemium · €64 one-time purchase |
 | [Magnet](https://macify.app/apps/magnet) | Organize your workspace. | Paid · $4.99 one-time purchase |
 | [Mimestream](https://macify.app/apps/mimestream) | Made for Mac. Optimized for Gmail. | Paid · $4.99/month |
@@ -98,6 +101,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [qBittorrent](https://macify.app/apps/qbittorrent) | A free and reliable P2P BitTorrent client. | Free |
 | [QSpace](https://macify.app/apps/qspace) | A better Finder for macOS. | Freemium · From $12.99 one-time purchase |
 | [Raycast](https://macify.app/apps/raycast) | Your shortcut to everything. | Freemium · $10/month |
+| [rcmd](https://macify.app/apps/rcmd) | Switch apps and windows with the Right Command key. | Freemium · €15 one-time purchase |
 | [Rectangle](https://macify.app/apps/rectangle) | Move and resize windows in macOS using keyboard shortcuts or snap areas. | Free |
 | [Screen Studio](https://macify.app/apps/screen-studio) | Beautiful screen recordings in minutes. | Paid · $29/month or $108/year |
 | [Session](https://macify.app/apps/session) | Pomodoro focus timer for mindful productivity. | Freemium · $4.99/month or $39.99/year |
@@ -113,7 +117,9 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Swish](https://macify.app/apps/swish) | The missing gesture layer for macOS. | Paid · $16 one-time purchase |
 | [The Unarchiver](https://macify.app/apps/the-unarchiver) | Open any archive in seconds. | Free |
 | [Things 3](https://macify.app/apps/things-3) | The award-winning personal task manager. | Paid · $49.99 one-time purchase |
+| [Tinycast](https://macify.app/apps/tinycast) | A small, native macOS launcher with local-first utilities. | Free |
 | [Toki](https://macify.app/apps/toki) | A keyboard-first timer, alarm, and stopwatch for macOS. | Freemium · $13.99 one-time purchase |
+| [Velja](https://macify.app/apps/velja) | Route links to the right browser, profile, or desktop app. | Paid · $8 one-time purchase |
 | [VoiceInk](https://macify.app/apps/voiceink) | Write at the speed of thought with private voice dictation. | Paid · $25 one-time purchase |
 | [VoiceOS](https://macify.app/apps/voiceos) | Say it and it’s done. | Paid · $11.99/month billed annually |
 | [Vorssaint](https://macify.app/apps/vorssaint) | A modular Swiss Army knife of Mac utilities. | Free |
