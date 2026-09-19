@@ -48,7 +48,6 @@ async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view
         .where(and(
           eq(apps.status, "published"),
           isNull(apps.deletedAt),
-          inArray(apps.slug, HOMEPAGE_APPLICATION_SLUGS),
           gte(apps.publishedAt, latestPublishedAt),
         ))
         .orderBy(desc(apps.publishedAt), asc(apps.id)).limit(homepageApplicationLimit)
@@ -146,18 +145,13 @@ async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view
   };
 }
 
-function utcDayKey() {
-  return new Date().toISOString().slice(0, 10);
-}
-
 export async function getHomepageDirectoryData(filters?: DirectorySearchFilters, view: HomepageView = "hot") {
-  // Search is user-specific and stays live. Hot changes only when catalogue
-  // data changes; Trending and Latest receive a new lazy snapshot each UTC day.
+  // Search is user-specific and stays live. Ranked homepage views remain
+  // cached until a catalogue mutation explicitly invalidates them.
   if (filters) return queryHomepageDirectoryData(filters, view);
-  const snapshot = view === "hot" ? "catalogue" : utcDayKey();
   return unstable_cache(
     () => queryHomepageDirectoryData(undefined, view),
-    ["homepage-directory", view, snapshot],
+    ["homepage-directory", view],
     { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
   )();
 }
