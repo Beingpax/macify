@@ -12,7 +12,7 @@ export default function EditorialPolicyPage() {
   return (
     <PolicyLayout
       title="Editorial policy"
-      updatedAt="September 8, 2026"
+      updatedAt="September 23, 2026"
       description="How applications earn and keep a place in the Macify directory."
     >
       <section id="selection">
@@ -35,6 +35,7 @@ export default function EditorialPolicyPage() {
         <h2>What a listing means</h2>
         <p>Inclusion means Macify considers the application useful enough to feature. It is not a warranty, security certification, or promise that the application will suit every person or workflow. Check the developer’s current terms, privacy information, system requirements, and pricing before relying on an application.</p>
         <p>Product names, trademarks, and artwork belong to their respective owners. Their appearance on Macify does not imply that the developer endorses or sponsors Macify.</p>
+        <p>Macify is an independent publication and is not affiliated with, endorsed by, or sponsored by Apple Inc. Mac and macOS are trademarks of Apple Inc.</p>
       </section>
       <section id="featured">
         <h2>Featured placements and disclosures</h2>

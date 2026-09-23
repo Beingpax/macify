@@ -44,11 +44,12 @@ export async function getPublishedCategoryBySlug(slug: string) {
 async function queryPublishedCategorySlugs() {
   const database = await getDatabase();
   return database
-    .selectDistinct({ slug: categories.slug })
+    .select({ slug: categories.slug, updatedAt: sql`max(${apps.updatedAt})`.mapWith(apps.updatedAt) })
     .from(categories)
     .innerJoin(appCategories, eq(appCategories.categoryId, categories.id))
     .innerJoin(apps, eq(apps.id, appCategories.appId))
     .where(and(eq(apps.status, "published"), isNull(apps.deletedAt)))
+    .groupBy(categories.id, categories.slug)
     .orderBy(asc(categories.slug));
 }
 

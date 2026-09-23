@@ -25,6 +25,10 @@ export function PublicFooter() {
             </div>
             <a className="curious-footer-surprise application-website" href="/surprise">Surprise me <AppleBrandMark /></a>
           </div>
+          <div className="curious-footer-bottom">
+            <p>Macify is an independent publication and is not affiliated with, endorsed by, or sponsored by Apple Inc.</p>
+            <p>Mac and macOS are trademarks of Apple Inc.</p>
+          </div>
           <div className="footer-transition-word footer-signoff-word" aria-hidden="true"><span>Macify.app</span></div>
         </div>
       </footer>
