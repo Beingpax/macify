@@ -152,7 +152,10 @@ export async function getHomepageDirectoryData(filters?: DirectorySearchFilters,
   return unstable_cache(
     () => queryHomepageDirectoryData(undefined, view),
     ["homepage-directory", view],
-    { revalidate: false, tags: [PUBLIC_CATALOGUE_CACHE_TAG] },
+    {
+      revalidate: view === "trending" ? 15 * 60 : false,
+      tags: [PUBLIC_CATALOGUE_CACHE_TAG],
+    },
   )();
 }
 

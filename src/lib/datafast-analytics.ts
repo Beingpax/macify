@@ -94,19 +94,7 @@ export async function getHotApplicationVisits() {
 }
 
 export async function getTrendingApplicationVisits() {
-  const [current, previous] = await Promise.all([
-    getApplicationVisits(utcDate(6), utcDate(0)),
-    getApplicationVisits(utcDate(13), utcDate(7)),
-  ]);
-  const previousBySlug = new Map((previous ?? []).map(({ slug, visitors }) => [slug, visitors]));
-  return (current ?? [])
-    .map(({ slug, visitors }) => ({
-      slug,
-      visitors,
-      score: (visitors - (previousBySlug.get(slug) ?? 0)) * Math.sqrt(visitors + 1),
-    }))
-    .sort((left, right) => right.score - left.score || right.visitors - left.visitors || left.slug.localeCompare(right.slug))
-    .slice(0, applicationLimit);
+  return (await getApplicationVisits(utcDate(29), utcDate(0)) ?? []).slice(0, applicationLimit);
 }
 
 export async function getAllTimeApplicationVisitors(slug: string) {

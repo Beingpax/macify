@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeCheck, GitPullRequest, Star, SlidersHorizontal } from "lucide-react";
+import { BadgeCheck, Download, GitPullRequest, Star, SlidersHorizontal } from "lucide-react";
 import { getApplicationsDashboardData } from "@/lib/app-editor-data";
 import { mediaUrl } from "@/components/public-app-card";
 import { cn } from "@/lib/utils";
@@ -14,7 +14,10 @@ export default async function DashboardPage() {
     <>
       <header className="dashboard-header">
         <div><h1>Applications</h1><p>Review your listings and manage where they appear.</p></div>
-        <Link className="button-primary" href="/dashboard/catalogue"><GitPullRequest size={16} /> Review app updates</Link>
+        <div className="dashboard-actions">
+          <a className="button-secondary" download href="/dashboard/export"><Download aria-hidden="true" size={16} /> Export CSV</a>
+          <Link className="button-primary" href="/dashboard/catalogue"><GitPullRequest aria-hidden="true" size={16} /> Review app updates</Link>
+        </div>
       </header>
 
       <section className="status-strip" aria-label="Directory status">
