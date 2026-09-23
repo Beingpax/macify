@@ -18,6 +18,7 @@ import "../styles/public/responsive-tablet.css";
 import "../styles/public/responsive-small.css";
 import "../styles/public/footer-variants.css";
 import "../styles/public/editorial-guides.css";
+import "../styles/public/surprise.css";
 
 const urbanist = Urbanist({
   subsets: ["latin"],

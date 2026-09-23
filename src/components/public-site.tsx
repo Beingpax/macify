@@ -19,7 +19,7 @@ function PublicHeader() {
   );
 }
 
-export async function PublicShell({ children }: { children: ReactNode }) {
+export async function PublicShell({ children, showFooter = true }: { children: ReactNode; showFooter?: boolean }) {
   return (
     <div className="public-site">
       <Script
@@ -31,7 +31,7 @@ export async function PublicShell({ children }: { children: ReactNode }) {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <PublicHeader />
       <div className="public-page-content">{children}</div>
-      <PublicFooter />
+      {showFooter && <PublicFooter />}
     </div>
   );
 }

@@ -5,7 +5,6 @@ import { Menu, Plus, Shuffle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { GitHubStarCount } from "@/components/github-star-count";
 import { LiveVisitorCount } from "@/components/live-visitor-count";
-import { MacifyLogo } from "@/components/macify-logo";
 
 export function PublicHeaderNavigation({ contributionGuideUrl }: { contributionGuideUrl: string }) {
   const [open, setOpen] = useState(false);
@@ -43,7 +42,6 @@ export function PublicHeaderNavigation({ contributionGuideUrl }: { contributionG
 
       <div className="public-menu-content" data-open={open ? "true" : undefined} id="public-mobile-menu">
         <div className="public-community-links">
-          <MacifyLogo />
           <div className="public-brand-pill">
             <LiveVisitorCount />
           </div>
