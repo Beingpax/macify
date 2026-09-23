@@ -36,6 +36,9 @@ type Props = {
   apiRef: React.RefObject<SurpriseFloorApi | null>;
   onPick: (index: number) => void;
   onReady?: () => void;
+  onSettled?: () => void;
+  onArrived?: (index: number) => void;
+  onDeparted?: (index: number) => void;
 };
 
 type HeldIcon = {
@@ -45,6 +48,8 @@ type HeldIcon = {
   time: number;
   boost: number;
   arrived: boolean;
+  announced: boolean;
+  stableFor: number;
 };
 
 type Sprite = HTMLCanvasElement | null;
@@ -64,6 +69,9 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
   apiRef,
   onPick,
   onReady,
+  onSettled,
+  onArrived,
+  onDeparted,
 }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -100,7 +108,9 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       pointerId: number;
       index: number;
       start: Anchor;
-      moved: boolean;
+      lastPoint: Anchor;
+      travel: number;
+      startedAt: number;
       constraint: Matter.Constraint;
     } | null = null;
     let dirty = true;
@@ -293,7 +303,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       const body = bodies[index];
       Matter.Body.scale(body, scale, scale);
       body.collisionFilter.group = -1;
-      held = { index, getAnchor, scale, time: 0, boost: 1, arrived: false };
+      held = { index, getAnchor, scale, time: 0, boost: 1, arrived: false, announced: false, stableFor: 0 };
       Matter.Sleeping.set(body, false);
       if (reducedMotion) {
         const anchor = getAnchor();
@@ -302,6 +312,8 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         Matter.Body.setVelocity(body, { x: 0, y: 0 });
         Matter.Body.setAngularVelocity(body, 0);
         Matter.Sleeping.set(body, true);
+        held.announced = true;
+        onArrived?.(index);
       }
       dirty = true;
     }
@@ -338,6 +350,17 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         body.collisionFilter.mask = 0;
         wakeNear(body);
       }
+      if (!held.announced) {
+        const stable = sprites[held.index] !== null
+          && distance < Math.max(24, size * held.scale * 0.35)
+          && Matter.Body.getSpeed(body) < 0.8
+          && Math.abs(Matter.Body.getAngularVelocity(body)) < 0.02;
+        held.stableFor = stable ? held.stableFor + delta : 0;
+        if (held.stableFor >= 220) {
+          held.announced = true;
+          onArrived?.(held.index);
+        }
+      }
       const firm = held.arrived ? 5 : 1;
       const pullX = (anchor.x - body.position.x) * SPRING * held.boost * firm
         - velocity.x * DAMPING * Math.sqrt(firm);
@@ -353,6 +376,17 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         -lean * TURN * brisk
         - Matter.Body.getAngularVelocity(body) * TURN_DAMPING * Math.sqrt(brisk)
       ) * body.inertia;
+    }
+
+    function updateHeldDeparture() {
+      if (!held?.announced) return;
+      const body = bodies[held.index];
+      const anchor = held.getAnchor();
+      const distance = Math.hypot(anchor.x - body.position.x, anchor.y - body.position.y);
+      if (distance <= Math.max(48, size * held.scale * 0.6)) return;
+      held.announced = false;
+      held.stableFor = 0;
+      onDeparted?.(held.index);
     }
 
     function limitSpeeds(delta: number) {
@@ -413,6 +447,9 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     let dropAt = performance.now() + 160;
     let dropIndex = 0;
     let patrolAt = 0;
+    let settleCheckAt = 0;
+    let quietSince: number | null = null;
+    let settledNotified = false;
 
     function frame(now: number) {
       if (stopped) return;
@@ -452,6 +489,8 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         if (awake) dirty = true;
       }
 
+      updateHeldDeparture();
+
       if (now - patrolAt > 1000) {
         patrolAt = now;
         if (!ceilingClosed && active.size === bodies.length && [...active].every((index) => bodies[index].position.y > size)) {
@@ -474,6 +513,23 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         }
       }
 
+      if (!settledNotified && active.size === bodies.length && now - settleCheckAt >= 120) {
+        settleCheckAt = now;
+        const quiet = bodies.every((body) => body.isSleeping || (
+          Matter.Body.getSpeed(body) < 0.15
+          && Math.abs(Matter.Body.getAngularVelocity(body)) < 0.015
+        ));
+        if (quiet) {
+          quietSince ??= now;
+          if (now - quietSince >= 700) {
+            settledNotified = true;
+            onSettled?.();
+          }
+        } else {
+          quietSince = null;
+        }
+      }
+
       if (dirty) {
         draw();
         dirty = false;
@@ -482,7 +538,6 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
 
     animationFrame = requestAnimationFrame(frame);
     apiRef.current = { select, release };
-    onReady?.();
 
     function pointFromEvent(event: PointerEvent): Anchor {
       const rect = canvas.getBoundingClientRect();
@@ -499,7 +554,10 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       if (index < 0) return;
 
       Matter.Sleeping.set(body, false);
-      if (held?.index === index) body.collisionFilter.mask = 0xffffffff;
+      if (held?.index === index) {
+        held.stableFor = 0;
+        body.collisionFilter.mask = 0xffffffff;
+      }
       const constraint = Matter.Constraint.create({
         pointA: point,
         bodyB: body,
@@ -510,7 +568,15 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         render: { visible: false },
       });
       Matter.Composite.add(engine.world, constraint);
-      pointerDrag = { pointerId: event.pointerId, index, start: point, moved: false, constraint };
+      pointerDrag = {
+        pointerId: event.pointerId,
+        index,
+        start: point,
+        lastPoint: point,
+        travel: 0,
+        startedAt: performance.now(),
+        constraint,
+      };
       canvas.setPointerCapture(event.pointerId);
       event.preventDefault();
       dirty = true;
@@ -519,10 +585,9 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     function pointerMove(event: PointerEvent) {
       if (!pointerDrag || event.pointerId !== pointerDrag.pointerId) return;
       const point = pointFromEvent(event);
+      pointerDrag.travel += Math.hypot(point.x - pointerDrag.lastPoint.x, point.y - pointerDrag.lastPoint.y);
+      pointerDrag.lastPoint = point;
       pointerDrag.constraint.pointA = point;
-      if (Math.hypot(point.x - pointerDrag.start.x, point.y - pointerDrag.start.y) > 7) {
-        pointerDrag.moved = true;
-      }
       const body = bodies[pointerDrag.index];
       if (reducedMotion) {
         Matter.Body.setPosition(body, point);
@@ -534,12 +599,37 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
 
     function finishDrag(event?: PointerEvent, pick = false) {
       if (!pointerDrag || (event && event.pointerId !== pointerDrag.pointerId)) return;
-      const { pointerId, index, moved, constraint } = pointerDrag;
+      const { pointerId, index, start, lastPoint, travel, startedAt, constraint } = pointerDrag;
       pointerDrag = null;
       Matter.Composite.remove(engine.world, constraint);
-      if (held?.index === index && held.arrived) bodies[index].collisionFilter.mask = 0;
+      const body = bodies[index];
+      if (held?.index === index && held.arrived) body.collisionFilter.mask = 0;
+      const releasePoint = event ? pointFromEvent(event) : null;
+      const totalTravel = releasePoint
+        ? travel + Math.hypot(releasePoint.x - lastPoint.x, releasePoint.y - lastPoint.y)
+        : Infinity;
+      const displacement = releasePoint
+        ? Math.hypot(releasePoint.x - start.x, releasePoint.y - start.y)
+        : Infinity;
+      const deliberateClick = pick && releasePoint
+        && totalTravel <= 6
+        && displacement <= 6
+        && performance.now() - startedAt <= 500
+        && Matter.Query.point([body], releasePoint).length > 0;
+      if (reducedMotion && held?.index === index) {
+        const anchor = held.getAnchor();
+        Matter.Body.setPosition(body, anchor);
+        Matter.Body.setAngle(body, 0);
+        Matter.Body.setVelocity(body, { x: 0, y: 0 });
+        Matter.Body.setAngularVelocity(body, 0);
+        Matter.Sleeping.set(body, true);
+        if (!stopped && !held.announced) {
+          held.announced = true;
+          onArrived?.(index);
+        }
+      }
       if (canvas.hasPointerCapture(pointerId)) canvas.releasePointerCapture(pointerId);
-      if (pick && !moved) onPick(index);
+      if (deliberateClick) onPick(index);
       dirty = true;
     }
 
@@ -586,6 +676,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     canvas.addEventListener("keydown", keyDown);
     window.addEventListener("blur", windowBlur);
     window.addEventListener("resize", onResize);
+    onReady?.();
 
     return () => {
       stopped = true;
@@ -603,7 +694,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       Matter.Composite.clear(engine.world, false);
       Matter.Engine.clear(engine);
     };
-  }, [apiRef, items, onPick, onReady]);
+  }, [apiRef, items, onPick, onReady, onSettled, onArrived, onDeparted]);
 
   return (
     <canvas

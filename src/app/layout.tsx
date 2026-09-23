@@ -49,6 +49,14 @@ export const metadata: Metadata = {
   description:
     "A considered directory of useful macOS applications, with clear pricing, related alternatives, and practical editorial context.",
   applicationName: "Macify",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

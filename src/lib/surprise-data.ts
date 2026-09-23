@@ -4,12 +4,18 @@ import { getDatabase } from "@/db/client";
 import { appCategories, apps, categories } from "@/db/schema";
 import { getAppIcons } from "@/lib/directory-shared";
 import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
+import type { BillingType, PricingType } from "@/lib/pricing";
 
 export type SurpriseApplication = {
   id: string;
   slug: string;
   name: string;
   tagline: string;
+  websiteUrl: string;
+  pricingType: PricingType;
+  billingType: BillingType;
+  pricingDetails: string | null;
+  sourceType: "open_source" | "closed_source";
   categories: Array<{ name: string; slug: string }>;
   icon: { storageKey: string; altText: string | null } | null;
 };
@@ -22,6 +28,11 @@ async function querySurpriseApplications(): Promise<SurpriseApplication[]> {
       slug: apps.slug,
       name: apps.name,
       tagline: apps.tagline,
+      websiteUrl: apps.websiteUrl,
+      pricingType: apps.pricingType,
+      billingType: apps.billingType,
+      pricingDetails: apps.pricingDetails,
+      sourceType: apps.sourceType,
     })
     .from(apps)
     .where(and(eq(apps.status, "published"), isNull(apps.deletedAt)))
