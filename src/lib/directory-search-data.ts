@@ -60,14 +60,8 @@ async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view
   let records = fallbackRecords;
   if (analyticsVisits.length) {
     const rankedSlugs = analyticsVisits.map(({ slug }) => slug);
-    const rankedRecords = await database.select(cardFields).from(apps).where(and(
-      eq(apps.status, "published"),
-      isNull(apps.deletedAt),
-      inArray(apps.slug, HOMEPAGE_APPLICATION_SLUGS),
-      inArray(apps.slug, rankedSlugs),
-    )).limit(homepageApplicationLimit);
-    const bySlug = new Map(rankedRecords.map((record) => [record.slug, record]));
-    const ranked = rankedSlugs.map((slug) => bySlug.get(slug)).filter((record): record is (typeof rankedRecords)[number] => Boolean(record));
+    const bySlug = new Map(fallbackRecords.map((record) => [record.slug, record]));
+    const ranked = rankedSlugs.map((slug) => bySlug.get(slug)).filter((record): record is (typeof fallbackRecords)[number] => Boolean(record));
     const rankedIds = new Set(ranked.map(({ id }) => id));
     const curatedRemainder = [...fallbackRecords]
       .filter(({ id }) => !rankedIds.has(id))
