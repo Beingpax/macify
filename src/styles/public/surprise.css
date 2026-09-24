@@ -150,39 +150,30 @@
 
 .surprise-icon-loading-copy { width: min(100%, 25rem); }
 
-.surprise-icon-spinner {
-  width: 4rem;
-  height: 4rem;
+.surprise-icon-loader {
+  width: max-content;
   margin-inline: auto;
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
 }
 
-.surprise-icon-spinner::before {
-  position: absolute;
-  inset: 0;
-  border: 0.25rem solid #dce1e6;
-  border-top-color: #101217;
-  border-right-color: #ffdc28;
-  border-radius: 50%;
-  content: "";
-  animation: surprise-icon-spinner-turn 850ms linear infinite;
-}
-
-.surprise-icon-spinner::after {
+.surprise-icon-loader-mark {
   width: 0.8rem;
   height: 0.8rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 2px solid #101217;
-  border-radius: 0.2rem;
-  background: #ffdc28;
-  content: "";
-  transform: translate(-50%, -50%) rotate(-12deg);
+  display: block;
+  border-radius: 0.22rem;
+  opacity: 0;
+  animation: surprise-icon-loader-pulse 1.2s ease-in-out infinite;
 }
 
-@keyframes surprise-icon-spinner-turn {
-  to { transform: rotate(360deg); }
+.surprise-icon-loader-mark-blue { background: var(--play-blue); animation-delay: -0.8s; }
+.surprise-icon-loader-mark-orange { background: var(--play-orange); animation-delay: -0.4s; }
+.surprise-icon-loader-mark-plum { background: var(--header-accent); }
+
+@keyframes surprise-icon-loader-pulse {
+  0%, 66.666%, 100% { opacity: 0; }
+  33.333% { opacity: 1; }
 }
 
 .surprise-icon-loading h2 {
@@ -316,7 +307,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .surprise-trigger { transition: none; }
-  .surprise-icon-spinner::before { animation: none; }
+  .surprise-icon-loader-mark { animation: none; opacity: 1; }
   .surprise-selected-name, .surprise-preview-shell { animation: none; }
 }
 

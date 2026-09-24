@@ -31,6 +31,7 @@ const bulkDecisionSchema = z.object({
   revisionIds: z.array(z.uuid()).min(1).max(100),
   intent: z.enum(["publish", "reject"]),
 });
+const bulkReviewQueryBatchSize = 75;
 
 type DecisionIntent = z.infer<typeof decisionSchema>["intent"];
 
@@ -138,15 +139,21 @@ export async function decideCatalogueRevisions(formData: FormData) {
   if (!parsed.success) redirect(`${queuePath}?error=invalid-selection`);
 
   const database = await getDatabase();
-  const selected = await database.select({
-    id: catalogueRevisions.id,
-    sourcePath: catalogueRevisions.sourcePath,
-    createdAt: catalogueRevisions.createdAt,
-  }).from(catalogueRevisions).where(and(
-    inArray(catalogueRevisions.id, parsed.data.revisionIds),
-    eq(catalogueRevisions.status, "pending"),
-    like(catalogueRevisions.sourcePath, reviewSourcePattern(queuePath)),
-  ));
+  const sourcePattern = reviewSourcePattern(queuePath);
+  const selected: Array<Pick<typeof catalogueRevisions.$inferSelect, "id" | "sourcePath" | "createdAt">> = [];
+  for (let offset = 0; offset < parsed.data.revisionIds.length; offset += bulkReviewQueryBatchSize) {
+    const revisionIds = parsed.data.revisionIds.slice(offset, offset + bulkReviewQueryBatchSize);
+    const batch = await database.select({
+      id: catalogueRevisions.id,
+      sourcePath: catalogueRevisions.sourcePath,
+      createdAt: catalogueRevisions.createdAt,
+    }).from(catalogueRevisions).where(and(
+      inArray(catalogueRevisions.id, revisionIds),
+      eq(catalogueRevisions.status, "pending"),
+      like(catalogueRevisions.sourcePath, sourcePattern),
+    ));
+    selected.push(...batch);
+  }
 
   const selectedIds = new Set(selected.map(({ id }) => id));
   let failed = parsed.data.revisionIds.length - selectedIds.size;
@@ -163,7 +170,7 @@ export async function decideCatalogueRevisions(formData: FormData) {
     const retry: string[] = [];
     for (const revisionId of remaining) {
       try {
-        await applyCatalogueDecision(revisionId, parsed.data.intent, reviewSourcePattern(queuePath));
+        await applyCatalogueDecision(revisionId, parsed.data.intent, sourcePattern);
         completed += 1;
       } catch (error) {
         await recordDecisionFailure(revisionId, parsed.data.intent, error);

@@ -141,7 +141,10 @@ function SurprisePlayground({
                 <Link href="/">Explore the directory instead</Link>
               </>
             ) : (
-              <div className="surprise-icon-spinner" role="status">
+              <div className="surprise-icon-loader" role="status">
+                <span aria-hidden="true" className="surprise-icon-loader-mark surprise-icon-loader-mark-blue" />
+                <span aria-hidden="true" className="surprise-icon-loader-mark surprise-icon-loader-mark-orange" />
+                <span aria-hidden="true" className="surprise-icon-loader-mark surprise-icon-loader-mark-plum" />
                 <span className="sr-only">Loading app icons</span>
               </div>
             )}
