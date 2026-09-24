@@ -2,7 +2,7 @@ import { PendingSubmitButton } from "@/components/forms/pending-submit-button";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BadgeCheck, ChevronRight, ExternalLink, GitBranch, Star } from "lucide-react";
+import { ArrowUpRight, BadgeCheck, ChevronRight, ExternalLink, GitBranch, Star } from "lucide-react";
 import { setApplicationPublication, setEditorsPickApplication, setFeaturedApplication } from "@/app/dashboard/editorial-actions";
 import { getApplicationEditorData } from "@/lib/dashboard/app-editor-data";
 
@@ -54,7 +54,7 @@ export default async function EditApplicationPage({
         </div>
         <div className="editor-header-actions">
           <a className="button-secondary" href={application.websiteUrl} rel="noreferrer" target="_blank">
-            Visit site <ExternalLink size={15} />
+            Visit site <ArrowUpRight aria-hidden="true" size={15} strokeWidth={1.8} />
           </a>
           <a className="button-secondary" href={`https://github.com/Beingpax/macify/edit/main/catalog/apps/${application.slug}.json`} rel="noreferrer" target="_blank">
             Edit in GitHub <GitBranch size={15} />

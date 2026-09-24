@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Code2, DollarSign, Gem, Gift, RefreshCw, TicketCheck, type LucideIcon } from "lucide-react";
+import { ArrowUpRight, Code2, DollarSign, Gem, Gift, RefreshCw, TicketCheck, type LucideIcon } from "lucide-react";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { PublicAppIcon } from "@/components/site/public-app-card";
 import type { ApplicationMedia, PublishedApplication } from "@/components/application-detail/types";
@@ -29,7 +29,7 @@ export function ApplicationHero({
   visitorContent,
   mediaScope = "public",
 }: {
-  application: Pick<PublishedApplication, "name" | "tagline" | "categories" | "pricingType" | "billingType" | "pricingDetails" | "sourceType">;
+  application: Pick<PublishedApplication, "name" | "tagline" | "categories" | "pricingType" | "billingType" | "pricingDetails" | "sourceType" | "websiteUrl">;
   mediaScope?: "public" | "dashboard";
   icon?: ApplicationMedia;
   visitorContent?: ReactNode;
@@ -79,6 +79,16 @@ export function ApplicationHero({
             <ApplicationFact className="application-price" icon={billingIcon} tone="green">{application.pricingDetails}</ApplicationFact>
           )}
           {application.sourceType === "open_source" && <ApplicationFact className="application-source" icon={Code2} tone="blue">Open source</ApplicationFact>}
+          <a
+            aria-label={`Visit ${application.name} site (opens in a new tab)`}
+            className="application-fact application-fact-blue application-facts-site"
+            href={application.websiteUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span className="application-fact-icon" aria-hidden="true"><ArrowUpRight size={17} strokeWidth={2.2} /></span>
+            <span>Visit site</span>
+          </a>
           {visitorContent}
         </div>
       </div>

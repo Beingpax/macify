@@ -192,6 +192,21 @@
 
 .application-facts .application-source { color: #3159a4; }
 
+.application-facts-site {
+  flex: 0 0 auto;
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.application-facts-site:hover > span:last-child,
+.application-facts-site:focus-visible > span:last-child {
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+.application-facts-site:focus-visible { outline: 2px solid var(--play-blue); outline-offset: 0.2rem; border-radius: 0.2rem; }
+
 .application-visitors strong {
   color: var(--public-ink-strong);
   font-variant-numeric: tabular-nums;

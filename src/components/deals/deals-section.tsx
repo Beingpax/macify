@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight, ExternalLink, Mail, TicketPercent } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Mail, TicketPercent } from "lucide-react";
 import Link from "next/link";
 import { DealCodeButton } from "@/components/deals/deal-code-button";
 import { PublicAppIcon } from "@/components/site/public-app-card";
@@ -121,7 +121,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
             <div className="deal-card-actions">
               {deal.code && <DealCodeButton appSlug={deal.slug} code={deal.code} />}
               <a aria-label={`Visit ${deal.name} site (opens in a new tab)`} className="deal-card-action site-action site-action--primary" href={deal.url} rel="noopener noreferrer" target="_blank">
-                Visit site <ExternalLink aria-hidden="true" size={17} />
+                Visit site <ArrowUpRight aria-hidden="true" size={17} strokeWidth={1.8} />
               </a>
             </div>
           </article>

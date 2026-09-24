@@ -1,6 +1,6 @@
 import { descriptionParts } from "@/lib/shared/application-description";
 import Image from "next/image";
-import { ExternalLink, Play } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Play } from "lucide-react";
 import { MarkdownContent } from "@/components/site/markdown-content";
 import { mediaUrl } from "@/components/site/public-app-card";
 import type { ApplicationMedia, PublishedApplication } from "@/components/application-detail/types";
@@ -53,7 +53,7 @@ export function ApplicationOverview({
           )}
           <a aria-label={`Visit ${application.name} site (opens in a new tab)`} className="application-website site-action site-action--primary" href={application.websiteUrl} rel="noreferrer" target="_blank">
             Visit site
-            <ExternalLink aria-hidden="true" size={19} strokeWidth={1.8} />
+            <ArrowUpRight aria-hidden="true" size={17} strokeWidth={1.8} />
           </a>
         </article>
         {application.youtubeUrl && <aside className="application-demo"><a href={application.youtubeUrl} rel="noreferrer" target="_blank"><span><Play size={15} /> Watch the demo</span><ExternalLink aria-hidden="true" size={14} /></a></aside>}

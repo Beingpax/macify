@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { PublicAppIcon } from "@/components/site/public-app-card";
 import type { SurpriseApplication } from "@/lib/surprise/surprise-data";
 import { pricingLabels } from "@/lib/shared/pricing";
@@ -56,7 +56,7 @@ export function SurprisePreview({
             rel="noopener noreferrer"
             target="_blank"
           >
-            Site <ExternalLink aria-hidden="true" size={16} />
+            Site <ArrowUpRight aria-hidden="true" size={16} strokeWidth={1.8} />
           </a>
         </div>
       </aside>
