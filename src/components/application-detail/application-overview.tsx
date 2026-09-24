@@ -51,7 +51,7 @@ export function ApplicationOverview({
               ))}
             </div>
           )}
-          <a className="application-website" href={application.websiteUrl} rel="noreferrer" target="_blank">
+          <a className="application-website site-action site-action--primary" href={application.websiteUrl} rel="noreferrer" target="_blank">
             Visit site
             <ArrowUpRight aria-hidden="true" size={19} strokeWidth={1.8} />
           </a>

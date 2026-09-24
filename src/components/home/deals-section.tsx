@@ -16,10 +16,10 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
             <h1 id="deals-title">No deals right now.</h1>
             <p>Macify only lists offers that are current and verified. The shelf is empty today, but the app collection is always open.</p>
             <div className="deals-empty-actions">
-              <Link className="deals-hero-action" href="/#all-apps">
+              <Link className="deals-hero-action site-action site-action--primary" href="/#all-apps">
                 Browse Mac apps <ArrowRight aria-hidden="true" size={19} />
               </Link>
-              <a className="deals-empty-surprise" href="/surprise">Surprise me</a>
+              <a className="deals-empty-surprise site-action site-action--secondary" href="/surprise">Surprise me</a>
             </div>
           </div>
           <div aria-hidden="true" className="deals-empty-art">
@@ -50,7 +50,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
               <span>Now for less.</span>
             </h1>
             <p>A curated shelf of worthwhile macOS deals. No bundles, no detours, just useful Mac apps at friendlier prices.</p>
-            <a className="deals-hero-action" href="#handpicked-deals">
+            <a className="deals-hero-action site-action site-action--primary" href="#handpicked-deals">
               Browse deals <ArrowRight aria-hidden="true" size={19} />
             </a>
             <p className="deals-hero-disclaimer">
@@ -119,7 +119,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
             </div>
             <div className="deal-card-actions">
               {deal.code && <DealCodeButton code={deal.code} />}
-              <a className="deal-card-action" href={deal.url} rel="noopener noreferrer" target="_blank">
+              <a className="deal-card-action site-action site-action--primary" href={deal.url} rel="noopener noreferrer" target="_blank">
                 Visit site <ArrowUpRight aria-hidden="true" size={17} />
               </a>
             </div>

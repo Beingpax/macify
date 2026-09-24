@@ -46,11 +46,12 @@ export function SurprisePreview({
         </dl>
 
         <div className="surprise-preview-actions">
-          <Link aria-label={`Details for ${application.name}`} href={`/apps/${application.slug}`} prefetch={false}>
+          <Link aria-label={`Details for ${application.name}`} className="site-action site-action--primary" href={`/apps/${application.slug}`} prefetch={false}>
             Details <ArrowRight aria-hidden="true" size={16} />
           </Link>
           <a
             aria-label={`Visit ${application.name} site (opens in a new tab)`}
+            className="site-action site-action--secondary"
             href={application.websiteUrl}
             rel="noopener noreferrer"
             target="_blank"

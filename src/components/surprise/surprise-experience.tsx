@@ -132,7 +132,7 @@ function SurprisePlayground({
               <>
                 <h2>App icons didn’t load.</h2>
                 <p>Try again to open the surprise room.</p>
-                <button onClick={retryIconLoading} type="button">Retry loading icons</button>
+                <button className="site-action site-action--primary" onClick={retryIconLoading} type="button">Retry loading icons</button>
               </>
             ) : iconLoadProblem === "missing" ? (
               <>
@@ -155,7 +155,7 @@ function SurprisePlayground({
       {hasLoadedIcon && iconLoadProblem && (
         <div className="surprise-icon-retry" role="status">
           <span>{iconLoadProblem === "failed" ? "Some icons couldn’t load." : "Some apps have no icon."}</span>
-          {iconLoadProblem === "failed" && <button onClick={retryIconLoading} type="button">Try again</button>}
+          {iconLoadProblem === "failed" && <button className="site-action" onClick={retryIconLoading} type="button">Try again</button>}
         </div>
       )}
 
@@ -170,7 +170,7 @@ function SurprisePlayground({
         </div>
       ) : !selectedApplication && isPileSettled ? (
         <div className="surprise-center">
-          <button className="surprise-trigger" onClick={selectRandomApplication} type="button">
+          <button className="surprise-trigger site-action site-action--primary" onClick={selectRandomApplication} type="button">
             <Shuffle aria-hidden="true" size={19} /> Surprise me
           </button>
         </div>
@@ -201,7 +201,7 @@ export function SurpriseExperience({ applications }: { applications: SurpriseApp
           <div className="surprise-empty-state-copy">
             <h1>The surprise room is empty.</h1>
             <p>There are no published apps to choose from right now.</p>
-            <Link href="/">Back to Macify <ArrowRight aria-hidden="true" size={18} /></Link>
+            <Link className="site-action site-action--primary" href="/">Back to Macify <ArrowRight aria-hidden="true" size={18} /></Link>
           </div>
         </div>
       ) : (
@@ -216,7 +216,7 @@ export function SurpriseExperience({ applications }: { applications: SurpriseApp
             <div className="surprise-small-screen-copy">
               <h1>The surprise room needs<br /><span>more space.</span></h1>
               <p>Open this on a bigger screen, like your Mac or iPad, to play in the surprise room.</p>
-              <Link href="/">Explore the apps instead <ArrowRight aria-hidden="true" size={18} /></Link>
+              <Link className="site-action site-action--primary" href="/">Explore the apps instead <ArrowRight aria-hidden="true" size={18} /></Link>
             </div>
           </div>
         </>

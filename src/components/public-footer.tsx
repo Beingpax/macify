@@ -22,7 +22,7 @@ export function PublicFooter() {
               <nav aria-label="Explore Macify"><span>Explore</span>{primaryLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
               <nav aria-label="About Macify"><span>Macify</span>{secondaryLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}<Link href="/privacy#affiliate-links">Affiliate disclosure</Link><a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a><Link href="/submit">Submit an app</Link><Link href="/get-featured">Get featured</Link></nav>
             </div>
-            <a className="curious-footer-surprise application-website" href="/surprise">Surprise me <AppleBrandMark /></a>
+            <a className="curious-footer-surprise application-website site-action site-action--primary" href="/surprise">Surprise me <AppleBrandMark /></a>
           </div>
           <div className="curious-footer-bottom">
             <p>Macify is an independent publication and is not affiliated with, endorsed by, or sponsored by Apple Inc.</p>

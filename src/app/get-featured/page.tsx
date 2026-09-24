@@ -1,53 +1,34 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  PublicContentCallToAction,
-  PublicContentHero,
-  PublicContentPage,
-  PublicContentSection,
-} from "@/components/public-content-page";
+import { Shuffle } from "lucide-react";
+import { PublicShell } from "@/components/public-site";
 
-const description = "Priority review and a 30-day featured placement for eligible Mac applications on Macify.";
-const checkoutUrl = "https://checkout.dodopayments.com/buy/pdt_0NoGuBrnjnGxoxvUzkjoW?quantity=1&redirect_url=https://macify.app%2Fget-featured%2Fthank-you";
+const description = "Featuring is not available on Macify right now. Check back later.";
 
 export const metadata: Metadata = {
-  title: "Get featured",
+  title: "Featuring is not available yet",
   description,
-  alternates: { canonical: "/get-featured" },
-  openGraph: {
-    title: "Get featured on Macify",
-    description,
-    url: "/get-featured",
-  },
   robots: { index: false, follow: true },
 };
 
 export default function GetFeaturedPage() {
   return (
-    <PublicContentPage className="featured-program-page">
-      <PublicContentHero className="featured-program-hero" kicker="A little more room in the spotlight" title="Get featured.">
-        <p>Give your Mac app priority review and, if approved, a clearly labelled place at the top of the directory for 30 days.</p>
-      </PublicContentHero>
-
-      <PublicContentSection id="priority-review" title="Priority review">
-        <p>Move ahead of the standard queue for an editorial decision.</p>
-      </PublicContentSection>
-
-      <PublicContentSection id="placement" title="30 days in the spotlight">
-        <p>Your approved app appears at the top of the homepage directory with a featured seal and a paid-placement label. The 30 days start when it goes live.</p>
-      </PublicContentSection>
-
-      <PublicContentSection id="terms" title="Editorial approval still applies.">
-        <p>Payment does not guarantee publication. Every app must meet the <Link className="editorial-inline-link" href="/editorial-policy">editorial policy</Link>. If an app is declined before placement, the payment is refunded minus non-refundable processing charges.</p>
-      </PublicContentSection>
-
-      <PublicContentCallToAction
-        description="Checkout is handled by Dodo Payments. We’ll contact you within 24 hours about your app’s placement."
-        external
-        href={checkoutUrl}
-        label="Continue to checkout"
-        title="Ready to get featured?"
-      />
-    </PublicContentPage>
+    <PublicShell>
+      <main className="featured-unavailable" id="main-content">
+        <div className="featured-unavailable-mark" aria-hidden="true">
+          <span />
+          <strong>Coming soon</strong>
+          <span />
+        </div>
+        <p className="featured-unavailable-note">A little early for the spotlight.</p>
+        <h1>Featuring isn’t available yet.</h1>
+        <p className="featured-unavailable-copy">
+          We’re still working out how featuring should work on Macify. If you’d like to feature your app, check back again in the future.
+        </p>
+        <div className="featured-unavailable-actions">
+          <Link className="site-action site-action--primary" href="/surprise">Surprise me <Shuffle aria-hidden="true" size={16} /></Link>
+        </div>
+      </main>
+    </PublicShell>
   );
 }

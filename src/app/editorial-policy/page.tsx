@@ -77,7 +77,7 @@ export default function EditorialPolicyPage() {
 
       <PublicContentSection id="featured" title="Featured placement and disclosure">
         <p>Featured applications appear at the top of the homepage directory and carry a gold check seal.</p>
-        <p>Paid placements are labelled separately from editorial selections.</p>
+        <p>Paid featured placements are not currently available.</p>
       </PublicContentSection>
 
       <PublicContentSection id="affiliate-disclosure" title="Affiliate disclosure">

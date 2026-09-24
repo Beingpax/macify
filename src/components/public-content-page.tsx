@@ -126,6 +126,7 @@ export function PublicContentCallToAction({
       {external ? (
         <a
           aria-label={newTab ? `${label} (opens in a new tab)` : undefined}
+          className="site-action site-action--primary"
           href={href}
           rel={newTab ? "noreferrer" : undefined}
           target={newTab ? "_blank" : undefined}
@@ -133,7 +134,7 @@ export function PublicContentCallToAction({
           {content}
         </a>
       ) : (
-        <Link href={href}>{content}</Link>
+        <Link className="site-action site-action--primary" href={href}>{content}</Link>
       )}
     </section>
   );

@@ -21,7 +21,7 @@ export function DealCodeButton({ code }: { code: string }) {
   return (
     <button
       aria-label={copied ? `${code} copied` : `Copy deal code ${code}`}
-      className="deal-code-button"
+      className="deal-code-button site-action"
       data-copied={copied}
       onClick={copyCode}
       type="button"

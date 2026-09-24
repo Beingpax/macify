@@ -64,10 +64,11 @@
 
 .directory-heading h2 {
   margin: 0;
+  font-family: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
   font-size: clamp(2.15rem, 3.4vw, 3.15rem);
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.025em;
 }
 
 .directory-view-tabs {

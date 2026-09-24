@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       </PublicContentHero>
 
       <PublicContentSection id="information" title="Information we handle">
-        <p>Macify is a public application directory. It does not offer public accounts, saved applications, or submission forms. Featured placement payments take place on Dodo Payments’ checkout, under its own privacy terms.</p>
+        <p>Macify is a public application directory. It does not offer public accounts, payments, saved applications, or submission forms.</p>
         <p>When you visit, the site processes standard technical information, including your IP address, requested page, browser and device details, referrer, approximate country, and security or diagnostic signals. If you email Macify, we receive the address, message, and any other information you choose to send.</p>
       </PublicContentSection>
 

@@ -99,9 +99,9 @@ export default function SubmitApplicationPage() {
       <aside className="submit-featured-path" aria-labelledby="submission-featured-title">
         <div>
           <h2 id="submission-featured-title">Want a featured placement?</h2>
-          <p>Priority review and 30 days at the top of the directory are available for eligible apps.</p>
+          <p>We’re still working out how featuring should work on Macify.</p>
         </div>
-        <Link href="/get-featured">Get featured <ArrowUpRight aria-hidden="true" size={18} /></Link>
+        <Link className="site-action site-action--primary" href="/get-featured">About featuring <ArrowUpRight aria-hidden="true" size={18} /></Link>
       </aside>
     </PublicContentPage>
   );
