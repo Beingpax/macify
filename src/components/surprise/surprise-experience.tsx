@@ -125,7 +125,10 @@ function SurprisePlayground({
       ) : null}
 
       {isSelectionStable && (
-        <SurprisePreview application={selectedApplication} />
+        <SurprisePreview
+          application={selectedApplication}
+          iconUrl={selectedApplication.icon ? createFloorIconUrl(selectedApplication.icon.storageKey) : null}
+        />
       )}
     </>
   );

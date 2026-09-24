@@ -23,6 +23,7 @@ type AppIconSize = 44 | 50 | 56 | 58 | 60 | 66 | 76 | 96;
 export function PublicAppIcon({
   app,
   decorative = false,
+  iconUrl,
   mediaScope = "public",
   loading,
   size = 56,
@@ -31,6 +32,7 @@ export function PublicAppIcon({
 }: {
   app: Pick<PublicAppSummary, "name" | "icon">;
   decorative?: boolean;
+  iconUrl?: string | null;
   mediaScope?: "public" | "dashboard";
   loading?: "eager" | "lazy";
   size?: AppIconSize;
@@ -45,8 +47,8 @@ export function PublicAppIcon({
       loading={loading ?? "lazy"}
       quality={88}
       sizes={sizes}
-      src={mediaUrl(app.icon.storageKey, mediaScope)}
-      unoptimized={mediaScope === "dashboard"}
+      src={iconUrl ?? mediaUrl(app.icon.storageKey, mediaScope)}
+      unoptimized={mediaScope === "dashboard" || Boolean(iconUrl)}
       width={size}
     />
   ) : (

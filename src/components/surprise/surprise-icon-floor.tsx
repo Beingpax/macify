@@ -215,6 +215,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
 
     function resizeCanvas() {
       const previousSize = size;
+      const previousDpr = dpr;
       dpr = Math.min(window.devicePixelRatio || 1, 2);
       width = canvas.clientWidth;
       height = canvas.clientHeight;
@@ -233,7 +234,9 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         Matter.Body.scale(iconBodies[selectedIcon.index], nextScale / selectedIcon.scale, nextScale / selectedIcon.scale);
         selectedIcon.scale = nextScale;
       }
-      for (let index = 0; index < items.length; index += 1) renderIconSprite(index);
+      if (previousDpr !== dpr || iconSprites.some((sprite) => sprite === null)) {
+        for (let index = 0; index < items.length; index += 1) renderIconSprite(index);
+      }
       needsRedraw = true;
       scheduleAnimationFrame();
     }
@@ -242,12 +245,20 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
 
     const imageQueue = items.flatMap((item, index) => item.src ? [index] : []);
     let nextImageQueueIndex = 0;
+    let activeIconRequestCount = 0;
+
+    function fillIconRequestSlots() {
+      if (isDisposed || document.hidden) return;
+      while (activeIconRequestCount < MAX_CONCURRENT_ICON_REQUESTS && nextImageQueueIndex < imageQueue.length) {
+        loadNextQueuedIcon();
+      }
+    }
 
     function loadNextQueuedIcon() {
-      if (isDisposed) return;
       const index = imageQueue[nextImageQueueIndex];
       if (index === undefined) return;
       nextImageQueueIndex += 1;
+      activeIconRequestCount += 1;
 
       const image = new Image();
       image.decoding = "async";
@@ -257,23 +268,24 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         image.onload = null;
         image.onerror = null;
         if (isDisposed) return;
+        activeIconRequestCount -= 1;
         renderIconSprite(index);
-        loadNextQueuedIcon();
+        fillIconRequestSlots();
       };
       image.onerror = () => {
         image.onload = null;
         image.onerror = null;
         iconImages[index] = null;
         if (isDisposed) return;
+        activeIconRequestCount -= 1;
         renderIconSprite(index);
-        loadNextQueuedIcon();
+        fillIconRequestSlots();
       };
       image.src = items[index].src ?? "";
     }
 
-    for (let index = 0; index < Math.min(MAX_CONCURRENT_ICON_REQUESTS, imageQueue.length); index += 1) {
-      loadNextQueuedIcon();
-    }
+    document.addEventListener("visibilitychange", fillIconRequestSlots);
+    fillIconRequestSlots();
 
     function createIconBody(index: number) {
       return Matter.Bodies.rectangle(
@@ -790,6 +802,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       canvas.removeEventListener("keydown", handleKeyboardSelection);
       window.removeEventListener("blur", handleWindowBlur);
       window.removeEventListener("resizeCanvas", handleWindowResize);
+      document.removeEventListener("visibilitychange", fillIconRequestSlots);
       for (const image of iconImages) {
         if (!image) continue;
         image.onload = null;

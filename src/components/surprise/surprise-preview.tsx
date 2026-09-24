@@ -6,7 +6,13 @@ import { PublicAppIcon } from "@/components/public-app-card";
 import type { SurpriseApplication } from "@/lib/surprise-data";
 import { pricingLabels } from "@/lib/pricing";
 
-export function SurprisePreview({ application }: { application: SurpriseApplication }) {
+export function SurprisePreview({
+  application,
+  iconUrl,
+}: {
+  application: SurpriseApplication;
+  iconUrl: string | null;
+}) {
   const categoryNames = application.categories.map((category) => category.name).join(", ") || "Not listed";
   const billingLabel = application.billingType === "subscription" ? "Subscription"
     : application.billingType === "one_time" ? "One-time purchase" : null;
@@ -20,7 +26,7 @@ export function SurprisePreview({ application }: { application: SurpriseApplicat
             <p>{application.tagline}</p>
           </div>
           <span className="surprise-preview-icon">
-            <PublicAppIcon app={application} decorative size={56} />
+            <PublicAppIcon app={application} decorative iconUrl={iconUrl} size={56} />
           </span>
         </div>
 
