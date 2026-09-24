@@ -43,22 +43,22 @@ function applicationSlugFromPath(path: string) {
 }
 
 async function getApplicationVisits(startAt?: string, endAt?: string): Promise<ApplicationVisit[] | null> {
-  const { env } = await getCloudflareContext({ async: true });
-  const apiKey = (env as DataFastEnv).DATAFAST_API_KEY;
-  if (!apiKey) return null;
-
-  const query = new URLSearchParams({
-    fields: "path,visitors",
-    filter_page: "contains:/apps/",
-    limit: "1000",
-    timezone: "UTC",
-  });
-  if (startAt && endAt) {
-    query.set("startAt", startAt);
-    query.set("endAt", endAt);
-  }
-
   try {
+    const { env } = await getCloudflareContext({ async: true });
+    const apiKey = (env as DataFastEnv).DATAFAST_API_KEY;
+    if (!apiKey) return null;
+
+    const query = new URLSearchParams({
+      fields: "path,visitors",
+      filter_page: "contains:/apps/",
+      limit: "1000",
+      timezone: "UTC",
+    });
+    if (startAt && endAt) {
+      query.set("startAt", startAt);
+      query.set("endAt", endAt);
+    }
+
     const response = await fetch(`${pagesAnalyticsUrl}?${query}`, {
       headers: {
         Accept: "application/json",

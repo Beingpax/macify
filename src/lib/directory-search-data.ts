@@ -42,7 +42,7 @@ function searchConditions(filters?: DirectorySearchFilters) {
 async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view: HomepageView = "hot") {
   const database = await getDatabase();
   const latestPublishedAt = new Date(Date.now() - latestApplicationWindowMs);
-  const [fallbackRecords, analyticsVisits, trendingFeaturedRecords] = await Promise.all([
+  const [fallbackRecords, analyticsVisits] = await Promise.all([
     view === "latest"
       ? database.select(cardFields).from(apps)
         .where(and(
@@ -55,17 +55,6 @@ async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view
         eq(apps.status, "published"), isNull(apps.deletedAt), inArray(apps.slug, HOMEPAGE_APPLICATION_SLUGS),
       )).limit(homepageApplicationLimit),
     view === "trending" ? getTrendingApplicationVisits() : Promise.resolve([]),
-    view === "trending"
-      ? database.select(cardFields).from(apps)
-        .where(and(
-          eq(apps.status, "published"),
-          isNull(apps.deletedAt),
-          inArray(apps.slug, HOMEPAGE_APPLICATION_SLUGS),
-          eq(apps.isFeatured, true),
-        ))
-        .orderBy(desc(apps.featuredAt), desc(apps.isEditorsPick), asc(apps.name), asc(apps.id))
-        .limit(homepageApplicationLimit)
-      : Promise.resolve([]),
   ]);
 
   let records = fallbackRecords;
@@ -109,7 +98,9 @@ async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view
   const promotedRecords = view === "hot"
     ? fallbackRecords.filter(({ isFeatured, isEditorsPick }) => isFeatured || isEditorsPick)
     : view === "trending"
-      ? trendingFeaturedRecords
+      ? fallbackRecords
+        .filter(({ isFeatured }) => isFeatured)
+        .sort((left, right) => homepageApplicationPosition(left.slug) - homepageApplicationPosition(right.slug))
       : [];
   const promotedIds = new Set(promotedRecords.map(({ id }) => id));
   let directoryRecords = [
