@@ -39,7 +39,15 @@ export async function prepareMediaSource(
     } as const;
   }
 
-  const optimized = await optimizeImage(images, role, source);
+  let optimized: Awaited<ReturnType<typeof optimizeImage>>;
+  try {
+    optimized = await optimizeImage(images, role, source);
+  } catch (error) {
+    return {
+      ok: false,
+      error: error instanceof Error ? error.message : "The image could not be processed.",
+    } as const;
+  }
   const digestInput = optimized.bytes.buffer.slice(
     optimized.bytes.byteOffset,
     optimized.bytes.byteOffset + optimized.bytes.byteLength,

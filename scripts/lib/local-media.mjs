@@ -13,14 +13,29 @@ const allowedImageTypes = {
     "image/jpeg",
     "image/webp",
     "image/avif",
+    "image/svg+xml",
+    "image/gif",
+    "image/bmp",
+    "image/tiff",
     "image/vnd.microsoft.icon",
     "image/x-icon",
   ]),
-  preview_image: new Set(["image/png", "image/jpeg", "image/webp", "image/avif"]),
-  screenshot: new Set(["image/png", "image/jpeg", "image/webp", "image/avif"]),
+  preview_image: new Set(["image/png", "image/jpeg", "image/webp", "image/avif", "image/svg+xml", "image/gif", "image/bmp", "image/tiff"]),
+  screenshot: new Set(["image/png", "image/jpeg", "image/webp", "image/avif", "image/svg+xml", "image/gif", "image/bmp", "image/tiff"]),
 };
+const formatsRequiringRasterization = new Set(["image/svg+xml", "image/gif", "image/bmp", "image/tiff"]);
 function bytesStartWith(bytes, signature, offset = 0) {
   return signature.every((value, index) => bytes[offset + index] === value);
+}
+
+function looksLikeSvg(bytes) {
+  const prefix = new TextDecoder().decode(bytes.slice(0, 4096))
+    .replace(/^\uFEFF/, "")
+    .trimStart()
+    .replace(/^<\?xml\b[^>]*\?>\s*/i, "")
+    .replace(/^(?:<!--[^]*?-->\s*)*/i, "")
+    .replace(/^<!doctype\s+svg\b[^>]*>\s*/i, "");
+  return /^<svg(?:\s|>)/i.test(prefix);
 }
 
 export function matchesFileSignature(bytes, mimeType) {
@@ -35,6 +50,16 @@ export function matchesFileSignature(bytes, mimeType) {
     case "image/avif":
       return bytesStartWith(bytes, [0x66, 0x74, 0x79, 0x70], 4)
         && ["avif", "avis"].includes(new TextDecoder().decode(bytes.slice(8, 12)));
+    case "image/svg+xml":
+      return looksLikeSvg(bytes);
+    case "image/gif":
+      return bytesStartWith(bytes, [0x47, 0x49, 0x46, 0x38, 0x37, 0x61])
+        || bytesStartWith(bytes, [0x47, 0x49, 0x46, 0x38, 0x39, 0x61]);
+    case "image/bmp":
+      return bytesStartWith(bytes, [0x42, 0x4d]);
+    case "image/tiff":
+      return bytesStartWith(bytes, [0x49, 0x49, 0x2a, 0x00])
+        || bytesStartWith(bytes, [0x4d, 0x4d, 0x00, 0x2a]);
     case "image/vnd.microsoft.icon":
     case "image/x-icon":
       return bytesStartWith(bytes, [0x00, 0x00, 0x01, 0x00]);
@@ -121,7 +146,7 @@ export async function fetchRemoteImage(value, role = "icon") {
     const response = await fetch(url, {
       redirect: "manual",
       signal: AbortSignal.timeout(12_000),
-      headers: { Accept: "image/avif,image/webp,image/png,image/jpeg" },
+      headers: { Accept: "image/avif,image/webp,image/png,image/jpeg,image/svg+xml,image/gif,image/bmp,image/tiff" },
     });
     if ([301, 302, 303, 307, 308].includes(response.status)) {
       const location = response.headers.get("location");
@@ -134,8 +159,8 @@ export async function fetchRemoteImage(value, role = "icon") {
     const mimeType = response.headers.get("content-type")?.split(";", 1)[0].trim().toLowerCase() ?? "";
     if (!allowedImageTypes[role]?.has(mimeType)) {
       throw new Error(role === "icon"
-        ? "The URL does not return a supported PNG, JPEG, WebP, AVIF, or ICO image."
-        : "The URL does not return a supported PNG, JPEG, WebP, or AVIF image.");
+        ? "The URL does not return a supported PNG, JPEG, WebP, AVIF, SVG, GIF, BMP, TIFF, or ICO image."
+        : "The URL does not return a supported PNG, JPEG, WebP, AVIF, SVG, GIF, BMP, or TIFF image.");
     }
     if (Number(response.headers.get("content-length") ?? 0) > MAX_UPLOAD_BYTES) {
       throw new Error("The remote image is larger than the 10 MB limit.");
@@ -177,7 +202,7 @@ export async function prepareLocalMedia(appId, role, sourceUrl, altText) {
   const pipeline = sharp(source.bytes, { animated: false }).rotate();
   const metadata = await pipeline.metadata();
   const transformed = await pipeline.clone().webp({ quality: role === "icon" ? 92 : 88 }).toBuffer({ resolveWithObject: true });
-  const useWebp = transformed.data.byteLength < source.bytes.byteLength;
+  const useWebp = formatsRequiringRasterization.has(source.mimeType) || transformed.data.byteLength < source.bytes.byteLength;
   const bytes = new Uint8Array(useWebp ? transformed.data : source.bytes);
   const mimeType = useWebp ? "image/webp" : source.mimeType;
   const fileName = useWebp ? webpFileName(source.fileName) : source.fileName;

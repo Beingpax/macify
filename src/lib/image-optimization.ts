@@ -12,6 +12,8 @@ type OptimizedImage = ImageSource & {
   optimized: boolean;
 };
 
+const formatsRequiringRasterization = new Set(["image/svg+xml", "image/gif", "image/bmp", "image/tiff"]);
+
 function imageStream(bytes: Uint8Array) {
   const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength) as ArrayBuffer;
   return new Blob([buffer]).stream();
@@ -28,6 +30,9 @@ export async function optimizeImage(
   source: ImageSource,
 ): Promise<OptimizedImage> {
   if (!images) {
+    if (formatsRequiringRasterization.has(source.mimeType)) {
+      throw new Error("This image format requires conversion before it can be stored.");
+    }
     return { ...source, width: null, height: null, optimized: false };
   }
   try {
@@ -43,7 +48,7 @@ export async function optimizeImage(
         anim: false,
       });
     const optimizedBytes = new Uint8Array(await transformed.response().arrayBuffer());
-    if (optimizedBytes.byteLength >= source.bytes.byteLength) {
+    if (!formatsRequiringRasterization.has(source.mimeType) && optimizedBytes.byteLength >= source.bytes.byteLength) {
       return { ...source, ...dimensions, optimized: false };
     }
     return {
@@ -59,6 +64,9 @@ export async function optimizeImage(
       role,
       message: error instanceof Error ? error.message : "Unknown image transformation error",
     }));
+    if (formatsRequiringRasterization.has(source.mimeType)) {
+      throw new Error("The source image could not be converted to WebP.");
+    }
     return { ...source, width: null, height: null, optimized: false };
   }
 }

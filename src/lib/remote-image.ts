@@ -34,7 +34,7 @@ export async function fetchRemoteImage(value: string, role: MediaRole) {
       const response = await fetch(url, {
         redirect: "manual",
         signal: AbortSignal.timeout(12_000),
-        headers: { Accept: "image/avif,image/webp,image/png,image/jpeg" },
+        headers: { Accept: "image/avif,image/webp,image/png,image/jpeg,image/svg+xml,image/gif,image/bmp,image/tiff" },
       });
       if ([301, 302, 303, 307, 308].includes(response.status)) {
         const location = response.headers.get("location");
@@ -49,8 +49,8 @@ export async function fetchRemoteImage(value: string, role: MediaRole) {
         return {
           ok: false,
           error: role === "icon"
-            ? "The URL does not return a supported PNG, JPEG, WebP, AVIF, or ICO image."
-            : "The URL does not return a supported PNG, JPEG, WebP, or AVIF image.",
+            ? "The URL does not return a supported PNG, JPEG, WebP, AVIF, SVG, GIF, BMP, TIFF, or ICO image."
+            : "The URL does not return a supported PNG, JPEG, WebP, AVIF, SVG, GIF, BMP, or TIFF image.",
         } as const;
       }
       if (Number(response.headers.get("content-length") ?? 0) > MAX_UPLOAD_BYTES) return { ok: false, error: "The remote image is larger than the 10 MB limit." } as const;

@@ -2,6 +2,16 @@ function bytesStartWith(bytes: Uint8Array, signature: number[], offset = 0) {
   return signature.every((value, index) => bytes[offset + index] === value);
 }
 
+function looksLikeSvg(bytes: Uint8Array) {
+  const prefix = new TextDecoder().decode(bytes.slice(0, 4096))
+    .replace(/^\uFEFF/, "")
+    .trimStart()
+    .replace(/^<\?xml\b[^>]*\?>\s*/i, "")
+    .replace(/^(?:<!--[^]*?-->\s*)*/i, "")
+    .replace(/^<!doctype\s+svg\b[^>]*>\s*/i, "");
+  return /^<svg(?:\s|>)/i.test(prefix);
+}
+
 export function matchesFileSignature(bytes: Uint8Array, mimeType: string) {
   switch (mimeType) {
     case "image/png":
@@ -12,6 +22,16 @@ export function matchesFileSignature(bytes: Uint8Array, mimeType: string) {
       return bytesStartWith(bytes, [0x52, 0x49, 0x46, 0x46]) && bytesStartWith(bytes, [0x57, 0x45, 0x42, 0x50], 8);
     case "image/avif":
       return bytesStartWith(bytes, [0x66, 0x74, 0x79, 0x70], 4) && ["avif", "avis"].includes(new TextDecoder().decode(bytes.slice(8, 12)));
+    case "image/svg+xml":
+      return looksLikeSvg(bytes);
+    case "image/gif":
+      return bytesStartWith(bytes, [0x47, 0x49, 0x46, 0x38, 0x37, 0x61])
+        || bytesStartWith(bytes, [0x47, 0x49, 0x46, 0x38, 0x39, 0x61]);
+    case "image/bmp":
+      return bytesStartWith(bytes, [0x42, 0x4d]);
+    case "image/tiff":
+      return bytesStartWith(bytes, [0x49, 0x49, 0x2a, 0x00])
+        || bytesStartWith(bytes, [0x4d, 0x4d, 0x00, 0x2a]);
     case "image/vnd.microsoft.icon":
     case "image/x-icon":
       return bytesStartWith(bytes, [0x00, 0x00, 0x01, 0x00]);
@@ -21,7 +41,17 @@ export function matchesFileSignature(bytes: Uint8Array, mimeType: string) {
 }
 
 export function detectImageMimeType(bytes: Uint8Array) {
-  for (const mimeType of ["image/png", "image/jpeg", "image/webp", "image/avif", "image/vnd.microsoft.icon"] as const) {
+  for (const mimeType of [
+    "image/png",
+    "image/jpeg",
+    "image/webp",
+    "image/avif",
+    "image/svg+xml",
+    "image/gif",
+    "image/bmp",
+    "image/tiff",
+    "image/vnd.microsoft.icon",
+  ] as const) {
     if (matchesFileSignature(bytes, mimeType)) return mimeType;
   }
   return null;
