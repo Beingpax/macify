@@ -56,7 +56,7 @@ export function DictationGuide({ apps, reviewedAt }: { apps: DictationApp[]; rev
           <ul>{editorial.strengths.map((strength) => <li key={strength}>{strength}</li>)}</ul>
           <h3>What to consider</h3>
           {editorial.considerations.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          <a aria-label={`Visit ${app.name} official site (opens in a new tab)`} className="application-website site-action site-action--primary" data-outbound-app={app.slug} data-outbound-kind="app-website" data-outbound-placement="dictation-guide" href={editorial.sourceUrl} rel="noopener" target="_blank">
+          <a aria-label={`Visit ${app.name} official site (opens in a new tab)`} className="application-website site-action site-action--primary" href={editorial.sourceUrl} rel="noreferrer" target="_blank">
             Visit site
             <ExternalLink aria-hidden="true" size={19} strokeWidth={1.8} />
           </a>

@@ -31,7 +31,7 @@ export default function PrivacyPage() {
       </PublicContentSection>
 
       <PublicContentSection id="analytics" title="Analytics and cookies">
-        <p>Macify uses an analytics service to measure page visits, referral sources, the approximate number of visitors online, clicks to outside websites, and deal-code copy actions. The outbound-click event records the destination domain and the Macify page where the click happened, plus an app or deal identifier when relevant, without including the full destination URL in that event. The current analytics setup uses a cookie to recognize a browser and processes IP address, browser and device information, approximate country, referrer, and page activity.</p>
+        <p>Macify uses analytics to measure page visits, referral sources, approximate visitors online, outside-link clicks, and deal-code copies. The service uses a cookie and processes standard technical information, including the destination of clicked outside links.</p>
         <p>Analytics is not connected to a public Macify account, used for personalized advertising, or sold. You can block or delete analytics cookies in your browser without losing access to the directory.</p>
       </PublicContentSection>
 

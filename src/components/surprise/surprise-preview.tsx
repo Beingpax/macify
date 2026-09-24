@@ -52,11 +52,8 @@ export function SurprisePreview({
           <a
             aria-label={`Visit ${application.name} site (opens in a new tab)`}
             className="site-action site-action--secondary"
-            data-outbound-app={application.slug}
-            data-outbound-kind="app-website"
-            data-outbound-placement="surprise"
             href={application.websiteUrl}
-            rel="noopener"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Site <ExternalLink aria-hidden="true" size={16} />

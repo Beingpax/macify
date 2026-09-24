@@ -120,7 +120,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
             </div>
             <div className="deal-card-actions">
               {deal.code && <DealCodeButton appSlug={deal.slug} code={deal.code} />}
-              <a aria-label={`Visit ${deal.name} site (opens in a new tab)`} className="deal-card-action site-action site-action--primary" data-outbound-app={deal.slug} data-outbound-kind="deal" data-outbound-placement="deals-card" href={deal.url} rel="noopener" target="_blank">
+              <a aria-label={`Visit ${deal.name} site (opens in a new tab)`} className="deal-card-action site-action site-action--primary" href={deal.url} rel="noopener noreferrer" target="_blank">
                 Visit site <ExternalLink aria-hidden="true" size={17} />
               </a>
             </div>
@@ -139,8 +139,6 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
             <a
               aria-label="Subscribe to Macify on Substack (opens in a new tab)"
               className="deal-card-action site-action site-action--secondary"
-              data-outbound-kind="newsletter"
-              data-outbound-placement="deals-card"
               href="https://macify.substack.com"
               rel="noopener noreferrer"
               target="_blank"

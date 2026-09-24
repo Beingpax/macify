@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Script from "next/script";
 import { InlineAppSearch } from "@/components/site/inline-app-search";
-import { OutboundLinkTracker } from "@/components/site/outbound-link-tracker";
 import { PublicHeaderNavigation } from "@/components/site/public-header-navigation";
 import { PublicFooter } from "@/components/site/public-footer";
 import { VoiceInkOfferBanner } from "@/components/site/voiceink-offer-banner";
@@ -28,7 +27,6 @@ export async function PublicShell({ children, showFooter = true }: { children: R
         src="/js/script.js"
         strategy="afterInteractive"
       />
-      <OutboundLinkTracker />
       <a className="skip-link" href="#main-content">Skip to content</a>
       {process.env.NODE_ENV === "development" && <VoiceInkOfferBanner />}
       <PublicHeader />
