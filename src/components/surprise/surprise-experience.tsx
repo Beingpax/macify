@@ -41,14 +41,15 @@ function SurprisePlayground({
   const currentSelectionIndexRef = useRef<number | null>(selectedApplicationIndex);
   const [arrivedApplicationIndex, setArrivedApplicationIndex] = useState<number | null>(null);
   const [isPileSettled, setIsPileSettled] = useState(false);
+  const [hasLoadedIcon, setHasLoadedIcon] = useState(false);
+  const [iconLoadProblem, setIconLoadProblem] = useState<"failed" | "missing" | null>(null);
+  const [floorAttempt, setFloorAttempt] = useState(0);
   const selectedApplication = selectedApplicationIndex === null
     ? null
     : applications[selectedApplicationIndex];
   const isSelectionStable = selectedApplication !== null
     && arrivedApplicationIndex === selectedApplicationIndex;
   const floorIcons = useMemo(() => applications.map((application) => ({
-    id: application.id,
-    name: application.name,
     src: application.icon ? createFloorIconUrl(application.icon.storageKey) : null,
   })), [applications]);
 
@@ -73,16 +74,31 @@ function SurprisePlayground({
   }, [getSelectionAnchor]);
 
   const selectRandomApplication = useCallback(() => {
-    if (!applications.length) return;
-    selectApplication(Math.floor(Math.random() * applications.length));
-  }, [applications.length, selectApplication]);
+    const loadedIndexes = floorApiRef.current?.getLoadedIndexes() ?? [];
+    if (!loadedIndexes.length) return;
+    selectApplication(loadedIndexes[Math.floor(Math.random() * loadedIndexes.length)]);
+  }, [selectApplication]);
 
   const handleFloorReady = useCallback(() => {
+    setHasLoadedIcon(true);
+    setIconLoadProblem(null);
     setIsPileSettled(false);
     setArrivedApplicationIndex(null);
     const selectedIndex = currentSelectionIndexRef.current;
     if (selectedIndex !== null) floorApiRef.current?.select(selectedIndex, getSelectionAnchor);
   }, [getSelectionAnchor]);
+  const handleIconLoadError = useCallback((canRetry: boolean) => {
+    setIconLoadProblem(canRetry ? "failed" : "missing");
+  }, []);
+  const retryIconLoading = useCallback(() => {
+    currentSelectionIndexRef.current = null;
+    setSelectedApplicationIndex(null);
+    setArrivedApplicationIndex(null);
+    setIsPileSettled(false);
+    setHasLoadedIcon(false);
+    setIconLoadProblem(null);
+    setFloorAttempt((attempt) => attempt + 1);
+  }, []);
   const handleFloorSettled = useCallback(() => setIsPileSettled(true), []);
   const handleApplicationArrived = useCallback((applicationIndex: number) => {
     if (currentSelectionIndexRef.current === applicationIndex) {
@@ -98,14 +114,45 @@ function SurprisePlayground({
   return (
     <>
       <SurpriseIconFloor
+        key={floorAttempt}
         apiRef={floorApiRef}
         items={floorIcons}
         onPick={selectApplication}
         onReady={handleFloorReady}
+        onIconLoadError={handleIconLoadError}
         onSettled={handleFloorSettled}
         onArrived={handleApplicationArrived}
         onDeparted={handleApplicationDeparted}
       />
+
+      {!hasLoadedIcon && (
+        <div className="surprise-icon-loading">
+          <div className="surprise-icon-loading-copy">
+            {iconLoadProblem === "failed" ? (
+              <>
+                <h2>App icons didn’t load.</h2>
+                <p>Try again to open the surprise room.</p>
+                <button onClick={retryIconLoading} type="button">Retry loading icons</button>
+              </>
+            ) : iconLoadProblem === "missing" ? (
+              <>
+                <h2>No app icons are available.</h2>
+                <p>The surprise room needs app icons to work.</p>
+                <Link href="/">Explore the directory instead</Link>
+              </>
+            ) : (
+              <h2>Loading app icons</h2>
+            )}
+          </div>
+        </div>
+      )}
+
+      {hasLoadedIcon && iconLoadProblem && (
+        <div className="surprise-icon-retry" role="status">
+          <span>{iconLoadProblem === "failed" ? "Some icons couldn’t load." : "Some apps have no icon."}</span>
+          {iconLoadProblem === "failed" && <button onClick={retryIconLoading} type="button">Try again</button>}
+        </div>
+      )}
 
       <h1 className="sr-only surprise-desktop-title">Explore Mac apps</h1>
       <p aria-live="polite" className="sr-only">

@@ -5,7 +5,7 @@
 "use client";
 
 import Matter from "matter-js";
-import { memo, useEffect, useRef } from "react";
+import { memo, useEffect, useRef, useState } from "react";
 
 const FRAME_DURATION_MS = 1000 / 60;
 const PHYSICS_SUBSTEPS_PER_FRAME = 3;
@@ -18,10 +18,9 @@ const SELECTION_VELOCITY_DAMPING = 0.00046;
 const SELECTION_ROTATION_STRENGTH = 0.0000043;
 const SELECTION_ROTATION_DAMPING = 0.00026;
 const MAX_CONCURRENT_ICON_REQUESTS = 6;
+const ICON_LOAD_TIMEOUT_MS = 30_000;
 
 type FloorIcon = {
-  id: string;
-  name: string;
   src: string | null;
 };
 
@@ -30,6 +29,7 @@ type CanvasPoint = { x: number; y: number };
 export type SurpriseFloorApi = {
   select: (index: number, getSelectionAnchor: () => CanvasPoint) => void;
   release: () => void;
+  getLoadedIndexes: () => number[];
 };
 
 type SurpriseIconFloorProps = {
@@ -37,6 +37,7 @@ type SurpriseIconFloorProps = {
   apiRef: React.RefObject<SurpriseFloorApi | null>;
   onPick: (index: number) => void;
   onReady?: () => void;
+  onIconLoadError?: (canRetry: boolean) => void;
   onSettled?: () => void;
   onArrived?: (index: number) => void;
   onDeparted?: (index: number) => void;
@@ -55,26 +56,18 @@ type SelectedIconState = {
 
 type IconSprite = HTMLCanvasElement | null;
 
-function createIconInitials(name: string) {
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((word) => word[0])
-    .join("")
-    .toUpperCase();
-}
-
 export const SurpriseIconFloor = memo(function SurpriseIconFloor({
   items,
   apiRef,
   onPick,
   onReady,
+  onIconLoadError,
   onSettled,
   onArrived,
   onDeparted,
 }: SurpriseIconFloorProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const canvasNode = canvasRef.current;
@@ -109,11 +102,11 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     } | null = null;
     let needsRedraw = true;
     let isDisposed = false;
+    let hasLoadedIcon = false;
     let animationFrameId = 0;
     let previousFrameTimestamp = performance.now();
     let accumulatedPhysicsTime = 0;
     let nextIconDropTimestamp = performance.now() + 160;
-    let nextIconDropIndex = 0;
     let lastBoundaryCheckTimestamp = 0;
     let lastSettleCheckTimestamp = 0;
     let quietStartTimestamp: number | null = null;
@@ -121,13 +114,18 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     const iconImages: Array<HTMLImageElement | null> = items.map(() => null);
     const iconSprites: IconSprite[] = items.map(() => null);
     const iconBodies: Matter.Body[] = [];
+    const loadedIconIndexes: number[] = [];
+    const waitingToDropIndexes: number[] = [];
+    const iconRequestTimeoutIds = new Set<number>();
 
     function scheduleAnimationFrame() {
-      if (isDisposed || animationFrameId !== 0) return;
+      if (isDisposed || !hasLoadedIcon || animationFrameId !== 0) return;
       animationFrameId = requestAnimationFrame(runAnimationFrame);
     }
 
     function renderIconSprite(index: number) {
+      const image = iconImages[index];
+      if (!image?.complete || image.naturalWidth === 0) return;
       const pixels = Math.max(1, Math.round(Math.max(size, 96) * dpr));
       const sprite = document.createElement("canvas");
       sprite.width = pixels;
@@ -142,33 +140,22 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       spriteContext.fillStyle = "#ffffff";
       spriteContext.fillRect(0, 0, pixels, pixels);
 
-      const image = iconImages[index];
-      if (image?.complete && image.naturalWidth > 0) {
-        const sourceSide = Math.min(image.naturalWidth, image.naturalHeight);
-        const sourceX = (image.naturalWidth - sourceSide) / 2;
-        const sourceY = (image.naturalHeight - sourceSide) / 2;
-        spriteContext.imageSmoothingEnabled = true;
-        spriteContext.imageSmoothingQuality = "high";
-        spriteContext.drawImage(
-          image,
-          sourceX,
-          sourceY,
-          sourceSide,
-          sourceSide,
-          0,
-          0,
-          pixels,
-          pixels,
-        );
-      } else {
-        spriteContext.fillStyle = "#55224f";
-        spriteContext.fillRect(0, 0, pixels, pixels);
-        spriteContext.fillStyle = "#ffffff";
-        spriteContext.font = `800 ${Math.round(pixels * 0.29)}px -apple-system, BlinkMacSystemFont, sans-serif`;
-        spriteContext.textAlign = "center";
-        spriteContext.textBaseline = "middle";
-        spriteContext.fillText(createIconInitials(items[index].name), pixels / 2, pixels / 2 + pixels * 0.015);
-      }
+      const sourceSide = Math.min(image.naturalWidth, image.naturalHeight);
+      const sourceX = (image.naturalWidth - sourceSide) / 2;
+      const sourceY = (image.naturalHeight - sourceSide) / 2;
+      spriteContext.imageSmoothingEnabled = true;
+      spriteContext.imageSmoothingQuality = "high";
+      spriteContext.drawImage(
+        image,
+        sourceX,
+        sourceY,
+        sourceSide,
+        sourceSide,
+        0,
+        0,
+        pixels,
+        pixels,
+      );
 
       spriteContext.strokeStyle = "rgba(20, 25, 32, 0.12)";
       spriteContext.lineWidth = Math.max(1, pixels * 0.012);
@@ -234,8 +221,8 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         Matter.Body.scale(iconBodies[selectedIcon.index], nextScale / selectedIcon.scale, nextScale / selectedIcon.scale);
         selectedIcon.scale = nextScale;
       }
-      if (previousDpr !== dpr || iconSprites.some((sprite) => sprite === null)) {
-        for (let index = 0; index < items.length; index += 1) renderIconSprite(index);
+      if (previousDpr !== dpr) {
+        for (const index of loadedIconIndexes) renderIconSprite(index);
       }
       needsRedraw = true;
       scheduleAnimationFrame();
@@ -246,9 +233,53 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     const imageQueue = items.flatMap((item, index) => item.src ? [index] : []);
     let nextImageQueueIndex = 0;
     let activeIconRequestCount = 0;
+    const missingIconCount = items.length - imageQueue.length;
+    let failedIconRequestCount = 0;
+
+    function haveIconRequestsFinished() {
+      return activeIconRequestCount === 0 && nextImageQueueIndex === imageQueue.length;
+    }
+
+    function completeIconRequest(index: number, loaded: boolean) {
+      activeIconRequestCount -= 1;
+      if (isDisposed) return;
+      if (loaded) {
+        renderIconSprite(index);
+        if (iconSprites[index]) {
+          loadedIconIndexes.push(index);
+          if (!hasLoadedIcon) {
+            hasLoadedIcon = true;
+            setIsReady(true);
+            previousFrameTimestamp = performance.now();
+            onReady?.();
+          }
+          if (isCeilingClosed) {
+            isCeilingClosed = false;
+            rebuildBoundaryBodies();
+          }
+          if (reducedMotion) {
+            layoutIconsWithoutMotion();
+            redrawCanvas();
+          } else {
+            if (waitingToDropIndexes.length === 0) nextIconDropTimestamp = performance.now() + 160;
+            waitingToDropIndexes.push(index);
+          }
+          scheduleAnimationFrame();
+        } else {
+          failedIconRequestCount += 1;
+        }
+      } else {
+        failedIconRequestCount += 1;
+      }
+      fillIconRequestSlots();
+      if (haveIconRequestsFinished()) {
+        if (failedIconRequestCount + missingIconCount > 0) onIconLoadError?.(failedIconRequestCount > 0);
+        scheduleAnimationFrame();
+      }
+    }
 
     function fillIconRequestSlots() {
-      if (isDisposed || document.hidden) return;
+      if (isDisposed) return;
       while (activeIconRequestCount < MAX_CONCURRENT_ICON_REQUESTS && nextImageQueueIndex < imageQueue.length) {
         loadNextQueuedIcon();
       }
@@ -262,35 +293,29 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
 
       const image = new Image();
       image.decoding = "async";
-      image.fetchPriority = "low";
       iconImages[index] = image;
-      image.onload = () => {
+      const timeoutId = window.setTimeout(() => finishRequest(false), ICON_LOAD_TIMEOUT_MS);
+      iconRequestTimeoutIds.add(timeoutId);
+      function finishRequest(loaded: boolean) {
+        if (!iconRequestTimeoutIds.delete(timeoutId)) return;
+        window.clearTimeout(timeoutId);
         image.onload = null;
         image.onerror = null;
-        if (isDisposed) return;
-        activeIconRequestCount -= 1;
-        renderIconSprite(index);
-        fillIconRequestSlots();
-      };
-      image.onerror = () => {
-        image.onload = null;
-        image.onerror = null;
-        iconImages[index] = null;
-        if (isDisposed) return;
-        activeIconRequestCount -= 1;
-        renderIconSprite(index);
-        fillIconRequestSlots();
-      };
+        if (!loaded) {
+          image.removeAttribute("src");
+          iconImages[index] = null;
+        }
+        completeIconRequest(index, loaded);
+      }
+      image.onload = () => finishRequest(image.naturalWidth > 0);
+      image.onerror = () => finishRequest(false);
       image.src = items[index].src ?? "";
     }
-
-    document.addEventListener("visibilitychange", fillIconRequestSlots);
-    fillIconRequestSlots();
 
     function createIconBody(index: number) {
       return Matter.Bodies.rectangle(
         width * (0.1 + 0.8 * ((index * 0.61803398875) % 1)),
-        -size * (1.4 + (index % 12) * 1.3),
+        -size * (1.3 + (index % 3) * 0.35),
         size,
         size,
         {
@@ -343,7 +368,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     }
 
     function selectIcon(index: number, getSelectionAnchor: () => CanvasPoint) {
-      if (!iconBodies[index]) return;
+      if (!iconSprites[index] || !iconBodies[index]) return;
       if (selectedIcon?.index === index) {
         selectedIcon.getSelectionAnchor = getSelectionAnchor;
         return;
@@ -504,15 +529,16 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     function layoutIconsWithoutMotion() {
       const spacingX = size * 0.82;
       const columns = Math.max(1, Math.floor(Math.max(size, width - size * 0.5) / spacingX));
-      const visibleColumns = Math.min(columns, iconBodies.length);
+      const visibleColumns = Math.min(columns, loadedIconIndexes.length);
       const startX = (width - Math.max(0, visibleColumns - 1) * spacingX) / 2;
 
-      for (let index = 0; index < iconBodies.length; index += 1) {
+      for (let position = 0; position < loadedIconIndexes.length; position += 1) {
+        const index = loadedIconIndexes[position];
         activateIconBody(index);
         const body = iconBodies[index];
         if (selectedIcon?.index === index) continue;
-        const row = Math.floor(index / columns);
-        const column = index % columns;
+        const row = Math.floor(position / columns);
+        const column = position % columns;
         const stagger = row % 2 === 0 ? 0 : spacingX * 0.22;
         Matter.Body.setPosition(body, {
           x: Math.min(width - size / 2, Math.max(size / 2, startX + column * spacingX + stagger)),
@@ -533,16 +559,10 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         Matter.Sleeping.set(body, true);
       }
       needsRedraw = true;
-      nextIconDropIndex = iconBodies.length;
-    }
-
-    if (reducedMotion) {
-      layoutIconsWithoutMotion();
-      redrawCanvas();
     }
 
     function runAnimationFrame(now: number) {
-      if (isDisposed) return;
+      if (isDisposed || !hasLoadedIcon) return;
       animationFrameId = 0;
       const elapsed = Math.min(now - previousFrameTimestamp, 120);
       previousFrameTimestamp = now;
@@ -550,9 +570,10 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       if (!reducedMotion) {
         const gap = Math.min(50, 3600 / Math.max(1, iconBodies.length));
         let poured = 0;
-        while (nextIconDropIndex < iconBodies.length && now >= nextIconDropTimestamp && poured < 12) {
-          activateIconBody(nextIconDropIndex);
-          nextIconDropIndex += 1;
+        while (waitingToDropIndexes.length > 0 && now >= nextIconDropTimestamp && poured < 12) {
+          const index = waitingToDropIndexes.shift();
+          if (index === undefined) break;
+          activateIconBody(index);
           nextIconDropTimestamp = Math.max(nextIconDropTimestamp + gap, now - 100);
           poured += 1;
           needsRedraw = true;
@@ -583,7 +604,9 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
 
       if (now - lastBoundaryCheckTimestamp > 1000) {
         lastBoundaryCheckTimestamp = now;
-        if (!isCeilingClosed && activeBodyIndexes.size === iconBodies.length && [...activeBodyIndexes].every((index) => iconBodies[index].position.y > size)) {
+        if (!isCeilingClosed && haveIconRequestsFinished()
+          && activeBodyIndexes.size === loadedIconIndexes.length
+          && [...activeBodyIndexes].every((index) => iconBodies[index].position.y > size)) {
           isCeilingClosed = true;
           rebuildBoundaryBodies();
         }
@@ -603,17 +626,19 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         }
       }
 
-      if (!hasNotifiedSettled && activeBodyIndexes.size === iconBodies.length && now - lastSettleCheckTimestamp >= 120) {
+      const allLoadedIconsHaveEntered = activeBodyIndexes.size === loadedIconIndexes.length;
+      if (!hasNotifiedSettled && haveIconRequestsFinished() && allLoadedIconsHaveEntered
+        && now - lastSettleCheckTimestamp >= 120) {
         lastSettleCheckTimestamp = now;
-        const quiet = iconBodies.every((body) => body.isSleeping || (
-          Matter.Body.getSpeed(body) < 0.15
-          && Math.abs(Matter.Body.getAngularVelocity(body)) < 0.015
+        const quiet = [...activeBodyIndexes].every((index) => iconBodies[index].isSleeping || (
+          Matter.Body.getSpeed(iconBodies[index]) < 0.15
+          && Math.abs(Matter.Body.getAngularVelocity(iconBodies[index])) < 0.015
         ));
         if (quiet) {
           quietStartTimestamp ??= now;
           if (now - quietStartTimestamp >= 700) {
             hasNotifiedSettled = true;
-            for (const body of iconBodies) Matter.Sleeping.set(body, true);
+            for (const index of activeBodyIndexes) Matter.Sleeping.set(iconBodies[index], true);
             onSettled?.();
           }
         } else {
@@ -627,11 +652,16 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       }
 
       const moving = [...activeBodyIndexes].some((index) => !iconBodies[index].isSleeping);
-      if (nextIconDropIndex < iconBodies.length || !hasNotifiedSettled || activePointerDrag || moving || needsRedraw) scheduleAnimationFrame();
+      const awaitingSettle = !hasNotifiedSettled && haveIconRequestsFinished() && allLoadedIconsHaveEntered;
+      if (waitingToDropIndexes.length > 0 || awaitingSettle || activePointerDrag || moving || needsRedraw) scheduleAnimationFrame();
     }
 
     scheduleAnimationFrame();
-    apiRef.current = { select: selectIcon, release: releaseSelectedIcon };
+    apiRef.current = {
+      select: selectIcon,
+      release: releaseSelectedIcon,
+      getLoadedIndexes: () => [...loadedIconIndexes],
+    };
 
     function getCanvasPointFromPointer(event: PointerEvent): CanvasPoint {
       const rect = canvas.getBoundingClientRect();
@@ -639,7 +669,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     }
 
     function handlePointerDown(event: PointerEvent) {
-      if (activePointerDrag || !event.isPrimary || event.button !== 0) return;
+      if (!hasLoadedIcon || activePointerDrag || !event.isPrimary || event.button !== 0) return;
       const point = getCanvasPointFromPointer(event);
       const found = Matter.Query.point([...activeBodyIndexes].map((index) => iconBodies[index]), point);
       const body = found.find((candidate) => selectedIcon?.index === iconBodies.indexOf(candidate)) ?? found.at(-1);
@@ -743,10 +773,10 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     }
 
     function handleKeyboardSelection(event: KeyboardEvent) {
-      if (event.key !== "Enter" && event.key !== " ") return;
+      if (!hasLoadedIcon || (event.key !== "Enter" && event.key !== " ")) return;
       event.preventDefault();
-      if (!iconBodies.length) return;
-      const choices = activeBodyIndexes.size ? [...activeBodyIndexes] : [0];
+      const choices = [...activeBodyIndexes];
+      if (!choices.length) return;
       const current = selectedIcon?.index ?? -1;
       const next = choices.find((index) => index > current) ?? choices[0];
       if (next !== undefined) onPick(next);
@@ -763,6 +793,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       resizeFrame = requestAnimationFrame(() => {
         resizeFrame = 0;
         resizeCanvas();
+        if (!hasLoadedIcon) return;
         if (reducedMotion) {
           layoutIconsWithoutMotion();
         } else {
@@ -787,10 +818,13 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     canvas.addEventListener("keydown", handleKeyboardSelection);
     window.addEventListener("blur", handleWindowBlur);
     window.addEventListener("resizeCanvas", handleWindowResize);
-    onReady?.();
+    if (imageQueue.length === 0) onIconLoadError?.(false);
+    else fillIconRequestSlots();
 
     return () => {
       isDisposed = true;
+      for (const timeoutId of iconRequestTimeoutIds) window.clearTimeout(timeoutId);
+      iconRequestTimeoutIds.clear();
       cancelAnimationFrame(animationFrameId);
       cancelAnimationFrame(resizeFrame);
       finishPointerDrag();
@@ -802,7 +836,6 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       canvas.removeEventListener("keydown", handleKeyboardSelection);
       window.removeEventListener("blur", handleWindowBlur);
       window.removeEventListener("resizeCanvas", handleWindowResize);
-      document.removeEventListener("visibilitychange", fillIconRequestSlots);
       for (const image of iconImages) {
         if (!image) continue;
         image.onload = null;
@@ -812,7 +845,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       Matter.Composite.clear(engine.world, false);
       Matter.Engine.clear(engine);
     };
-  }, [apiRef, items, onPick, onReady, onSettled, onArrived, onDeparted]);
+  }, [apiRef, items, onPick, onReady, onIconLoadError, onSettled, onArrived, onDeparted]);
 
   return (
     <canvas
@@ -820,7 +853,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       className="surprise-floor"
       ref={canvasRef}
       role="button"
-      tabIndex={items.length ? 0 : -1}
+      tabIndex={isReady && items.length ? 0 : -1}
     />
   );
 });
