@@ -15,7 +15,6 @@ import "../styles/public/application-detail.css";
 import "../styles/public/markdown.css";
 import "../styles/public/policy.css";
 import "../styles/public/submission.css";
-import "../styles/public/featured-program.css";
 import "../styles/public/featured-thanks.css";
 import "../styles/public/editorial-policy.css";
 import "../styles/public/responsive-tablet.css";

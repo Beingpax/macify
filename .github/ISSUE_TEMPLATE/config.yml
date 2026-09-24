@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Propose a new application
-    url: https://github.com/Beingpax/macify/blob/main/CONTRIBUTING.md
-    about: Follow the contribution guide and open a pull request without creating an issue first.
+    url: https://github.com/Beingpax/macify/new/main/catalog/apps
+    about: Add one application manifest and submit it as a pull request.
   - name: Report a security vulnerability
     url: https://github.com/Beingpax/macify/security/policy
     about: Report security vulnerabilities privately rather than in a public issue.

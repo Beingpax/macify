@@ -214,8 +214,6 @@
   .related-application-shelf::-webkit-scrollbar { display: none; }
   .related-application-shelf > a { min-width: 5.1rem; flex-direction: column; align-items: flex-start; gap: 0.7rem; scroll-snap-align: start; }
   .related-application-shelf strong { max-width: 5.2rem; font-size: 0.8rem; }
-  .policy-page { width: min(calc(100% - 2rem), 62rem); }
-  .policy-intro h1 { font-size: clamp(3.2rem, 16vw, 4.8rem); }
 }
 
 @media (max-width: 52rem) {
