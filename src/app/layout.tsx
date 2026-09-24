@@ -15,6 +15,7 @@ import "../styles/public/application-detail.css";
 import "../styles/public/markdown.css";
 import "../styles/public/policy.css";
 import "../styles/public/featured-unavailable.css";
+import "../styles/public/deals-how.css";
 import "../styles/public/submission.css";
 import "../styles/public/editorial-policy.css";
 import "../styles/public/responsive-tablet.css";
@@ -23,6 +24,7 @@ import "../styles/public/footer-variants.css";
 import "../styles/public/editorial-guides.css";
 import "../styles/public/surprise.css";
 import "../styles/public/site-actions.css";
+import "../styles/public/voiceink-offer-banner.css";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -77,8 +79,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
+        width: 1730,
+        height: 909,
         alt: "Mac apps worth making room for. — Macify",
       },
     ],

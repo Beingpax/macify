@@ -1,0 +1,28 @@
+.deals-how-copy {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid #cfd2d8;
+}
+
+.deals-how-copy p {
+  max-width: 65rem;
+  margin: 0 auto;
+  color: #414954;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.deals-how-copy p + p { margin-top: 1.5rem; }
+
+.deals-how-copy a {
+  color: var(--play-blue);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 0.18rem;
+}
+
+.deals-how-copy .deals-how-disclaimer {
+  margin-top: 2.5rem;
+  color: var(--public-text-secondary);
+  font-size: 0.9rem;
+}

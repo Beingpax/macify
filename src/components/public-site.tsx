@@ -3,6 +3,7 @@ import Script from "next/script";
 import { InlineAppSearch } from "@/components/inline-app-search";
 import { PublicHeaderNavigation } from "@/components/public-header-navigation";
 import { PublicFooter } from "@/components/public-footer";
+import { VoiceInkOfferBanner } from "@/components/voiceink-offer-banner";
 
 function PublicHeader() {
   return (
@@ -27,6 +28,7 @@ export async function PublicShell({ children, showFooter = true }: { children: R
         strategy="lazyOnload"
       />
       <a className="skip-link" href="#main-content">Skip to content</a>
+      {process.env.NODE_ENV === "development" && <VoiceInkOfferBanner />}
       <PublicHeader />
       <div className="public-page-content">{children}</div>
       {showFooter && <PublicFooter />}

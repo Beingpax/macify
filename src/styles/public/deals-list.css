@@ -124,6 +124,8 @@
   row-gap: 2.25rem;
 }
 
+.deals-empty-explainer { width: fit-content; margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.35rem; color: var(--play-blue); font-size: 0.86rem; font-weight: 800; text-decoration: underline; text-underline-offset: 0.2rem; }
+
 .deal-card {
   --deal-card-background: #ffdc28;
   min-width: 0;
@@ -147,6 +149,27 @@
 .deal-card:nth-child(10n + 8) { --deal-card-background: #dec9ff; }
 .deal-card:nth-child(10n + 9) { --deal-card-background: #ffb9ad; }
 .deal-card:nth-child(10n) { --deal-card-background: #afece6; }
+
+.deal-card.deal-card--coming { --deal-card-background: #e5e9ff; }
+
+.deal-card-app .deal-card-coming-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 0.85rem;
+  color: #fff;
+  background: var(--public-ink);
+}
+
+.deal-card-app h3 {
+  margin: 0;
+  color: var(--public-ink-strong);
+  font-size: 1.05rem;
+  font-weight: 850;
+  line-height: 1.25;
+}
 
 .deal-card-app {
   min-width: 0;
@@ -332,4 +355,3 @@
 .deal-card-action:hover,
 .deal-card-action:focus-visible { background: color-mix(in oklch, var(--public-ink) 90%, white); }
 .deal-card-action:active { background: color-mix(in oklch, var(--public-ink) 95%, white); transform: translateY(0.12rem) scale(0.98); }
-

@@ -29,7 +29,7 @@ export function PublicContentHero({
   children,
   className,
 }: {
-  kicker: string;
+  kicker?: string;
   title: string;
   children: ReactNode;
   className?: string;
@@ -37,7 +37,7 @@ export function PublicContentHero({
   return (
     <header className={classNames("public-content-hero", className)}>
       <div className="public-content-hero-title">
-        <p>{kicker}</p>
+        {kicker ? <p>{kicker}</p> : null}
         <h1>{title}</h1>
       </div>
       <div className="public-content-hero-copy">{children}</div>

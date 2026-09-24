@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Check, CircleHelp, Minus, X } from "lucide-react";
+import { Check, CircleHelp, ExternalLink, Minus, X } from "lucide-react";
 import { PublicAppIcon, type PublicAppSummary } from "@/components/public-app-card";
 import { dictationComparisonRows, dictationEditorial, dictationRecommendations, type ComparisonValue, type DictationAppSlug } from "@/content/blog/posts/best-dictation-apps-for-mac/comparison";
 
@@ -56,9 +56,9 @@ export function DictationGuide({ apps, reviewedAt }: { apps: DictationApp[]; rev
           <ul>{editorial.strengths.map((strength) => <li key={strength}>{strength}</li>)}</ul>
           <h3>What to consider</h3>
           {editorial.considerations.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          <a aria-label={`Visit ${app.name} official site`} className="application-website site-action site-action--primary" href={editorial.sourceUrl} rel="noreferrer" target="_blank">
+          <a aria-label={`Visit ${app.name} official site (opens in a new tab)`} className="application-website site-action site-action--primary" href={editorial.sourceUrl} rel="noreferrer" target="_blank">
             Visit site
-            <ArrowUpRight aria-hidden="true" size={19} strokeWidth={1.8} />
+            <ExternalLink aria-hidden="true" size={19} strokeWidth={1.8} />
           </a>
         </div>
       </section>; })}

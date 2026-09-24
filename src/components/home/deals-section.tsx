@@ -1,4 +1,4 @@
-import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ExternalLink, Mail, TicketPercent } from "lucide-react";
 import Link from "next/link";
 import { DealCodeButton } from "@/components/deal-code-button";
 import { PublicAppIcon } from "@/components/public-app-card";
@@ -21,6 +21,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
               </Link>
               <a className="deals-empty-surprise site-action site-action--secondary" href="/surprise">Surprise me</a>
             </div>
+            <Link className="deals-empty-explainer" href="/deals/how-it-works">How Macify deals work <ArrowUpRight aria-hidden="true" size={16} /></Link>
           </div>
           <div aria-hidden="true" className="deals-empty-art">
             <span className="deals-empty-ticket deals-empty-ticket-1"><i /></span>
@@ -119,12 +120,36 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
             </div>
             <div className="deal-card-actions">
               {deal.code && <DealCodeButton code={deal.code} />}
-              <a className="deal-card-action site-action site-action--primary" href={deal.url} rel="noopener noreferrer" target="_blank">
-                Visit site <ArrowUpRight aria-hidden="true" size={17} />
+              <a aria-label={`Visit ${deal.name} site (opens in a new tab)`} className="deal-card-action site-action site-action--primary" href={deal.url} rel="noopener noreferrer" target="_blank">
+                Visit site <ExternalLink aria-hidden="true" size={17} />
               </a>
             </div>
           </article>
         ))}
+        <article className="deal-card deal-card--coming">
+          <div className="deal-card-app">
+            <span aria-hidden="true" className="deal-card-coming-icon"><TicketPercent size={30} /></span>
+            <div>
+              <h3>More deals are coming soon.</h3>
+              <span>New offers will appear here soon</span>
+            </div>
+          </div>
+          <p className="deal-card-description">We’re working with Mac app developers on more discounts for Macify readers.</p>
+          <div className="deal-card-actions">
+            <a
+              aria-label="Subscribe to Macify on Substack (opens in a new tab)"
+              className="deal-card-action site-action site-action--secondary"
+              href="https://macify.substack.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Get deals <Mail aria-hidden="true" size={17} />
+            </a>
+            <Link className="deal-card-action site-action site-action--primary" href="/deals/how-it-works">
+              How it works <ArrowRight aria-hidden="true" size={17} />
+            </Link>
+          </div>
+        </article>
       </div>
     </section>
   );
