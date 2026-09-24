@@ -18,11 +18,11 @@
   grid-template-columns: auto minmax(0, 1fr);
   align-items: start;
   gap: clamp(0.7rem, 1.7vw, 1.25rem);
-  font-family: var(--font-caprasimo), sans-serif;
-  font-size: clamp(3.5rem, 9vw, 6rem);
+  font-family: var(--public-display-font);
+  font-size: var(--public-page-title-size);
   font-weight: 400;
-  line-height: 0.88;
-  letter-spacing: -0.04em;
+  line-height: 0.94;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -64,7 +64,7 @@
 
 .directory-heading h2 {
   margin: 0;
-  font-family: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
+  font-family: var(--public-display-font);
   font-size: clamp(2.15rem, 3.4vw, 3.15rem);
   font-weight: 400;
   line-height: 0.9;

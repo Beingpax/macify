@@ -7,7 +7,6 @@
     grid-template-columns: minmax(0, 1.05fr) minmax(22rem, 0.8fr);
     gap: 2rem;
   }
-  .deals-hero-copy h1 > span { font-size: clamp(3rem, 6.3vw, 4.35rem); }
   .deals-ticket-stage { padding-right: 1rem; }
   .deals-ticket {
     --ticket-padding-block: 0.9rem;
@@ -40,6 +39,7 @@
 }
 
 @media (max-width: 52rem) {
+  .public-site { --public-page-inset: 2rem; }
   .public-header {
     min-height: 4.6rem;
     padding: 0.55rem 0 0.25rem;
@@ -50,8 +50,8 @@
     max-width: none;
     min-height: 3.2rem;
     margin: 0 auto;
-    grid-template-areas: "menu";
-    grid-template-columns: auto;
+    display: flex;
+    justify-content: center;
     gap: 0.5rem;
     padding: 0;
     border: 0;
@@ -60,83 +60,52 @@
     box-shadow: none;
   }
   .public-menu {
-    grid-area: menu;
-    position: static;
-    display: block;
+    display: contents;
   }
-  .public-menu-trigger {
-    width: 3rem;
-    height: 3rem;
-    display: grid;
-    place-items: center;
-    position: relative;
-    z-index: calc(var(--z-menu) + 1);
-    border: 1px solid #e1e3e7;
-    border-radius: 50%;
-    color: #151a21;
-    background: var(--public-canvas);
-    box-shadow: 0 0.3rem 0.8rem rgb(24 31 43 / 0.08);
-  }
-  .public-menu-trigger:focus-visible { outline: 0.2rem solid rgb(20 87 255 / 0.28); outline-offset: 0.15rem; }
-  .public-menu-content {
-    width: min(26rem, calc(100vw - 2rem));
-    max-height: calc(100dvh - 5.5rem);
-    padding: 0.75rem;
-    position: fixed;
-    top: 4.65rem;
-    left: 1rem;
-    z-index: var(--z-menu);
-    display: none;
-    grid-template-areas: "navigation";
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    border: 1px solid #dfe2e7;
-    border-radius: 0.9rem;
-    background: var(--public-canvas);
-    box-shadow: 0 0.5rem 0.8rem rgb(24 31 43 / 0.12);
-  }
-  .public-menu-content[data-open="true"] { display: grid; }
+  .public-menu-content { display: contents; }
   .public-community-links {
     display: none;
   }
-  .public-brand-pill { min-height: 2.5rem; padding: 0.2rem 0.75rem; }
   .public-navigation {
-    width: 100%;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-    grid-area: navigation;
+    width: min(100%, 22rem);
+    min-height: 3.2rem;
+    margin-inline: auto;
+    padding: 0.2rem;
     display: grid;
-    align-content: start;
-    grid-template-columns: 1fr;
-    gap: 0.25rem;
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.12rem;
   }
-  .public-home-link { display: flex !important; }
   .public-navigation a,
   .public-navigation .public-surprise-link,
   .public-navigation .public-submit-link {
     width: 100%;
-    min-height: 3rem;
-    padding: 0.55rem 0.7rem;
-    justify-content: flex-start;
-    border-radius: 0.55rem;
-    font-size: 1rem;
-  }
-  .public-navigation .public-submit-link {
-    min-height: 3rem;
-    margin-top: 0.5rem;
-    grid-column: 1;
+    min-height: 2.75rem;
+    padding: 0;
     justify-content: center;
     border-radius: 999px;
-    font-size: 1rem;
   }
-  .public-surprise-link .public-navigation-icon { display: none; }
+  .public-navigation .public-submit-link {
+    min-height: 2.75rem;
+  }
+  .public-navigation a[aria-current="page"]:not(.public-submit-link) {
+    color: #1457ff;
+    background: #eaf0ff;
+  }
+  .public-navigation a:focus-visible {
+    outline: 0.16rem solid #1457ff;
+    outline-offset: 0.1rem;
+  }
   .public-navigation-icon { width: 1.35rem; height: 1.35rem; display: grid; }
-  .public-navigation-label { width: auto; height: auto; position: static; overflow: visible; clip: auto; white-space: normal; }
+  .public-navigation-icon svg { width: 1.35rem; height: 1.35rem; stroke-width: 2; }
+  .public-navigation-label {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
   .public-header-actions { display: none; }
   .inline-app-search { width: 3rem; }
   .inline-app-search:focus-within { width: min(58vw, 16rem); }
@@ -179,7 +148,6 @@
     gap: 3.5rem;
   }
   .deals-hero-copy { width: min(100%, 42rem); }
-  .deals-hero-copy h1 > span { font-size: clamp(3.3rem, 10vw, 4.9rem); }
   .deals-ticket-stage { width: min(100%, 34rem); }
   .deals-ticket-arrow { display: none; }
   .deals-featured { grid-template-columns: 1fr; }

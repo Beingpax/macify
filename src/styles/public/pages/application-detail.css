@@ -65,11 +65,14 @@
 .application-title-icon:active { transform: rotate(0deg) scale(0.98); }
 
 .application-title-name {
+  min-width: 0;
+  max-width: 100%;
   font-size: var(--application-title-size);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: -0.04em;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
 }
 
 .application-title-tagline {
@@ -437,4 +440,3 @@
 /* Keep a stable width only when analytics content is available. */
 .application-visitors-slot { display: inline-flex; min-width: 8.5rem; min-height: 1.5rem; }
 .application-visitors-slot:empty { display: none; }
-

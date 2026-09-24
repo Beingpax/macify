@@ -22,9 +22,9 @@
 .public-content-hero-title > p {
   width: fit-content;
   margin: 0 auto 1.15rem;
-  color: #555e6b;
-  font-family: var(--font-caveat), cursive;
-  font-size: clamp(1.35rem, 1.75vw, 1.65rem);
+  color: var(--public-note-color);
+  font-family: var(--public-note-font);
+  font-size: var(--public-note-size);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.005em;
@@ -32,11 +32,11 @@
 
 .public-content-hero h1 {
   margin: 0;
-  font-family: var(--font-caprasimo), Georgia, serif;
-  font-size: clamp(3.8rem, 8vw, 5.8rem);
+  font-family: var(--public-display-font);
+  font-size: var(--public-page-title-size);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.035em;
+  line-height: 0.94;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -73,8 +73,8 @@
 
 .public-content-section-heading h2 {
   margin: 0;
-  font-family: var(--font-caprasimo), Georgia, serif;
-  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-family: var(--public-display-font);
+  font-size: var(--public-section-title-size);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.035em;
@@ -168,11 +168,11 @@
 .public-content-feature h2 {
   max-width: 15ch;
   margin: 0;
-  font-family: var(--font-caprasimo), Georgia, serif;
+  font-family: var(--public-display-font);
   font-size: clamp(2.6rem, 5vw, 4.8rem);
   font-weight: 400;
   line-height: 1.05;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
   text-wrap: balance;
 }
 
@@ -220,7 +220,7 @@
   background: var(--play-yellow);
 }
 
-.public-content-cta h2 { margin: 0; font-family: var(--font-caprasimo), Georgia, serif; font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.035em; }
+.public-content-cta h2 { margin: 0; font-family: var(--public-display-font); font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 400; line-height: 1.1; letter-spacing: -0.025em; text-wrap: balance; }
 .public-content-cta p { max-width: 42rem; margin: 0.85rem 0 0; color: #39360f; font-family: inherit; font-size: 0.95rem; line-height: 1.6; }
 
 .public-content-cta > a {
@@ -251,11 +251,12 @@
 }
 .submit-featured-path h2 {
   margin: 0;
-  font-family: var(--font-caprasimo), Georgia, serif;
+  font-family: var(--public-display-font);
   font-size: clamp(1.8rem, 3vw, 2.7rem);
   font-weight: 400;
   line-height: 1.1;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 .submit-featured-path p { max-width: 42rem; margin: 0.85rem 0 0; color: #414954; line-height: 1.6; }
 .submit-featured-path > a {
@@ -281,7 +282,6 @@
   .public-content-shell { width: min(calc(100% - 2rem), 78rem); }
   .public-content-page { padding-top: 0.75rem; }
   .public-content-hero { padding-top: 2.75rem; }
-  .public-content-hero h1 { font-size: clamp(3.5rem, 18vw, 5rem); }
   .submission-facts { grid-template-columns: 1fr; gap: 0.8rem; }
   .submission-facts li { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: 0.5rem; }
   .submission-facts span { margin-top: 0; }

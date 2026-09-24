@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-.surprise-small-screen-copy { width: min(100%, 34rem); }
+.surprise-small-screen-copy { width: min(100%, 38rem); }
 
 .surprise-empty-state {
   min-height: inherit;
@@ -36,8 +36,8 @@
 
 .surprise-empty-state h1 {
   margin: 0;
-  font-family: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
-  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-family: var(--public-display-font);
+  font-size: var(--public-page-title-size);
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.025em;
@@ -70,11 +70,12 @@
 .surprise-empty-state a:focus-visible { outline: 0.18rem solid var(--play-blue); outline-offset: 0.18rem; }
 
 .surprise-small-screen h1 {
+  max-width: 100%;
   margin: 0;
-  font-family: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
-  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-family: var(--public-display-font);
+  font-size: var(--public-page-title-size);
   font-weight: 400;
-  line-height: 0.95;
+  line-height: 0.98;
   letter-spacing: -0.025em;
   text-wrap: balance;
 }
@@ -82,14 +83,14 @@
 .surprise-small-screen h1 span { color: var(--play-blue); }
 
 .surprise-small-screen p {
-  max-width: 26rem;
+  max-width: min(100%, 32rem);
   margin: 1.5rem auto 0;
-  color: #555e6b;
-  font-family: var(--font-caveat), cursive;
-  font-size: clamp(1.4rem, 5.5vw, 1.9rem);
+  color: var(--public-note-color);
+  font-family: var(--public-note-font);
+  font-size: var(--public-note-size);
   font-weight: 500;
   line-height: 1.15;
-  text-wrap: pretty;
+  text-wrap: balance;
 }
 
 .surprise-small-screen a {

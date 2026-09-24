@@ -111,6 +111,6 @@
   .voiceink-offer-copy p { max-width: 42rem; }
 }
 
-@media (max-width: 38rem) {
+@media (max-width: 52rem) {
   .voiceink-offer-banner { display: none; }
 }

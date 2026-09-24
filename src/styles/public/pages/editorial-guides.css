@@ -120,4 +120,33 @@
 @media(max-width:38rem){.blog-list-page{width:min(calc(100% - 2rem),var(--content-width));padding-top:3rem}.blog-list-heading h1{font-size:clamp(1.9rem,10vw,2.5rem)}.blog-post-grid{grid-template-columns:1fr;gap:3rem}.blog-post-card>p{min-height:0}}
 @media(prefers-reduced-motion:reduce){.blog-post-preview img{transition:none}.blog-post-card:hover .blog-post-preview img{transform:none}}
 
+/* Public page titles follow the homepage display type and responsive scale. */
+.blog-list-heading h1,
+.blog-index-hero h1,
+.dictation-guide .dictation-hero-final h1 {
+  font-family: var(--public-display-font);
+  font-size: var(--public-page-title-size);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.dictation-guide .best-apps-meta {
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-width: none;
+}
+
+.dictation-guide .best-apps-meta > * { flex: 0 0 auto; white-space: nowrap; }
+.dictation-guide .best-apps-meta::-webkit-scrollbar { display: none; }
+.dictation-guide .best-apps-meta:focus-visible { outline: 0.18rem solid var(--play-blue); outline-offset: 0.18rem; }
+
+@media (max-width: 52rem) {
+  .dictation-guide .best-apps-meta { justify-content: safe center; }
+}
+
 .comparison-ledger .comparison-app-name{display:inline-flex;align-items:center;gap:.7rem}.comparison-ledger .comparison-app-name .public-app-icon{width:2.15rem;height:2.15rem;flex:0 0 auto;box-shadow:none}.dictation-review>header{scroll-margin-top:7rem}

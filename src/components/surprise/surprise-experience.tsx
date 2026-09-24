@@ -214,8 +214,8 @@ export function SurpriseExperience({ applications }: { applications: SurpriseApp
           )}
           <div className="surprise-small-screen">
             <div className="surprise-small-screen-copy">
-              <h1>The surprise room needs<br /><span>more space.</span></h1>
-              <p>Open this on a bigger screen, like your Mac or iPad, to play in the surprise room.</p>
+              <h1>The surprise room needs <span>more space.</span></h1>
+              <p>Open the surprise room on your Mac or iPad.</p>
               <Link className="site-action site-action--primary" href="/">Explore the apps instead <ArrowRight aria-hidden="true" size={18} /></Link>
             </div>
           </div>

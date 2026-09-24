@@ -30,6 +30,12 @@
   --font-body: var(--font-urbanist), "Avenir Next", sans-serif;
   --font-reading: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: var(--font-urbanist), "Avenir Next", sans-serif;
+  --public-display-font: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
+  --public-note-font: var(--font-caveat), cursive;
+  --public-note-color: #555e6b;
+  --public-page-title-size: clamp(3.1rem, 9vw, 6rem);
+  --public-section-title-size: clamp(2rem, 4vw, 3.4rem);
+  --public-note-size: clamp(1.35rem, 1.75vw, 1.65rem);
   --play-blue: #1457ff;
   --play-orange: #ff5b27;
   --play-yellow: #ffdc28;
@@ -101,8 +107,6 @@
 
 .public-menu,
 .public-menu-content { display: contents; }
-
-.public-menu-trigger { display: none; }
 
 .public-community-links {
   grid-area: brand;
@@ -427,4 +431,3 @@
 }
 
 @keyframes search-spin { to { transform: rotate(360deg); } }
-

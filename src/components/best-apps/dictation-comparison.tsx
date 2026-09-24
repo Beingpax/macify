@@ -30,10 +30,9 @@ export function DictationGuide({ apps, reviewedAt }: { apps: DictationApp[]; rev
   return <div className="dictation-guide">
     <header className="best-apps-hero dictation-hero-quiet dictation-hero-final">
       <div className="best-apps-hero-copy">
-        <p className="best-apps-breadcrumb"><Link href="/">Mac apps</Link><span aria-hidden="true">/</span><Link href="/categories/dictation">Dictation</Link></p>
         <h1>Best dictation apps for Mac<span>.</span></h1>
         <p>Mac dictation apps differ widely in price, privacy, accuracy, and how they process your voice. We compared six options to explain these differences and help you choose the one that best fits the way you work.</p>
-        <div className="best-apps-meta"><span>{apps.length} apps compared</span><time dateTime="2026-09-08">Reviewed {reviewedAt}</time></div>
+        <div aria-label="Article details" className="best-apps-meta" tabIndex={0}><span>{apps.length} apps compared</span><time dateTime="2026-09-08">Reviewed {reviewedAt}</time></div>
       </div>
     </header>
 
