@@ -3,25 +3,33 @@
 import Image from "next/image";
 import Link from "next/link";
 import { TicketPercent, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 const dismissedKey = "macify:voiceink-offer:dismissed";
 
-export function VoiceInkOfferBanner() {
-  const [ready, setReady] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
+function subscribeToDismissal(onStoreChange: () => void) {
+  window.addEventListener("storage", onStoreChange);
+  return () => window.removeEventListener("storage", onStoreChange);
+}
 
-  useEffect(() => {
-    try {
-      setDismissed(window.localStorage.getItem(dismissedKey) === "1");
-    } catch {
-      // The banner still works when browser storage is unavailable.
-    }
-    setReady(true);
-  }, []);
+function getDismissedSnapshot() {
+  try {
+    return window.localStorage.getItem(dismissedKey) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function getServerSnapshot() {
+  return true;
+}
+
+export function VoiceInkOfferBanner() {
+  const dismissedInStorage = useSyncExternalStore(subscribeToDismissal, getDismissedSnapshot, getServerSnapshot);
+  const [dismissedThisPage, setDismissedThisPage] = useState(false);
 
   function dismissBanner() {
-    setDismissed(true);
+    setDismissedThisPage(true);
     try {
       window.localStorage.setItem(dismissedKey, "1");
     } catch {
@@ -29,7 +37,7 @@ export function VoiceInkOfferBanner() {
     }
   }
 
-  if (!ready || dismissed) return null;
+  if (dismissedInStorage || dismissedThisPage) return null;
 
   return (
     <aside aria-label="VoiceInk offer from Macify’s maker" className="voiceink-offer-banner">
