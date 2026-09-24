@@ -4,13 +4,11 @@ import { InlineAppSearch } from "@/components/inline-app-search";
 import { PublicHeaderNavigation } from "@/components/public-header-navigation";
 import { PublicFooter } from "@/components/public-footer";
 
-const contributionGuideUrl = "https://github.com/Beingpax/macify/blob/main/CONTRIBUTING.md";
-
 function PublicHeader() {
   return (
     <header className="public-header">
       <div className="public-header-inner">
-        <PublicHeaderNavigation contributionGuideUrl={contributionGuideUrl} />
+        <PublicHeaderNavigation />
         <div className="public-header-actions">
           <InlineAppSearch />
         </div>
@@ -19,7 +17,7 @@ function PublicHeader() {
   );
 }
 
-export async function PublicShell({ children }: { children: ReactNode }) {
+export async function PublicShell({ children, showFooter = true }: { children: ReactNode; showFooter?: boolean }) {
   return (
     <div className="public-site">
       <Script
@@ -31,7 +29,7 @@ export async function PublicShell({ children }: { children: ReactNode }) {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <PublicHeader />
       <div className="public-page-content">{children}</div>
-      <PublicFooter />
+      {showFooter && <PublicFooter />}
     </div>
   );
 }

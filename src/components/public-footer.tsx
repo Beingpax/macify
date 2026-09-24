@@ -8,7 +8,6 @@ function AppleBrandMark() {
   );
 }
 
-const contributionGuideUrl = "https://github.com/Beingpax/macify/blob/main/CONTRIBUTING.md";
 const githubUrl = "https://github.com/Beingpax/macify";
 const primaryLinks = [["Browse apps", "/#all-apps"], ["Deals", "/deals"], ["Categories", "/categories"], ["Blog", "/blog"], ["Surprise me", "/surprise"]] as const;
 const secondaryLinks = [["Home", "/"], ["Editorial policy", "/editorial-policy"], ["Privacy", "/privacy"]] as const;
@@ -21,7 +20,7 @@ export function PublicFooter() {
             <div className="curious-footer-heading"><p>Made for</p><h2><span className="curious-with-apple">curious <AppleBrandMark /></span><br />Mac people.</h2></div>
             <div className="curious-footer-links">
               <nav aria-label="Explore Macify"><span>Explore</span>{primaryLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
-              <nav aria-label="About Macify"><span>Macify</span>{secondaryLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}<Link href="/privacy#affiliate-links">Affiliate disclosure</Link><a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a><a href={contributionGuideUrl} target="_blank" rel="noreferrer">Submit an app</a></nav>
+              <nav aria-label="About Macify"><span>Macify</span>{secondaryLinks.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}<Link href="/privacy#affiliate-links">Affiliate disclosure</Link><a href={githubUrl} target="_blank" rel="noreferrer">GitHub</a><Link href="/submit">Submit an app</Link><Link href="/get-featured">Get featured</Link></nav>
             </div>
             <a className="curious-footer-surprise application-website" href="/surprise">Surprise me <AppleBrandMark /></a>
           </div>

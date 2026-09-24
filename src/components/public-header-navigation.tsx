@@ -5,9 +5,8 @@ import { Menu, Plus, Shuffle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { GitHubStarCount } from "@/components/github-star-count";
 import { LiveVisitorCount } from "@/components/live-visitor-count";
-import { MacifyLogo } from "@/components/macify-logo";
 
-export function PublicHeaderNavigation({ contributionGuideUrl }: { contributionGuideUrl: string }) {
+export function PublicHeaderNavigation() {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -43,7 +42,6 @@ export function PublicHeaderNavigation({ contributionGuideUrl }: { contributionG
 
       <div className="public-menu-content" data-open={open ? "true" : undefined} id="public-mobile-menu">
         <div className="public-community-links">
-          <MacifyLogo />
           <div className="public-brand-pill">
             <LiveVisitorCount />
           </div>
@@ -56,17 +54,15 @@ export function PublicHeaderNavigation({ contributionGuideUrl }: { contributionG
             <span className="public-navigation-icon" aria-hidden="true"><Shuffle size={15} /></span>
             <span className="public-navigation-label">Surprise me</span>
           </a>
-          <a
+          <Link
             className="public-submit-link"
-            href={contributionGuideUrl}
-            target="_blank"
-            rel="noreferrer"
+            href="/submit"
             onClick={() => setOpen(false)}
-            aria-label="Submit app on GitHub (opens in a new tab)"
+            aria-label="Read the application submission guidelines"
           >
             <span className="public-navigation-icon" aria-hidden="true"><Plus size={15} /></span>
             <span className="public-navigation-label">Submit app</span>
-          </a>
+          </Link>
         </nav>
       </div>
     </div>

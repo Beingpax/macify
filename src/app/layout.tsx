@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caprasimo, Caveat, Urbanist } from "next/font/google";
+import { Caprasimo, Caveat, Roboto, Urbanist } from "next/font/google";
 import "./globals.css";
 import "../styles/tokens.css";
 import "../styles/base.css";
@@ -14,10 +14,15 @@ import "../styles/public/directory-results.css";
 import "../styles/public/application-detail.css";
 import "../styles/public/markdown.css";
 import "../styles/public/policy.css";
+import "../styles/public/submission.css";
+import "../styles/public/featured-program.css";
+import "../styles/public/featured-thanks.css";
+import "../styles/public/editorial-policy.css";
 import "../styles/public/responsive-tablet.css";
 import "../styles/public/responsive-small.css";
 import "../styles/public/footer-variants.css";
 import "../styles/public/editorial-guides.css";
+import "../styles/public/surprise.css";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -39,6 +44,12 @@ const caveat = Caveat({
   weight: "500",
 });
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-policy",
+  weight: ["400", "700", "900"],
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://macify.app"),
   title: {
@@ -48,6 +59,14 @@ export const metadata: Metadata = {
   description:
     "A considered directory of useful macOS applications, with clear pricing, related alternatives, and practical editorial context.",
   applicationName: "Macify",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -75,7 +94,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html data-scroll-behavior="smooth" lang="en">
-      <body className={`${urbanist.variable} ${caprasimo.variable} ${caveat.variable}`}>{children}</body>
+      <body className={`${urbanist.variable} ${caprasimo.variable} ${caveat.variable} ${roboto.variable}`}>{children}</body>
     </html>
   );
 }

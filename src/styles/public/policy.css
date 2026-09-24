@@ -3,6 +3,7 @@
   width: min(calc(100% - var(--public-page-inset)), 55rem);
   margin-inline: auto;
   padding: 1.75rem 0 clamp(5rem, 9vw, 8rem);
+  font-family: var(--font-policy), Arial, sans-serif;
 }
 
 .policy-page > .back-link {
@@ -21,10 +22,10 @@
 .policy-intro h1 {
   margin: 0;
   font-family: var(--font-caprasimo), Georgia, serif;
-  font-size: clamp(3.4rem, 6vw, 4.9rem);
+  font-size: clamp(2.8rem, 5.5vw, 4.25rem);
   font-weight: 400;
-  line-height: 0.95;
-  letter-spacing: -0.035em;
+  line-height: 1;
+  letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
@@ -62,7 +63,7 @@
 .policy-content h2 {
   margin: 0 0 1.1rem;
   font-size: clamp(1.45rem, 2.4vw, 1.8rem);
-  font-weight: 850;
+  font-weight: 700;
   line-height: 1.15;
   letter-spacing: -0.025em;
   text-wrap: balance;
@@ -122,106 +123,11 @@
   background: var(--play-blue);
 }
 
-.featured-unavailable {
-  width: min(calc(100% - var(--public-page-inset)), 64rem);
-  min-height: 42rem;
-  margin-inline: auto;
-  padding: clamp(4rem, 9vw, 7rem) 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.featured-unavailable-mark {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  color: var(--play-blue);
-}
-
-.featured-unavailable-mark span {
-  width: clamp(2.25rem, 6vw, 4rem);
-  height: 0.18rem;
-  border-radius: 999px;
-  background: var(--play-orange);
-}
-
-.featured-unavailable-mark strong {
-  font-family: var(--font-caprasimo), var(--font-display);
-  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
-  font-weight: 400;
-  letter-spacing: -0.025em;
-  white-space: nowrap;
-}
-
-.featured-unavailable-note {
-  margin: 2.5rem 0 0.65rem;
-  color: #6b3971;
-  font-family: var(--font-caveat), cursive;
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
-  font-weight: 500;
-  line-height: 1.1;
-}
-
-.featured-unavailable h1 {
-  max-width: 12ch;
-  margin: 0;
-  color: #111318;
-  font-family: var(--font-caprasimo), var(--font-display);
-  font-size: clamp(3.3rem, 8vw, 6rem);
-  font-weight: 400;
-  line-height: 0.94;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
-}
-
-.featured-unavailable-copy {
-  max-width: 38rem;
-  margin: 1.5rem 0 0;
-  color: #535b66;
-  font-size: 1.05rem;
-  line-height: 1.65;
-  text-wrap: pretty;
-}
-
-.featured-unavailable-actions {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
-}
-
-.featured-unavailable-actions .primary-button {
-  border-color: #080a0d;
-  background: #080a0d;
-}
-
-.featured-unavailable-surprise {
-  min-height: 2.65rem;
-  padding: 0 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.45rem;
-  border: 1px solid #b9bec6;
-  border-radius: var(--radius-sm);
-  color: #17191e;
-  background: #fff;
-  font-size: 0.8rem;
-  font-weight: 650;
-}
-
-.featured-unavailable-surprise:hover { border-color: #17191e; }
-
 @media (max-width: 38rem) {
   .policy-page,
-  .not-found-page,
-  .featured-unavailable { width: min(calc(100% - 2rem), var(--content-width)); }
+  .not-found-page { width: min(calc(100% - 2rem), var(--content-width)); }
   .policy-intro h1 { font-size: clamp(3.1rem, 15vw, 4.5rem); }
   .policy-content { padding-top: 1.5rem; }
   .policy-content section { padding-bottom: 2.25rem; }
   .policy-content section + section { padding-top: 2.25rem; }
 }
-
