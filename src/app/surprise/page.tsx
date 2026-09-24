@@ -16,13 +16,16 @@ export const metadata: Metadata = {
   },
 };
 
-function shuffle<T>(items: T[]) {
-  const copy = [...items];
-  for (let index = copy.length - 1; index > 0; index -= 1) {
+function shuffleApplications<T>(applications: T[]) {
+  const shuffledApplications = [...applications];
+  for (let index = shuffledApplications.length - 1; index > 0; index -= 1) {
     const swapIndex = Math.floor(Math.random() * (index + 1));
-    [copy[index], copy[swapIndex]] = [copy[swapIndex], copy[index]];
+    [shuffledApplications[index], shuffledApplications[swapIndex]] = [
+      shuffledApplications[swapIndex],
+      shuffledApplications[index],
+    ];
   }
-  return copy;
+  return shuffledApplications;
 }
 
 const structuredData = {
@@ -35,7 +38,7 @@ const structuredData = {
 };
 
 export default async function SurprisePage() {
-  const applications: SurpriseApplication[] = shuffle(await getSurpriseApplications());
+  const applications: SurpriseApplication[] = shuffleApplications(await getSurpriseApplications());
 
   return (
     <PublicShell showFooter={false}>

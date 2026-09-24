@@ -24,6 +24,51 @@
 
 .surprise-small-screen-copy { width: min(100%, 34rem); }
 
+.surprise-empty-state {
+  min-height: inherit;
+  padding: clamp(3rem, 10vw, 5rem) var(--public-page-inset);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.surprise-empty-state-copy { width: min(100%, 34rem); }
+
+.surprise-empty-state h1 {
+  margin: 0;
+  font-family: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.surprise-empty-state p {
+  margin: 1.25rem 0 0;
+  color: #555e6b;
+  font-size: 1.05rem;
+}
+
+.surprise-empty-state a {
+  width: fit-content;
+  min-height: 2.75rem;
+  margin: 2rem auto 0;
+  padding: 0.7rem 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.55rem;
+  color: #fff;
+  background: #101217;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.surprise-empty-state a:hover { background: #252a31; }
+.surprise-empty-state a:focus-visible { outline: 0.18rem solid var(--play-blue); outline-offset: 0.18rem; }
+
 .surprise-small-screen h1 {
   margin: 0;
   font-family: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;

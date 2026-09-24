@@ -14,125 +14,158 @@ const SurpriseIconFloor = dynamic(
   { ssr: false },
 );
 
-function subscribeToScreenSize(onChange: () => void) {
-  const query = window.matchMedia(LARGE_SCREEN_QUERY);
-  query.addEventListener("change", onChange);
-  return () => query.removeEventListener("change", onChange);
+function subscribeToInteractiveFloorAvailability(onAvailabilityChange: () => void) {
+  const screenSizeQuery = window.matchMedia(LARGE_SCREEN_QUERY);
+  screenSizeQuery.addEventListener("change", onAvailabilityChange);
+  return () => screenSizeQuery.removeEventListener("change", onAvailabilityChange);
 }
 
-function hasRoomForPile() {
+function hasSpaceForInteractiveFloor() {
   return window.matchMedia(LARGE_SCREEN_QUERY).matches;
 }
 
-function iconUrl(storageKey: string) {
-  return `/media/${storageKey.split("/").map(encodeURIComponent).join("/")}`;
+function createFloorIconUrl(storageKey: string) {
+  const encodedStoragePath = storageKey.split("/").map(encodeURIComponent).join("/");
+  return `/media/${encodedStoragePath}?width=192&quality=78`;
 }
 
 function SurprisePlayground({
   applications,
-  stage,
+  experienceContainerRef,
 }: {
   applications: SurpriseApplication[];
-  stage: RefObject<HTMLDivElement | null>;
+  experienceContainerRef: RefObject<HTMLDivElement | null>;
 }) {
-  const floor = useRef<SurpriseFloorApi | null>(null);
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-  const currentSelection = useRef<number | null>(selectedIndex);
-  const [arrivedIndex, setArrivedIndex] = useState<number | null>(null);
-  const [pileSettled, setPileSettled] = useState(false);
-  const selected = selectedIndex === null ? null : applications[selectedIndex];
-  const selectionStable = selected !== null && arrivedIndex === selectedIndex;
-  const floorItems = useMemo(() => applications.map((application) => ({
+  const floorApiRef = useRef<SurpriseFloorApi | null>(null);
+  const [selectedApplicationIndex, setSelectedApplicationIndex] = useState<number | null>(null);
+  const currentSelectionIndexRef = useRef<number | null>(selectedApplicationIndex);
+  const [arrivedApplicationIndex, setArrivedApplicationIndex] = useState<number | null>(null);
+  const [isPileSettled, setIsPileSettled] = useState(false);
+  const selectedApplication = selectedApplicationIndex === null
+    ? null
+    : applications[selectedApplicationIndex];
+  const isSelectionStable = selectedApplication !== null
+    && arrivedApplicationIndex === selectedApplicationIndex;
+  const floorIcons = useMemo(() => applications.map((application) => ({
     id: application.id,
     name: application.name,
-    src: application.icon ? iconUrl(application.icon.storageKey) : null,
+    src: application.icon ? createFloorIconUrl(application.icon.storageKey) : null,
   })), [applications]);
 
-  const anchor = useCallback(() => {
-    const stageBox = stage.current?.getBoundingClientRect();
-    const width = stageBox?.width ?? window.innerWidth;
+  const getSelectionAnchor = useCallback(() => {
+    const experienceBounds = experienceContainerRef.current?.getBoundingClientRect();
+    const experienceWidth = experienceBounds?.width ?? window.innerWidth;
     return {
-      x: width < 1120 ? width * 0.35 : width / 2,
-      y: (stageBox?.height ?? window.innerHeight) * 0.38,
+      x: experienceWidth < 1120 ? experienceWidth * 0.35 : experienceWidth / 2,
+      y: (experienceBounds?.height ?? window.innerHeight) * 0.38,
     };
-  }, [stage]);
+  }, [experienceContainerRef]);
 
-  const pick = useCallback((index: number) => {
-    if (currentSelection.current === index) {
-      floor.current?.select(index, anchor);
+  const selectApplication = useCallback((applicationIndex: number) => {
+    if (currentSelectionIndexRef.current === applicationIndex) {
+      floorApiRef.current?.select(applicationIndex, getSelectionAnchor);
       return;
     }
-    currentSelection.current = index;
-    setArrivedIndex(null);
-    setSelectedIndex(index);
-    floor.current?.select(index, anchor);
-  }, [anchor]);
-  const surprise = useCallback(() => {
+    currentSelectionIndexRef.current = applicationIndex;
+    setArrivedApplicationIndex(null);
+    setSelectedApplicationIndex(applicationIndex);
+    floorApiRef.current?.select(applicationIndex, getSelectionAnchor);
+  }, [getSelectionAnchor]);
+
+  const selectRandomApplication = useCallback(() => {
     if (!applications.length) return;
-    pick(Math.floor(Math.random() * applications.length));
-  }, [applications.length, pick]);
-  const ready = useCallback(() => {
-    setPileSettled(false);
-    setArrivedIndex(null);
-    const index = currentSelection.current;
-    if (index !== null) floor.current?.select(index, anchor);
-  }, [anchor]);
-  const settled = useCallback(() => setPileSettled(true), []);
-  const arrived = useCallback((index: number) => {
-    if (currentSelection.current === index) setArrivedIndex(index);
+    selectApplication(Math.floor(Math.random() * applications.length));
+  }, [applications.length, selectApplication]);
+
+  const handleFloorReady = useCallback(() => {
+    setIsPileSettled(false);
+    setArrivedApplicationIndex(null);
+    const selectedIndex = currentSelectionIndexRef.current;
+    if (selectedIndex !== null) floorApiRef.current?.select(selectedIndex, getSelectionAnchor);
+  }, [getSelectionAnchor]);
+  const handleFloorSettled = useCallback(() => setIsPileSettled(true), []);
+  const handleApplicationArrived = useCallback((applicationIndex: number) => {
+    if (currentSelectionIndexRef.current === applicationIndex) {
+      setArrivedApplicationIndex(applicationIndex);
+    }
   }, []);
-  const departed = useCallback((index: number) => {
-    if (currentSelection.current === index) setArrivedIndex(null);
+  const handleApplicationDeparted = useCallback((applicationIndex: number) => {
+    if (currentSelectionIndexRef.current === applicationIndex) {
+      setArrivedApplicationIndex(null);
+    }
   }, []);
 
   return (
     <>
       <SurpriseIconFloor
-        apiRef={floor}
-        items={floorItems}
-        onPick={pick}
-        onReady={ready}
-        onSettled={settled}
-        onArrived={arrived}
-        onDeparted={departed}
+        apiRef={floorApiRef}
+        items={floorIcons}
+        onPick={selectApplication}
+        onReady={handleFloorReady}
+        onSettled={handleFloorSettled}
+        onArrived={handleApplicationArrived}
+        onDeparted={handleApplicationDeparted}
       />
 
       <h1 className="sr-only surprise-desktop-title">Explore Mac apps</h1>
-      <p aria-live="polite" className="sr-only">{selected ? `${selected.name} selected` : ""}</p>
+      <p aria-live="polite" className="sr-only">
+        {selectedApplication ? `${selectedApplication.name} selected` : ""}
+      </p>
 
-      {selectionStable ? (
+      {isSelectionStable ? (
         <div className="surprise-center surprise-center-selected">
-          <h2 className="surprise-selected-name">{selected.name}</h2>
+          <h2 className="surprise-selected-name">{selectedApplication.name}</h2>
         </div>
-      ) : !selected && pileSettled ? (
+      ) : !selectedApplication && isPileSettled ? (
         <div className="surprise-center">
-          <button className="surprise-trigger" onClick={surprise} type="button">
+          <button className="surprise-trigger" onClick={selectRandomApplication} type="button">
             <Shuffle aria-hidden="true" size={19} /> Surprise me
           </button>
         </div>
       ) : null}
 
-      {selectionStable && (
-        <SurprisePreview application={selected} />
+      {isSelectionStable && (
+        <SurprisePreview application={selectedApplication} />
       )}
     </>
   );
 }
 
 export function SurpriseExperience({ applications }: { applications: SurpriseApplication[] }) {
-  const canPlay = useSyncExternalStore(subscribeToScreenSize, hasRoomForPile, () => false);
-  const stage = useRef<HTMLDivElement>(null);
+  const hasInteractiveFloorSpace = useSyncExternalStore(
+    subscribeToInteractiveFloorAvailability,
+    hasSpaceForInteractiveFloor,
+    () => false,
+  );
+  const experienceContainerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="surprise-experience" ref={stage}>
-      {canPlay && <SurprisePlayground applications={applications} stage={stage} />}
-      <div className="surprise-small-screen">
-        <div className="surprise-small-screen-copy">
-          <h1>This pile needs<br /><span>more room.</span></h1>
-          <p>Open this on a bigger screen, like your Mac or iPad, to play with the app pile.</p>
-          <Link href="/">Explore the apps instead <ArrowRight aria-hidden="true" size={18} /></Link>
+    <div className="surprise-experience" ref={experienceContainerRef}>
+      {applications.length === 0 ? (
+        <div className="surprise-empty-state">
+          <div className="surprise-empty-state-copy">
+            <h1>The surprise room is empty.</h1>
+            <p>There are no published apps to choose from right now.</p>
+            <Link href="/">Back to Macify <ArrowRight aria-hidden="true" size={18} /></Link>
+          </div>
         </div>
-      </div>
+      ) : (
+        <>
+          {hasInteractiveFloorSpace && (
+            <SurprisePlayground
+              applications={applications}
+              experienceContainerRef={experienceContainerRef}
+            />
+          )}
+          <div className="surprise-small-screen">
+            <div className="surprise-small-screen-copy">
+              <h1>The surprise room needs<br /><span>more space.</span></h1>
+              <p>Open this on a bigger screen, like your Mac or iPad, to play in the surprise room.</p>
+              <Link href="/">Explore the apps instead <ArrowRight aria-hidden="true" size={18} /></Link>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }

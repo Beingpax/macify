@@ -7,8 +7,8 @@ import type { SurpriseApplication } from "@/lib/surprise-data";
 import { pricingLabels } from "@/lib/pricing";
 
 export function SurprisePreview({ application }: { application: SurpriseApplication }) {
-  const category = application.categories.map((item) => item.name).join(", ") || "Not listed";
-  const billing = application.billingType === "subscription" ? "Subscription"
+  const categoryNames = application.categories.map((category) => category.name).join(", ") || "Not listed";
+  const billingLabel = application.billingType === "subscription" ? "Subscription"
     : application.billingType === "one_time" ? "One-time purchase" : null;
 
   return (
@@ -25,7 +25,7 @@ export function SurprisePreview({ application }: { application: SurpriseApplicat
         </div>
 
         <dl className="surprise-preview-facts">
-          <div><dt>Category</dt><dd>{category}</dd></div>
+          <div><dt>Category</dt><dd>{categoryNames}</dd></div>
           <div>
             <dt>Pricing</dt>
             <dd>
@@ -33,7 +33,7 @@ export function SurprisePreview({ application }: { application: SurpriseApplicat
               {application.pricingDetails && <small>{application.pricingDetails}</small>}
             </dd>
           </div>
-          {billing && <div><dt>Billing</dt><dd>{billing}</dd></div>}
+          {billingLabel && <div><dt>Billing</dt><dd>{billingLabel}</dd></div>}
           {application.sourceType === "open_source" && (
             <div><dt>Source</dt><dd data-open-source="true">Open source</dd></div>
           )}
