@@ -40,7 +40,7 @@ function AppSeal({ appName, kind }: { appName: string; kind: "featured" | "edito
       {open && <span className="featured-seal-panel" id={id}>
         <span className="featured-seal-content">
           <span className="featured-seal-description">{isFeatured ? "This app is featured on Macify." : "This is an Editor’s Pick."}</span>
-          {isFeatured && <Link href="/get-featured">Feature my app now</Link>}
+          {isFeatured && <Link href="/get-featured">Learn about featuring</Link>}
         </span>
       </span>}
     </span>

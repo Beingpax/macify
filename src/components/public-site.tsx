@@ -4,13 +4,11 @@ import { InlineAppSearch } from "@/components/inline-app-search";
 import { PublicHeaderNavigation } from "@/components/public-header-navigation";
 import { PublicFooter } from "@/components/public-footer";
 
-const contributionGuideUrl = "https://github.com/Beingpax/macify/blob/main/CONTRIBUTING.md";
-
 function PublicHeader() {
   return (
     <header className="public-header">
       <div className="public-header-inner">
-        <PublicHeaderNavigation contributionGuideUrl={contributionGuideUrl} />
+        <PublicHeaderNavigation />
         <div className="public-header-actions">
           <InlineAppSearch />
         </div>

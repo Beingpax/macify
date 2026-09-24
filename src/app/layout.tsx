@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caprasimo, Caveat, Urbanist } from "next/font/google";
+import { Caprasimo, Caveat, Roboto, Urbanist } from "next/font/google";
 import "./globals.css";
 import "../styles/tokens.css";
 import "../styles/base.css";
@@ -14,6 +14,10 @@ import "../styles/public/directory-results.css";
 import "../styles/public/application-detail.css";
 import "../styles/public/markdown.css";
 import "../styles/public/policy.css";
+import "../styles/public/submission.css";
+import "../styles/public/featured-program.css";
+import "../styles/public/featured-thanks.css";
+import "../styles/public/editorial-policy.css";
 import "../styles/public/responsive-tablet.css";
 import "../styles/public/responsive-small.css";
 import "../styles/public/footer-variants.css";
@@ -38,6 +42,12 @@ const caveat = Caveat({
   subsets: ["latin"],
   variable: "--font-caveat",
   weight: "500",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-policy",
+  weight: ["400", "700", "900"],
 });
 
 export const metadata: Metadata = {
@@ -84,7 +94,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html data-scroll-behavior="smooth" lang="en">
-      <body className={`${urbanist.variable} ${caprasimo.variable} ${caveat.variable}`}>{children}</body>
+      <body className={`${urbanist.variable} ${caprasimo.variable} ${caveat.variable} ${roboto.variable}`}>{children}</body>
     </html>
   );
 }
