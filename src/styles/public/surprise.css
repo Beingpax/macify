@@ -417,7 +417,6 @@
 
 @media (max-width: 70rem) {
   .surprise-preview-shell { width: min(20rem, calc(100% - 2rem)); }
-  .surprise-center { left: 35%; }
   .surprise-center-selected { width: min(18rem, 35vw); }
 }
 

@@ -57,7 +57,7 @@ function SurprisePlayground({
     const experienceBounds = experienceContainerRef.current?.getBoundingClientRect();
     const experienceWidth = experienceBounds?.width ?? window.innerWidth;
     return {
-      x: experienceWidth < 1120 ? experienceWidth * 0.35 : experienceWidth / 2,
+      x: experienceWidth / 2,
       y: (experienceBounds?.height ?? window.innerHeight) * 0.38,
     };
   }, [experienceContainerRef]);

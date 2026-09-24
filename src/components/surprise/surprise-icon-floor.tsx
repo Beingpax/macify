@@ -201,16 +201,28 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     }
 
     function resizeCanvas() {
+      const nextWidth = canvas.clientWidth;
+      const nextHeight = canvas.clientHeight;
+      if (nextWidth === 0 || nextHeight === 0) return;
+
+      const nextDpr = Math.min(window.devicePixelRatio || 1, 2);
+      const boxChanged = nextWidth !== width || nextHeight !== height;
+      const dprChanged = nextDpr !== dpr;
+      if (!boxChanged && !dprChanged) return;
+
+      const previousWidth = width;
+      const previousHeight = height;
       const previousSize = size;
-      const previousDpr = dpr;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      width = canvas.clientWidth;
-      height = canvas.clientHeight;
+      dpr = nextDpr;
+      width = nextWidth;
+      height = nextHeight;
       size = calculateIconSize();
-      canvas.width = Math.round(width * dpr);
-      canvas.height = Math.round(height * dpr);
+      const backingWidth = Math.round(width * dpr);
+      const backingHeight = Math.round(height * dpr);
+      if (canvas.width !== backingWidth) canvas.width = backingWidth;
+      if (canvas.height !== backingHeight) canvas.height = backingHeight;
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
-      rebuildBoundaryBodies();
+      if (boxChanged) rebuildBoundaryBodies();
 
       if (iconBodies.length && previousSize !== size) {
         const ratio = size / previousSize;
@@ -221,7 +233,33 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
         Matter.Body.scale(iconBodies[selectedIcon.index], nextScale / selectedIcon.scale, nextScale / selectedIcon.scale);
         selectedIcon.scale = nextScale;
       }
-      if (previousDpr !== dpr) {
+      if (boxChanged && previousWidth > 0 && previousHeight > 0) {
+        finishPointerDrag();
+        const widthRatio = width / previousWidth;
+        const heightChange = height - previousHeight;
+
+        for (let index = 0; index < iconBodies.length; index += 1) {
+          if (selectedIcon?.index === index) continue;
+          if (!activeBodyIndexes.has(index)) {
+            iconBodies[index] = createIconBody(index);
+            continue;
+          }
+
+          const body = iconBodies[index];
+          const margin = size / 2;
+          const nextX = Math.max(margin, Math.min(width - margin, body.position.x * widthRatio));
+          const nextY = Math.min(height - margin, body.position.y + heightChange);
+          Matter.Body.setPosition(body, { x: nextX, y: nextY });
+        }
+
+        if (selectedIcon) {
+          const body = iconBodies[selectedIcon.index];
+          Matter.Body.setPosition(body, selectedIcon.getSelectionAnchor());
+          Matter.Body.setVelocity(body, { x: 0, y: 0 });
+          Matter.Body.setAngularVelocity(body, 0);
+        }
+      }
+      if (dprChanged) {
         for (const index of loadedIconIndexes) renderIconSprite(index);
       }
       needsRedraw = true;
@@ -787,28 +825,30 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     }
 
     let resizeFrame = 0;
+    let pixelRatioQuery: MediaQueryList | null = null;
 
     function handleWindowResize() {
       cancelAnimationFrame(resizeFrame);
       resizeFrame = requestAnimationFrame(() => {
         resizeFrame = 0;
         resizeCanvas();
-        if (!hasLoadedIcon) return;
-        if (reducedMotion) {
-          layoutIconsWithoutMotion();
-        } else {
-          for (const index of activeBodyIndexes) {
-            const body = iconBodies[index];
-            if (selectedIcon?.index === index) continue;
-            if (body.position.x < 0 || body.position.x > width || body.position.y > height + size) {
-              Matter.Body.setPosition(body, { x: width / 2, y: -size });
-              Matter.Body.setVelocity(body, { x: 0, y: 0 });
-              Matter.Sleeping.set(body, false);
-            }
-          }
-        }
       });
     }
+
+    function watchPixelRatio() {
+      pixelRatioQuery?.removeEventListener("change", handlePixelRatioChange);
+      pixelRatioQuery = window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`);
+      pixelRatioQuery.addEventListener("change", handlePixelRatioChange);
+    }
+
+    function handlePixelRatioChange() {
+      watchPixelRatio();
+      handleWindowResize();
+    }
+
+    const containerResizeObserver = new ResizeObserver(handleWindowResize);
+    containerResizeObserver.observe(canvas.parentElement ?? canvas);
+    watchPixelRatio();
 
     canvas.addEventListener("pointerdown", handlePointerDown);
     canvas.addEventListener("pointermove", handlePointerMove);
@@ -817,7 +857,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
     canvas.addEventListener("lostpointercapture", handlePointerCancel);
     canvas.addEventListener("keydown", handleKeyboardSelection);
     window.addEventListener("blur", handleWindowBlur);
-    window.addEventListener("resizeCanvas", handleWindowResize);
+    window.addEventListener("resize", handleWindowResize);
     if (imageQueue.length === 0) onIconLoadError?.(false);
     else fillIconRequestSlots();
 
@@ -827,6 +867,8 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       iconRequestTimeoutIds.clear();
       cancelAnimationFrame(animationFrameId);
       cancelAnimationFrame(resizeFrame);
+      containerResizeObserver.disconnect();
+      pixelRatioQuery?.removeEventListener("change", handlePixelRatioChange);
       finishPointerDrag();
       canvas.removeEventListener("pointerdown", handlePointerDown);
       canvas.removeEventListener("pointermove", handlePointerMove);
@@ -835,7 +877,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       canvas.removeEventListener("lostpointercapture", handlePointerCancel);
       canvas.removeEventListener("keydown", handleKeyboardSelection);
       window.removeEventListener("blur", handleWindowBlur);
-      window.removeEventListener("resizeCanvas", handleWindowResize);
+      window.removeEventListener("resize", handleWindowResize);
       for (const image of iconImages) {
         if (!image) continue;
         image.onload = null;
