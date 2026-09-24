@@ -2,8 +2,9 @@
 
 import { Check, Copy } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { trackDataFastGoal } from "@/lib/analytics/datafast-client";
 
-export function DealCodeButton({ code }: { code: string }) {
+export function DealCodeButton({ code, appSlug }: { code: string; appSlug: string }) {
   const [copied, setCopied] = useState(false);
   const resetTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -13,6 +14,7 @@ export function DealCodeButton({ code }: { code: string }) {
 
   async function copyCode() {
     await navigator.clipboard.writeText(code);
+    trackDataFastGoal("deal_code_copied", { app_slug: appSlug });
     setCopied(true);
     if (resetTimer.current) clearTimeout(resetTimer.current);
     resetTimer.current = setTimeout(() => setCopied(false), 1800);

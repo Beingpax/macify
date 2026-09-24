@@ -5,7 +5,7 @@ import { MarkdownContent } from "@/components/site/markdown-content";
 import { mediaUrl } from "@/components/site/public-app-card";
 import type { ApplicationMedia, PublishedApplication } from "@/components/application-detail/types";
 
-type OverviewApplication = Pick<PublishedApplication, "name" | "description" | "tagline" | "websiteUrl" | "youtubeUrl">;
+type OverviewApplication = Pick<PublishedApplication, "name" | "slug" | "description" | "tagline" | "websiteUrl" | "youtubeUrl">;
 
 function EditorialImage({ application, media, preload = false, mediaScope }: { application: OverviewApplication; media: ApplicationMedia; preload?: boolean; mediaScope: "public" | "dashboard" }) {
   return (
@@ -51,7 +51,7 @@ export function ApplicationOverview({
               ))}
             </div>
           )}
-          <a aria-label={`Visit ${application.name} site (opens in a new tab)`} className="application-website site-action site-action--primary" href={application.websiteUrl} rel="noreferrer" target="_blank">
+          <a aria-label={`Visit ${application.name} site (opens in a new tab)`} className="application-website site-action site-action--primary" data-outbound-app={application.slug} data-outbound-kind="app-website" data-outbound-placement="app-detail" href={application.websiteUrl} rel="noopener" target="_blank">
             Visit site
             <ExternalLink aria-hidden="true" size={19} strokeWidth={1.8} />
           </a>

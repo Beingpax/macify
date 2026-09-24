@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Caprasimo, Caveat, Roboto, Urbanist } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import "../styles/tokens.css";
 import "../styles/base.css";
@@ -96,7 +97,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html data-scroll-behavior="smooth" lang="en">
-      <body className={`${urbanist.variable} ${caprasimo.variable} ${caveat.variable} ${roboto.variable}`}>{children}</body>
+      <body className={`${urbanist.variable} ${caprasimo.variable} ${caveat.variable} ${roboto.variable}`}>
+        <Script id="datafast-queue" strategy="beforeInteractive">
+          {`window.datafast = window.datafast || function() { window.datafast.q = window.datafast.q || []; window.datafast.q.push(arguments); };`}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
