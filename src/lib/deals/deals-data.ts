@@ -1,7 +1,7 @@
 import { and, asc, eq, gte, isNull, lte } from "drizzle-orm";
 import { getDatabase } from "@/db/client";
 import { apps, deals } from "@/db/schema";
-import { cardFields, getAppIcons } from "@/lib/directory-shared";
+import { cardFields, getAppIcons } from "@/lib/directory/directory-shared";
 
 export async function getActiveDeals(limit = 12) {
   const database = await getDatabase();

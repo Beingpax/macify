@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import { DirectoryAppGrid } from "@/components/home/application-directory";
-import { PublicShell } from "@/components/public-site";
-import { getPublishedCategoryBySlug } from "@/lib/category-directory-data";
+import { PublicShell } from "@/components/site/public-site";
+import { getPublishedCategoryBySlug } from "@/lib/directory/category-directory-data";
 
 export const dynamic = "force-dynamic";
 const getCategory = cache(getPublishedCategoryBySlug);

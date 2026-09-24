@@ -1,5 +1,5 @@
-import { requireAdminRequest } from "@/lib/admin-auth";
-import { createApplicationsCsv } from "@/lib/dashboard-export";
+import { requireAdminRequest } from "@/lib/auth/admin-auth";
+import { createApplicationsCsv } from "@/lib/dashboard/dashboard-export";
 
 export const dynamic = "force-dynamic";
 

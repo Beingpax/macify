@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { DatabaseSync } from "node:sqlite";
 import { SQLiteSyncDialect } from "drizzle-orm/sqlite-core";
-import { publicationStatus } from "../../src/lib/catalogue-publication-guard.ts";
+import { publicationStatus } from "../../src/lib/catalogue/catalogue-publication-guard.ts";
 
 for (const state of ["pending", "rejected", "published", "superseded"]) {
   test(`publication batch ${state === "pending" ? "commits" : "rolls back"} for a ${state} revision`, () => {

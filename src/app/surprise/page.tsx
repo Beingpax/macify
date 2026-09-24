@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { PublicShell } from "@/components/public-site";
+import { PublicShell } from "@/components/site/public-site";
 import { SurpriseExperience } from "@/components/surprise/surprise-experience";
-import { getSurpriseApplications, type SurpriseApplication } from "@/lib/surprise-data";
+import { getSurpriseApplications, type SurpriseApplication } from "@/lib/surprise/surprise-data";
 
 export const dynamic = "force-dynamic";
 

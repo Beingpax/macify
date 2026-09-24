@@ -6,8 +6,8 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { getDatabase } from "@/db/client";
 import { apps } from "@/db/schema";
-import { requireAdmin } from "@/lib/admin-auth";
-import { invalidatePublicCatalogueCache } from "@/lib/public-cache";
+import { requireAdmin } from "@/lib/auth/admin-auth";
+import { invalidatePublicCatalogueCache } from "@/lib/shared/public-cache";
 
 function invalidatePublicCataloguePaths() {
   invalidatePublicCatalogueCache();

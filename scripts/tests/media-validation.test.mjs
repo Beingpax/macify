@@ -9,7 +9,7 @@ import {
   detectImageMimeType,
   matchesFileSignature as matchesWorkerFileSignature,
   parseRemoteImageUrl as parseWorkerRemoteImageUrl,
-} from "../../src/lib/media-validation.ts";
+} from "../../src/lib/media/media-validation.ts";
 
 test("Worker detects a supported image when the server declares the wrong MIME type", () => {
   const jpeg = new Uint8Array([0xff, 0xd8, 0xff, 0xe0]);

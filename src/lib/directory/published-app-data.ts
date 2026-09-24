@@ -10,8 +10,8 @@ import {
   mediaAssets,
   categories,
 } from "@/db/schema";
-import { getAppIcons, publicApplicationFields } from "@/lib/directory-shared";
-import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
+import { getAppIcons, publicApplicationFields } from "@/lib/directory/directory-shared";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/shared/public-cache";
 
 async function queryPublishedApplicationBySlug(slug: string) {
   const database = await getDatabase();

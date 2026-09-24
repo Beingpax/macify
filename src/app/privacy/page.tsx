@@ -4,7 +4,7 @@ import {
   PublicContentHero,
   PublicContentPage,
   PublicContentSection,
-} from "@/components/public-content-page";
+} from "@/components/site/public-content-page";
 
 export const metadata: Metadata = {
   title: "Privacy notice",

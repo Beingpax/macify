@@ -1,6 +1,6 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { z } from "zod";
-import { ingestCatalogueItem } from "@/lib/catalogue-ingestion";
+import { ingestCatalogueItem } from "@/lib/catalogue/catalogue-ingestion";
 
 export const dynamic = "force-dynamic";
 

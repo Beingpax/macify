@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Check, Minus, Plus } from "lucide-react";
 import type { CataloguePreparedMedia } from "@/db/schema";
-import type { CatalogueManifest } from "@/lib/catalogue-manifest";
-import { createProseDiff, getChangedManifestFields, type CatalogueSnapshot, type DiffPart, type ProseDiffRow } from "@/lib/catalogue-diff";
-import { formatPricing } from "@/lib/pricing";
+import type { CatalogueManifest } from "@/lib/catalogue/catalogue-manifest";
+import { createProseDiff, getChangedManifestFields, type CatalogueSnapshot, type DiffPart, type ProseDiffRow } from "@/lib/catalogue/catalogue-diff";
+import { formatPricing } from "@/lib/shared/pricing";
 
 type CurrentMedia = {
   id: string;

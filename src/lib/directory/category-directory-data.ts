@@ -2,8 +2,8 @@ import { and, asc, count, desc, eq, isNull, lte, sql } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDatabase } from "@/db/client";
 import { appCategories, apps, categories } from "@/db/schema";
-import { cardFields, getAppIcons, getCardMedia } from "@/lib/directory-shared";
-import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
+import { cardFields, getAppIcons, getCardMedia } from "@/lib/directory/directory-shared";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/shared/public-cache";
 
 async function queryPublishedCategoryBySlug(slug: string) {
   const database = await getDatabase();

@@ -2,9 +2,9 @@
 
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { PublicAppIcon } from "@/components/public-app-card";
-import type { SurpriseApplication } from "@/lib/surprise-data";
-import { pricingLabels } from "@/lib/pricing";
+import { PublicAppIcon } from "@/components/site/public-app-card";
+import type { SurpriseApplication } from "@/lib/surprise/surprise-data";
+import { pricingLabels } from "@/lib/shared/pricing";
 
 export function SurprisePreview({
   application,

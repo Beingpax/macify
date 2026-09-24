@@ -1,19 +1,19 @@
-import { PendingSubmitButton } from "@/components/pending-submit-button";
+import { PendingSubmitButton } from "@/components/forms/pending-submit-button";
 import Image from "next/image";
 import Link from "next/link";
 import { and, desc, eq, inArray, like, sql } from "drizzle-orm";
 import { AlertTriangle, CheckCircle2, GitBranch } from "lucide-react";
 import { dismissCatalogueFailure, retryCatalogueFailure } from "@/app/dashboard/catalogue/actions";
-import { CatalogueBulkReview } from "@/components/catalogue-bulk-review";
+import { CatalogueBulkReview } from "@/components/dashboard/catalogue-bulk-review";
 import { getDatabase } from "@/db/client";
 import { catalogueRevisions } from "@/db/schema";
-import { catalogueManifestSchema } from "@/lib/catalogue-manifest";
-import type { CatalogueManifest } from "@/lib/catalogue-manifest";
-import { dealManifestSchema } from "@/lib/deal-manifest";
-import type { DealManifest } from "@/lib/deal-manifest";
-import { revisionChangeLabels, revisionStatusLabels } from "@/lib/catalogue-revision-labels";
-import { getCatalogueQueueApplications } from "@/lib/catalogue-review-data";
-import { cn } from "@/lib/utils";
+import { catalogueManifestSchema } from "@/lib/catalogue/catalogue-manifest";
+import type { CatalogueManifest } from "@/lib/catalogue/catalogue-manifest";
+import { dealManifestSchema } from "@/lib/deals/deal-manifest";
+import type { DealManifest } from "@/lib/deals/deal-manifest";
+import { revisionChangeLabels, revisionStatusLabels } from "@/lib/catalogue/catalogue-revision-labels";
+import { getCatalogueQueueApplications } from "@/lib/catalogue/catalogue-review-data";
+import { cn } from "@/lib/shared/utils";
 
 export const dynamic = "force-dynamic";
 

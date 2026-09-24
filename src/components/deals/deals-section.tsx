@@ -1,8 +1,8 @@
 import { ArrowRight, ArrowUpRight, ExternalLink, Mail, TicketPercent } from "lucide-react";
 import Link from "next/link";
-import { DealCodeButton } from "@/components/deal-code-button";
-import { PublicAppIcon } from "@/components/public-app-card";
-import type { getActiveDeals } from "@/lib/deals-data";
+import { DealCodeButton } from "@/components/deals/deal-code-button";
+import { PublicAppIcon } from "@/components/site/public-app-card";
+import type { getActiveDeals } from "@/lib/deals/deals-data";
 
 type ActiveDeal = Awaited<ReturnType<typeof getActiveDeals>>[number];
 const heroTicketSlugs = ["cleanshot-x", "bettertouchtool", "daisydisk"];

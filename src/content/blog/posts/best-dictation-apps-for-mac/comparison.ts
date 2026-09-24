@@ -1,7 +1,7 @@
 import { and, asc, eq, inArray, isNull } from "drizzle-orm";
 import { getDatabase } from "@/db/client";
 import { apps } from "@/db/schema";
-import { cardFields, getAppIcons } from "@/lib/directory-shared";
+import { cardFields, getAppIcons } from "@/lib/directory/directory-shared";
 
 export const dictationAppSlugs = [
   "voiceink",

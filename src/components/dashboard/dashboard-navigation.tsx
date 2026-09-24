@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AppWindow, GitPullRequest, Image as ImageIcon, TicketPercent } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/shared/utils";
 
 const navigation = [
   { id: "applications", label: "Applications", description: "Published app listings", icon: AppWindow, href: "/dashboard", tone: "blue" },

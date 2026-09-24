@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import {
   PublicContentHero,
   PublicContentPage,
-} from "@/components/public-content-page";
+} from "@/components/site/public-content-page";
 
 const description = "Macify finds Mac apps worth buying and works with their developers to bring readers discounts.";
 

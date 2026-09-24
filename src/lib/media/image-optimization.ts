@@ -1,4 +1,4 @@
-import type { MediaRole } from "@/lib/media-types";
+import type { MediaRole } from "@/lib/media/media-types";
 
 type ImageSource = {
   bytes: Uint8Array;

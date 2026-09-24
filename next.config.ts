@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     loader: "custom",
-    loaderFile: "./src/lib/media-image-loader.ts",
+    loaderFile: "./src/lib/media/media-image-loader.ts",
     imageSizes: [32, 48, 64, 96, 128, 192, 256, 384],
     qualities: [75, 78, 85, 88],
   },

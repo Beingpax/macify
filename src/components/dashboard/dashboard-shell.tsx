@@ -5,8 +5,8 @@ import {
   LogOut,
 } from "lucide-react";
 import { logoutAdmin } from "@/app/dashboard/logout-action";
-import { MacifyLogo } from "@/components/macify-logo";
-import { DashboardNavigation } from "@/components/dashboard-navigation";
+import { MacifyLogo } from "@/components/site/macify-logo";
+import { DashboardNavigation } from "@/components/dashboard/dashboard-navigation";
 
 export function DashboardShell({
   children,

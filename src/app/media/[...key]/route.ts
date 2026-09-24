@@ -1,4 +1,4 @@
-import { serveMedia } from "@/lib/media-response";
+import { serveMedia } from "@/lib/media/media-response";
 
 export const dynamic = "force-dynamic";
 

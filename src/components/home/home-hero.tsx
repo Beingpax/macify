@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PublicAppIcon, mediaUrl, type PublicAppSummary } from "@/components/public-app-card";
+import { PublicAppIcon, mediaUrl, type PublicAppSummary } from "@/components/site/public-app-card";
 
 type HomeApp = PublicAppSummary & {
   preview: { storageKey: string; altText: string | null; width: number | null; height: number | null } | null;

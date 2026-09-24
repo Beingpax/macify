@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 import { LoaderCircle, Search, X } from "lucide-react";
-import { PublicAppIcon } from "@/components/public-app-card";
+import { PublicAppIcon } from "@/components/site/public-app-card";
 
 type SearchResult = {
   id: string;

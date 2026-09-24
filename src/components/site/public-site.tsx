@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
 import Script from "next/script";
-import { InlineAppSearch } from "@/components/inline-app-search";
-import { PublicHeaderNavigation } from "@/components/public-header-navigation";
-import { PublicFooter } from "@/components/public-footer";
-import { VoiceInkOfferBanner } from "@/components/voiceink-offer-banner";
+import { InlineAppSearch } from "@/components/site/inline-app-search";
+import { PublicHeaderNavigation } from "@/components/site/public-header-navigation";
+import { PublicFooter } from "@/components/site/public-footer";
+import { VoiceInkOfferBanner } from "@/components/site/voiceink-offer-banner";
 
 function PublicHeader() {
   return (

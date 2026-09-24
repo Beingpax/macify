@@ -1,4 +1,4 @@
-import { PendingSubmitButton } from "@/components/pending-submit-button";
+import { PendingSubmitButton } from "@/components/forms/pending-submit-button";
 import Link from "next/link";
 import { and, desc, eq, isNull, like, lt } from "drizzle-orm";
 import { notFound } from "next/navigation";
@@ -12,14 +12,14 @@ import {
   TicketPercent,
 } from "lucide-react";
 import { decideCatalogueRevision, dismissCatalogueFailure, retryCatalogueFailure } from "@/app/dashboard/catalogue/actions";
-import { CatalogueChangeReview } from "@/components/catalogue-change-review";
+import { CatalogueChangeReview } from "@/components/dashboard/catalogue-change-review";
 import { getDatabase } from "@/db/client";
 import { apps, catalogueRevisions, deals } from "@/db/schema";
-import { getChangedManifestFields } from "@/lib/catalogue-diff";
-import { catalogueManifestSchema } from "@/lib/catalogue-manifest";
-import { dealManifestSchema } from "@/lib/deal-manifest";
-import { publishActionLabels, revisionChangeLabels, revisionStatusLabels } from "@/lib/catalogue-revision-labels";
-import { getCatalogueReviewSnapshot } from "@/lib/catalogue-review-data";
+import { getChangedManifestFields } from "@/lib/catalogue/catalogue-diff";
+import { catalogueManifestSchema } from "@/lib/catalogue/catalogue-manifest";
+import { dealManifestSchema } from "@/lib/deals/deal-manifest";
+import { publishActionLabels, revisionChangeLabels, revisionStatusLabels } from "@/lib/catalogue/catalogue-revision-labels";
+import { getCatalogueReviewSnapshot } from "@/lib/catalogue/catalogue-review-data";
 
 export const dynamic = "force-dynamic";
 

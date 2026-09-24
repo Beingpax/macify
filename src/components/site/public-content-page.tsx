@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { PublicShell } from "@/components/public-site";
+import { PublicShell } from "@/components/site/public-site";
 
 function classNames(...values: Array<string | undefined>) {
   return values.filter(Boolean).join(" ");

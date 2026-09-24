@@ -1,7 +1,7 @@
 import { and, asc, eq, isNull, sql } from "drizzle-orm";
 import { getDatabase } from "@/db/client";
 import { appCategories, apps, categories } from "@/db/schema";
-import { getAppIcons } from "@/lib/directory-shared";
+import { getAppIcons } from "@/lib/directory/directory-shared";
 
 export const dynamic = "force-dynamic";
 

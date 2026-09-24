@@ -4,7 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ArrowRight, Shuffle } from "lucide-react";
 import { useCallback, useMemo, useRef, useState, useSyncExternalStore, type RefObject } from "react";
-import type { SurpriseApplication } from "@/lib/surprise-data";
+import type { SurpriseApplication } from "@/lib/surprise/surprise-data";
 import type { SurpriseFloorApi } from "@/components/surprise/surprise-icon-floor";
 import { SurprisePreview } from "@/components/surprise/surprise-preview";
 

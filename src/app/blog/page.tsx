@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PublicShell } from "@/components/public-site";
+import { PublicShell } from "@/components/site/public-site";
 import { getAllBlogPosts } from "@/content/blog";
 
 const canonical = "https://macify.app/blog";

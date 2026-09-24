@@ -1,5 +1,5 @@
-import { serveMedia } from "@/lib/media-response";
-import { requireAdminRequest } from "@/lib/admin-auth";
+import { serveMedia } from "@/lib/media/media-response";
+import { requireAdminRequest } from "@/lib/auth/admin-auth";
 
 export const dynamic = "force-dynamic";
 

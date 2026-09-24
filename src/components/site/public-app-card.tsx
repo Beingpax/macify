@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { BillingType, PricingType } from "@/lib/pricing";
+import type { BillingType, PricingType } from "@/lib/shared/pricing";
 
 export type PublicAppSummary = {
   id: string;

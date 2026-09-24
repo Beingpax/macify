@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { DictationGuide } from "@/components/best-apps/dictation-comparison";
-import { PublicShell } from "@/components/public-site";
+import { PublicShell } from "@/components/site/public-site";
 import { createBlogPostMetadata, createBlogPostSchema } from "@/content/blog";
 import { bestDictationAppsPost } from "@/content/blog/posts/best-dictation-apps-for-mac";
 import { getPublishedDictationApps } from "@/content/blog/posts/best-dictation-apps-for-mac/comparison";

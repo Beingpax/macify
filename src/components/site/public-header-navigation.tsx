@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { Menu, Plus, Shuffle, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { GitHubStarCount } from "@/components/github-star-count";
-import { LiveVisitorCount } from "@/components/live-visitor-count";
+import { GitHubStarCount } from "@/components/site/github-star-count";
+import { LiveVisitorCount } from "@/components/site/live-visitor-count";
 
 export function PublicHeaderNavigation() {
   const [open, setOpen] = useState(false);

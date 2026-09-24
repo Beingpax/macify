@@ -1,4 +1,4 @@
-import type { CatalogueManifest } from "@/lib/catalogue-manifest";
+import type { CatalogueManifest } from "@/lib/catalogue/catalogue-manifest";
 
 export type DiffPart = {
   type: "equal" | "added" | "removed";

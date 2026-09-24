@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Code2, DollarSign, Gem, Gift, RefreshCw, TicketCheck, type LucideIcon } from "lucide-react";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
-import { PublicAppIcon } from "@/components/public-app-card";
+import { PublicAppIcon } from "@/components/site/public-app-card";
 import type { ApplicationMedia, PublishedApplication } from "@/components/application-detail/types";
-import { pricingLabels } from "@/lib/pricing";
+import { pricingLabels } from "@/lib/shared/pricing";
 
 function ApplicationFact({
   children,

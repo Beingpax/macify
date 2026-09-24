@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Shuffle } from "lucide-react";
-import { PublicContentHero, PublicContentPage } from "@/components/public-content-page";
+import { PublicContentHero, PublicContentPage } from "@/components/site/public-content-page";
 
 const description = "Featuring is not available on Macify right now. Check back later.";
 

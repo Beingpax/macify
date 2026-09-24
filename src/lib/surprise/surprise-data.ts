@@ -2,9 +2,9 @@ import { and, asc, eq, isNull } from "drizzle-orm";
 import { unstable_cache } from "next/cache";
 import { getDatabase } from "@/db/client";
 import { appCategories, apps, categories } from "@/db/schema";
-import { getAppIcons } from "@/lib/directory-shared";
-import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
-import type { BillingType, PricingType } from "@/lib/pricing";
+import { getAppIcons } from "@/lib/directory/directory-shared";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/shared/public-cache";
+import type { BillingType, PricingType } from "@/lib/shared/pricing";
 
 export type SurpriseApplication = {
   id: string;

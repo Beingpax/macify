@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getMediaManagementData } from "@/lib/dashboard-data";
+import { getMediaManagementData } from "@/lib/dashboard/dashboard-data";
 
 export const dynamic = "force-dynamic";
 const labels: Record<string, string> = { icon: "Icon", preview_image: "Main preview", screenshot: "Screenshot" };

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PublicShell } from "@/components/public-site";
+import { PublicShell } from "@/components/site/public-site";
 
 export default function NotFound() {
   return (

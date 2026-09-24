@@ -1,8 +1,8 @@
 import { ApplicationDirectorySwitcher } from "@/components/home/application-directory-switcher";
 import { HomeHero } from "@/components/home/home-hero";
-import { PublicShell } from "@/components/public-site";
+import { PublicShell } from "@/components/site/public-site";
 import { Suspense } from "react";
-import { getHomepageDirectoryData, getHomepageHeroData } from "@/lib/directory-search-data";
+import { getHomepageDirectoryData, getHomepageHeroData } from "@/lib/directory/directory-search-data";
 
 export const dynamic = "force-dynamic";
 

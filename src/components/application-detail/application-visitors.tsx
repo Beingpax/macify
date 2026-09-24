@@ -1,5 +1,5 @@
 import { MousePointer2 } from "lucide-react";
-import { getAllTimeApplicationVisitors } from "@/lib/datafast-analytics";
+import { getAllTimeApplicationVisitors } from "@/lib/analytics/datafast-analytics";
 
 export async function ApplicationVisitors({ slug }: { slug: string }) {
   const visitors = await getAllTimeApplicationVisitors(slug);

@@ -6,9 +6,9 @@ import {
   catalogueManifestSchema,
   manifestMediaSources,
   type CatalogueManifest,
-} from "@/lib/catalogue-manifest";
-import { dealManifestSchema } from "@/lib/deal-manifest";
-import { prepareMediaSource, putPreparedMedia } from "@/lib/media-upload";
+} from "@/lib/catalogue/catalogue-manifest";
+import { dealManifestSchema } from "@/lib/deals/deal-manifest";
+import { prepareMediaSource, putPreparedMedia } from "@/lib/media/media-upload";
 
 type CatalogueSyncItem = {
   changeType: "upsert" | "delete";

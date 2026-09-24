@@ -2,7 +2,7 @@
 
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { authenticateAdmin, createAdminSession, loginRateLimit } from "@/lib/admin-auth";
+import { authenticateAdmin, createAdminSession, loginRateLimit } from "@/lib/auth/admin-auth";
 
 export type LoginState = { error?: string };
 

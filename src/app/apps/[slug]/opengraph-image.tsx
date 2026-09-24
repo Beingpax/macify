@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { notFound } from "next/navigation";
-import { mediaUrl } from "@/components/public-app-card";
-import { getPublishedApplicationBySlug } from "@/lib/published-app-data";
+import { mediaUrl } from "@/components/site/public-app-card";
+import { getPublishedApplicationBySlug } from "@/lib/directory/published-app-data";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

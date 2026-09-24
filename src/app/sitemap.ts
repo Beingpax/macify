@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllBlogPosts } from "@/content/blog";
-import { getPublishedApplicationSlugs } from "@/lib/published-app-data";
-import { getPublishedCategorySlugs } from "@/lib/category-directory-data";
+import { getPublishedApplicationSlugs } from "@/lib/directory/published-app-data";
+import { getPublishedCategorySlugs } from "@/lib/directory/category-directory-data";
 
 export const dynamic = "force-dynamic";
 

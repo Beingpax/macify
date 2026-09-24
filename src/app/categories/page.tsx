@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PublicAppIcon } from "@/components/public-app-card";
-import { PublicShell } from "@/components/public-site";
-import { getPublishedCategories } from "@/lib/category-directory-data";
+import { PublicAppIcon } from "@/components/site/public-app-card";
+import { PublicShell } from "@/components/site/public-site";
+import { getPublishedCategories } from "@/lib/directory/category-directory-data";
 
 export const dynamic = "force-dynamic";
 

@@ -162,3 +162,19 @@ Before submitting changes, run the checks that match your work:
 npm run typecheck
 npm run lint
 ```
+
+## Project layout
+
+| Path | Purpose |
+| --- | --- |
+| `src/app/` | Next.js routes, route handlers, layouts, and metadata files. A `page.tsx` stays in the folder matching its URL. |
+| `src/components/` | UI grouped by feature (`home`, `deals`, `surprise`, `application-detail`, `dashboard`) or shared site use (`site`, `forms`). |
+| `src/lib/` | Server and shared logic grouped by domain: catalogue, directory, deals, media, dashboard, auth, analytics, and shared helpers. |
+| `src/styles/public/` | Public styles grouped into layout, page, and responsive layers. `src/styles/dashboard/` contains editor styles. |
+| `src/content/blog/posts/` | Editorial content grouped by article slug. |
+| `catalog/` | Application and deal manifests, examples, and schemas. |
+| `database/` | Database schema documentation. |
+| `scripts/` | Local setup, catalogue maintenance, and script tests. |
+| `public/` | Assets served by stable URLs, including app icons and preview images. |
+
+Next.js reserves names such as `page.tsx`, `route.ts`, `layout.tsx`, `robots.ts`, `sitemap.ts`, and `manifest.ts`. They remain in `src/app/` at the route or root where Next.js discovers them.

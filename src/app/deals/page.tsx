@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { DealsSection } from "@/components/home/deals-section";
-import { PublicShell } from "@/components/public-site";
-import { getActiveDeals } from "@/lib/deals-data";
+import { DealsSection } from "@/components/deals/deals-section";
+import { PublicShell } from "@/components/site/public-site";
+import { getActiveDeals } from "@/lib/deals/deals-data";
 
 export const dynamic = "force-dynamic";
 

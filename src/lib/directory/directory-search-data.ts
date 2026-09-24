@@ -6,13 +6,13 @@ import {
   cardFields,
   getCardMedia,
   type DirectorySearchFilters,
-} from "@/lib/directory-shared";
-import { getTrendingApplicationVisits } from "@/lib/datafast-analytics";
+} from "@/lib/directory/directory-shared";
+import { getTrendingApplicationVisits } from "@/lib/analytics/datafast-analytics";
 import {
   HOMEPAGE_APPLICATION_SLUGS,
   homepageApplicationPosition,
-} from "@/lib/homepage-application-order";
-import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/public-cache";
+} from "@/lib/directory/homepage-application-order";
+import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/shared/public-cache";
 
 type HomepageView = "hot" | "trending" | "latest";
 const homepageApplicationLimit = 50;

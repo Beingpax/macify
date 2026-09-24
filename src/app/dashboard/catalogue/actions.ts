@@ -15,12 +15,12 @@ import {
   deals,
   mediaAssets,
 } from "@/db/schema";
-import { catalogueManifestSchema } from "@/lib/catalogue-manifest";
-import { ingestCatalogueItem } from "@/lib/catalogue-ingestion";
-import { dealManifestSchema } from "@/lib/deal-manifest";
-import { publicationStatus } from "@/lib/catalogue-publication-guard";
-import { requireAdmin } from "@/lib/admin-auth";
-import { invalidatePublicCatalogueCache } from "@/lib/public-cache";
+import { catalogueManifestSchema } from "@/lib/catalogue/catalogue-manifest";
+import { ingestCatalogueItem } from "@/lib/catalogue/catalogue-ingestion";
+import { dealManifestSchema } from "@/lib/deals/deal-manifest";
+import { publicationStatus } from "@/lib/catalogue/catalogue-publication-guard";
+import { requireAdmin } from "@/lib/auth/admin-auth";
+import { invalidatePublicCatalogueCache } from "@/lib/shared/public-cache";
 
 const decisionSchema = z.object({
   revisionId: z.uuid(),

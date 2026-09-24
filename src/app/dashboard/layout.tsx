@@ -7,8 +7,8 @@ import "@/styles/dashboard/responsive.css";
 import "@/styles/dashboard/visual-system.css";
 import "@/styles/dashboard/container-responsive.css";
 import type { Metadata } from "next";
-import { DashboardShell } from "@/components/dashboard-shell";
-import { requireAdmin } from "@/lib/admin-auth";
+import { DashboardShell } from "@/components/dashboard/dashboard-shell";
+import { requireAdmin } from "@/lib/auth/admin-auth";
 
 export const metadata: Metadata = {
   title: "Dashboard",

@@ -1,10 +1,10 @@
-import { PendingSubmitButton } from "@/components/pending-submit-button";
+import { PendingSubmitButton } from "@/components/forms/pending-submit-button";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BadgeCheck, ChevronRight, ExternalLink, GitBranch, Star } from "lucide-react";
 import { setApplicationPublication, setEditorsPickApplication, setFeaturedApplication } from "@/app/dashboard/editorial-actions";
-import { getApplicationEditorData } from "@/lib/app-editor-data";
+import { getApplicationEditorData } from "@/lib/dashboard/app-editor-data";
 
 export const dynamic = "force-dynamic";
 

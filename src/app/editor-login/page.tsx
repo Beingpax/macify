@@ -2,8 +2,8 @@ import "@/styles/editor-login.css";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { LoginForm } from "@/app/editor-login/login-form";
-import { MacifyLogo } from "@/components/macify-logo";
-import { isAdminAuthenticated } from "@/lib/admin-auth";
+import { MacifyLogo } from "@/components/site/macify-logo";
+import { isAdminAuthenticated } from "@/lib/auth/admin-auth";
 
 export const metadata: Metadata = { title: "Editorial sign in", robots: { index: false, follow: false } };
 export const dynamic = "force-dynamic";

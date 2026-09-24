@@ -1,10 +1,10 @@
-import { allowedImageTypes, MAX_UPLOAD_BYTES, type MediaRole, type PreparedMedia } from "@/lib/media-types";
-import { bytesToHex, matchesFileSignature, safeFileName } from "@/lib/media-validation";
-import { fetchRemoteImage } from "@/lib/remote-image";
-import { optimizeImage } from "@/lib/image-optimization";
-import { normalizeIcoSource } from "@/lib/ico";
+import { allowedImageTypes, MAX_UPLOAD_BYTES, type MediaRole, type PreparedMedia } from "@/lib/media/media-types";
+import { bytesToHex, matchesFileSignature, safeFileName } from "@/lib/media/media-validation";
+import { fetchRemoteImage } from "@/lib/media/remote-image";
+import { optimizeImage } from "@/lib/media/image-optimization";
+import { normalizeIcoSource } from "@/lib/media/ico";
 
-export type { MediaRole, PreparedMedia } from "@/lib/media-types";
+export type { MediaRole, PreparedMedia } from "@/lib/media/media-types";
 
 export async function prepareMediaSource(
   appId: string,

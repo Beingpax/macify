@@ -1,8 +1,8 @@
-import { descriptionParts } from "@/lib/application-description";
+import { descriptionParts } from "@/lib/shared/application-description";
 import Image from "next/image";
 import { ExternalLink, Play } from "lucide-react";
-import { MarkdownContent } from "@/components/markdown-content";
-import { mediaUrl } from "@/components/public-app-card";
+import { MarkdownContent } from "@/components/site/markdown-content";
+import { mediaUrl } from "@/components/site/public-app-card";
 import type { ApplicationMedia, PublishedApplication } from "@/components/application-detail/types";
 
 type OverviewApplication = Pick<PublishedApplication, "name" | "description" | "tagline" | "websiteUrl" | "youtubeUrl">;

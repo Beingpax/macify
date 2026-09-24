@@ -1,5 +1,5 @@
 import { and, asc, count, desc, eq, inArray, isNull, like, or, sql } from "drizzle-orm";
-import { getAppIcons } from "@/lib/directory-shared";
+import { getAppIcons } from "@/lib/directory/directory-shared";
 import { alias } from "drizzle-orm/sqlite-core";
 import { getDatabase } from "@/db/client";
 import {

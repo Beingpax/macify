@@ -7,7 +7,7 @@ import {
   PublicContentHero,
   PublicContentPage,
   PublicContentSection,
-} from "@/components/public-content-page";
+} from "@/components/site/public-content-page";
 
 const appSubmissionUrl = "https://github.com/Beingpax/macify/new/main/catalog/apps";
 

@@ -1,5 +1,5 @@
-import { allowedImageTypes, MAX_UPLOAD_BYTES, type MediaRole } from "@/lib/media-types";
-import { detectImageMimeType, matchesFileSignature, parseRemoteImageUrl } from "@/lib/media-validation";
+import { allowedImageTypes, MAX_UPLOAD_BYTES, type MediaRole } from "@/lib/media/media-types";
+import { detectImageMimeType, matchesFileSignature, parseRemoteImageUrl } from "@/lib/media/media-validation";
 
 async function readResponseWithLimit(response: Response) {
   if (!response.body) throw new Error("The remote server returned an empty response.");

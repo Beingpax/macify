@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { descriptionParts } from "../../src/lib/application-description.ts";
+import { descriptionParts } from "../../src/lib/shared/application-description.ts";
 
 test("keeps introductory text and a what-it-does section", () => {
   const result = descriptionParts("Introduction.\n\n## What it does\n\nMore information.\n\n## Features\n\nFeature details.", "A useful tool", "Example");

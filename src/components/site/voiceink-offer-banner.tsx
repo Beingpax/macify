@@ -35,7 +35,7 @@ export function VoiceInkOfferBanner() {
     <aside aria-label="VoiceInk offer from Macify’s maker" className="voiceink-offer-banner">
       <div className="voiceink-offer-inner">
         <div className="voiceink-offer-brand">
-          <Image alt="" className="voiceink-offer-icon" height={46} src="/voiceink-banner-icon.png" unoptimized width={46} />
+          <Image alt="" className="voiceink-offer-icon" height={46} src="/app-icons/voiceink-banner.png" unoptimized width={46} />
           <div><strong>VoiceInk</strong><small>From Macify’s maker</small></div>
         </div>
         <div className="voiceink-offer-copy">

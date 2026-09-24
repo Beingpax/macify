@@ -4,7 +4,7 @@ import { ArrowLeft, ExternalLink, SlidersHorizontal } from "lucide-react";
 import { ApplicationHero } from "@/components/application-detail/application-hero";
 import { ApplicationOverview } from "@/components/application-detail/application-overview";
 import { RelatedApplications } from "@/components/application-detail/related-applications";
-import { getDashboardApplicationDetail } from "@/lib/app-editor-data";
+import { getDashboardApplicationDetail } from "@/lib/dashboard/app-editor-data";
 
 export const dynamic = "force-dynamic";
 

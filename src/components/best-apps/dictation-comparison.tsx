@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Check, CircleHelp, ExternalLink, Minus, X } from "lucide-react";
-import { PublicAppIcon, type PublicAppSummary } from "@/components/public-app-card";
+import { PublicAppIcon, type PublicAppSummary } from "@/components/site/public-app-card";
 import { dictationComparisonRows, dictationEditorial, dictationRecommendations, type ComparisonValue, type DictationAppSlug } from "@/content/blog/posts/best-dictation-apps-for-mac/comparison";
 
 type DictationApp = PublicAppSummary & { slug: DictationAppSlug };
