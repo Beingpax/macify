@@ -178,3 +178,9 @@ npm run lint
 | `public/` | Assets served by stable URLs, including app icons and preview images. |
 
 Next.js reserves names such as `page.tsx`, `route.ts`, `layout.tsx`, `robots.ts`, `sitemap.ts`, and `manifest.ts`. They remain in `src/app/` at the route or root where Next.js discovers them.
+
+## License
+
+Original Macify software code is available under the [MIT License](LICENSE). Files carrying their own license remain under that license.
+
+The Macify name and brand marks, editorial writing and catalogue descriptions, and images or artwork are not licensed by the MIT code license. App names, icons, screenshots, and other third-party material belong to their respective owners. Their presence in this repository does not grant permission to reuse them.
