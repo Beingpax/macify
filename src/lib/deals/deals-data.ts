@@ -3,7 +3,11 @@ import { getDatabase } from "@/db/client";
 import { apps, deals } from "@/db/schema";
 import { cardFields, getAppIcons } from "@/lib/directory/directory-shared";
 
-export async function getActiveDeals(limit = 12) {
+// Change this list when the editorial order of public deals should change.
+const editorialDealSlugs = ["voiceink", "cleanshot-x", "bettertouchtool", "daisydisk"];
+const editorialDealPositions = new Map(editorialDealSlugs.map((slug, index) => [slug, index]));
+
+export async function getActiveDeals() {
   const database = await getDatabase();
   const now = new Date();
   const rows = await database
@@ -22,8 +26,12 @@ export async function getActiveDeals(limit = 12) {
       lte(deals.startsAt, now),
       gte(deals.endsAt, now),
     ))
-    .orderBy(asc(deals.endsAt))
-    .limit(limit);
+    .orderBy(asc(apps.name));
   const icons = await getAppIcons(rows.map(({ id }) => id));
-  return rows.map((row) => ({ ...row, icon: icons.get(row.id) ?? null }));
+  return rows
+    .sort((left, right) =>
+      (editorialDealPositions.get(left.slug) ?? editorialDealSlugs.length) - (editorialDealPositions.get(right.slug) ?? editorialDealSlugs.length)
+      || left.name.localeCompare(right.name),
+    )
+    .map((row) => ({ ...row, icon: icons.get(row.id) ?? null }));
 }

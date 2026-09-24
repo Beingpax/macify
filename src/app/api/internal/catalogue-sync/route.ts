@@ -20,6 +20,31 @@ const requestSchema = z.object({
   })).length(1),
 });
 
+const maxRequestBytes = 1_000_000;
+
+async function readBoundedBody(request: Request): Promise<string | null> {
+  const reader = request.body?.getReader();
+  if (!reader) return "";
+
+  const bytes = new Uint8Array(maxRequestBytes);
+  let bytesRead = 0;
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) return new TextDecoder().decode(bytes.subarray(0, bytesRead));
+
+      if (bytesRead + value.byteLength > maxRequestBytes) {
+        await reader.cancel().catch(() => {});
+        return null;
+      }
+      bytes.set(value, bytesRead);
+      bytesRead += value.byteLength;
+    }
+  } finally {
+    reader.releaseLock();
+  }
+}
+
 export async function POST(request: Request) {
   const { env: baseEnv } = await getCloudflareContext({ async: true });
   const env = baseEnv as CatalogueSyncEnv;
@@ -28,9 +53,9 @@ export async function POST(request: Request) {
   }
 
   const declaredLength = Number(request.headers.get("content-length") ?? 0);
-  if (declaredLength > 1_000_000) return Response.json({ error: "Payload is too large." }, { status: 413 });
-  const body = await request.text();
-  if (body.length > 1_000_000) return Response.json({ error: "Payload is too large." }, { status: 413 });
+  if (declaredLength > maxRequestBytes) return Response.json({ error: "Payload is too large." }, { status: 413 });
+  const body = await readBoundedBody(request);
+  if (body === null) return Response.json({ error: "Payload is too large." }, { status: 413 });
   const supplied = request.headers.get("x-macify-signature") ?? "";
   if (!(await verifySignature(body, supplied, env.CATALOG_SYNC_SECRET))) {
     return Response.json({ error: "Unauthorized." }, { status: 401 });

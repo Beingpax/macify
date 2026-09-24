@@ -2,11 +2,12 @@
 
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { authenticateAdmin, createAdminSession, loginRateLimit } from "@/lib/auth/admin-auth";
+import { authenticateAdmin, createAdminSession, isLocalEditor, loginRateLimit } from "@/lib/auth/admin-auth";
 
 export type LoginState = { error?: string };
 
 export async function loginAdmin(_state: LoginState, formData: FormData): Promise<LoginState> {
+  if (!(await isLocalEditor())) redirect("/dashboard");
   const email = String(formData.get("email") ?? "").slice(0, 320);
   const password = String(formData.get("password") ?? "").slice(0, 1024);
   const limit = await loginRateLimit(await headers());

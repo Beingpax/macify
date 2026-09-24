@@ -50,7 +50,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
               <span>Great Mac apps.</span>
               <span>Now for less.</span>
             </h1>
-            <p>A curated shelf of worthwhile macOS deals. No bundles, no detours, just useful Mac apps at friendlier prices.</p>
+            <p>Current discounts on worthwhile macOS apps. Compare the offers here, then buy directly from the developers.</p>
             <a className="deals-hero-action site-action site-action--primary" href="#handpicked-deals">
               Browse deals <ArrowRight aria-hidden="true" size={19} />
             </a>

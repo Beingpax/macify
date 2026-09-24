@@ -28,7 +28,7 @@ export async function PublicShell({ children, showFooter = true }: { children: R
         strategy="afterInteractive"
       />
       <a className="skip-link" href="#main-content">Skip to content</a>
-      {process.env.NODE_ENV === "development" && <VoiceInkOfferBanner />}
+      <VoiceInkOfferBanner />
       <PublicHeader />
       <div className="public-page-content">{children}</div>
       {showFooter && <PublicFooter />}

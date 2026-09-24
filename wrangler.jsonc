@@ -72,6 +72,7 @@
       },
       "vars": {
         "APP_ENV": "production",
+        "ACCESS_AUD": "06d2da1e6c10a11af606ee8f9e47834c2f2824b7dce5f9f0f6c3b418eabb3a4a",
         "CATALOG_REPOSITORY": "Beingpax/macify",
         "NEXT_INC_CACHE_R2_PREFIX": "next-cache"
       },

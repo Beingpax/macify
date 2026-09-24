@@ -1,5 +1,6 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { cookies } from "next/headers";
+import { createRemoteJWKSet, jwtVerify } from "jose";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 const COOKIE_NAME = "macify_admin";
@@ -11,6 +12,32 @@ type AdminEnv = CloudflareEnv & {
   ADMIN_PASSWORD?: string;
   ADMIN_SESSION_SECRET?: string;
 };
+
+const ACCESS_ISSUER = "https://prakashjoshipax.cloudflareaccess.com";
+const accessKeys = createRemoteJWKSet(new URL(`${ACCESS_ISSUER}/cdn-cgi/access/certs`));
+
+async function isAccessAdmin(requestHeaders: Headers) {
+  const { env } = await getCloudflareContext({ async: true });
+  const token = requestHeaders.get("cf-access-jwt-assertion");
+  const audience = (env as CloudflareEnv & { ACCESS_AUD?: string }).ACCESS_AUD;
+  if (!token || !audience) return false;
+  try {
+    const { payload } = await jwtVerify(token, accessKeys, {
+      issuer: ACCESS_ISSUER,
+      audience,
+      algorithms: ["RS256"],
+    });
+    return typeof payload.email === "string"
+      && payload.email.toLowerCase() === "prakashjoshipax@gmail.com";
+  } catch {
+    return false;
+  }
+}
+
+export async function isLocalEditor() {
+  const { env } = await getCloudflareContext({ async: true });
+  return env.APP_ENV === "local";
+}
 
 type ConfiguredAdminEnv = CloudflareEnv & {
   ADMIN_EMAIL: string;
@@ -44,7 +71,7 @@ async function safeEqual(left: string, right: string) {
 async function authEnv(): Promise<ConfiguredAdminEnv | null> {
   const { env } = await getCloudflareContext({ async: true });
   const values = env as AdminEnv;
-  if (!values.ADMIN_EMAIL || !values.ADMIN_PASSWORD || !values.ADMIN_SESSION_SECRET) return null;
+  if (values.APP_ENV !== "local" || !values.ADMIN_EMAIL || !values.ADMIN_PASSWORD || !values.ADMIN_SESSION_SECRET) return null;
   return values as ConfiguredAdminEnv;
 }
 
@@ -71,10 +98,13 @@ export async function createAdminSession() {
   });
 }
 
-export async function isAdminAuthenticated(cookieHeader?: string | null) {
+export async function isAdminAuthenticated(requestHeaders?: Headers) {
+  const { env: runtime } = await getCloudflareContext({ async: true });
+  if (runtime.APP_ENV !== "local") return isAccessAdmin(requestHeaders ?? await headers());
   const env = await authEnv();
   if (!env) return false;
-  const value = cookieHeader === undefined
+  const cookieHeader = requestHeaders?.get("cookie");
+  const value = requestHeaders === undefined
     ? (await cookies()).get(COOKIE_NAME)?.value
     : cookieHeader?.split(";").map((item) => item.trim()).find((item) => item.startsWith(`${COOKIE_NAME}=`))?.slice(COOKIE_NAME.length + 1);
   if (!value) return false;
@@ -87,11 +117,11 @@ export async function isAdminAuthenticated(cookieHeader?: string | null) {
 }
 
 export async function requireAdmin() {
-  if (!(await isAdminAuthenticated())) redirect("/editor-login");
+  if (!(await isAdminAuthenticated())) redirect((await isLocalEditor()) ? "/editor-login" : "/cdn-cgi/access/logout");
 }
 
 export async function requireAdminRequest(request: Request) {
-  return isAdminAuthenticated(request.headers.get("cookie"));
+  return isAdminAuthenticated(request.headers);
 }
 
 export async function clearAdminSession() {
@@ -102,6 +132,7 @@ export async function clearAdminSession() {
 
 export async function loginRateLimit(requestHeaders: Headers) {
   const { env } = await getCloudflareContext({ async: true });
+  if (env.APP_ENV !== "local") throw new Error("Local editor sign-in is disabled in production.");
   const address = requestHeaders.get("cf-connecting-ip") ?? requestHeaders.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "local";
   const digest = base64Url(await crypto.subtle.digest("SHA-256", encoder.encode(address)));
   const windowStart = Math.floor(Date.now() / 900_000) * 900_000;
