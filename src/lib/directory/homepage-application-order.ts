@@ -22,6 +22,7 @@ export const HOMEPAGE_APPLICATION_SLUGS = [
   "portal",
   "sublime-text",
   "supercharge",
+  "tinycast",
   "wallspace",
   "swish",
   "1password",
@@ -51,6 +52,10 @@ export const HOMEPAGE_APPLICATION_SLUGS = [
   "dropover",
   "dato",
   "session",
+  "ghostty",
+  "noteplan",
+  "craft",
+  "helium-browser",
   "bettertouchtool",
   "dia",
 ] as const;

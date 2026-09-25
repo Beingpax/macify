@@ -15,7 +15,7 @@ import {
 import { PUBLIC_CATALOGUE_CACHE_TAG } from "@/lib/shared/public-cache";
 
 type HomepageView = "hot" | "trending" | "latest";
-const homepageApplicationLimit = 50;
+const homepageApplicationLimit = HOMEPAGE_APPLICATION_SLUGS.length;
 const latestApplicationWindowMs = 15 * 24 * 60 * 60 * 1000;
 
 function searchConditions(filters?: DirectorySearchFilters) {
