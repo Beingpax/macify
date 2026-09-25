@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Transmission",
+  "slug": "transmission",
+  "websiteUrl": "https://transmissionbt.com/",
+  "tagline": "A simple, free BitTorrent client for Mac.",
+  "description": "Transmission is a free, open-source BitTorrent client with a native macOS application. It keeps the everyday download queue simple while offering bandwidth, peer, tracker, and remote-control settings for users who need them.\n\nOpen a legitimate torrent or magnet link, choose where its files should go, and manage progress from a compact queue. Rules and speed limits can make large transfers less disruptive to other network use.\n\n## Features\n\n- Download and seed torrents or magnet links from a native Mac interface.\n- Set speed limits, scheduling, peer, and tracker preferences.\n- Choose files and priorities within a torrent.\n- Control a running client through its optional web interface.\n\n## Where it fits\n\nTransmission suits people who want a straightforward torrent client rather than a dashboard full of advanced controls. It is a valid way to distribute open-source software and other authorized files; the app does not determine whether a particular download is lawful or trustworthy.\n\n## Privacy and requirements\n\nBitTorrent peers can see the network address participating in a swarm. Transmission itself does not require an account. Protect the optional web interface and download only files from sources you trust.\n\n## Pricing\n\nTransmission is free and open source.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "bittorrent"
+  ],
+  "relatedAppSlugs": [
+    "qbittorrent"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://transmissionbt.com/assets/images/icons/1024.png",
+      "altText": "Transmission application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://transmissionbt.com/assets/images/homepage/screenshot_mac_full_window.png",
+      "altText": "Transmission application preview"
+    },
+    "screenshots": []
+  }
+}

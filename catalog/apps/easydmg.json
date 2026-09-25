@@ -1,0 +1,34 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "EasyDMG",
+  "slug": "easydmg",
+  "websiteUrl": "https://easydmg.app/",
+  "tagline": "Install Mac apps from DMG files with fewer steps.",
+  "description": "EasyDMG is a native Mac utility that automates the common drag-to-Applications installation flow for disk images. It mounts a DMG, finds an application, copies it into Applications, and cleans up the mounted image afterward.\n\nOpen a downloaded DMG with EasyDMG, review the app it found, and let it perform the normal installation sequence. It can optionally move the original disk image to the Trash after the copy.\n\n## Features\n\n- Mount a DMG and identify installable app bundles.\n- Copy an app to the Applications folder and unmount the image.\n- Optionally discard the source DMG after installation.\n- Keep a local installation log to explain completed or skipped actions.\n\n## Where it fits\n\nEasyDMG fits Mac users who install many directly downloaded apps and want to remove a repetitive Finder routine. It does not replace checking the publisher or trustworthiness of a downloaded installer.\n\n## Privacy and requirements\n\nThe app needs filesystem access to inspect disk images and install applications. Its developer says it operates locally and connects only for update checks through Sparkle. The current site lists macOS 13 or later; review each DMG before accepting an installation.\n\n## Pricing\n\nEasyDMG is currently available free. It is open source under GPL-3.0 for open-source use, with separate commercial licensing described by the developer; prebuilt release pricing may change.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "file-management"
+  ],
+  "relatedAppSlugs": [
+    "the-unarchiver",
+    "pearcleaner"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://easydmg.app/assets/wizardhamster.png",
+      "altText": "EasyDMG application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://easydmg.app/assets/light-mode-about.png",
+      "altText": "EasyDMG application preview"
+    },
+    "screenshots": []
+  }
+}

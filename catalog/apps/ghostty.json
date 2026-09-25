@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Ghostty",
+  "slug": "ghostty",
+  "websiteUrl": "https://ghostty.org/",
+  "tagline": "A fast terminal with native Mac controls.",
+  "description": "Ghostty is a free, open-source terminal emulator with a macOS interface and GPU-accelerated rendering. It aims to make a terminal feel fast without giving up familiar Mac windows, tabs, and system behavior.\n\nOpen a normal shell for development or administration, split a window when comparing sessions, and use the quick terminal when a short command should not interrupt the desktop. Configuration is file based and can be versioned with other dotfiles.\n\n## Features\n\n- Run terminal sessions in native windows, tabs, and splits.\n- Render text and terminal graphics with Metal acceleration on macOS.\n- Customize fonts, colors, themes, keybindings, and shell behavior through configuration.\n- Use the drop-down quick terminal and AppleScript automation on Mac.\n\n## Where it fits\n\nGhostty fits developers and command-line users who want strong terminal features with native Mac presentation. It is a terminal emulator, so the shell and command-line tools it runs still determine most of the workflow.\n\n## Privacy and requirements\n\nTerminal content stays on the Mac unless commands or remote connections send it elsewhere. Official macOS binaries are signed and notarized by the project. Treat shell commands, SSH hosts, and downloaded configuration separately from the terminal app itself.\n\n## Pricing\n\nGhostty is free and open source.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [
+    "zed"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://raw.githubusercontent.com/ghostty-org/ghostty/main/images/icons/icon_512.png",
+      "altText": "Ghostty application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://ghostty.org/social-share-card.jpg",
+      "altText": "Ghostty application preview"
+    },
+    "screenshots": []
+  }
+}

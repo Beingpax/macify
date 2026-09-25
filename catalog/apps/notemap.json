@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Notemap",
+  "slug": "notemap",
+  "websiteUrl": "https://notemap.com/",
+  "tagline": "A native, local-first mind mapper for macOS.",
+  "description": "Notemap is a Swift-built Mac app for developing ideas as a mind map. It gives branches room to grow on a canvas while keeping the underlying work in local files rather than requiring a hosted account.\n\nStart with a question or project, add and rearrange nodes, zoom into a branch to focus, then export or present the map. Notes, tasks, attachments, and cross-links help a map hold more than a short brainstorm.\n\n## Features\n\n- Create unlimited maps with notes, tasks, attachments, and cross-links in the free edition.\n- Navigate and reorganize branches with keyboard and drag-and-drop controls.\n- Import Xmind, FreeMind, OPML, Markdown, and plain text outlines.\n- Use optional AI expansion with a personal provider key in Pro, along with more themes and export formats.\n\n## Where it fits\n\nNotemap is a good fit for visual planning and research that benefits from seeing the whole structure at once. A linear outliner may be quicker for short documents or agendas.\n\n## Privacy and requirements\n\nMaps are stored locally by default and no account is required. Users can place files in a cloud-synced folder themselves; AI features send selected content to the provider chosen with the user’s key. Notemap requires macOS 14 or later and supports Intel and Apple silicon.\n\n## Pricing\n\nNotemap is free for unlimited maps. Pro is a one-time purchase currently advertised at a $30 beta price, reduced from $60.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free core; Pro $30 beta one-time price",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "mind-mapping",
+    "notes-writing"
+  ],
+  "relatedAppSlugs": [
+    "xmind",
+    "bike-outliner"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://notemap.com/brand.ico",
+      "altText": "Notemap application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://notemap.com/og-img.png",
+      "altText": "Notemap application preview"
+    },
+    "screenshots": []
+  }
+}

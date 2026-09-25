@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "SideNotes",
+  "slug": "sidenotes",
+  "websiteUrl": "https://www.apptorium.com/sidenotes",
+  "tagline": "Quick notes that slide out from the edge of the screen.",
+  "description": "SideNotes is a compact Mac note app that lives at the side of the display. It is meant for snippets, links, lists, and fleeting thoughts that need to stay close to the work in progress.\n\nReveal the side panel, write a note without changing your main window, then hide it again. Folders, colors, pinning, and search help small notes remain useful after the moment of capture.\n\n## Features\n\n- Keep notes, tasks, links, and snippets in an edge panel.\n- Organize notes into folders, pin important material, and use Markdown-style formatting.\n- Sync through an optional private iCloud account and rely on automatic backups.\n- Automate capture with Shortcuts, AppleScript, and a URL-based API.\n\n## Where it fits\n\nSideNotes is a good scratchpad for people who repeatedly copy details between apps or need a small persistent reference. It is less suitable as a full long-form knowledge base than a document editor or linked-note system.\n\n## Privacy and requirements\n\nThe developer says note content is stored locally and, if enabled, in the user’s iCloud account; Apptorium says it does not have access to that content. SideNotes requires macOS 13 or newer. The separate iPhone and iPad app is sold independently.\n\n## Pricing\n\nSideNotes has a free trial and costs $19.99 as a one-time purchase for the current major version. Future major upgrades may be paid.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$19.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing",
+    "focus-tools"
+  ],
+  "relatedAppSlugs": [
+    "antinote",
+    "drafts"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fd/74/f7/fd74f741-709f-d6c0-038c-c95a509a7a5c/SideNotes-0-0-85-220-0-0-6-0-2x-sRGB.png/512x512bb.png",
+      "altText": "SideNotes application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.apptorium.com/public/products/sidenotes/index/social4.jpg",
+      "altText": "SideNotes application preview"
+    },
+    "screenshots": []
+  }
+}

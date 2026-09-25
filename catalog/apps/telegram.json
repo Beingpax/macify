@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Telegram for macOS",
+  "slug": "telegram",
+  "websiteUrl": "https://telegram.org/macos",
+  "tagline": "Telegram messaging in a native Mac client.",
+  "description": "Telegram for macOS is the official native desktop client for Telegram chats, groups, channels, and calls. It brings the service’s cloud-synced messaging to a Mac interface with desktop notifications and file sharing.\n\nSign in with a Telegram account, continue chats from other devices, send files or media, and manage group or channel conversations from the desktop. Telegram also distributes a separate cross-platform desktop client, so this listing specifically points to its native macOS app.\n\n## Features\n\n- Continue regular cloud chats across Mac and mobile devices.\n- Use groups, channels, saved messages, media, and file sharing.\n- Make supported voice and video calls from the Mac.\n- Use Telegram’s native macOS application distributed through its official site and Mac App Store.\n\n## Where it fits\n\nTelegram fits people and communities already using the service. It is useful for fast multi-device communication, though its privacy model differs from an end-to-end encrypted messenger by default.\n\n## Privacy and requirements\n\nRegular Telegram cloud chats are stored by Telegram so they can sync across devices; do not assume every conversation is end-to-end encrypted. Review current Secret Chat availability and account security before sharing sensitive material. The native macOS client is open source under GPLv2.\n\n## Pricing\n\nTelegram for macOS is free. Optional Telegram Premium features are sold separately by the service.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "messaging",
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/94/fd/c0/94fdc020-0f5e-b048-3f72-e95a5ae568b6/AppIcon-0-0-85-220-0-0-6-0-2x-sRGB.png/512x512bb.png",
+      "altText": "Telegram for macOS application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://osx.telegram.org/updates/site/logo.png",
+      "altText": "Telegram for macOS application preview"
+    },
+    "screenshots": []
+  }
+}

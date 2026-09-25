@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "NotePlan",
+  "slug": "noteplan",
+  "websiteUrl": "https://noteplan.co/",
+  "tagline": "Daily notes, tasks, and calendar planning together.",
+  "description": "NotePlan combines Markdown notes, to-dos, and calendar events in a daily planning workspace. It is designed for people who want to write the day’s plan in a note and see commitments beside it, instead of maintaining disconnected task and note systems.\n\nOpen a daily note, add tasks and context in Markdown, then schedule or reschedule work against the calendar. Links, tags, filters, and project notes connect daily action to longer-running plans.\n\n## Features\n\n- Write daily and project notes in Markdown with linked references.\n- Manage tasks, recurring items, review lists, and custom filters.\n- View calendar events beside notes and time-block work.\n- Sync notes across Apple devices using supported iCloud or CloudKit options.\n\n## Where it fits\n\nNotePlan fits people who plan by day and want tasks attached to written context. Its flexibility rewards a consistent personal system, but the subscription may be more than a simple checklist requires.\n\n## Privacy and requirements\n\nNotes are stored as local plain-text files on Mac and can sync through iCloud Drive or CloudKit, depending on configuration. Calendar access is needed for event views; optional web and AI features involve additional services. Confirm which sync mode is active before storing private information.\n\n## Pricing\n\nNotePlan has a trial. The current direct plans list $12 monthly or $99 yearly, which is $8.33 per month when billed annually.",
+  "pricingType": "paid",
+  "billingType": "subscription",
+  "pricingDetails": "$99/year or $12/month after trial",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "task-management",
+    "notes-writing",
+    "calendar-scheduling"
+  ],
+  "relatedAppSlugs": [
+    "things-3",
+    "obsidian",
+    "fantastical"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/db/72/f4/db72f493-2aca-39e2-5e6d-fb43256026d4/LGAppIcon4-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "altText": "NotePlan application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://images.prismic.io/noteplan-landing-cms/ZscCukaF0TcGJPDk_NotePlanOGImage.png?auto=format,compress&rect=0,0,2400,1260&w=2400&h=1260",
+      "altText": "NotePlan application preview"
+    },
+    "screenshots": []
+  }
+}

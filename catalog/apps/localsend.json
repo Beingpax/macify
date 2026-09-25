@@ -1,0 +1,34 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "LocalSend",
+  "slug": "localsend",
+  "websiteUrl": "https://localsend.org/",
+  "tagline": "Share files directly with nearby devices.",
+  "description": "LocalSend is a free, open-source file-sharing app for Macs, phones, and other computers on the same local network. It transfers files and short messages directly between devices without requiring an account or external cloud storage.\n\nOpen LocalSend on both devices, choose the receiving device discovered on the network, and approve the transfer. It is particularly useful between Mac and Android or Windows, where AirDrop does not cover the whole path.\n\n## Features\n\n- Send files, folders, and text over a local network.\n- Discover nearby devices without creating a service account.\n- Transfer between macOS, Windows, Linux, Android, and iOS.\n- Use encrypted local communication rather than uploading files to a cloud relay.\n\n## Where it fits\n\nLocalSend fits households and teams with mixed devices or people who prefer a direct transfer. Both devices must be reachable on the same network; restrictive guest Wi-Fi and firewalls can prevent discovery.\n\n## Privacy and requirements\n\nTransfers stay on the local network and do not require internet access. Devices still need network permissions, and a recipient should verify the sending device before accepting an unexpected file. The project publishes its source code openly.\n\n## Pricing\n\nLocalSend is free and open source.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "file-transfer"
+  ],
+  "relatedAppSlugs": [
+    "blip",
+    "dropover"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://localsend.org/apple-touch-icon.png",
+      "altText": "LocalSend application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://localsend.org/img/hero-desktop.webp",
+      "altText": "LocalSend application preview"
+    },
+    "screenshots": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Bike Outliner",
+  "slug": "bike-outliner",
+  "websiteUrl": "https://www.hogbaysoftware.com/bike/",
+  "tagline": "A fast, focused outliner for writing and planning.",
+  "description": "Bike Outliner is a Mac writing app built around an editable outline. Rows can be nested, reordered, and focused so a long document remains navigable while its structure changes.\n\nUse Bike for a project outline, meeting notes, a plan, or a draft. Expand the parts you need, collapse the rest, and move between a broad structure and a focused section without converting the work to a separate format.\n\n## Features\n\n- Create and rearrange nested rows using the keyboard or pointer.\n- Use headings, task lists, rich text, focus mode, and typewriter mode with a paid license.\n- Keep outlines in document files; Bike supports its HTML-based .bike format along with OPML and plain text.\n- Integrate with macOS Shortcuts and AppleScript where the licensed feature set permits.\n\n## Where it fits\n\nBike is especially useful when the order of ideas is still changing. It offers more structure than a plain text editor and less visual overhead than a mind map. The free mode remains usable for ordinary outline editing.\n\n## Privacy and requirements\n\nBike is a document-based Mac app; files can stay local or be placed in a sync folder chosen by the user. The current product page lists macOS 11 or later. Cloud behavior depends on the folder provider rather than a required Bike account.\n\n## Pricing\n\nBike is free for core reading and editing. The direct-download license is a one-time purchase with one year of updates; Mac App Store and Setapp editions use subscriptions.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free core; direct license is a one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing",
+    "task-management"
+  ],
+  "relatedAppSlugs": [
+    "ia-writer",
+    "obsidian"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/35/1f/51/351f51da-b841-4607-fd19-3d4ef5941e4e/AppIcon-0-0-85-220-0-0-5-0-2x-0-0-0.png/512x512bb.png",
+      "altText": "Bike Outliner application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/a9/09/92/a90992b0-28f5-8416-03d2-f17c87d8cb1e/ce025826-b3bc-410c-9adb-b0fa36c47098_rowtypes.png/800x500bb.jpg",
+      "altText": "Bike Outliner application preview"
+    },
+    "screenshots": []
+  }
+}

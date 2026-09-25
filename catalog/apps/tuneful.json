@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Tuneful",
+  "slug": "tuneful",
+  "websiteUrl": "https://tuneful.app/",
+  "tagline": "Native playback controls for Spotify and Apple Music.",
+  "description": "Tuneful adds compact music controls to macOS for Spotify and Apple Music. It can show current playback in the menu bar, around the MacBook notch, or in a small player without keeping the main music app in front.\n\nChoose a music source, select the interface you prefer, then play, pause, skip, seek, or adjust output while working elsewhere. The app is intended as a control surface for existing music services rather than a music library.\n\n## Features\n\n- Display track information and controls in the menu bar, notch, popover, or mini player.\n- Control Spotify and Apple Music playback without switching apps.\n- Customize artwork, layout, visibility, and media controls.\n- Use a native Swift app designed for Mac performance.\n\n## Where it fits\n\nTuneful fits listeners who keep music running throughout the day and want quick controls that blend into the desktop. Spotify or Apple Music and their own accounts remain necessary for playback.\n\n## Privacy and requirements\n\nTuneful communicates with the selected music app or service to show track state and send playback commands. Check each service’s account and playback permissions separately. The Mac App Store listing documents the current compatibility requirements.\n\n## Pricing\n\nTuneful costs $4.99 as a one-time purchase in the US Mac App Store; regional prices can vary.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$4.99 one-time Mac App Store purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "menu-bar-utilities",
+    "media-players",
+    "notch-utilities"
+  ],
+  "relatedAppSlugs": [
+    "dynamiclake"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b0/44/43/b04443ff-a43c-441d-48f4-45cca1aff640/AppIcon-0-0-85-220-0-6-0-2x-0-0-0.png/512x512bb.png",
+      "altText": "Tuneful application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://tuneful.app/opengraph-image?643a592e6801eb64",
+      "altText": "Tuneful application preview"
+    },
+    "screenshots": []
+  }
+}

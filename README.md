@@ -41,6 +41,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Bear](https://macify.app/apps/bear) | Markdown notes you’ll love. | Freemium · $2.99/month or $29.99/year |
 | [BetterDisplay](https://macify.app/apps/betterdisplay) | Unlock your displays on your Mac. | Freemium · $21.99 one-time purchase |
 | [BetterTouchTool](https://macify.app/apps/bettertouchtool) | Greatly customize your Mac input devices. | Paid · $15 or $25 one-time purchase |
+| [Bike Outliner](https://macify.app/apps/bike-outliner) | A fast, focused outliner for writing and planning. | Freemium · Free core; direct license is a one-time purchase |
 | [Blip](https://macify.app/apps/blip) | Send any size file between devices. | Freemium · $25/user/month, billed annually |
 | [Bloom](https://macify.app/apps/bloom) | Finder, but refined. | Paid · $16 one-time purchase |
 | [CapCut](https://macify.app/apps/capcut) | Create more. Edit less. | Freemium · $19.99/month or $179.99/year |
@@ -51,6 +52,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Clop](https://macify.app/apps/clop) | Clipboard optimizer for macOS. | Freemium · €15 one-time purchase |
 | [Cold Turkey Blocker](https://macify.app/apps/cold-turkey-blocker) | The toughest website and app blocker on the internet. | Freemium · $39 one-time purchase |
 | [Compresto](https://macify.app/apps/compressx) | Compress video, images and PDFs locally on your Mac. | Paid · $49 one-time purchase |
+| [Craft](https://macify.app/apps/craft) | Polished documents, notes, and tasks in one workspace. | Freemium · Free plan; Plus from $6.40/month billed yearly |
 | [DaisyDisk](https://macify.app/apps/daisydisk) | Free up disk space by finding and removing large, unused files. | Paid · $9.99 one-time purchase |
 | [Dato](https://macify.app/apps/dato) | A better menu bar clock with calendar and time zones. | Paid · $18 one-time purchase |
 | [Dayflow](https://macify.app/apps/dayflow) | Automatic work journal & AI time tracker for Mac. | Freemium · $20/month |
@@ -62,27 +64,38 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Dropover](https://macify.app/apps/dropover) | Drag and drop. Without the friction. | Freemium · $6.99 one-time purchase |
 | [Droppy](https://macify.app/apps/droppy) | Your Mac, just way better. | Paid · €8.55 one-time purchase |
 | [DynamicLake](https://macify.app/apps/dynamiclake) | A Dynamic Island-style workspace for your Mac. | Paid · $13.99 one-time purchase |
+| [EasyDMG](https://macify.app/apps/easydmg) | Install Mac apps from DMG files with fewer steps. | Free |
 | [Expenses](https://macify.app/apps/expenses) | Simple expense tracking. | Freemium · From $1.99/month, $14.99/year, or $39.99 one-time purchase |
 | [Fantastical](https://macify.app/apps/fantastical) | Calendar and tasks, reimagined. | Freemium · $4.75/month billed annually or $6.99/month |
+| [Folx](https://macify.app/apps/folx) | Download management and torrents for Mac. | Freemium · Free edition; Pro from $19.95 one-time |
 | [ForkLift](https://macify.app/apps/forklift) | Dual-pane file management and transfers for Mac. | Paid · From $19.95 one-time purchase |
+| [Ghostty](https://macify.app/apps/ghostty) | A fast terminal with native Mac controls. | Free |
 | [Glance](https://macify.app/apps/glance) | Unlock your Mac with on-device facial recognition. | Free |
 | [Glyph](https://macify.app/apps/glyph) | A better Markdown app for your projects. | Paid · $24.99 one-time purchase |
 | [HandBrake](https://macify.app/apps/handbrake) | The open source video transcoder. | Free |
+| [Helium](https://macify.app/apps/helium-browser) | A privacy-focused, open-source browser. | Free |
 | [iA Writer](https://macify.app/apps/ia-writer) | A focused Markdown writing environment for Mac. | Paid · $49.99 one-time purchase |
 | [IINA](https://macify.app/apps/iina) | The modern media player for macOS. | Free |
+| [Karabiner-Elements](https://macify.app/apps/karabiner-elements) | Deep keyboard remapping for macOS. | Free |
 | [Keeby](https://macify.app/apps/keeby) | Mechanical keyboard sounds tuned for your Mac. | Paid · $4.99 one-time purchase |
 | [Klack](https://macify.app/apps/klack) | Satisfying key sounds. | Paid · $4.99 one-time purchase |
 | [Liqoria](https://macify.app/apps/liqoria) | Animated album artwork for music playing on your Mac. | Paid · $8.90 one-time purchase |
+| [LocalSend](https://macify.app/apps/localsend) | Share files directly with nearby devices. | Free |
 | [LookAway](https://macify.app/apps/lookaway) | Smart Break Reminder App for Mac. | Paid · $19 one-time purchase |
+| [Loop](https://macify.app/apps/loop) | Arrange Mac windows through a customizable radial menu. | Free |
 | [Lunar](https://macify.app/apps/lunar) | The defacto app for controlling monitors. | Freemium · $23 one-time purchase |
 | [Mac Mouse Fix](https://macify.app/apps/mac-mouse-fix) | Make your mouse better. | Freemium · $2.99 one-time purchase |
 | [Maccy](https://macify.app/apps/maccy) | A lightweight, keyboard-first clipboard manager for macOS. | Free |
 | [MacWhisper](https://macify.app/apps/macwhisper) | Transcribe audio files into text with ease. | Freemium · €64 one-time purchase |
 | [Magnet](https://macify.app/apps/magnet) | Organize your workspace. | Paid · $4.99 one-time purchase |
+| [MeetingBar](https://macify.app/apps/meetingbar) | Upcoming meetings and join links in the menu bar. | Free |
 | [Mimestream](https://macify.app/apps/mimestream) | Made for Mac. Optimized for Gmail. | Paid · $4.99/month |
 | [Mole](https://macify.app/apps/mole) | Native Mac utility for cleanup, software, and status. | Paid · $19 one-time purchase |
 | [Monocle](https://macify.app/apps/monocle) | Noise-cancelling for your screen. | Paid · $9 one-time purchase |
+| [Monologue](https://macify.app/apps/monologue) | Dictation, voice notes, and meeting transcripts. | Freemium · Limited free trial; Pro $144/year or $15/month |
 | [mymind](https://macify.app/apps/mymind) | A private place to save your most precious notes, images, quotes and highlights. | Paid · From $7.99/month or $79/year |
+| [Notemap](https://macify.app/apps/notemap) | A native, local-first mind mapper for macOS. | Freemium · Free core; Pro $30 beta one-time price |
+| [NotePlan](https://macify.app/apps/noteplan) | Daily notes, tasks, and calendar planning together. | Paid · $99/year or $12/month after trial |
 | [Obsidian](https://macify.app/apps/obsidian) | Sharpen your thinking. | Freemium · From $4/month, billed annually |
 | [OpenUsage](https://macify.app/apps/openusage) | Track AI coding subscriptions from the menu bar. | Free |
 | [Orion](https://macify.app/apps/orion) | The fastest browser on Earth. | Freemium · $5/month, $50/year, or $150 one-time purchase |
@@ -106,6 +119,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Screen Studio](https://macify.app/apps/screen-studio) | Beautiful screen recordings in minutes. | Paid · $29/month or $108/year |
 | [Session](https://macify.app/apps/session) | Pomodoro focus timer for mindful productivity. | Freemium · $4.99/month or $39.99/year |
 | [Shottr](https://macify.app/apps/shottr) | A screenshot tool for those who care about pixels. | Freemium · $12 one-time purchase |
+| [SideNotes](https://macify.app/apps/sidenotes) | Quick notes that slide out from the edge of the screen. | Paid · $19.99 one-time purchase |
 | [Sketch](https://macify.app/apps/sketch) | The definitive design toolkit. | Paid · $12/month or $120 one-time purchase |
 | [Sorted³](https://macify.app/apps/sorted) | Tasks, calendar events and notes in one timeline. | Freemium · $24.99 one-time purchase |
 | [Spokenly](https://macify.app/apps/spokenly) | Voice dictation for every app. | Freemium · $8.33/month or $99.99/year |
@@ -115,10 +129,18 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Supercharge](https://macify.app/apps/supercharge) | A broad collection of opt-in macOS enhancements. | Paid · $20 one-time purchase |
 | [Superwhisper](https://macify.app/apps/superwhisper) | Turn your voice into polished text. | Freemium · $8.49/month |
 | [Swish](https://macify.app/apps/swish) | The missing gesture layer for macOS. | Paid · $16 one-time purchase |
+| [TablePlus](https://macify.app/apps/tableplus) | A native database client for querying and editing data. | Freemium · Free limited trial; Basic license $99 one-time |
+| [Telegram for macOS](https://macify.app/apps/telegram) | Telegram messaging in a native Mac client. | Free |
+| [TextSniper](https://macify.app/apps/textsniper) | Copy text from anywhere on the Mac screen. | Paid · $9.99 one-time Mac App Store purchase |
 | [The Unarchiver](https://macify.app/apps/the-unarchiver) | Open any archive in seconds. | Free |
 | [Things 3](https://macify.app/apps/things-3) | The award-winning personal task manager. | Paid · $49.99 one-time purchase |
 | [Tinycast](https://macify.app/apps/tinycast) | A small, native macOS launcher with local-first utilities. | Free |
 | [Toki](https://macify.app/apps/toki) | A keyboard-first timer, alarm, and stopwatch for macOS. | Freemium · $13.99 one-time purchase |
+| [Transmission](https://macify.app/apps/transmission) | A simple, free BitTorrent client for Mac. | Free |
+| [Transmit](https://macify.app/apps/transmit) | Panic’s Mac client for servers and cloud files. | Paid · $45 direct one-time purchase; App Store subscription also offered |
+| [Tuneful](https://macify.app/apps/tuneful) | Native playback controls for Spotify and Apple Music. | Paid · $4.99 one-time Mac App Store purchase |
+| [Typibara](https://macify.app/apps/typibara) | A small animated companion for your Mac desktop. | Paid · £4.99 one-time purchase |
+| [Ulysses](https://macify.app/apps/ulysses) | A focused writing and publishing workspace. | Paid · $39.99/year or $5.99/month after trial |
 | [Velja](https://macify.app/apps/velja) | Route links to the right browser, profile, or desktop app. | Paid · $8 one-time purchase |
 | [VoiceInk](https://macify.app/apps/voiceink) | Write at the speed of thought with private voice dictation. | Paid · $25 one-time purchase |
 | [VoiceOS](https://macify.app/apps/voiceos) | Say it and it’s done. | Paid · $11.99/month billed annually |
@@ -126,6 +148,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Wallspace](https://macify.app/apps/wallspace) | Cinematic live wallpapers for macOS. | Freemium · $12.99 one-time purchase |
 | [Wispr Flow](https://macify.app/apps/wispr-flow) | Effortless Voice Dictation. | Freemium · $15/month |
 | [Xmind](https://macify.app/apps/xmind) | Where ideas grow. | Freemium · $4.92/month, billed annually |
+| [Zed](https://macify.app/apps/zed) | A fast code editor with collaboration and AI tools. | Freemium · Free Personal plan; Pro $10/month plus excess AI usage |
 <!-- macify-apps:end -->
 
 ## 💡 Know a good one?

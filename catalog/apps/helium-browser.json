@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Helium",
+  "slug": "helium-browser",
+  "websiteUrl": "https://helium.computer/",
+  "tagline": "A privacy-focused, open-source browser.",
+  "description": "Helium is an open-source web browser focused on privacy and a clean interface. It aims to reduce unwanted tracking and browser clutter while leaving users in control of the websites and extensions they choose.\n\nBrowse with built-in protections, choose a preferred tab layout, and add extensions when needed. The Mac build offers automatic updates when Helium services are enabled.\n\n## Features\n\n- Block ads and trackers with built-in browser protections.\n- Customize the browser interface with several tab and window layouts.\n- Use supported Chrome extensions through an anonymized store-request path.\n- Inspect the browser and service source code in public repositories.\n\n## Where it fits\n\nHelium suits people who want a Chromium-family browser with privacy defaults and a simpler interface. Website compatibility and extension behavior still depend on the underlying web platform and the particular sites visited.\n\n## Privacy and requirements\n\nThe developer says browsing data is stored locally and background network requests are limited to user actions or features explicitly enabled during setup. Optional crash reporting sends diagnostics only with consent. Privacy features reduce tracking but cannot eliminate all fingerprinting or tracking by websites.\n\n## Pricing\n\nHelium is free and open source.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "web-browsers",
+    "security"
+  ],
+  "relatedAppSlugs": [
+    "orion",
+    "dia"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://helium.computer/favicon.png",
+      "altText": "Helium application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://helium.computer/embed.jpg",
+      "altText": "Helium application preview"
+    },
+    "screenshots": []
+  }
+}
