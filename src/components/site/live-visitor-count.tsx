@@ -61,7 +61,6 @@ export function LiveVisitorCount() {
     <span className="live-visitor-count" aria-label={visitorCount === null ? "Loading people online now" : `${visitorCount.toLocaleString()} people online now`} aria-live="polite">
       <span className="live-visitor-status" aria-hidden="true" />
       <strong>{visitorCount === null ? "–" : visitorCount.toLocaleString()}</strong>
-      <span>online</span>
     </span>
   );
 }

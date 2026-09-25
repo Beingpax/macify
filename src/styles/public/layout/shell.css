@@ -142,7 +142,6 @@
 
 .live-visitor-count { gap: 0.45rem; }
 .live-visitor-count strong { font-size: 0.98rem; font-variant-numeric: tabular-nums; }
-.live-visitor-count > span:last-child { color: var(--color-text-muted); }
 
 .live-visitor-status {
   width: 0.55rem;
@@ -152,6 +151,15 @@
   border-radius: 50%;
   background: var(--color-green-bright);
   box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--color-green-bright) 14.000000000000002%, transparent);
+  animation: live-visitor-blink 1.8s ease-in-out infinite;
+}
+
+@keyframes live-visitor-blink {
+  50% { opacity: 0.35; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-visitor-status { animation: none; }
 }
 
 .public-site .brand {
