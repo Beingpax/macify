@@ -1,0 +1,57 @@
+:root {
+  /* Shared Macify surfaces and typography. */
+  --color-white: var(--theme-white);
+  --color-black: var(--theme-black);
+  --color-canvas: var(--theme-canvas);
+  --color-surface: var(--theme-white);
+  --color-surface-soft: #f6f7f9;
+  --color-surface-muted: #eef0f4;
+  --color-ink: var(--theme-ink);
+  --color-ink-strong: #080a0d;
+  --color-ink-soft: var(--theme-ink-soft);
+  --color-text-muted: var(--theme-text-muted);
+  --color-text-faint: #858c97;
+  --color-line: #e2e4e8;
+  --color-line-strong: #cbd0d7;
+  --color-line-heavy: #aeb1b5;
+
+  /* Sunflower identifies discounts on light and dark surfaces. */
+  --color-offer-surface: var(--theme-offer-surface);
+  --color-offer-surface-soft: #fff2c9;
+  --color-offer-ink: var(--theme-offer-ink);
+  --color-offer-ink-soft: #3d2a0e;
+  --color-deal-lime: #d9f29f;
+  --color-deal-lilac: #dec9ff;
+  --color-deal-coral: #ffb9ad;
+  --color-deal-aqua: #afece6;
+
+  /* Supporting brand accents and semantic states. */
+  --color-action: var(--theme-action);
+  --color-action-dark: #2858cf;
+  --color-action-deep: #244588;
+  --color-action-mid: #8caaff;
+  --color-action-border: #b7c6f3;
+  --color-action-soft: #eaf0ff;
+  --color-orange: #ff5b27;
+  --color-orange-dark: #b94f31;
+  --color-orange-soft: #fff1e9;
+  --color-mint: #b7f2d4;
+  --color-mint-mid: #5dcea0;
+  --color-green: #176846;
+  --color-green-bright: #118a5b;
+  --color-green-soft: #e8f4ec;
+  --color-violet: #6358aa;
+  --color-violet-bright: #8b5cf6;
+  --color-violet-mid: #bca9ff;
+  --color-violet-soft: #e5e9ff;
+  --color-peach: #ffc8aa;
+  --color-blue-soft: #bfe7ff;
+  --color-rose-soft: #ffd0dc;
+  --color-plum: #47314a;
+  --color-plum-dark: #342338;
+  --color-plum-soft: #f2edf2;
+  --color-warning: #72571c;
+  --color-danger: #983b34;
+  --color-danger-soft: #fbefec;
+  --color-shadow-rgb: 41 58 68;
+}

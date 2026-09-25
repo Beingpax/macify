@@ -22,15 +22,15 @@
 
 .site-action.site-action--primary,
 .surprise-preview-actions .site-action.site-action--primary {
-  color: #fff;
-  background: #080a0d;
+  color: var(--color-white);
+  background: var(--color-ink-strong);
 }
 
 .site-action.site-action--primary:hover,
 .site-action.site-action--primary:focus-visible,
 .surprise-preview-actions .site-action.site-action--primary:hover,
 .surprise-preview-actions .site-action.site-action--primary:focus-visible {
-  color: #fff;
+  color: var(--color-white);
   background: var(--button-dark-hover);
 }
 
@@ -41,21 +41,21 @@
 
 .site-action.site-action--secondary,
 .surprise-preview-actions .site-action.site-action--secondary {
-  border-color: #c9cfd4;
-  color: #101217;
-  background: #fff;
+  border-color: var(--color-line-strong);
+  color: var(--color-ink);
+  background: var(--color-white);
 }
 
 .site-action.site-action--secondary:hover,
 .surprise-preview-actions .site-action.site-action--secondary:hover {
-  border-color: #8f989f;
-  color: #101217;
-  background: #f5f6f7;
+  border-color: var(--color-text-faint);
+  color: var(--color-ink);
+  background: var(--color-surface-soft);
 }
 
 .site-action.site-action--secondary:active,
 .surprise-preview-actions .site-action.site-action--secondary:active {
-  background: #e9edf0;
+  background: var(--color-surface-muted);
 }
 
 .site-action:active {

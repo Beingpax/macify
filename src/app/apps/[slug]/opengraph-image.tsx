@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { notFound } from "next/navigation";
 import { mediaUrl } from "@/components/site/public-app-card";
 import { getPublishedApplicationBySlug } from "@/lib/directory/published-app-data";
+import { themeColors } from "@/lib/shared/theme-colors";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -26,7 +27,7 @@ export default async function OpenGraphImage({
 
   if (previewSource) {
     return new ImageResponse(
-      <div style={{ background: "#f6f4f5", display: "flex", height: "100%", width: "100%" }}>
+      <div style={{ background: themeColors.canvas, display: "flex", height: "100%", width: "100%" }}>
         <img alt="" height={630} src={previewSource} style={{ height: "100%", objectFit: "cover", width: "100%" }} width={1200} />
       </div>,
       size,
@@ -37,8 +38,8 @@ export default async function OpenGraphImage({
     <div
       style={{
         alignItems: "center",
-        background: "#f7f7f5",
-        color: "#20111f",
+        background: themeColors.canvas,
+        color: themeColors.ink,
         display: "flex",
         flexDirection: "column",
         height: "100%",
@@ -49,9 +50,9 @@ export default async function OpenGraphImage({
       }}
     >
       {iconSource ? <img alt="" height={132} src={iconSource} style={{ borderRadius: 28, height: 132, marginBottom: 34, objectFit: "cover", width: 132 }} width={132} /> : null}
-      <div style={{ color: "#1457ff", display: "flex", fontSize: 22, fontWeight: 750, marginBottom: 24 }}>Macify</div>
+      <div style={{ color: themeColors.action, display: "flex", fontSize: 22, fontWeight: 750, marginBottom: 24 }}>Macify</div>
       <div style={{ display: "flex", fontSize: 72, fontWeight: 850, letterSpacing: "-0.04em", lineHeight: 1 }}>{application.name}</div>
-      <div style={{ color: "#555b66", display: "flex", fontSize: 28, lineHeight: 1.4, marginTop: 26, maxWidth: 880 }}>{application.tagline}</div>
+      <div style={{ color: themeColors.textMuted, display: "flex", fontSize: 28, lineHeight: 1.4, marginTop: 26, maxWidth: 880 }}>{application.tagline}</div>
     </div>,
     size,
   );

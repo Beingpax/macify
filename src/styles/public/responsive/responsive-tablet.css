@@ -88,11 +88,11 @@
     min-height: 2.75rem;
   }
   .public-navigation a[aria-current="page"]:not(.public-submit-link) {
-    color: #1457ff;
-    background: #eaf0ff;
+    color: var(--color-action);
+    background: var(--color-action-soft);
   }
   .public-navigation a:focus-visible {
-    outline: 0.16rem solid #1457ff;
+    outline: 0.16rem solid var(--color-action);
     outline-offset: 0.1rem;
   }
   .public-navigation-icon { width: 1.35rem; height: 1.35rem; display: grid; }
@@ -113,7 +113,7 @@
     min-height: 3rem;
     padding-inline: 0;
     overflow: hidden;
-    border-color: #e1e3e7;
+    border-color: var(--color-line);
     border-radius: 999px;
     background: var(--public-canvas);
   }
@@ -152,7 +152,7 @@
   .deals-ticket-arrow { display: none; }
   .deals-featured { grid-template-columns: 1fr; }
   .deals-featured-app { min-height: 5.9rem; }
-  .deals-featured-app + .deals-featured-app { border-top: 0.08rem solid #cfd1d6; border-left: 0; }
+  .deals-featured-app + .deals-featured-app { border-top: 0.08rem solid var(--color-line-strong); border-left: 0; }
   .category-index-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .category-index-grid a:nth-child(n) { grid-column: span 3; }
   .category-index-grid a:nth-child(5n) { grid-column: span 6; }

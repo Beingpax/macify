@@ -40,7 +40,7 @@
   border-radius: 0.38rem;
   background: var(--play-blue);
   transform: rotate(-8deg);
-  box-shadow: 0 0.35rem 0.8rem rgb(28 95 230 / 0.2);
+  box-shadow: 0 0.35rem 0.8rem color-mix(in srgb, var(--color-action) 20%, transparent);
 }
 
 .category-page-period { color: var(--play-orange); }
@@ -105,13 +105,13 @@
 
 .directory-view-icon svg { width: 100%; height: 100%; display: block; fill: currentColor; }
 .directory-view-tabs a[data-view="hot"] .directory-view-icon { color: var(--play-orange); }
-.directory-view-tabs a[data-view="trending"] .directory-view-icon { color: #118a5b; }
-.directory-view-tabs a[data-view="latest"] .directory-view-icon { color: #8b5cf6; }
+.directory-view-tabs a[data-view="trending"] .directory-view-icon { color: var(--color-green-bright); }
+.directory-view-tabs a[data-view="latest"] .directory-view-icon { color: var(--color-violet-bright); }
 .directory-flame-inner { fill: var(--play-yellow); }
-.directory-trend-bar-low { fill: #8ee3bc; }
-.directory-trend-bar-mid { fill: #5dcea0; }
-.directory-trend-bar-high { fill: #2eb47b; }
-.directory-trend-bar-peak { fill: #118a5b; }
+.directory-trend-bar-low { fill: var(--color-mint); }
+.directory-trend-bar-mid { fill: var(--color-mint-mid); }
+.directory-trend-bar-high { fill: var(--color-green-bright); }
+.directory-trend-bar-peak { fill: var(--color-green-bright); }
 
 .directory-view-tabs a[aria-current="page"] {
   color: var(--public-canvas);

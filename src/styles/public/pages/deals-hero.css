@@ -73,8 +73,8 @@
   place-items: center;
   border: 0.14rem dashed var(--public-ink);
   border-radius: 0.7rem;
-  background: #dedbff;
-  box-shadow: 0 0.7rem 1rem rgb(21 31 49 / 0.12);
+  background: var(--color-violet-soft);
+  box-shadow: 0 0.7rem 1rem color-mix(in srgb, var(--color-ink) 12%, transparent);
 }
 
 .deals-empty-ticket::before,
@@ -94,12 +94,12 @@
 
 .deals-empty-ticket i {
   width: 42%;
-  border-top: 0.18rem dashed rgb(14 18 25 / 0.35);
+  border-top: 0.18rem dashed color-mix(in srgb, var(--color-ink) 35%, transparent);
 }
 
 .deals-empty-ticket-1 { top: 1.5rem; left: 4%; transform: rotate(-8deg); }
-.deals-empty-ticket-2 { top: 8.5rem; right: 3%; background: #b7f2d4; transform: rotate(7deg); }
-.deals-empty-ticket-3 { bottom: 0.5rem; left: 22%; background: #ffdc28; transform: rotate(-3deg); }
+.deals-empty-ticket-2 { top: 8.5rem; right: 3%; background: var(--color-mint); transform: rotate(7deg); }
+.deals-empty-ticket-3 { bottom: 0.5rem; left: 22%; background: var(--color-offer-surface); transform: rotate(-3deg); }
 
 .deals-empty-star {
   position: absolute;
@@ -180,7 +180,7 @@
   justify-content: center;
   gap: 0.7rem;
   border-radius: 0.35rem;
-  color: #fff;
+  color: var(--color-white);
   background: var(--play-blue);
   font-size: 0.98rem;
   font-weight: 800;
@@ -189,7 +189,7 @@
 
 .deals-hero-action:focus-visible { outline: 0.2rem solid var(--play-blue); outline-offset: 0.22rem; }
 .deals-hero-action:hover,
-.deals-hero-action:focus-visible { background: color-mix(in oklch, var(--play-blue) 92%, black); }
+.deals-hero-action:focus-visible { background: color-mix(in oklch, var(--play-blue) 92%, var(--color-black)); }
 .deals-hero-action:active { transform: translateY(0.03rem) scale(0.985); }
 
 .deals-hero-copy > .deals-hero-disclaimer {
@@ -198,7 +198,7 @@
   display: flex;
   align-items: flex-start;
   gap: 0.55rem;
-  color: #353a43;
+  color: var(--color-ink-soft);
   font-size: 0.78rem;
   font-weight: 600;
   line-height: 1.4;
@@ -223,8 +223,8 @@
 }
 
 .deals-ticket {
-  --ticket-background: #dedbff;
-  --ticket-accent: #1858e8;
+  --ticket-background: var(--color-violet-soft);
+  --ticket-accent: var(--color-action-dark);
   --ticket-padding-block: 1.15rem;
   width: calc(100% - 2.5rem);
   min-height: 8.6rem;
@@ -258,8 +258,8 @@
 .deals-ticket:focus-visible { outline: 0.2rem solid var(--play-blue); outline-offset: 0.28rem; }
 
 .deals-ticket-2 {
-  --ticket-background: #cceedd;
-  --ticket-accent: #159a63;
+  --ticket-background: var(--color-mint);
+  --ticket-accent: var(--color-green-bright);
   width: calc(100% - 1.5rem);
   margin-top: -1.5rem;
   margin-left: -0.45rem;
@@ -268,8 +268,8 @@
 }
 
 .deals-ticket-3 {
-  --ticket-background: #ffe4a2;
-  --ticket-accent: #ee6300;
+  --ticket-background: var(--color-offer-surface-soft);
+  --ticket-accent: var(--color-orange);
   width: calc(100% - 2.2rem);
   margin-top: -1.45rem;
   margin-left: 0.55rem;
@@ -301,7 +301,7 @@
 
 .deals-ticket-copy small {
   overflow: hidden;
-  color: #3f4650;
+  color: var(--color-ink-soft);
   display: -webkit-box;
   font-size: clamp(0.68rem, 1vw, 0.8rem);
   font-weight: 650;
@@ -316,7 +316,7 @@
   margin-block: calc(-1 * var(--ticket-padding-block));
   position: relative;
   align-self: stretch;
-  border-left: 0.09rem dashed rgb(28 33 41 / 0.38);
+  border-left: 0.09rem dashed color-mix(in srgb, var(--color-ink) 38%, transparent);
 }
 
 .deals-ticket-perforation::before,

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { themeColors } from "@/lib/shared/theme-colors";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
@@ -7,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "A curated directory of useful macOS applications.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f3f5f6",
-    theme_color: "#171b1e",
+    background_color: themeColors.canvas,
+    theme_color: themeColors.offerSurface,
     icons: [
       {
         src: "/icons/macify-192.png",

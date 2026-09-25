@@ -1,8 +1,16 @@
 .voiceink-offer-banner {
+  --offer-bg: var(--color-green);
+  --offer-ink: var(--color-white);
+  --offer-secondary: var(--color-white);
+  --offer-accent: var(--color-offer-surface);
+  --offer-ticket: var(--color-offer-surface);
+  --offer-ticket-ink: var(--color-offer-ink);
+  --offer-button: var(--color-white);
+  --offer-button-ink: var(--color-ink);
   position: relative;
   z-index: var(--z-header);
-  color: var(--public-ink-strong);
-  background: #b7f2d4;
+  color: var(--offer-ink);
+  background: var(--offer-bg);
 }
 
 .voiceink-offer-inner {
@@ -24,13 +32,19 @@
   align-items: center;
   gap: 0.65rem;
 }
-.voiceink-offer-icon { width: 3.5rem; height: 3.5rem; flex: 0 0 auto; border-radius: 0.85rem; }
+.voiceink-offer-icon { width: 3.5rem; height: 3.5rem; flex: 0 0 auto; border: 2px solid var(--color-white); border-radius: 0.85rem; box-shadow: 0 0.25rem 0.7rem color-mix(in srgb, var(--color-black) 18%, transparent); }
 .voiceink-offer-brand > div { min-width: 0; display: grid; gap: 0.06rem; }
 .voiceink-offer-brand strong { font-size: 1rem; font-weight: 850; letter-spacing: -0.035em; line-height: 1.1; }
-.voiceink-offer-brand small { color: #355246; font-size: 0.68rem; font-weight: 750; line-height: 1.2; }
+.voiceink-offer-brand small { color: var(--offer-secondary); font-size: 0.68rem; font-weight: 750; line-height: 1.2; }
 
 .voiceink-offer-copy { min-width: 0; grid-area: copy; }
-.voiceink-offer-copy span { color: #245b45; font-size: 0.62rem; font-weight: 850; letter-spacing: 0.1em; text-transform: uppercase; }
+.voiceink-offer-copy > span {
+  color: var(--offer-accent);
+  font-size: 0.62rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
 .voiceink-offer-copy p {
   margin: 0.08rem 0 0;
   font-family: var(--font-caprasimo), var(--font-urbanist), sans-serif;
@@ -47,8 +61,8 @@
   position: relative;
   grid-area: discount;
   display: block;
-  color: var(--public-ink-strong);
-  background: #ffcf56;
+  color: var(--offer-ticket-ink);
+  background: var(--offer-ticket);
   transform: rotate(4deg);
 }
 
@@ -59,7 +73,7 @@
   position: absolute;
   top: 50%;
   border-radius: 50%;
-  background: #b7f2d4;
+  background: var(--offer-bg);
   content: "";
   transform: translateY(-50%);
 }
@@ -70,7 +84,7 @@
   padding: 0.22rem 0.44rem;
   display: grid;
   place-items: center;
-  border: 0.08rem dashed rgb(91 57 4 / 0.58);
+  border: 0.08rem dashed color-mix(in srgb, var(--offer-ticket-ink) 55%, transparent);
   font-size: 0.76rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -79,13 +93,15 @@
 
 .voiceink-offer-banner .voiceink-offer-action {
   grid-area: action;
+  border-color: var(--offer-button);
   border-radius: 0.55rem;
-  color: #fff;
-  background: var(--public-ink);
+  color: var(--offer-button-ink);
+  background: var(--offer-button);
   white-space: nowrap;
 }
 .voiceink-offer-banner .voiceink-offer-action:hover,
-.voiceink-offer-banner .voiceink-offer-action:focus-visible { background: color-mix(in oklch, var(--public-ink) 90%, white); }
+.voiceink-offer-banner .voiceink-offer-action:focus-visible { border-color: var(--offer-button); color: var(--offer-button-ink); background: color-mix(in srgb, var(--offer-button) 86%, var(--offer-bg)); }
+.voiceink-offer-banner .voiceink-offer-action:active { color: var(--offer-button-ink); background: color-mix(in srgb, var(--offer-button) 76%, var(--offer-bg)); }
 .voiceink-offer-dismiss {
   width: 2rem;
   height: 2rem;
@@ -95,12 +111,12 @@
   place-items: center;
   border: 0;
   border-radius: 0.4rem;
-  color: #315546;
+  color: var(--offer-secondary);
   background: transparent;
   cursor: pointer;
 }
-.voiceink-offer-dismiss:hover { color: var(--public-ink); background: rgb(255 255 255 / 0.55); }
-.voiceink-offer-dismiss:focus-visible { outline: 0.18rem solid var(--play-blue); outline-offset: 0.12rem; }
+.voiceink-offer-dismiss:hover { color: var(--offer-ink); background: color-mix(in srgb, var(--offer-ink) 12%, transparent); }
+.voiceink-offer-dismiss:focus-visible { outline: 0.18rem solid var(--offer-accent); outline-offset: 0.12rem; }
 
 @media (max-width: 64rem) {
   .voiceink-offer-inner {

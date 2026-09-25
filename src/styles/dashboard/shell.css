@@ -32,22 +32,22 @@
 .dashboard-loading-rows span { height: 6rem; }
 
 .dashboard-shell {
-  --canvas: #f6f7f9;
-  --paper: #f6f7f9;
-  --paper-strong: #fff;
-  --ink: #15171c;
-  --ink-soft: #3d424c;
-  --muted: #626975;
-  --faint: #858c97;
-  --line: #e2e5e9;
-  --line-strong: #cbd0d7;
-  --accent: #2858cf;
-  --accent-dark: #1e46aa;
-  --accent-soft: #edf2ff;
-  --play-orange: #b94f31;
-  --play-yellow: #8d6a0c;
-  --play-mint: #287857;
-  --play-lilac: #6358aa;
+  --canvas: var(--color-canvas);
+  --paper: var(--color-surface);
+  --paper-strong: var(--color-white);
+  --ink: var(--color-ink);
+  --ink-soft: var(--color-ink-soft);
+  --muted: var(--color-text-muted);
+  --faint: var(--color-text-faint);
+  --line: var(--color-line);
+  --line-strong: var(--color-line-strong);
+  --accent: var(--color-plum);
+  --accent-dark: var(--color-plum-dark);
+  --accent-soft: var(--color-plum-soft);
+  --play-orange: var(--color-orange-dark);
+  --play-yellow: var(--color-warning);
+  --play-mint: var(--color-green);
+  --play-lilac: var(--color-violet);
   --font-body: var(--font-urbanist), "Avenir Next", sans-serif;
   --font-display: var(--font-urbanist), "Avenir Next", sans-serif;
   min-height: 100dvh;
@@ -68,7 +68,7 @@
   flex-direction: column;
   border-right: 1px solid var(--line);
   color: var(--ink);
-  background: #fff;
+  background: var(--color-white);
 }
 
 .dashboard-brand {
@@ -94,8 +94,8 @@
   display: grid;
   place-items: center;
   border-radius: 0.58rem;
-  color: #fff;
-  background: #4a2945;
+  color: var(--color-white);
+  background: var(--color-plum);
 }
 
 .dashboard-brand .brand-word { font-size: 1.12rem; }
@@ -183,11 +183,11 @@
 }
 
 .dashboard-nav-active .dashboard-nav-icon {
-  color: #fff;
+  color: var(--color-white);
   background: var(--accent);
 }
 
-.dashboard-nav-active .dashboard-nav-copy small { color: #526487; }
+.dashboard-nav-active .dashboard-nav-copy small { color: var(--color-text-muted); }
 
 .dashboard-rail-footer {
   margin-top: auto;
@@ -210,8 +210,8 @@
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 50%;
-  background: #82dcb1;
-  box-shadow: 0 0 0 0.2rem rgb(130 220 177 / 0.13);
+  background: var(--color-mint-mid);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--color-mint) 13%, transparent);
 }
 
 .dashboard-site-link {
@@ -224,14 +224,14 @@
   border: 1px solid var(--line-strong);
   border-radius: 0.55rem;
   color: var(--ink-soft);
-  background: #fff;
+  background: var(--color-white);
   font-size: 0.7rem;
   font-weight: 700;
   transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
 }
 
 .dashboard-site-link:hover {
-  border-color: #aebbe0;
+  border-color: var(--color-action-border);
   color: var(--accent-dark);
   background: var(--accent-soft);
   transform: translateY(-1px);
@@ -255,7 +255,7 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--line);
-  background: rgb(255 255 255 / 0.94);
+  background: color-mix(in srgb, var(--color-white) 94%, transparent);
 }
 
 .dashboard-current-section {
@@ -265,7 +265,7 @@
 }
 
 .dashboard-current-icon {
-  --current-tone: #7fa3ff;
+  --current-tone: var(--color-action-mid);
   width: 2.15rem;
   height: 2.15rem;
   display: grid;
@@ -361,7 +361,7 @@
 .dashboard-shell .button-primary {
   border-color: var(--accent);
   background: var(--accent);
-  box-shadow: 0 0.35rem 0.8rem rgb(23 88 238 / 0.18);
+  box-shadow: 0 0.35rem 0.8rem color-mix(in srgb, var(--color-action) 18%, transparent);
 }
 
 .dashboard-shell .button-primary:hover {
@@ -371,7 +371,7 @@
 
 .dashboard-shell .button-secondary {
   border-color: var(--line-strong);
-  background: #fff;
+  background: var(--color-white);
 }
 
 .dashboard-breadcrumbs {
@@ -406,4 +406,3 @@
   .dashboard-nav-link,
   .dashboard-site-link { transition: none; }
 }
-

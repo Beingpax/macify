@@ -61,7 +61,7 @@
     display: inline-flex;
     border-color: var(--line);
     color: var(--ink-soft);
-    background: #fff;
+    background: var(--color-white);
   }
 
   .dashboard-main { padding: 2.5rem 1rem 5rem; }

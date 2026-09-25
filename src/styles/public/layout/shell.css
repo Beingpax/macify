@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 22%;
-  background-color: #fff;
+  background-color: var(--color-white);
   object-fit: cover;
-  box-shadow: 0 0.45rem 1rem rgb(var(--shadow-color) / 0.17), inset 0 0 0 1px rgb(255 255 255 / 0.36);
+  box-shadow: 0 0.45rem 1rem rgb(var(--shadow-color) / 0.17), inset 0 0 0 1px color-mix(in srgb, var(--color-white) 36%, transparent);
 }
 
 .public-app-icon-fallback {
@@ -32,26 +32,26 @@
   --font-display: var(--font-urbanist), "Avenir Next", sans-serif;
   --public-display-font: var(--font-caprasimo), var(--font-urbanist), "Avenir Next", sans-serif;
   --public-note-font: var(--font-caveat), cursive;
-  --public-note-color: #555e6b;
+  --public-note-color: var(--color-text-muted);
   --public-page-title-size: clamp(3.1rem, 9vw, 6rem);
   --public-section-title-size: clamp(2rem, 4vw, 3.4rem);
   --public-note-size: clamp(1.35rem, 1.75vw, 1.65rem);
-  --play-blue: #1457ff;
-  --play-orange: #ff5b27;
-  --play-yellow: #ffdc28;
-  --play-mint: #b7f2d4;
-  --play-lilac: #e5e9ff;
-  --public-canvas: #fff;
-  --public-ink: #080a0d;
-  --public-ink-strong: #101217;
-  --public-text: #343a43;
-  --public-text-secondary: #59616b;
-  --public-text-muted: #6b727d;
-  --public-line: #e2e4e8;
-  --public-line-soft: #eceef1;
-  --public-surface: #f3f4f6;
-  --header-canvas: oklch(0.985 0.012 82);
-  --header-accent: oklch(0.34 0.075 326);
+  --play-blue: var(--color-action);
+  --play-orange: var(--color-orange);
+  --play-yellow: var(--color-offer-surface);
+  --play-mint: var(--color-mint);
+  --play-lilac: var(--color-violet-soft);
+  --public-canvas: var(--color-surface);
+  --public-ink: var(--color-ink-strong);
+  --public-ink-strong: var(--color-ink);
+  --public-text: var(--color-ink-soft);
+  --public-text-secondary: var(--color-text-muted);
+  --public-text-muted: var(--color-text-faint);
+  --public-line: var(--color-line);
+  --public-line-soft: var(--color-surface-muted);
+  --public-surface: var(--color-surface-soft);
+  --header-canvas: var(--color-canvas);
+  --header-accent: var(--color-plum);
 }
 
 .application-presentation { font-family: var(--font-body); }
@@ -122,17 +122,17 @@
   padding: 0.25rem 0.85rem;
   display: inline-flex;
   align-items: center;
-  border: 1px solid #e1e3e7;
+  border: 1px solid var(--color-line);
   border-radius: 999px;
   background: var(--public-canvas);
-  box-shadow: 0 0.45rem 1.4rem rgb(24 31 43 / 0.08);
+  box-shadow: 0 0.45rem 1.4rem color-mix(in srgb, var(--color-ink) 8%, transparent);
 }
 
 .live-visitor-count {
   min-height: 2rem;
   display: inline-flex;
   align-items: center;
-  color: #111318;
+  color: var(--color-ink);
   font-family: var(--font-urbanist), "Avenir Next", sans-serif;
   font-size: 0.88rem;
   font-weight: 650;
@@ -142,7 +142,7 @@
 
 .live-visitor-count { gap: 0.45rem; }
 .live-visitor-count strong { font-size: 0.98rem; font-variant-numeric: tabular-nums; }
-.live-visitor-count > span:last-child { color: #5f646d; }
+.live-visitor-count > span:last-child { color: var(--color-text-muted); }
 
 .live-visitor-status {
   width: 0.55rem;
@@ -150,8 +150,8 @@
   margin-inline-end: 0.1rem;
   flex: 0 0 auto;
   border-radius: 50%;
-  background: #159455;
-  box-shadow: 0 0 0 0.18rem rgb(21 148 85 / 0.14);
+  background: var(--color-green-bright);
+  box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--color-green-bright) 14.000000000000002%, transparent);
 }
 
 .public-site .brand {
@@ -166,7 +166,7 @@
 
 .public-header .brand {
   min-height: 2.35rem;
-  color: #111318;
+  color: var(--color-ink);
 }
 
 .public-header .brand-mark {
@@ -176,8 +176,8 @@
   place-items: center;
   border-radius: 0.58rem;
   color: var(--public-canvas);
-  background: #55224f;
-  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18), 0 0.35rem 0.8rem rgb(0 0 0 / 0.32);
+  background: var(--color-plum);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--color-white) 18%, transparent), 0 0.35rem 0.8rem color-mix(in srgb, var(--color-black) 32%, transparent);
 }
 
 .public-header .brand-word { font-size: 1.05rem; letter-spacing: -0.04em; }
@@ -193,10 +193,10 @@
   display: flex;
   align-items: center;
   gap: 0.12rem;
-  border: 1px solid #e1e3e7;
+  border: 1px solid var(--color-line);
   border-radius: 999px;
   background: var(--public-canvas);
-  box-shadow: 0 0.45rem 1.4rem rgb(24 31 43 / 0.08);
+  box-shadow: 0 0.45rem 1.4rem color-mix(in srgb, var(--color-ink) 8%, transparent);
 }
 
 .public-navigation a {
@@ -208,7 +208,7 @@
   gap: 0.4rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  color: #252a31;
+  color: var(--color-plum-dark);
   background: transparent;
   box-shadow: none;
   font-size: 0.84rem;
@@ -219,8 +219,8 @@
 .public-navigation a:hover,
 .public-navigation a:focus-visible {
   border-color: transparent;
-  color: #111318;
-  background: #f0f1f3;
+  color: var(--color-ink);
+  background: var(--color-surface-muted);
   transform: none;
 }
 
@@ -228,14 +228,14 @@
   padding-inline: 1rem;
   border-color: transparent;
   color: var(--public-canvas);
-  background: #151a21;
+  background: var(--color-ink);
 }
 
 .public-navigation .public-submit-link:hover,
 .public-navigation .public-submit-link:focus-visible {
   border-color: transparent;
   color: var(--public-canvas);
-  background: #080a0d;
+  background: var(--color-ink-strong);
 }
 
 .public-submit-link:active { transform: translateY(0.03rem) scale(0.985); }
@@ -272,18 +272,18 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid #e1e3e7;
+  border: 1px solid var(--color-line);
   border-radius: 999px;
-  color: #525b68;
+  color: var(--color-text-muted);
   background: var(--public-canvas);
-  box-shadow: 0 0.45rem 1.4rem rgb(24 31 43 / 0.08);
+  box-shadow: 0 0.45rem 1.4rem color-mix(in srgb, var(--color-ink) 8%, transparent);
   transition: border-color 160ms cubic-bezier(0.22, 1, 0.36, 1), background-color 160ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .header-search-field:focus-within {
-  border-color: #8caaff;
+  border-color: var(--color-action-mid);
   background: var(--public-canvas);
-  box-shadow: 0 0 0 0.18rem rgb(20 87 255 / 0.16);
+  box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--color-action) 16%, transparent);
 }
 
 .header-search-field input {
@@ -296,7 +296,7 @@
   font-size: 0.84rem;
 }
 
-.header-search-field input::placeholder { color: #68717d; }
+.header-search-field input::placeholder { color: var(--color-text-muted); }
 .header-search-field input::-webkit-search-cancel-button { display: none; }
 
 .search-trigger {
@@ -308,7 +308,7 @@
   flex: 0 0 auto;
   border: 0;
   border-radius: 0.4rem;
-  color: #525b68;
+  color: var(--color-text-muted);
   background: transparent;
   cursor: pointer;
 }
@@ -323,11 +323,11 @@
   flex: 0 0 auto;
   border: 0;
   border-radius: 50%;
-  color: #626b78;
+  color: var(--color-text-muted);
   background: transparent;
 }
 
-.search-clear:hover { color: var(--public-ink-strong); background: #e9ebef; }
+.search-clear:hover { color: var(--public-ink-strong); background: var(--color-plum-soft); }
 
 .search-spinner {
   flex: 0 0 auto;
@@ -346,10 +346,10 @@
   right: 0;
   overflow-y: auto;
   z-index: var(--z-menu);
-  border: 1px solid #e0e2e6;
+  border: 1px solid var(--color-line);
   border-radius: 0.75rem;
   background: var(--public-canvas);
-  box-shadow: 0 1.4rem 4rem rgb(15 22 34 / 0.18);
+  box-shadow: 0 1.4rem 4rem color-mix(in srgb, var(--color-ink) 18%, transparent);
 }
 
 .inline-search-summary {
@@ -357,13 +357,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #3d4450;
+  color: var(--color-ink-soft);
   font-size: 0.72rem;
   font-weight: 750;
 }
 
 .inline-search-summary small {
-  color: #989ea8;
+  color: var(--color-text-faint);
   font-size: 0.67rem;
   font-weight: 550;
 }
@@ -388,10 +388,10 @@
 }
 
 .inline-search-results > button:hover,
-.inline-search-results > button[data-active="true"] { background: #f3f6ff; }
+.inline-search-results > button[data-active="true"] { background: var(--color-surface-soft); }
 
 .inline-search-results .public-app-icon {
-  box-shadow: 0 0.35rem 0.8rem rgb(20 28 42 / 0.16);
+  box-shadow: 0 0.35rem 0.8rem color-mix(in srgb, var(--color-ink) 16%, transparent);
 }
 
 .inline-search-copy {

@@ -2,7 +2,7 @@
 .editorial-hero h1 { max-width: none; }
 
 .editorial-hero .public-content-hero-copy > p:first-child {
-  color: #282e36;
+  color: var(--color-ink-soft);
   font-size: clamp(1.15rem, 1.9vw, 1.45rem);
 }
 
@@ -15,7 +15,7 @@
 
 .editorial-page .public-content-feature-aside > p {
   margin: 1.75rem 0 0;
-  color: #c7cbd2;
+  color: var(--color-line-strong);
   font-size: 0.94rem;
   line-height: 1.7;
 }

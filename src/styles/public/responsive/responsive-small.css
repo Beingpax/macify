@@ -35,14 +35,14 @@
   }
   .public-brand-pill { min-height: 2.4rem; padding: 0.15rem 0.65rem; }
   .public-header .brand { min-width: 0; padding: 0; }
-  .public-header .brand-word { color: #080a0d; font-size: 0.95rem; }
+  .public-header .brand-word { color: var(--color-ink-strong); font-size: 0.95rem; }
   .public-header .brand-mark { width: 1.85rem; height: 1.85rem; }
   .live-visitor-count > span:last-child { display: none; }
   .header-search-field { min-height: 2.85rem; border-radius: 999px; }
   .header-search-field:focus-within {
-    border-color: #8caaff;
+    border-color: var(--color-action-mid);
     background: var(--public-canvas);
-    box-shadow: 0 0 0 0.2rem rgb(20 87 255 / 0.16);
+    box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--color-action) 16%, transparent);
   }
 
   .inline-app-search { width: 2.85rem; }

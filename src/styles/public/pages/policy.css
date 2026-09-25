@@ -22,7 +22,7 @@
 .not-found-page > p {
   max-width: 35rem;
   margin: 1.75rem 0 0;
-  color: #59616d;
+  color: var(--color-text-muted);
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   line-height: 1.6;
   text-wrap: balance;

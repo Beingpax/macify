@@ -87,7 +87,7 @@
   padding: 1rem;
   overflow-x: auto;
   border-radius: var(--radius-sm);
-  color: #e9edf0;
+  color: var(--color-surface-muted);
   background: var(--ink);
 }
 
@@ -121,4 +121,3 @@
   color: var(--ink);
   font-weight: 650;
 }
-

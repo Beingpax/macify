@@ -6,7 +6,7 @@
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
-  background: #fff;
+  background: var(--color-white);
 }
 
 .status-strip > div {
@@ -55,7 +55,7 @@
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 0.75rem;
-  background: #fff;
+  background: var(--color-white);
 }
 
 .form-error {
@@ -69,7 +69,6 @@
 }
 
 .section-kicker { margin: 0 0 .35rem !important; color: var(--accent-dark) !important; font-size: .62rem !important; font-weight: 780; letter-spacing: .04em; text-transform: uppercase; }
-.button-danger { border-color: #e2b9b4 !important; color: #a3362a !important; background: #fff !important; box-shadow: none !important; }
-.button-danger:hover { border-color: #c56b60 !important; color: #852a20 !important; background: #fff3f1 !important; }
+.button-danger { border-color: var(--color-peach) !important; color: var(--color-danger) !important; background: var(--color-white) !important; box-shadow: none !important; }
+.button-danger:hover { border-color: var(--color-orange-dark) !important; color: var(--color-danger) !important; background: var(--color-orange-soft) !important; }
 .dashboard-shell button:disabled { cursor: not-allowed; opacity: .5; box-shadow: none; }
-

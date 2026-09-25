@@ -6,6 +6,7 @@
 
 import Matter from "matter-js";
 import { memo, useEffect, useRef, useState } from "react";
+import { themeColors } from "@/lib/shared/theme-colors";
 
 const FRAME_DURATION_MS = 1000 / 60;
 const PHYSICS_SUBSTEPS_PER_FRAME = 3;
@@ -137,7 +138,7 @@ export const SurpriseIconFloor = memo(function SurpriseIconFloor({
       spriteContext.beginPath();
       spriteContext.roundRect(0, 0, pixels, pixels, radius);
       spriteContext.clip();
-      spriteContext.fillStyle = "#ffffff";
+      spriteContext.fillStyle = themeColors.white;
       spriteContext.fillRect(0, 0, pixels, pixels);
 
       const sourceSide = Math.min(image.naturalWidth, image.naturalHeight);

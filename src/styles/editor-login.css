@@ -1,13 +1,13 @@
-.editor-login-page { min-height: 100dvh; padding: 1.5rem; display: grid; place-items: center; color: #15171c; background: #f6f7f9; font-family: var(--font-urbanist), "Avenir Next", sans-serif; }
-.editor-login-card { width: min(100%, 25rem); padding: 2rem; display: grid; gap: 1.75rem; border: 1px solid #e2e5e9; border-radius: 0.85rem; background: #fff; box-shadow: 0 1rem 3rem rgb(25 32 45 / 0.08); }
-.editor-login-card .brand { width: max-content; display: inline-flex; align-items: center; gap: 0.65rem; color: #15171c; font-weight: 850; letter-spacing: -0.035em; }
-.editor-login-card .brand-mark { width: 2.2rem; height: 2.2rem; display: grid; place-items: center; border-radius: 0.58rem; color: #fff; background: #4a2945; }
+.editor-login-page { min-height: 100dvh; padding: 1.5rem; display: grid; place-items: center; color: var(--color-ink); background: var(--color-surface-soft); font-family: var(--font-urbanist), "Avenir Next", sans-serif; }
+.editor-login-card { width: min(100%, 25rem); padding: 2rem; display: grid; gap: 1.75rem; border: 1px solid var(--color-line); border-radius: 0.85rem; background: var(--color-white); box-shadow: 0 1rem 3rem color-mix(in srgb, var(--color-ink) 8%, transparent); }
+.editor-login-card .brand { width: max-content; display: inline-flex; align-items: center; gap: 0.65rem; color: var(--color-ink); font-weight: 850; letter-spacing: -0.035em; }
+.editor-login-card .brand-mark { width: 2.2rem; height: 2.2rem; display: grid; place-items: center; border-radius: 0.58rem; color: var(--color-white); background: var(--color-plum); }
 .editor-login-card h1 { margin: 0; font-size: 1.65rem; font-weight: 850; letter-spacing: -0.035em; }
-.editor-login-card p { margin: 0.4rem 0 0; color: #626975; font-size: 0.86rem; }
+.editor-login-card p { margin: 0.4rem 0 0; color: var(--color-text-muted); font-size: 0.86rem; }
 .editor-login-form { display: grid; gap: 1rem; }
-.editor-login-form label { display: grid; gap: 0.4rem; color: #3d424c; font-size: 0.72rem; font-weight: 700; }
-.editor-login-form input { min-height: 2.85rem; padding: 0 0.8rem; border: 1px solid #cbd0d7; border-radius: 0.55rem; outline: none; font: inherit; font-size: 0.9rem; }
-.editor-login-form input:focus { border-color: #2858cf; box-shadow: 0 0 0 0.2rem rgb(40 88 207 / 0.16); }
-.editor-login-form button { min-height: 2.85rem; border: 0; border-radius: 0.55rem; color: #fff; background: #2858cf; font-weight: 750; cursor: pointer; }
+.editor-login-form label { display: grid; gap: 0.4rem; color: var(--color-ink-soft); font-size: 0.72rem; font-weight: 700; }
+.editor-login-form input { min-height: 2.85rem; padding: 0 0.8rem; border: 1px solid var(--color-line-strong); border-radius: 0.55rem; outline: none; font: inherit; font-size: 0.9rem; }
+.editor-login-form input:focus { border-color: var(--color-action-dark); box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--color-action-dark) 16%, transparent); }
+.editor-login-form button { min-height: 2.85rem; border: 0; border-radius: 0.55rem; color: var(--color-white); background: var(--color-action-dark); font-weight: 750; cursor: pointer; }
 .editor-login-form button:disabled { opacity: 0.65; cursor: wait; }
-.editor-login-error { padding: 0.7rem 0.8rem; border-radius: 0.5rem; color: #7c2631 !important; background: #fbe8eb; font-size: 0.76rem !important; }
+.editor-login-error { padding: 0.7rem 0.8rem; border-radius: 0.5rem; color: var(--color-danger) !important; background: var(--color-danger-soft); font-size: 0.76rem !important; }
