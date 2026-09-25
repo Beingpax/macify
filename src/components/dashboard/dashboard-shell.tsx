@@ -15,22 +15,22 @@ export function DashboardShell({
 }) {
   return (
     <div className="dashboard-shell">
-      <aside className="dashboard-rail">
+      <a className="skip-link" href="#main-content">Skip to content</a>
+      <header className="dashboard-rail">
         <div className="dashboard-brand">
           <MacifyLogo href="/dashboard" />
           <span>Publishing</span>
         </div>
-        <div className="dashboard-rail-label">Workspace</div>
         <DashboardNavigation />
         <div className="dashboard-rail-footer">
           <span className="dashboard-environment"><i aria-hidden="true" /> Admin workspace</span>
           <Link className="dashboard-site-link" href="/">Open Macify <ArrowUpRight aria-hidden="true" size={15} /></Link>
           <form action={logoutAdmin}><button className="dashboard-site-link dashboard-logout" type="submit">Sign out <LogOut aria-hidden="true" size={15} /></button></form>
         </div>
-      </aside>
-      <section className="dashboard-workspace">
+      </header>
+      <div className="dashboard-workspace">
         <main className="dashboard-main" id="main-content">{children}</main>
-      </section>
+      </div>
     </div>
   );
 }

@@ -163,31 +163,16 @@ export async function decideCatalogueRevisions(formData: FormData) {
     const rightIsDeal = right.sourcePath.startsWith("catalog/deals/");
     return Number(leftIsDeal) - Number(rightIsDeal) || left.createdAt.getTime() - right.createdAt.getTime();
   });
-  let remaining = ordered.map(({ id }) => id);
 
-  // Each productive pass resolves another dependency level; stop when no progress is possible.
-  for (let pass = 0; pass < ordered.length && remaining.length > 0; pass += 1) {
-    const retry: string[] = [];
-    for (const revisionId of remaining) {
-      try {
-        await applyCatalogueDecision(revisionId, parsed.data.intent, sourcePattern);
-        completed += 1;
-      } catch (error) {
-        await recordDecisionFailure(revisionId, parsed.data.intent, error);
-        if (error instanceof CatalogueDecisionError && error.code === "missing-related-app") {
-          retry.push(revisionId);
-        } else {
-          failed += 1;
-        }
-      }
+  for (const { id } of ordered) {
+    try {
+      await applyCatalogueDecision(id, parsed.data.intent, sourcePattern);
+      completed += 1;
+    } catch (error) {
+      await recordDecisionFailure(id, parsed.data.intent, error);
+      failed += 1;
     }
-    if (retry.length === remaining.length) {
-      remaining = retry;
-      break;
-    }
-    remaining = retry;
   }
-  failed += remaining.length;
 
   revalidateCataloguePaths();
   const params = new URLSearchParams({
@@ -290,7 +275,6 @@ async function applyCatalogueDecision(revisionId: string, intent: DecisionIntent
     ? await database.select({ id: apps.id, slug: apps.slug }).from(apps)
       .where(and(inArray(apps.slug, relatedSlugs), isNull(apps.deletedAt)))
     : [];
-  if (related.length !== relatedSlugs.length) throw new CatalogueDecisionError("missing-related-app");
   if (!revision.preparedMedia.some((asset) => asset.role === "icon")
     || !revision.preparedMedia.some((asset) => asset.role === "preview_image")) {
     throw new CatalogueDecisionError("missing-media");
@@ -352,6 +336,27 @@ async function applyCatalogueDecision(revisionId: string, intent: DecisionIntent
       altText: asset.altText,
       createdAt: now,
     })),
+    // A published app may have named this slug before it existed. Complete those
+    // relationships now, using only each source app's latest published manifest.
+    database.insert(appRelationships).select(sql`
+      select lower(hex(randomblob(16))), source.id, ${appId}, ${now.getTime()}
+      from catalogue_revisions as revision
+      join apps as source on source.id = revision.app_id
+      where revision.status = 'published'
+        and source.status = 'published'
+        and source.deleted_at is null
+        and source.id <> ${appId}
+        and revision.id = (
+          select newest.id from catalogue_revisions as newest
+          where newest.app_id = source.id and newest.status = 'published'
+          order by newest.reviewed_at desc, newest.created_at desc, newest.id desc
+          limit 1
+        )
+        and exists (
+          select 1 from json_each(revision.manifest, '$.relatedAppSlugs') as related
+          where related.value = ${manifest.slug}
+        )
+    `).onConflictDoNothing(),
     database.update(catalogueRevisions).set({ appId, status: publicationStatus(revision.id, revision.sourcePath, revision.createdAt), errors: [], reviewedAt: now })
       .where(eq(catalogueRevisions.id, revision.id)),
   ]);

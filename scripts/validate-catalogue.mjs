@@ -10,8 +10,8 @@ const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const allowedPricing = new Set(["free", "freemium", "paid"]);
 const allowedBilling = new Set(["one_time", "subscription"]);
 const allowedSource = new Set(["open_source", "closed_source"]);
-const requiredManifestKeys = ["$schema", "schemaVersion", "name", "slug", "websiteUrl", "tagline", "description", "pricingType", "billingType", "pricingDetails", "sourceType", "youtubeUrl", "categories", "relatedAppSlugs", "media"];
-const optionalManifestKeys = ["isFeatured", "isEditorsPick"];
+const requiredManifestKeys = ["$schema", "schemaVersion", "name", "slug", "websiteUrl", "tagline", "description", "pricingType", "billingType", "pricingDetails", "sourceType", "youtubeUrl", "categories", "media"];
+const optionalManifestKeys = ["isFeatured", "isEditorsPick", "relatedAppSlugs"];
 
 function isHttpUrl(value, httpsOnly = false) {
   if (typeof value !== "string" || value.length > 2_000) return false;
@@ -78,6 +78,7 @@ function validateManifest(manifest, expectedSlug) {
   if (manifest.youtubeUrl != null && !isHttpUrl(manifest.youtubeUrl, true)) issues.push("youtubeUrl must be null or a public HTTPS URL.");
   for (const [key, limit, minimum] of [["categories", 12, 1], ["relatedAppSlugs", 12, 0]]) {
     const values = manifest[key];
+    if (key === "relatedAppSlugs" && values === undefined) continue;
     if (!Array.isArray(values) || values.length < minimum || values.length > limit || values.some((item) => typeof item !== "string" || !slugPattern.test(item))) {
       issues.push(`${key} must contain ${minimum} to ${limit} valid slugs.`);
     } else if (new Set(values).size !== values.length) {

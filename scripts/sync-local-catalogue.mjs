@@ -227,8 +227,10 @@ statements.push(`DELETE FROM app_relationships
 
 const relationshipPairs = new Set();
 for (const manifest of manifests) {
-  for (const relatedSlug of manifest.relatedAppSlugs) {
-    const pair = [appIds.get(manifest.slug), appIds.get(relatedSlug)].sort();
+  for (const relatedSlug of manifest.relatedAppSlugs ?? []) {
+    const relatedAppId = appIds.get(relatedSlug);
+    if (!relatedAppId) continue;
+    const pair = [appIds.get(manifest.slug), relatedAppId].sort();
     relationshipPairs.add(pair.join(":"));
   }
 }

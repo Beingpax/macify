@@ -6,6 +6,7 @@ import "@/styles/dashboard/media.css";
 import "@/styles/dashboard/responsive.css";
 import "@/styles/dashboard/visual-system.css";
 import "@/styles/dashboard/container-responsive.css";
+import "@/styles/dashboard/refined-workspace.css";
 import type { Metadata } from "next";
 import { DashboardShell } from "@/components/dashboard/dashboard-shell";
 import { requireAdmin } from "@/lib/auth/admin-auth";

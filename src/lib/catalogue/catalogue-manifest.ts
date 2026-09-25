@@ -22,7 +22,7 @@ export const catalogueManifestSchema = z.object({
   sourceType: z.enum(["open_source", "closed_source"]),
   youtubeUrl: httpsUrl.max(2_000).nullable(),
   categories: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)).min(1).max(12),
-  relatedAppSlugs: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)).max(12),
+  relatedAppSlugs: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)).max(12).default([]),
   media: z.object({
     icon: mediaSource,
     preview: mediaSource,

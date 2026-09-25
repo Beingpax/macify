@@ -23,7 +23,6 @@ const errorMessages: Record<string, string> = {
   "not-pending": "That revision has already been reviewed.",
   "missing-app": "The application linked to this archive request no longer exists.",
   "invalid-manifest": "The stored manifest is invalid and cannot be published.",
-  "missing-related-app": "Publish the related applications first, or remove those relationships in GitHub.",
   "missing-media": "The revision is missing its required icon or preview image.",
   "missing-deal-app": "Publish the application before publishing its deal.",
   "invalid-deal-manifest": "The stored deal manifest is invalid and cannot be published.",
@@ -87,7 +86,7 @@ export async function ReviewQueuePage({
       </header>
 
       <section className="catalogue-queue-stats" aria-label="Review queue status">
-        <div><GitBranch size={18} /><span>Awaiting review</span><strong>{counts.pending}</strong></div>
+        <div><GitBranch aria-hidden="true" size={18} /><span>Awaiting review</span><strong>{counts.pending}</strong></div>
         <div><AlertTriangle aria-hidden="true" size={18} /><span>Needs attention</span><strong>{counts.failed}</strong></div>
         <div><CheckCircle2 aria-hidden="true" size={18} /><span>In history</span><strong>{counts.reviewed}</strong></div>
       </section>
