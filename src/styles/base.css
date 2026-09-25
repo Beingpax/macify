@@ -47,6 +47,14 @@ img {
   max-width: 100%;
 }
 
+.brand-mark-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
 ::selection {
   color: var(--paper-strong);
   background: var(--accent);

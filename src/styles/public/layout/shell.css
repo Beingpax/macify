@@ -180,12 +180,6 @@
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.18), 0 0.35rem 0.8rem rgb(0 0 0 / 0.32);
 }
 
-.public-header .brand-mark > span {
-  font-size: 0.78rem;
-  font-weight: 900;
-  letter-spacing: -0.04em;
-}
-
 .public-header .brand-word { font-size: 1.05rem; letter-spacing: -0.04em; }
 .public-footer .brand-mark { display: none; }
 .public-footer .brand-word { font-size: 1.35rem; }
