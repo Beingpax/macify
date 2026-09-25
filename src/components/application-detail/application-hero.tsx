@@ -79,6 +79,7 @@ export function ApplicationHero({
             <ApplicationFact className="application-price" icon={billingIcon} tone="green">{application.pricingDetails}</ApplicationFact>
           )}
           {application.sourceType === "open_source" && <ApplicationFact className="application-source" icon={Code2} tone="blue">Open source</ApplicationFact>}
+          {visitorContent}
           <a
             aria-label={`Visit ${application.name} site (opens in a new tab)`}
             className="application-fact application-fact-blue application-facts-site"
@@ -89,7 +90,6 @@ export function ApplicationHero({
             <span className="application-fact-icon" aria-hidden="true"><ArrowUpRight size={17} strokeWidth={2.2} /></span>
             <span>Visit site</span>
           </a>
-          {visitorContent}
         </div>
       </div>
     </header>
