@@ -11,6 +11,8 @@ This directory contains Macify’s application and deal manifests, contribution 
 
 Application and deal manifests are reviewed before publication. Merging a contribution does not guarantee inclusion in the public catalogue.
 
+Application manifests may omit `isFeatured` and `isEditorsPick`; omitted values are treated as `false`. Public submissions may not set either field to `true`.
+
 Run `npm run catalogue:validate` before submitting a manifest.
 
 To propose an application or deal, read [`../CONTRIBUTING.md`](../CONTRIBUTING.md).

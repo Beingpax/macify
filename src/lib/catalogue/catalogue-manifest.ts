@@ -9,8 +9,8 @@ const mediaSource = z.object({
 export const catalogueManifestSchema = z.object({
   $schema: z.string().optional(),
   schemaVersion: z.literal(1),
-  isFeatured: z.boolean(),
-  isEditorsPick: z.boolean(),
+  isFeatured: z.boolean().default(false),
+  isEditorsPick: z.boolean().default(false),
   name: z.string().trim().min(2).max(80),
   slug: z.string().trim().min(2).max(90).regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   websiteUrl: httpsUrl,

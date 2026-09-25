@@ -7,8 +7,6 @@
   "required": [
     "$schema",
     "schemaVersion",
-    "isFeatured",
-    "isEditorsPick",
     "name",
     "slug",
     "websiteUrl",
@@ -26,8 +24,8 @@
   "properties": {
     "$schema": { "type": "string" },
     "schemaVersion": { "const": 1 },
-    "isFeatured": { "type": "boolean" },
-    "isEditorsPick": { "type": "boolean" },
+    "isFeatured": { "type": "boolean", "default": false },
+    "isEditorsPick": { "type": "boolean", "default": false },
     "name": { "type": "string", "minLength": 2, "maxLength": 80 },
     "slug": { "type": "string", "minLength": 2, "maxLength": 90, "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
     "websiteUrl": { "type": "string", "format": "uri", "pattern": "^https://" },

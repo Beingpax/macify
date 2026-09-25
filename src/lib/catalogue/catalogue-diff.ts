@@ -76,8 +76,6 @@ export function getChangedManifestFields(current: CatalogueSnapshot | null, prop
   ) changed.add("pricing");
   if (current.sourceType !== proposed.sourceType) changed.add("source");
   if (current.youtubeUrl !== proposed.youtubeUrl) changed.add("video");
-  if (current.isFeatured !== proposed.isFeatured) changed.add("featured");
-  if (current.isEditorsPick !== proposed.isEditorsPick) changed.add("editorsPick");
   if (!sameSet(current.categories, proposed.categories)) changed.add("categories");
   if (!sameSet(current.relatedAppSlugs, proposed.relatedAppSlugs)) changed.add("related");
   if (current.description !== proposed.description) changed.add("description");

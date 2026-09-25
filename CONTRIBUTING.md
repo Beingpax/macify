@@ -8,7 +8,7 @@ You can propose a Mac app you built or recommend one that is not yet listed. Eac
 - Useful, original apps with reliable core features, thoughtful design, and active maintenance.
 - Listings backed by current official information about downloads, pricing, privacy, support, and macOS compatibility.
 
-We do not accept unfinished or generic apps, close copies without meaningful original work, misleading claims, hidden pricing, malware, impersonation, or rights violations. The site owner decides what is published and assigns Featured and Editor's Pick status; public submissions must leave `isFeatured` and `isEditorsPick` set to `false`.
+We do not accept unfinished or generic apps, close copies without meaningful original work, misleading claims, hidden pricing, malware, impersonation, or rights violations. The site owner decides what is published and assigns Featured and Editor's Pick status. Public submissions may omit `isFeatured` and `isEditorsPick` or set them to `false`; `true` is rejected.
 
 ## Submit an app
 

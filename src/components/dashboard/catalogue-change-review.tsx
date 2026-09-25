@@ -54,8 +54,10 @@ export function CatalogueChangeReview({ current, manifest, preparedMedia }: {
     { key: "pricing" as const, before: current ? formatPricing(current) : undefined, after: formatPricing(manifest) },
     { key: "source" as const, before: current ? sourceLabel(current.sourceType) : undefined, after: sourceLabel(manifest.sourceType) },
     { key: "video" as const, before: current?.youtubeUrl ?? undefined, after: manifest.youtubeUrl ?? undefined },
-    { key: "featured" as const, before: current ? yesNo(current.isFeatured) : undefined, after: yesNo(manifest.isFeatured) },
-    { key: "editorsPick" as const, before: current ? yesNo(current.isEditorsPick) : undefined, after: yesNo(manifest.isEditorsPick) },
+    ...(!current ? [
+      { key: "featured" as const, before: undefined, after: yesNo(manifest.isFeatured) },
+      { key: "editorsPick" as const, before: undefined, after: yesNo(manifest.isEditorsPick) },
+    ] : []),
     { key: "categories" as const, before: current?.categories, after: manifest.categories },
     { key: "related" as const, before: current?.relatedAppSlugs, after: manifest.relatedAppSlugs },
   ];

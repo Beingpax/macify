@@ -10,7 +10,8 @@ const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const allowedPricing = new Set(["free", "freemium", "paid"]);
 const allowedBilling = new Set(["one_time", "subscription"]);
 const allowedSource = new Set(["open_source", "closed_source"]);
-const requiredManifestKeys = ["$schema", "schemaVersion", "isFeatured", "isEditorsPick", "name", "slug", "websiteUrl", "tagline", "description", "pricingType", "billingType", "pricingDetails", "sourceType", "youtubeUrl", "categories", "relatedAppSlugs", "media"];
+const requiredManifestKeys = ["$schema", "schemaVersion", "name", "slug", "websiteUrl", "tagline", "description", "pricingType", "billingType", "pricingDetails", "sourceType", "youtubeUrl", "categories", "relatedAppSlugs", "media"];
+const optionalManifestKeys = ["isFeatured", "isEditorsPick"];
 
 function isHttpUrl(value, httpsOnly = false) {
   if (typeof value !== "string" || value.length > 2_000) return false;
@@ -50,7 +51,7 @@ function validateManifest(manifest, expectedSlug) {
   if (!manifest || typeof manifest !== "object" || Array.isArray(manifest)) {
     return ["manifest must be a JSON object."];
   }
-  const allowedKeys = new Set(requiredManifestKeys);
+  const allowedKeys = new Set([...requiredManifestKeys, ...optionalManifestKeys]);
   for (const key of requiredManifestKeys) if (!(key in manifest)) issues.push(`${key} is required.`);
   for (const key of Object.keys(manifest)) if (!allowedKeys.has(key)) issues.push(`${key} is not an allowed manifest field.`);
   const text = (key, min, max) => {

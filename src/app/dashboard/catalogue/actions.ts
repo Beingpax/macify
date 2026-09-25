@@ -309,15 +309,19 @@ async function applyCatalogueDecision(revisionId: string, intent: DecisionIntent
     sourceType: manifest.sourceType,
     youtubeUrl: manifest.youtubeUrl,
     status: "published" as const,
-    isFeatured: manifest.isFeatured,
-    isEditorsPick: manifest.isEditorsPick,
-    featuredAt: manifest.isFeatured ? now : null,
     publishedAt: now,
     updatedAt: now,
   };
   const normalizedCategories = normalizeManifestCategories(manifest.categories);
   const appQuery = revision.changeType === "create"
-    ? database.insert(apps).values({ id: appId, ...appValues, createdAt: now })
+    ? database.insert(apps).values({
+      id: appId,
+      ...appValues,
+      isFeatured: manifest.isFeatured,
+      isEditorsPick: manifest.isEditorsPick,
+      featuredAt: manifest.isFeatured ? now : null,
+      createdAt: now,
+    })
     : database.update(apps).set({ ...appValues, publishedAt: sql`coalesce(${apps.publishedAt}, ${now.getTime()})` }).where(and(eq(apps.id, appId), isNull(apps.deletedAt)));
 
   await database.batch([
