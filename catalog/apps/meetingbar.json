@@ -6,7 +6,7 @@
   "name": "MeetingBar",
   "slug": "meetingbar",
   "websiteUrl": "https://meetingbar.app/",
-  "tagline": "Upcoming meetings and join links in the menu bar.",
+  "tagline": "See your next meeting in the menu bar and join with one click.",
   "description": "MeetingBar is a Mac menu-bar utility that surfaces the next calendar event and its meeting link. It is designed to make joining a call a one-click action instead of a search through invitations or browser tabs.\n\nConnect the calendars already available on the Mac, choose how an upcoming event appears in the menu bar, and open its conferencing link when the meeting starts. Reminders and shortcuts help when the schedule is crowded.\n\n## Features\n\n- Show an upcoming meeting title or icon in the menu bar.\n- Recognize links from many conferencing services, including Meet, Zoom, and Teams.\n- Notify before events and offer quick join actions.\n- Run optional AppleScript actions around meeting events.\n\n## Where it fits\n\nMeetingBar is useful for people with frequent video calls and several calendar sources. Its main value is quick access; it is not a replacement for a calendar planner or the conferencing service itself.\n\n## Privacy and requirements\n\nThe open-source app reads calendar events and their URLs to identify meetings. Calendar access is required; meeting links remain sensitive, especially when shown in the menu bar or notifications. The project lists macOS 10.15 or later.\n\n## Pricing\n\nMeetingBar is free and open source. The project accepts optional support through donations or App Store purchases.",
   "pricingType": "free",
   "billingType": null,

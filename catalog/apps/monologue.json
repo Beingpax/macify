@@ -6,7 +6,7 @@
   "name": "Monologue",
   "slug": "monologue",
   "websiteUrl": "https://www.monologue.to/",
-  "tagline": "Dictation, voice notes, and meeting transcripts.",
+  "tagline": "Dictate your drafts, capture voice notes, and transcribe meetings without adding a bot.",
   "description": "Monologue brings speech-to-text into everyday Mac writing while also recording voice notes and bot-free meetings. It is built for speaking a draft, capturing an idea away from the keyboard, and turning a conversation into editable notes.\n\nStart dictation in a text field and speak naturally, or record a longer voice note or meeting. Review the resulting text, correct names or terminology, and reuse it in the document or app where it belongs.\n\n## Features\n\n- Dictate into Mac apps with context-aware text formatting.\n- Record voice notes and transcribe meetings without adding a bot to the call.\n- Use offline transcription on Mac for supported workflows.\n- Access one subscription on Mac, iPhone, iPad, and Apple Watch.\n\n## Where it fits\n\nMonologue fits people who write more comfortably by speaking and want dictation plus longer recordings in one product. Its meeting workflow needs the same consent and review care as any recording tool.\n\n## Privacy and requirements\n\nMicrophone permission is required for capture; meetings may require system-audio access. The product offers offline transcription on Mac, while sync and optional connected features can move content through its service. Check the chosen mode before recording confidential material.\n\n## Pricing\n\nThe free trial includes 1,000 dictated words and 10 recorded notes. Pro is $15 monthly or $144 yearly ($12 per month equivalent).",
   "pricingType": "freemium",
   "billingType": "subscription",

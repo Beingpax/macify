@@ -6,7 +6,7 @@
   "name": "Zed",
   "slug": "zed",
   "websiteUrl": "https://zed.dev/",
-  "tagline": "A fast code editor with collaboration and AI tools.",
+  "tagline": "Edit your code in a fast, native editor with collaboration and optional AI assistance.",
   "description": "Zed is an open-source code editor built for responsive editing, project navigation, and collaboration. It runs natively on macOS and supports extensions, language tooling, Git workflows, and optional AI assistance.\n\nOpen a project folder, edit with language-server feedback and keyboard-driven navigation, then review changes in Git. AI agents and hosted models can be added when they suit a project, while the core editor works without a paid account.\n\n## Features\n\n- Edit code with syntax support, extensions, language servers, and integrated terminal tools.\n- Use collaborative editing and shared project workflows.\n- Inspect Git changes and work with built-in agent and AI features when enabled.\n- Use external agents or personal API keys on the free plan.\n\n## Where it fits\n\nZed suits developers who prioritize editor speed and a modern integrated workflow. Extensions and language support vary by ecosystem, so an existing specialist IDE may still be needed for some platforms.\n\n## Privacy and requirements\n\nLocal code editing does not require a Zed account. Collaboration, hosted AI, telemetry choices, and external agents each have separate network and data boundaries. Review what project context an agent receives before enabling it.\n\n## Pricing\n\nThe Personal editor is free. Pro costs $10 per month for hosted AI access and unlimited edit predictions, with usage beyond included credits billed separately.",
   "pricingType": "freemium",
   "billingType": "subscription",

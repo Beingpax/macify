@@ -6,7 +6,7 @@
   "name": "Ulysses",
   "slug": "ulysses",
   "websiteUrl": "https://ulysses.app/",
-  "tagline": "A focused writing and publishing workspace.",
+  "tagline": "Organize your long-form writing, focus on drafts, and export or publish your finished work.",
   "description": "Ulysses is a writing app for Mac, iPhone, and iPad that combines a calm editor with a library for long-form projects. It helps writers move from notes and drafts to an exported or published final piece without maintaining a separate file for every revision.\n\nCollect sheets in a project, write with markup and focus tools, set a goal, then export a finished document or publish through a supported service. iCloud sync keeps the same library available on Apple devices.\n\n## Features\n\n- Organize drafts and notes into groups and sheets.\n- Use a focused editor with markup, writing goals, and revision tools.\n- Export to PDF, Word, eBook, and web formats.\n- Publish to supported platforms such as WordPress, Substack, and Ghost.\n\n## Where it fits\n\nUlysses is strongest for people writing articles, books, newsletters, or other ongoing work. Its subscription and library-centered workflow are less attractive if ordinary portable Markdown files are the top priority.\n\n## Privacy and requirements\n\nThe app uses iCloud synchronization for cross-device libraries when enabled. Publishing sends selected work to the chosen platform; review each destination’s access and privacy settings. A subscription unlocks editing across supported Apple devices.\n\n## Pricing\n\nUlysses offers a seven-day trial and costs $39.99 per year or $5.99 per month in the US; regional App Store pricing can differ.",
   "pricingType": "paid",
   "billingType": "subscription",

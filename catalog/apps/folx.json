@@ -6,7 +6,7 @@
   "name": "Folx",
   "slug": "folx",
   "websiteUrl": "https://mac.eltima.com/download-manager.html",
-  "tagline": "Download management and torrents for Mac.",
+  "tagline": "Organize your downloads and torrents in one queue, and resume transfers when they’re interrupted.",
   "description": "Folx is a Mac download manager from Electronic Team. It organizes ordinary file downloads and BitTorrent transfers in one application, with tags and resume controls for large or interrupted files.\n\nPaste a link or let a browser hand the download to Folx, choose a destination and tags, then manage the queue. The Pro edition adds scheduling, more download threads, and other controls for heavy download use.\n\n## Features\n\n- Queue ordinary downloads and resume interrupted transfers.\n- Handle torrent files and magnet links.\n- Organize downloads with tags and Spotlight integration.\n- Unlock scheduling, speed adjustment, up to 20 threads, and built-in torrent search with Pro.\n\n## Where it fits\n\nFolx is useful when browser downloads alone do not provide enough organization or retry control. The free edition covers basic transfers, while the paid features are more relevant to frequent large downloads.\n\n## Privacy and requirements\n\nDownloads connect to the websites or torrent peers selected by the user. Browser integration and saved credentials should be enabled only when needed; torrent participation exposes a network address to peers. The current developer page lists macOS 10.13 or later and a Folx 5 release from June 2026.\n\n## Pricing\n\nFolx has a free edition. Folx Pro is a one-time purchase starting at $19.95 on the developer’s site.",
   "pricingType": "freemium",
   "billingType": "one_time",

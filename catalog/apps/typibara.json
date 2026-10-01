@@ -6,7 +6,7 @@
   "name": "Typibara",
   "slug": "typibara",
   "websiteUrl": "https://www.typibara.com/",
-  "tagline": "A small animated companion for your Mac desktop.",
+  "tagline": "Keep a little capybara on your desktop that animates as you type.",
   "description": "Typibara is a playful desktop companion that reacts while you type. The small capybara can sit in a corner of the screen, change appearance, and stay out of the way when an app or task needs an uncluttered workspace.\n\nPlace Typibara where it feels comfortable, choose a size and appearance, then type normally. Visibility rules can hide it in chosen apps, and animations can be adjusted when battery life or focus matters more.\n\n## Features\n\n- Show an animated capybara companion that responds to key presses.\n- Choose its position, size, appearance, and visibility by app.\n- Disable animations or hide the companion to reduce resource use.\n- Run offline without an account or in-app purchases.\n\n## Where it fits\n\nTypibara is for people who enjoy a light visual touch while writing or working. It is decorative rather than a productivity or typing-assistance tool.\n\n## Privacy and requirements\n\nThe developer says key events are used only for immediate animation, are not stored, and are not sent over the network. The app needs Accessibility and Input Monitoring permission to react to typing, so users should decide whether that permission is comfortable. The current Mac App Store listing requires macOS 14.6 or later.\n\n## Pricing\n\nTypibara costs £4.99 as a one-time Mac App Store purchase and includes lifetime updates, according to the developer.",
   "pricingType": "paid",
   "billingType": "one_time",

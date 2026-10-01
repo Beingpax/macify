@@ -6,7 +6,7 @@
   "name": "TextSniper",
   "slug": "textsniper",
   "websiteUrl": "https://www.textsniper.app/",
-  "tagline": "Copy text from anywhere on the Mac screen.",
+  "tagline": "Copy text from your screen’s images, videos, and scanned documents with on-device recognition.",
   "description": "TextSniper is a small OCR utility for text that cannot be selected normally. It can capture words from an image, video frame, presentation, scanned PDF, or other visible content and place the recognized result on the clipboard.\n\nInvoke its shortcut, draw a selection around the text, then paste the recognized result into another app. The same screen-based workflow can also handle QR codes or speak selected text where supported.\n\n## Features\n\n- Recognize text in a selected screen region with a quick shortcut.\n- Copy text from images, video frames, and non-selectable documents.\n- Read captured text aloud and recognize supported QR or barcode content.\n- Use the Mac’s on-device text recognition rather than sending every selection to a remote OCR service.\n\n## Where it fits\n\nTextSniper fits users who frequently extract small amounts of text from the screen. It is intentionally narrower than a full PDF editor or document scanning system.\n\n## Privacy and requirements\n\nScreen Recording permission is needed to inspect a selected screen region. OCR is described by the developer as on-device, though copied text remains in the macOS clipboard until replaced. Avoid capturing passwords or private content in a shared-screen session.\n\n## Pricing\n\nTextSniper costs $9.99 as a one-time purchase in the US Mac App Store; regional prices and promotions can vary.",
   "pricingType": "paid",
   "billingType": "one_time",

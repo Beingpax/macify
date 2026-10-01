@@ -6,7 +6,7 @@
   "name": "Keeby",
   "slug": "keeby",
   "websiteUrl": "https://getkeeby.com/",
-  "tagline": "Mechanical keyboard sounds tuned for your Mac.",
+  "tagline": "Give your Mac keyboard mechanical switch sounds without buying a new keyboard.",
   "description": "Keeby adds mechanical-keyboard sound effects to typing on a Mac. It is a focused sensory utility for people who like the character of switch sounds but want to keep using a laptop keyboard or a quieter external keyboard.\n\n## Features\n\n- Choose between distinct sound profiles and tune their volume to suit speakers or headphones.\n- Hear responsive key-down feedback while typing across Mac applications.\n- Keep the utility close at hand without turning it into a larger keyboard-remapping system.\n- View lightweight typing statistics and a keyboard visualization in the app.\n- Run entirely offline after installation.\n\n## Where it fits\n\nKeeby is best for writing, coding, or casual typing when audible feedback makes the keyboard feel more engaging. It overlaps with Klack, so the decision is mainly about which recordings, controls, and visual presentation feel better. Sound effects can become distracting in shared spaces, making headphones or a low volume sensible.\n\n## Privacy and requirements\n\nKeeby requires macOS 13 or later. Its developer says the app works offline, has no network access, and collects no data. Like any keyboard-sound utility, it needs system access to notice key presses; review the permission prompt and download only from the official site or App Store.\n\n## Pricing\n\nKeeby costs $4.99 as a one-time purchase, with no subscription.",
   "pricingType": "paid",
   "billingType": "one_time",

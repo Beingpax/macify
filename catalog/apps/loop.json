@@ -6,7 +6,7 @@
   "name": "Loop",
   "slug": "loop",
   "websiteUrl": "https://loop.menu/",
-  "tagline": "Arrange Mac windows through a customizable radial menu.",
+  "tagline": "Arrange your windows by pointing toward a layout in a customizable radial menu.",
   "description": "Loop is an open-source Mac window manager built around a radial menu. Press its trigger key, point toward a layout, and release to move the active window into place. The gesture makes common positions easy to remember without assigning a separate keyboard shortcut to every layout.\n\nLoop can also be customized with colors, dimensions, and shortcuts for a preferred desktop setup. It is especially useful when windows need to move among halves, corners, or displays throughout the day.\n\n## Features\n\n- Choose a window position from a radial menu triggered by a key press.\n- Move, resize, and arrange windows in repeatable screen regions.\n- Customize layouts, colors, keyboard controls, and related window behavior.\n- Use the open-source Mac app without creating an account.\n\n## Where it fits\n\nLoop suits people who want fast, gesture-like window placement with visual feedback. It offers a different interaction from simple edge snapping or a list of fixed menu commands, so it may take a short period to build muscle memory.\n\n## Privacy and requirements\n\nLoop needs macOS Accessibility permission to control other application windows. The official project lists macOS 13 or later. Window movement happens locally; granting Accessibility access should still be treated as a system-level permission.\n\n## Pricing\n\nLoop is free and open source; the developer accepts optional sponsorship.",
   "pricingType": "free",
   "billingType": null,

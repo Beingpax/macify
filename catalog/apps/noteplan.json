@@ -6,7 +6,7 @@
   "name": "NotePlan",
   "slug": "noteplan",
   "websiteUrl": "https://noteplan.co/",
-  "tagline": "Daily notes, tasks, and calendar planning together.",
+  "tagline": "Plan your day with Markdown notes, tasks, and calendar events in one workspace.",
   "description": "NotePlan combines Markdown notes, to-dos, and calendar events in a daily planning workspace. It is designed for people who want to write the day’s plan in a note and see commitments beside it, instead of maintaining disconnected task and note systems.\n\nOpen a daily note, add tasks and context in Markdown, then schedule or reschedule work against the calendar. Links, tags, filters, and project notes connect daily action to longer-running plans.\n\n## Features\n\n- Write daily and project notes in Markdown with linked references.\n- Manage tasks, recurring items, review lists, and custom filters.\n- View calendar events beside notes and time-block work.\n- Sync notes across Apple devices using supported iCloud or CloudKit options.\n\n## Where it fits\n\nNotePlan fits people who plan by day and want tasks attached to written context. Its flexibility rewards a consistent personal system, but the subscription may be more than a simple checklist requires.\n\n## Privacy and requirements\n\nNotes are stored as local plain-text files on Mac and can sync through iCloud Drive or CloudKit, depending on configuration. Calendar access is needed for event views; optional web and AI features involve additional services. Confirm which sync mode is active before storing private information.\n\n## Pricing\n\nNotePlan has a trial. The current direct plans list $12 monthly or $99 yearly, which is $8.33 per month when billed annually.",
   "pricingType": "paid",
   "billingType": "subscription",
