@@ -3,6 +3,12 @@
 import { useState, type FormEvent } from "react";
 import { markSubscribed } from "./subscription-state";
 import { ArrowRight, Check } from "lucide-react";
+import { z } from "zod";
+
+const signupResponseSchema = z.object({
+  status: z.string(),
+  errors: z.object({ messages: z.array(z.string()).optional() }).optional(),
+});
 
 export function SignupForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -24,10 +30,10 @@ export function SignupForm({ compact = false }: { compact?: boolean }) {
         signal: AbortSignal.timeout(20000),
       });
       if (!response.ok) throw new Error("request failed");
-      const result = await response.json();
+      const result = signupResponseSchema.parse(await response.json());
       if (result.status !== "success") {
         const errors = result.errors?.messages;
-        setMessage(Array.isArray(errors) && errors.every((item: unknown) => typeof item === "string")
+        setMessage(errors && errors.length > 0
           ? errors.join(" ") : "Kit couldn’t complete your signup. Please try again or use the signup link below.");
         setStatus("error");
         return;
