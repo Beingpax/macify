@@ -1,10 +1,9 @@
 /**
  * Applications eligible to appear in the homepage directory, in editorial
- * order. Featured and Editor's Pick groupings are applied separately; this
- * order is preserved within each group.
+ * order, with Swish first and Glyph last.
  */
 export const HOMEPAGE_APPLICATION_SLUGS = [
-  "glyph",
+  "swish",
   "cleanshot-x",
   "openusage",
   "daisydisk",
@@ -25,7 +24,6 @@ export const HOMEPAGE_APPLICATION_SLUGS = [
   "supercharge",
   "tinycast",
   "wallspace",
-  "swish",
   "1password",
   "orion",
   "proxyman",
@@ -58,6 +56,9 @@ export const HOMEPAGE_APPLICATION_SLUGS = [
   "helium-browser",
   "bettertouchtool",
   "dia",
+  "ardia",
+  "yet-another-browser",
+  "glyph",
 ] as const;
 
 const homepageApplicationOrder = new Map<string, number>(

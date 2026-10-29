@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Yet Another Browser",
+  "slug": "yet-another-browser",
+  "websiteUrl": "https://yetanotherbrowser.com/",
+  "tagline": "Bring your Arc spaces and pinned tabs to a WebKit browser with optional AI agents.",
+  "description": "Yet Another Browser, also called Yab, is a free Mac browser built on WebKit. It offers an Arc-like workspace with sidebar tabs, folders, Spaces, Peek link previews, and Split View.\n\n## Features\n\n- Import Arc Spaces, pinned tabs, folders, passwords, and history.\n- Open links in Peek and place two pages side by side.\n- Switch between sidebar and horizontal tabs and find pages through the Command-T field.\n- Block ads and trackers with built-in filter lists.\n- Install supported Chrome Web Store extensions through WebKit's extension engine; compatibility varies by extension.\n- Connect your own Claude or ChatGPT plan for optional agents that read and act in tabs. Sending, payments, and deletion require approval.\n\n## Where it fits\n\nYab suits people who want Arc-style organization on Apple's browser engine, with optional automation. It uses WebKit rather than Chromium, so check your essential websites and extensions before switching.\n\n## Privacy and requirements\n\nRuns on Intel and Apple silicon Macs with macOS 15.4 or later; no Yab account is required. The developer says browsing data stays on the Mac, with optional end-to-end encrypted sync. Usage statistics can be disabled, and crash reports require consent. Content an agent reads is sent to its model provider when working on your task.\n\n## Pricing\n\nThe browser is free. Optional AI uses your own third-party plan and its limits; Yab does not sell a separate AI subscription.\n\n## Sources\n\n[Official website](https://yetanotherbrowser.com/), [installation requirements](https://yetanotherbrowser.com/manual/getting-started), [extension support](https://yetanotherbrowser.com/manual/extensions), and [privacy](https://yetanotherbrowser.com/manual/privacy).",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": "Free browser; optional AI requires your own supported third-party plan.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "web-browsers",
+    "productivity",
+    "ai"
+  ],
+  "relatedAppSlugs": [
+    "ardia",
+    "orion",
+    "helium-browser",
+    "dia"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://yetanotherbrowser.com/home/i/appicon320.89e361c4.png",
+      "altText": "Yet Another Browser application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://yetanotherbrowser.com/opengraph-image.png",
+      "altText": "Yet Another Browser official preview artwork"
+    },
+    "screenshots": []
+  }
+}
