@@ -20,7 +20,8 @@
     "catalogue:validate": "node scripts/validate-catalogue.mjs",
     "catalogue:sync:local": "node scripts/sync-local-catalogue.mjs",
     "readme:generate": "node scripts/generate-readme-apps.mjs",
-    "readme:check": "node scripts/generate-readme-apps.mjs --check"
+    "readme:check": "node scripts/generate-readme-apps.mjs --check",
+    "test:catalogue": "node --experimental-strip-types --test scripts/tests/catalogue-*.test.mjs"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "1.20.13",
