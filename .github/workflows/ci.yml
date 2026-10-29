@@ -23,3 +23,6 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run ci:check
+      - run: npm run test:catalogue
+      - run: npm run test:media-validation
+      - run: npm run catalogue:validate

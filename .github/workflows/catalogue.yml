@@ -12,6 +12,15 @@ on:
       - "catalog/apps/**"
       - "catalog/deals/**"
       - "scripts/sync-catalogue-changes.mjs"
+      - "scripts/lib/catalogue-sync-client.mjs"
+      - "src/lib/catalogue/**"
+      - "src/app/api/internal/catalogue-sync/**"
+      - ".github/workflows/catalogue.yml"
+
+# Keep reconciliation runs in order; do not interrupt a partially imported run.
+concurrency:
+  group: catalogue-${{ github.ref }}
+  cancel-in-progress: false
 
 permissions:
   contents: read
@@ -47,6 +56,7 @@ jobs:
       - run: node scripts/validate-catalogue.mjs
 
   sync:
+    timeout-minutes: 30
     # Reconcile valid files even when a different manifest fails validation.
     if: ${{ always() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') }}
     needs: validate
