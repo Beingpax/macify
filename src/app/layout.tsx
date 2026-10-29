@@ -9,6 +9,7 @@ import "../styles/base.css";
 import "../styles/public/layout/shell.css";
 import "../styles/public/layout/footer.css";
 import "../styles/public/pages/home.css";
+import "../styles/public/pages/black-friday.css";
 import "../styles/public/pages/directory-heading.css";
 import "../styles/public/pages/deals-hero.css";
 import "../styles/public/pages/deals-list.css";
@@ -27,7 +28,7 @@ import "../styles/public/layout/footer-variants.css";
 import "../styles/public/pages/editorial-guides.css";
 import "../styles/public/pages/surprise.css";
 import "../styles/public/layout/site-actions.css";
-import "../styles/public/layout/voiceink-offer-banner.css";
+import "../styles/public/layout/black-friday-banner.css";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
