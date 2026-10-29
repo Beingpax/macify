@@ -36,6 +36,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Anarlog](https://macify.app/apps/anarlog) | Transcribe your meetings locally and turn conversations into notes without a recording bot. | Freemium · $15/month or $150/year for Pro |
 | [Antinote](https://macify.app/apps/antinote) | Jot down your temporary thoughts, drafts, and calculations without organizing another permanent notebook. | Paid · $5 one-time purchase |
 | [Anybox](https://macify.app/apps/anybox) | Save your links in one searchable library instead of losing them among open tabs. | Freemium · From $1.99/month |
+| [Ardia](https://macify.app/apps/ardia) | Keep an Arc-style sidebar with Chrome extensions, built-in blocking, and encrypted iCloud sync. | Free |
 | [Balance](https://macify.app/apps/balance) | Give your work a clear rhythm with focus timers, planned breaks, and session tracking. | Freemium · $4.99/month, $49.99/year, or $149.99 one-time purchase |
 | [Bauhaus Clock](https://macify.app/apps/bauhaus-clock) | Turn your idle Mac display into a customizable analog clock with watch-inspired details. | Paid · $19 one-time purchase |
 | [Bear](https://macify.app/apps/bear) | Capture your thoughts in Markdown notes, then organize them with tags and links. | Freemium · $2.99/month or $29.99/year |
@@ -148,6 +149,7 @@ Browse the complete curated collection below, or visit [Macify](https://macify.a
 | [Wallspace](https://macify.app/apps/wallspace) | Bring your desktop to life with animated wallpapers or your own MP4 videos. | Freemium · $12.99 one-time purchase |
 | [Wispr Flow](https://macify.app/apps/wispr-flow) | Speak your thoughts into everyday apps and get formatted text ready for review. | Freemium · $15/month |
 | [Xmind](https://macify.app/apps/xmind) | Turn your scattered ideas into visual maps for brainstorming, studying, and planning. | Freemium · $4.92/month, billed annually |
+| [Yet Another Browser](https://macify.app/apps/yet-another-browser) | Bring your Arc spaces and pinned tabs to a WebKit browser with optional AI agents. | Free · Free browser; optional AI requires your own supported third-party plan. |
 | [Zed](https://macify.app/apps/zed) | Edit your code in a fast, native editor with collaboration and optional AI assistance. | Freemium · Free Personal plan; Pro $10/month plus excess AI usage |
 <!-- macify-apps:end -->
 

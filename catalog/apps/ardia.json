@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Ardia",
+  "slug": "ardia",
+  "websiteUrl": "https://ardia.dev/",
+  "tagline": "Keep an Arc-style sidebar with Chrome extensions, built-in blocking, and encrypted iCloud sync.",
+  "description": "Ardia is a free, open-source browser for Apple silicon Macs. It pairs an Arc-style sidebar with Chromium, giving people leaving Arc a familiar way to organize tabs while keeping Chrome extension support.\n\n## Features\n\n- Import Arc Spaces, pinned tabs, names, and themes alongside browsing data.\n- Keep separate logins, history, and extensions in profiles.\n- Arrange up to three pages in split panes.\n- Install Chrome Web Store extensions and use built-in uBlock Origin.\n- Sync through your own iCloud Drive with end-to-end encryption.\n- Search tabs, bookmarks, and history from the command bar.\n\n## Where it fits\n\nArdia suits Arc users who want sidebar browsing and Chromium compatibility. Intel Macs are unsupported. The developer documents partial passkey support and a WebKit fallback for protected streaming while Chromium Widevine support remains unavailable.\n\n## Privacy and requirements\n\nRequires macOS 14 Sonoma or later and Apple silicon. According to the developer, Google background services are removed. The app sends an anonymous daily activity count with app and macOS versions, counts update checks, and fetches a launch configuration file. Additional diagnostics are opt-in; browsing sites and searches are excluded.\n\n## Pricing\n\nFree and open source, with no paid tier.\n\n## Sources\n\n[Official website](https://ardia.dev/), [features and compatibility](https://github.com/mantrakp04/ardia), and [Arc migration](https://ardia.dev/arc/).",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": null,
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "web-browsers",
+    "security"
+  ],
+  "relatedAppSlugs": [
+    "yet-another-browser",
+    "helium-browser",
+    "orion",
+    "dia"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://ardia.dev/apple-touch-icon.png",
+      "altText": "Ardia application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://ardia.dev/og.png",
+      "altText": "Ardia browser artwork with painted hills and a yellow sun"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://ardia.dev/_assets/window.CJXVIf3P_Z25N5D8.webp",
+        "altText": "Ardia browser showing pinned tiles and tabs in its sidebar"
+      },
+      {
+        "sourceUrl": "https://ardia.dev/_assets/split.SnSgSXtY_ZGbM3W.webp",
+        "altText": "Ardia browser displaying pages in split view"
+      }
+    ]
+  }
+}

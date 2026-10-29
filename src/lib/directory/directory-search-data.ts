@@ -103,6 +103,8 @@ async function queryHomepageDirectoryData(filters?: DirectorySearchFilters, view
   ].slice(0, homepageApplicationLimit);
   if (view === "hot") {
     directoryRecords = directoryRecords.sort((left, right) => {
+      if (left.slug === "swish") return right.slug === "swish" ? 0 : -1;
+      if (right.slug === "swish") return 1;
       const leftGroup = left.isFeatured ? 0 : left.isEditorsPick ? 1 : 2;
       const rightGroup = right.isFeatured ? 0 : right.isEditorsPick ? 1 : 2;
       return leftGroup - rightGroup
