@@ -4,10 +4,11 @@
  * order is preserved within each group.
  */
 export const HOMEPAGE_APPLICATION_SLUGS = [
-  "voiceink",
+  "glyph",
   "cleanshot-x",
   "openusage",
   "daisydisk",
+  "voiceink",
   "dayflow",
   "cold-turkey-blocker",
   "droppy",
@@ -40,7 +41,6 @@ export const HOMEPAGE_APPLICATION_SLUGS = [
   "antinote",
   "anybox",
   "alcove",
-  "glyph",
   "pixelmator-pro",
   "raycast",
   "superwhisper",

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { House, Plus, Shuffle, TicketPercent } from "lucide-react";
+import { House, Plus, Shuffle, Tag } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { GitHubStarCount } from "@/components/site/github-star-count";
 import { LiveVisitorCount } from "@/components/site/live-visitor-count";
@@ -23,9 +23,9 @@ export function PublicHeaderNavigation() {
             <span className="public-navigation-icon" aria-hidden="true"><House /></span>
             <span className="public-navigation-label">Home</span>
           </Link>
-          <Link className="public-deals-link" href="/deals" aria-current={pathname === "/deals" ? "page" : undefined} title="Deals">
-            <span className="public-navigation-icon" aria-hidden="true"><TicketPercent /></span>
-            <span className="public-navigation-label">Deals</span>
+          <Link className="public-black-friday-link" href="/black-friday" aria-current={pathname === "/black-friday" ? "page" : undefined} title="Black Friday">
+            <span className="public-navigation-icon" aria-hidden="true"><Tag /></span>
+            <span className="public-navigation-label">Black Friday</span>
           </Link>
           <a className="public-surprise-link" href="/surprise" aria-current={pathname === "/surprise" ? "page" : undefined} title="Surprise me">
             <span className="public-navigation-icon" aria-hidden="true"><Shuffle /></span>

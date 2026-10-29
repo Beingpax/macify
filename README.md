@@ -166,7 +166,7 @@ Every contribution helps us build a better collection of high quality macOS appl
 
 ## 🛠️ Make it run locally
 
-Macify uses Next.js and TypeScript on Cloudflare Workers.
+Macify uses Next.js and TypeScript, deployed on Cloudflare Workers.
 
 Local development requires Node.js 22. To get started:
 

@@ -93,6 +93,7 @@ export function DealsSection({ deals }: { deals: ActiveDeal[] }) {
           ))}
         </div>
       </header>
+      <p className="black-friday-deals-link"><Link href="/black-friday">Get notified about Black Friday deals <ArrowRight aria-hidden="true" size={17} /></Link></p>
       <div className="deals-heading" id="handpicked-deals">
         <h2>
           <span>Handpicked deals.</span>

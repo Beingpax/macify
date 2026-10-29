@@ -17,12 +17,13 @@ export default function PrivacyPage() {
     <PublicContentPage className="privacy-page">
       <PublicContentHero kicker="How Macify handles site data" title="Privacy notice.">
         <p>What happens to your data when you browse Macify.</p>
-        <small>Last updated September 24, 2026</small>
+        <small>Last updated October 29, 2026</small>
       </PublicContentHero>
 
       <PublicContentSection id="information" title="Information we handle">
-        <p>Macify is a public application directory. It does not offer public accounts, payments, saved applications, or submission forms.</p>
+        <p>Macify is a public application directory. It does not offer public accounts, payments, saved applications, or public submission forms.</p>
         <p>When you visit, the site processes standard technical information, including your IP address, requested page, browser and device details, referrer, approximate country, and security or diagnostic signals. If you email Macify, we receive the address, message, and any other information you choose to send.</p>
+        <p>If you sign up for Black Friday alerts, your email address is submitted to Kit, our email service provider, to manage your subscription and send the alerts you requested. You can unsubscribe using the link in an email or contact us to request deletion.</p>
       </PublicContentSection>
 
       <PublicContentSection id="use" title="How we use it">

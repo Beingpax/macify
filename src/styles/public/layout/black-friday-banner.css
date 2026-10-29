@@ -1,0 +1,30 @@
+.black-friday-banner { position: relative; z-index: var(--z-header); color: #fff9ef; background: #a83b2c; }
+.black-friday-banner-inner { width: min(calc(100% - var(--public-page-inset)), var(--content-width)); min-height: 5rem; margin: auto; padding: 1rem 0; display: flex; align-items: center; gap: 1.5rem; padding-block: .8rem; }
+.black-friday-banner-copy { flex: 1; display: grid; gap: .2rem; }
+.black-friday-banner-copy strong { font-family: var(--font-urbanist), sans-serif; font-weight: 850; font-size: 1.05rem; line-height: 1.25; }
+.black-friday-banner-copy strong span { color: #ffc6a2; }
+.black-friday-banner-copy > span { font-size: .85rem; line-height: 1.4; color: #fff1e7; }
+.black-friday-banner-form { display: block; gap: .5rem; flex: 0 1 27rem; min-width: 0; }
+.black-friday-banner-form input { min-width: 0; width: 100%; padding: .8rem 1rem; border: 1px solid #e4b9ae; border-radius: .5rem; background: #fff9ef; color: #30201d; font: inherit; border-color: #e4b9ae; padding-block: .65rem; }
+.black-friday-banner-form input::placeholder { color: #66534c; }
+.black-friday-banner-form button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .8rem 1rem; border: 0; border-radius: .5rem; background: #2d211e; color: #fff9ef; font: inherit; font-weight: 800; white-space: nowrap; cursor: pointer; padding-block: .65rem; }
+.black-friday-banner-form button:hover { background: #140f0d; }
+.black-friday-banner-inner > button { flex: none; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: .4rem; background: transparent; color: inherit; cursor: pointer; }
+.black-friday-banner-inner > button:hover { background: #ffffff20; }
+.black-friday-banner :focus-visible { outline: 3px solid #ffe0a4; outline-offset: 3px; }
+.black-friday-banner-email-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 700px) {
+  .black-friday-banner-inner { width: calc(100% - 2rem); display: grid; grid-template-columns: minmax(0, 1fr) 2.75rem; gap: .7rem .5rem; }
+  .black-friday-banner-copy { grid-column: 1; grid-row: 1; }
+  .black-friday-banner-inner > button { grid-column: 2; grid-row: 1; align-self: start; }
+  .black-friday-banner-form { grid-column: 1 / -1; width: 100%; }
+}
+@media (max-width: 360px) { .black-friday-banner-form button { padding-inline: .65rem; } .black-friday-banner-form input { padding-inline: .7rem; } }
+.black-friday-banner-form .black-friday-form-row { display: flex; gap: .5rem; }
+.black-friday-banner-form .signup-feedback { margin: .6rem 0 0; font-family: inherit; font-size: .875rem; line-height: 1.4; }
+.black-friday-banner-form .signup-feedback a { color: inherit; text-decoration: underline; }
+.black-friday-banner-form button:disabled { opacity: .7; cursor: wait; }
+.black-friday-signup-notice { display: flex; align-items: center; justify-content: center; gap: .75rem; padding: .9rem 1rem; background: #e2eddf; color: #25452c; font-size: .95rem; line-height: 1.5; }
+.black-friday-signup-notice > svg { flex: none; }
+.black-friday-signup-notice button { display: grid; place-items: center; flex: none; min-width: 2.75rem; min-height: 2.75rem; border: 0; border-radius: .5rem; color: inherit; background: transparent; cursor: pointer; }
+.black-friday-signup-notice button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }

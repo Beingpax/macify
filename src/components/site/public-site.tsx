@@ -3,7 +3,7 @@ import Script from "next/script";
 import { InlineAppSearch } from "@/components/site/inline-app-search";
 import { PublicHeaderNavigation } from "@/components/site/public-header-navigation";
 import { PublicFooter } from "@/components/site/public-footer";
-import { VoiceInkOfferBanner } from "@/components/site/voiceink-offer-banner";
+import { BlackFridayBanner } from "@/components/site/black-friday-banner";
 
 function PublicHeader() {
   return (
@@ -28,7 +28,7 @@ export async function PublicShell({ children, showFooter = true }: { children: R
         strategy="afterInteractive"
       />
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <VoiceInkOfferBanner />
+      <BlackFridayBanner />
       <PublicHeader />
       <div className="public-page-content">{children}</div>
       {showFooter && <PublicFooter />}

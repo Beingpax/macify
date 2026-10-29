@@ -7,6 +7,7 @@ const paxUrl = "https://x.com/JoshiPax";
 const browseLinks = [
   ["All Mac apps", "/#all-apps"],
   ["Deals", "/deals"],
+  ["Black Friday", "/black-friday"],
   ["Browse by category", "/categories"],
   ["Blog", "/blog"],
   ["Surprise me", "/surprise"],
