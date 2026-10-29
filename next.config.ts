@@ -8,11 +8,11 @@ const contentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self'",
-  `connect-src 'self' https://cloudflareinsights.com${isDevelopment ? " ws: wss:" : ""}`,
+  `connect-src 'self' https://cloudflareinsights.com https://app.kit.com${isDevelopment ? " ws: wss:" : ""}`,
   "media-src 'self'",
   "object-src 'none'",
   "base-uri 'self'",
-  "form-action 'self'",
+  "form-action 'self' https://app.kit.com",
   "frame-ancestors 'none'",
   ...(!isDevelopment ? ["upgrade-insecure-requests"] : []),
 ].join("; ");
