@@ -24,14 +24,14 @@
     "test:catalogue": "node --experimental-strip-types --test scripts/tests/catalogue-*.test.mjs"
   },
   "dependencies": {
-    "@opennextjs/cloudflare": "1.20.13",
+    "@opennextjs/cloudflare": "1.20.14",
     "@phosphor-icons/react": "^2.1.10",
     "clsx": "^2.1.1",
     "decode-ico": "^0.4.1",
     "drizzle-orm": "0.45.4",
     "icojs": "^1.0.1",
-    "jose": "^6.2.13",
-    "lucide-react": "1.61.0",
+    "jose": "^6.2.14",
+    "lucide-react": "1.64.0",
     "matter-js": "^0.20.0",
     "next": "16.4.3",
     "react": "19.3.1",
@@ -44,7 +44,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
     "@types/matter-js": "^0.20.2",
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "eslint": "9.39.5",
@@ -52,6 +52,6 @@
     "sharp": "^0.35.5",
     "tailwindcss": "4.3.3",
     "typescript": "6.0.3",
-    "wrangler": "4.155.0"
+    "wrangler": "4.156.0"
   }
 }
