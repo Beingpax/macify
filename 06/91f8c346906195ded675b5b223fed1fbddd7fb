@@ -1,0 +1,19 @@
+README.md
+  s_7ab186a679b26f::t_79793b31d19332 14,16,22
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "0691f8c346906195ded675b5b223fed1fbddd7fb",
+  "prompts": {},
+  "sessions": {
+    "s_7ab186a679b26f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c4f2cb21-b31a-4bc4-9077-6fc84650bba0",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Prakash Joshi Pax <101010368+Beingpax@users.noreply.github.com>"
+    }
+  }
+}
