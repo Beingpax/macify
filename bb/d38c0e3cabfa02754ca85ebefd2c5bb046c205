@@ -1,0 +1,49 @@
+src/lib/shared/submission.ts
+  ai_agent 87,110
+database/schema.sql
+  ai_agent 90
+scripts/validate-catalogue.mjs
+  ai_agent 128,133
+scripts/sync-local-catalogue.mjs
+  ai_agent 197
+catalog/schema/deal.schema.json
+  ai_agent 26
+src/components/application-detail/application-sidebar.tsx
+  ai_agent 31,85-99
+catalog/README.md
+  ai_agent 25-26
+database/README.md
+  ai_agent 7-9,18-23
+catalog/deals/compressx.json
+  ai_agent 9
+src/app/dashboard/catalogue/page.tsx
+  ai_agent 252-253
+src/app/dashboard/catalogue/[id]/page.tsx
+  ai_agent 174,203
+src/lib/directory/published-app-data.ts
+  ai_agent 1,86
+scripts/initialize-database.mjs
+  ai_agent 77-87,89
+database/migrations/2026-11-03-optional-deal-expiry.sql
+  ai_agent 1-27
+src/app/dashboard/apps/[id]/page.tsx
+  ai_agent 19,54
+README.md
+  ai_agent 26
+src/lib/deals/deal-manifest.ts
+  ai_agent 15,17
+src/lib/deals/deals-data.ts
+  ai_agent 1,27
+CONTRIBUTING.md
+  ai_agent 26
+src/app/dashboard/catalogue/actions.ts
+  ai_agent 241
+src/db/schema.ts
+  ai_agent 107
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "bbd38c0e3cabfa02754ca85ebefd2c5bb046c205",
+  "prompts": {}
+}
