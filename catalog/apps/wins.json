@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Wins",
+  "slug": "wins",
+  "websiteUrl": "https://wins.cool/",
+  "tagline": "Snap, preview, and switch between windows on macOS.",
+  "description": "Wins is a macOS window manager that integrates into System Settings. Drag a window to a screen edge or into a Snap Island layout to arrange it. Dock Preview shows the open windows for an app when you hover over its Dock icon. Cmd-Tab Plus and Mission Control Pro let you switch to or close windows from the keyboard.\n\n## Where it fits\n\nWins is useful for people who frequently rearrange windows or switch between several windows of the same app. It combines window tiling with Dock previews and window switching.\n\n## Privacy and requirements\n\nWins requires macOS 12 Monterey or later and supports Apple silicon and Intel Macs. It uses Accessibility to manage windows, and window thumbnails require optional Screen Recording permission. The developer says window data stays on the Mac. Wins connects to check for updates and validate licenses.\n\n## Pricing\n\nWins offers a one-day free trial. Single starts at $19.99 and includes one year of updates. Pro and X are also one-time purchases and include lifetime updates.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "One-time licenses from $19.99 USD after a one-day free trial. Single includes one year of updates. Pro and X include lifetime updates.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "window-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://wins.cool/images/logo.svg",
+      "altText": "Wins application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://wins.cool/images/heroSectionVideoEN-poster.webp",
+      "altText": "Wins window management preview on macOS"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://wins.cool/images/preferencePanelen.webp",
+        "altText": "Wins controls and keyboard shortcuts in macOS System Settings"
+      }
+    ]
+  }
+}
