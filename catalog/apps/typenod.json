@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "TypeNod",
+  "slug": "typenod",
+  "websiteUrl": "https://typenod.com/",
+  "tagline": "Preview on-device translations as you type, then confirm insertion on Mac.",
+  "description": "TypeNod is a paid Mac input method that previews an on-device translation while you type. Enter Simplified Chinese Pinyin, English, Spanish or French, review the translation, then confirm insertion in the current text field instead of switching windows or copying and pasting.\n\n## Features\n\n- Type in four supported input languages and confirm when to insert translated text. Input languages are distinct from the translation languages available on the Mac.\n- Download Apple's on-device translation resources for the language pair first. Translation-language availability varies by Mac and Apple's local translation support.\n- After resources are downloaded, input, supported translation and license activation can work offline.\n\n## Where it fits\n\nTypeNod suits individuals composing short messages, email and other text in apps that use the standard macOS input system. Some editors with nonstandard input fields may not work. If a language pair is not supported locally, the input method can still enter the original text.\n\n## Privacy and requirements\n\nThe developer says typed text and translations are not uploaded and the clipboard is not read. The Pinyin user dictionary is an exception to temporary input retention: selected words, their pinyin and usage frequency stay on the Mac and can be cleared. Apple may collect app identifier, language-pair, usage and performance metadata under its policies, but not the typed text or translation.\n\nRequires macOS 26.0 or later on Apple silicon or Intel; sentence refinement requires macOS 26.4 or later. TypeNod is distributed by SELFARK LTD as a signed, notarized DMG from the official website. It is not a Mac App Store app.\n\nThe preview image is an actual Overview screenshot with Translate to Spanish off and the Try it area only partly visible. It illustrates the interface, not a live translation demonstration.\n\n## Pricing\n\nUS$9.90 including tax buys a lifetime TypeNod for Mac license for one person, usable on every Mac they use, with future Mac app updates. There is no free trial; a full refund can be requested within 30 days. Compatibility with future macOS releases is not guaranteed. See https://typenod.com/install/.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "US$9.90 including tax, lifetime Mac license for one person; no free trial; 30-day full refund.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "text-utilities"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://typenod.com/_astro/icon-512.c-BqEfiO.png",
+      "altText": "TypeNod application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://typenod.com/_astro/overview-light.Pdx-0ygY.webp",
+      "altText": "Actual TypeNod Overview screenshot; Translate to Spanish is off and Try it is only partly visible, showing appearance rather than live translation."
+    },
+    "screenshots": []
+  }
+}
