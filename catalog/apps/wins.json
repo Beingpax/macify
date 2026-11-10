@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Wins",
+  "slug": "wins",
+  "websiteUrl": "https://wins.cool/",
+  "tagline": "Snap windows, preview open windows from the Dock, and switch between apps and windows.",
+  "description": "Wins brings window snapping and previews to the Mac desktop. It helps when you work with many open windows and need to arrange, locate, or switch to a specific one quickly.\n\n## Features\n- Place windows into common layouts with snapping and shortcuts.\n- Preview open windows for a Dock app.\n- Switch to an individual window with the keyboard and manage windows from Mission Control.\n\n## Privacy and requirements\nWindow management features require access to macOS window controls. Dock previews can expose window contents while you share your screen.\n\n## Pricing\nWins offers a trial. Single, Pro, and X are one-time licenses starting at $19.99. The developer also offers update renewals.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "From $19.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "window-management"
+  ],
+  "relatedAppSlugs": [
+    "rectangle",
+    "magnet",
+    "swish"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://wins.cool/favicon.ico",
+      "altText": "Wins application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://wins.cool/images/heroSectionVideoCN-poster_2.webp",
+      "altText": "Wins window management tools on macOS"
+    },
+    "screenshots": []
+  }
+}

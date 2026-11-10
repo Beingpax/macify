@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "actionclip",
+  "discountPercent": 25,
+  "code": null,
+  "url": "https://actionclip.app/black-friday-deal",
+  "startsAt": "2026-11-05T00:00:00Z",
+  "endsAt": "2026-11-29T23:59:00Z"
+}

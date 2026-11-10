@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "ShiftPlus",
+  "slug": "shiftplus",
+  "websiteUrl": "https://shiftplus.app/",
+  "tagline": "Restore the apps, browser profiles, and window layout you use for each project.",
+  "description": "ShiftPlus lets you save a working setup and recall it when you switch projects. A workspace can reopen a set of apps, URLs, and folders, then restore supported windows across displays and macOS Spaces.\n\n## Features\n- Capture your current setup or build a workspace by hand.\n- Choose browser profiles and shortcuts for individual workspaces.\n- Restore window placement and keep selected apps open when you switch.\n\n## Privacy and requirements\nShiftPlus requires macOS 14.6 or later. It uses system permissions to manage other applications and windows. The developer says workspace contents stay on your Mac by default and offers optional iCloud sync.\n\n## Pricing\nA 14-day trial is available. Lifetime licenses cost $24 for one Mac or $39 for two Macs.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "From $24 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "window-management",
+    "automation"
+  ],
+  "relatedAppSlugs": [
+    "rcmd",
+    "rectangle"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://shiftplus.app/apple-touch-icon.png",
+      "altText": "ShiftPlus application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://shiftplus.app/shiftplus-social-card.jpg",
+      "altText": "ShiftPlus workspace manager for macOS"
+    },
+    "screenshots": []
+  }
+}

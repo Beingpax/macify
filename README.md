@@ -9,12 +9,35 @@
   </p>
 </div>
 
-| App | Discount | Code | Dates (2026) |
-| --- | --- | --- | --- |
-| [Chronoid](https://macify.app/apps/chronoid) | 50% off | `BLACKFRIDAY26` | Nov 4–Dec 3 |
-| [Compresto](https://macify.app/apps/compressx) | 40% off | `BFCM26` | From Nov 2; end date not announced |
-| [TextSniper](https://macify.app/apps/textsniper) | 75% off | `BFIM2026` | Nov 27–Dec 4 |
-| [VoiceInk](https://macify.app/apps/voiceink) | 40% off | `BFVI2640` | Nov 9–Dec 5 |
+| App | Discount | Code | Dates (2026) | Offer terms |
+| --- | --- | --- | --- | --- |
+| [ActionClip](https://macify.app/apps/actionclip) | 25% off | Automatic | Nov 5–29 | One-Mac lifetime license, $9. [Offer](https://actionclip.app/black-friday-deal) |
+| [Almighty](https://macify.app/apps/almighty) | 50% off | `INDIEGOODIESBF26` | Nov 20–30 | Standalone lifetime license, $7.49. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1060) |
+| [Chronoid](https://macify.app/apps/chronoid) | 50% off | `BLACKFRIDAY26` | Nov 4–Dec 3 | Personal, Lifetime, and the bundle. [Offer](https://www.chronoid.app/pricing) |
+| [CleanClip](https://macify.app/apps/cleanclip) | 30% off | `BF2026` | Nov 4–Dec 15 | Standard, Pro, and Family one-time licenses. [Offer](https://pricing.cleanclip.cc/zh/null) |
+| [Compresto](https://macify.app/apps/compressx) | 40% off | `BFCM26` | Nov 2–Dec 1 | One-time licenses and the first subscription payment. [Offer](https://compresto.app/blog/compresto-black-friday-2026) |
+| [Cozy](https://macify.app/apps/cozy) | 50% off | `BLACKFRIDAY` | Nov 23–30 PT | One-time license, $24.50. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1019) |
+| [FaceScreen](https://macify.app/apps/facescreen) | 30% off | `FACESCREEN30` | Nov 18–Dec 2 | Direct purchase, $4.19. [Announcement](https://github.com/Pimjo/black-friday-deals/pull/76/files) |
+| [Fluent 2](https://macify.app/apps/fluent) | 25% off | `BF2026` | Nov 1–Dec 1 | One-time licenses, Basic from $36.75. [Offer](https://fluentmac.app/) |
+| [JuxtaCode](https://macify.app/apps/juxtacode) | 40% off | `BLACKFRIDAY26` | Nov 20–Dec 1 PT | Direct purchase, $24. [Offer](https://juxtacode.app/black-friday/) |
+| [KeyScreen](https://macify.app/apps/keyscreen) | 30% off | `KEYSCREEN30` | Nov 18–Dec 2 | Direct purchase, $4.19. [Announcement](https://github.com/Pimjo/black-friday-deals/pull/76/files) |
+| [Overcal](https://macify.app/apps/overcal) | 50% off | `INDIEGOODIESBF26` | Nov 20–30 | Lifetime license, $3.99. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1060) |
+| [PastePal](https://macify.app/apps/pastepal) | 50% off | `INDIEGOODIESBF26` | Nov 20–30 | Standalone Mac lifetime license, $7.49. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1060) |
+| [Perch](https://macify.app/apps/perch) | 40% off | `BLACKFRIDAY2026` | Nov 2–Dec 1 PT | Mac lifetime license, $17.40, limited to the first 500 orders. [Offer](https://perch.run/black-friday) |
+| [Picmal](https://macify.app/apps/picmal) | 50% off | `BLACKFRIDAY` | Nov 23–30 PT | One-time license, $14.50. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1019) |
+| [Pimosa](https://macify.app/apps/pimosa) | 40% off | `BLACKFRIDAY40` | Nov 10–30 | Code applied at checkout. Personal $17.40, Plus $29.40. [Offer](https://pimosa.app/pricing), [sale dates](https://github.com/twf-nikhila/Awesome-Black-Friday-Cyber-Monday-deals/pull/536) |
+| [Presentify](https://macify.app/apps/presentify) | 30% off | `PRESENTIFY30` | Nov 18–Dec 2 | Direct purchase, $9.80. [Announcement](https://github.com/Pimjo/black-friday-deals/pull/76/files) |
+| [Proxyman](https://macify.app/apps/proxyman) | 30% off | `BF2026` | Nov 19–Dec 3 | All plans, Standard $62.30. [Announcement](https://github.com/trungdq88/Awesome-Black-Friday-Cyber-Monday/pull/2441) |
+| [RewriteBar](https://macify.app/apps/rewritebar) | 50% off | `BF2026` | Nov 2–Dec 3 | One-time licenses, extra devices, and the first year of Gateway. [Offer](https://rewritebar.com/black-friday) |
+| [ShiftPlus](https://macify.app/apps/shiftplus) | 40% off | `BF2026` | Nov 20–Dec 2 | One-Mac and two-Mac lifetime licenses, code applied at checkout. [Offer](https://shiftplus.app/black-friday/) |
+| [TablePlus](https://macify.app/apps/tableplus) | 25% off | `BLACK_FRIDAY_2026` | Nov 19–Dec 3 | Basic one-time license, $74.25. [Announcement](https://github.com/trungdq88/Awesome-Black-Friday-Cyber-Monday/pull/2469/files) |
+| [TablePro](https://macify.app/apps/tablepro) | 40% off | `BLACKFRIDAY2026` | Nov 24–Dec 1, ends 08:00 UTC | Pro one-time license or the first year of Pro annual. [Offer](https://tablepro.app/black-friday) |
+| [TextSniper](https://macify.app/apps/textsniper) | 75% off | `BFIM2026` | Nov 27–Dec 4 | Lifetime license. |
+| [VMPal](https://macify.app/apps/vmpal) | 25% off | `BLACK_FRIDAY_2026` | Nov 19–Dec 3 | Individual $51.75, Team $74.25 per seat. [Announcement](https://github.com/trungdq88/Awesome-Black-Friday-Cyber-Monday/pull/2469/files) |
+| [VoiceInk](https://macify.app/apps/voiceink) | 40% off | `BFVI2640` | Nov 9–Dec 5 | [Offer](https://tryvoiceink.com/pricing) |
+| [Wins](https://macify.app/apps/wins) | 40% off | `BF_26` | Nov 1–Dec 1 China Standard Time | New licenses and eligible update renewals. [Offer](https://wins.cool/) |
+
+Macify uses UTC day boundaries when an announcement gives calendar dates without a time zone. Check the developer’s offer for checkout availability and eligible plans.
 
 ## 🌱 Got a deal for us?
 

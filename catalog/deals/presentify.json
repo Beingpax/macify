@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "presentify",
+  "discountPercent": 30,
+  "code": "PRESENTIFY30",
+  "url": "https://presentifyapp.com/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-02T23:59:59Z"
+}

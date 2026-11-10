@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Fluent 2",
+  "slug": "fluent",
+  "websiteUrl": "https://fluentmac.app/",
+  "tagline": "Ask an assistant about your current Mac app and run writing actions where you work.",
+  "description": "Fluent 2 opens over your current Mac app and can use the context you provide to answer questions or act on text. Use its keyboard shortcut when you need to draft a reply, summarize material, or run a saved prompt.\n\n## Features\n- Launch custom actions with keyboard shortcuts.\n- Ask questions using selected text, documents, or images as context.\n- Choose a supported local model or connect a hosted provider.\n\n## Privacy and requirements\nCheck the active provider and context settings before sharing sensitive material. Hosted providers process the inputs you send to them. Local models can run on your Mac when configured.\n\n## Pricing\nBasic and Standard are one-time licenses for one and two Macs respectively. Basic costs $49. Model providers can have separate usage charges.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "From $49 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ai",
+    "text-utilities"
+  ],
+  "relatedAppSlugs": [
+    "actionclip",
+    "rewritebar"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://fluentmac.app/apple-touch-icon.png",
+      "altText": "Fluent 2 application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://fluentmac.app/assets/og-card.png",
+      "altText": "Fluent 2 assistant for macOS"
+    },
+    "screenshots": []
+  }
+}

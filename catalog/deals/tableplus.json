@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "tableplus",
+  "discountPercent": 25,
+  "code": "BLACK_FRIDAY_2026",
+  "url": "https://tableplus.com/pricing",
+  "startsAt": "2026-11-19T00:00:00Z",
+  "endsAt": "2026-12-03T23:59:59Z"
+}

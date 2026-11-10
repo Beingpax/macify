@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "facescreen",
+  "discountPercent": 30,
+  "code": "FACESCREEN30",
+  "url": "https://facescreen.app/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-02T23:59:59Z"
+}

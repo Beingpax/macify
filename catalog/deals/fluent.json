@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "fluent",
+  "discountPercent": 25,
+  "code": "BF2026",
+  "url": "https://fluentmac.app/",
+  "startsAt": "2026-11-01T00:00:00Z",
+  "endsAt": "2026-12-01T23:59:59Z"
+}

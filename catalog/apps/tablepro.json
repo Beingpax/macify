@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "TablePro",
+  "slug": "tablepro",
+  "websiteUrl": "https://tablepro.app/",
+  "tagline": "Browse schemas, edit data, and run SQL queries from a native database client.",
+  "description": "TablePro is an open-source database client with a native macOS interface. It brings connection management, schema browsing, SQL editing, and table data into one workspace.\n\n## Features\n- Connect to supported databases including PostgreSQL, MySQL, and SQLite.\n- Write queries, browse schemas, and edit supported table data.\n- Use Pro to compare supported databases, inspect local query history, and chart results.\n\n## Privacy and requirements\nThe client connects to the databases you configure. Review connection settings, credentials, and database permissions before editing production data. Optional cloud and AI features have their own configuration.\n\n## Pricing\nThe core app is free, including for work. The sale applies to the $79 Pro one-time license and the first year of the $39 Pro annual plan. Both cover up to three Macs.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free core app, Pro from $79 one-time or $39/year",
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [
+    "tableplus"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://tablepro.app/apple-touch-icon.png",
+      "altText": "TablePro application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://tablepro.app/images/home/home-hero-mac-light-1280.webp",
+      "altText": "TablePro on Mac with a query editor, database sidebar, and results grid"
+    },
+    "screenshots": []
+  }
+}

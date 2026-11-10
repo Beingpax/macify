@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "RewriteBar",
+  "slug": "rewritebar",
+  "websiteUrl": "https://rewritebar.com/",
+  "tagline": "Edit, translate, and rewrite selected text across Mac apps with a keyboard shortcut.",
+  "description": "RewriteBar brings writing commands to the text you already have selected. Open its command picker from an email, document, or editor, then review the result and apply it in place.\n\n## Features\n- Correct grammar, change tone, shorten drafts, or translate text.\n- Compare the result with the original and save custom actions for repeat work.\n- Use a supported local model, your own provider key, or the optional hosted Gateway.\n\n## Privacy and requirements\nRewriteBar supports Intel and Apple Silicon Macs running macOS 13 or later. It needs Accessibility permission to read and replace selected text. Hosted models process submitted text remotely. Local model options keep model processing on your device.\n\n## Pricing\nStandard is $29 and Pro is $59 as a one-time purchase. Pro includes one year of Gateway access. Gateway is also available as an optional annual subscription.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "From $29 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ai",
+    "text-utilities"
+  ],
+  "relatedAppSlugs": [
+    "actionclip",
+    "popclip"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://rewritebar.com/icon.png?icon.09gfgnyh7rt1v.png",
+      "altText": "RewriteBar application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://rewritebar.com/opengraph-image.png?opengraph-image.3vt53_rplcew5.png",
+      "altText": "RewriteBar writing assistant for macOS"
+    },
+    "screenshots": []
+  }
+}

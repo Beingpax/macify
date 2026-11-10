@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "cleanclip",
+  "discountPercent": 30,
+  "code": "BF2026",
+  "url": "https://pricing.cleanclip.cc/",
+  "startsAt": "2026-11-04T00:00:00Z",
+  "endsAt": "2026-12-15T23:59:59Z"
+}

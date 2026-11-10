@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "VMPal",
+  "slug": "vmpal",
+  "websiteUrl": "https://vmpal.com/",
+  "tagline": "Create and manage macOS, Windows, and Linux virtual machines on an Apple Silicon Mac.",
+  "description": "VMPal is a desktop virtualization tool for Apple Silicon Macs. Create a virtual machine for development or compatibility work, select its resource limits, and manage its state from the Mac.\n\n## Features\n- Set up supported macOS, Windows, and Linux guests.\n- Capture snapshots to return to a previous VM state.\n- Control virtual machines with the command line or optional MCP integration.\n\n## Privacy and requirements\nThe app requires Apple Silicon and macOS 26 or later. Virtual machines consume local disk space and memory. Review guest networking, shared files, and any agent permissions for each VM.\n\n## Pricing\nThe Individual one-time license costs $69 and includes one year of app updates.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Individual license $69 one-time",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [
+    "tableplus"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://vmpal.com/resources/images/app-icon-big.png",
+      "altText": "VMPal application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://vmpal.com/resources/images/vmpal-og.png",
+      "altText": "VMPal dashboard for managing virtual machines on a Mac"
+    },
+    "screenshots": []
+  }
+}

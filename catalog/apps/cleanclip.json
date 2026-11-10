@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "CleanClip",
+  "slug": "cleanclip",
+  "websiteUrl": "https://www.cleanclip.cc/",
+  "tagline": "Find previous clipboard items with keyboard shortcuts and queue clips for sequential pasting.",
+  "description": "CleanClip keeps a searchable history of copied material on your Mac. Its compact picker opens near your current work, so you can recover a link, image, or text snippet without switching to a separate window.\n\n## Features\n- Browse and paste recent items from the keyboard.\n- Filter history and collect frequently used clips in smart lists.\n- Use the Paste Stack to place several copied items in a chosen order.\n\n## Privacy and requirements\nClipboard history can contain private information. The developer documents local clipboard storage and offers sync on eligible plans. Review the sync and history settings before saving sensitive material.\n\n## Pricing\nA free tier is available. Standard, Pro, and Family are one-time purchases for different device limits, starting at $19.99.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier, paid licenses from $19.99",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "clipboard-managers"
+  ],
+  "relatedAppSlugs": [
+    "pastepal",
+    "maccy",
+    "paste"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.cleanclip.cc/images/apple-touch-icon.png",
+      "altText": "CleanClip application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.cleanclip.cc/images/hero2.webp",
+      "altText": "CleanClip showing its clipboard history and quick paste controls"
+    },
+    "screenshots": []
+  }
+}

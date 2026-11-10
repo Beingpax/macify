@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "tablepro",
+  "discountPercent": 40,
+  "code": "BLACKFRIDAY2026",
+  "url": "https://tablepro.app/black-friday",
+  "startsAt": "2026-11-24T00:00:00Z",
+  "endsAt": "2026-12-01T08:00:00Z"
+}

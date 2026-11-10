@@ -1,0 +1,34 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Picmal",
+  "slug": "picmal",
+  "websiteUrl": "https://picmal.app/",
+  "tagline": "Convert, compress, and batch-edit images, video, audio, and PDFs on your Mac.",
+  "description": "Picmal groups common media jobs into a desktop app. Drop in a batch of files to convert formats, shrink assets, or prepare them for delivery without uploading them to a browser service.\n\n## Features\n- Resize and convert images, remove backgrounds, and export app icons.\n- Compress or convert video and audio files.\n- Merge PDFs and split audiobooks by chapter.\n\n## Privacy and requirements\nThe developer says file processing stays on your Mac and works offline. Choose the source files and output destination in the app.\n\n## Pricing\nA seven-day trial is available. A single Mac license costs $29 once, with multi-Mac licenses also offered.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$29 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "media-compression-conversion",
+    "video-conversion"
+  ],
+  "relatedAppSlugs": [
+    "pimosa",
+    "compressx",
+    "clop"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://picmal.app/apple-touch-icon.png",
+      "altText": "Picmal application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://picmal.app/_astro/og.DVYHrddZ.png",
+      "altText": "Picmal media conversion and editing tools for Mac"
+    },
+    "screenshots": []
+  }
+}

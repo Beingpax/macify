@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "shiftplus",
+  "discountPercent": 40,
+  "code": "BF2026",
+  "url": "https://shiftplus.app/black-friday/",
+  "startsAt": "2026-11-20T00:00:00Z",
+  "endsAt": "2026-12-02T23:59:59Z"
+}

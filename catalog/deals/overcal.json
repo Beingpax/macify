@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "overcal",
+  "discountPercent": 50,
+  "code": "INDIEGOODIESBF26",
+  "url": "https://indiegoodies.com/overcal",
+  "startsAt": "2026-11-20T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "FaceScreen",
+  "slug": "facescreen",
+  "websiteUrl": "https://facescreen.app/",
+  "tagline": "Put a floating camera feed and name label on your Mac screen for live demos and recordings.",
+  "description": "FaceScreen places a live camera window above other apps. Position it where it will stay visible when you share your screen and add a label for your name or a short note.\n\n## Features\n- Adjust the camera overlay's size, shape, and position.\n- Add a custom text label and change its style.\n- Toggle the camera with a shortcut during a presentation.\n\n## Privacy and requirements\nThe app requires camera access to show the feed. Check where the overlay sits before sharing or recording the screen, since it can appear in the capture.\n\n## Pricing\nThe direct license is a $5.99 one-time purchase.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$5.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "screen-recording",
+    "presentations"
+  ],
+  "relatedAppSlugs": [
+    "presentify",
+    "screen-studio"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://facescreen.app/_next/static/media/icon_128x128.34le_h82djcst.png",
+      "altText": "FaceScreen application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://facescreen.app/_next/static/media/og-image.0veeui3cvt8wk.jpg",
+      "altText": "FaceScreen floating camera overlay"
+    },
+    "screenshots": []
+  }
+}

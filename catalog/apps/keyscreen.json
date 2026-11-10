@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "KeyScreen",
+  "slug": "keyscreen",
+  "websiteUrl": "https://keyscreen.app/",
+  "tagline": "Display keyboard shortcuts and mouse clicks on screen as you demonstrate a Mac workflow.",
+  "description": "KeyScreen displays key presses as an overlay during a tutorial, stream, or live demo. You can show only shortcut combinations when ordinary typing would distract from the walkthrough.\n\n## Features\n- Choose which keys and mouse clicks are shown.\n- Customize the overlay's position, appearance, and animation.\n- Move the overlay to the display being shared.\n\n## Privacy and requirements\nKeyScreen requires macOS 15 or later. The developer says it processes input locally and does not receive events from protected password fields. Pause the overlay before typing confidential text in other fields.\n\n## Pricing\nThe direct license is a $5.99 one-time purchase.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$5.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "screen-annotation",
+    "presentations"
+  ],
+  "relatedAppSlugs": [
+    "presentify",
+    "facescreen"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://keyscreen.app/_next/static/media/icon-128.1v8_oy5bmfxns.png",
+      "altText": "KeyScreen application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://keyscreen.app/images/2.jpg",
+      "altText": "KeyScreen displaying a keystroke overlay on macOS"
+    },
+    "screenshots": []
+  }
+}

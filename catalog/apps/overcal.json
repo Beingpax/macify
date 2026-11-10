@@ -1,0 +1,34 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Overcal",
+  "slug": "overcal",
+  "websiteUrl": "https://indiegoodies.com/overcal",
+  "tagline": "Open your agenda, world clocks, and next-meeting countdown from the menu bar.",
+  "description": "Overcal puts a compact month view and upcoming agenda in the Mac menu bar. It is geared toward checking the next appointment, joining a call, and comparing time zones without leaving the current app.\n\n## Features\n- Browse the month and inspect the day's events.\n- See a countdown and open the meeting link when available.\n- Keep clocks for other time zones alongside the agenda.\n\n## Privacy and requirements\nOvercal requires macOS 26 and asks for access to calendar events to build the agenda.\n\n## Pricing\nOvercal costs $7.99 as a one-time purchase.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$7.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "calendar-scheduling",
+    "menu-bar-utilities"
+  ],
+  "relatedAppSlugs": [
+    "dato",
+    "meetingbar",
+    "fantastical"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://indiegoodies.com/icons/overcal.png",
+      "altText": "Overcal application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://indiegoodies.com/images/landing/overcal/banner.png",
+      "altText": "Overcal menu-bar calendar and agenda"
+    },
+    "screenshots": []
+  }
+}

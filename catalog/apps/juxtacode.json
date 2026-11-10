@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "JuxtaCode",
+  "slug": "juxtacode",
+  "websiteUrl": "https://juxtacode.app/",
+  "tagline": "Review Git history, compare branches, and resolve conflicts in a three-way merge editor.",
+  "description": "JuxtaCode is a Mac interface for inspecting changes in a Git repository. It connects commits, file history, and conflicts so you can see where a change came from before deciding how to merge it.\n\n## Features\n- Compare two branches or commits side by side.\n- Trace a file across renames and search the commit timeline.\n- Resolve conflicts in a three-way editor and export comparisons as PDF or PNG.\n\n## Privacy and requirements\nJuxtaCode opens repositories you select on your Mac. Resolving conflicts can change working files, so review the resulting Git diff before committing.\n\n## Pricing\nThe developer offers a trial and a one-time purchase, with separate direct and Mac App Store purchase options.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "One-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [
+    "zed",
+    "sublime-text"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://juxtacode.app/favicon/header-icon.svg?v=20260724-full-bleed-square",
+      "altText": "JuxtaCode application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://juxtacode.app/_astro/Hero.DIJz1Dpj.png",
+      "altText": "JuxtaCode comparing two Git commits side by side"
+    },
+    "screenshots": []
+  }
+}

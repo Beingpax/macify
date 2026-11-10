@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Cozy",
+  "slug": "cozy",
+  "websiteUrl": "https://cozyjournal.app/",
+  "tagline": "Keep a private journal in files you own and revisit entries by date or location.",
+  "description": "Cozy is a personal journal for Mac, Windows, iPhone, and iPad. It stores entries as files you can open outside the app, while offering a dedicated interface for writing, finding, and revisiting them.\n\n## Features\n- Create separate journals and search past entries.\n- Browse entries as a list, on a calendar, or on a map when locations are attached.\n- Add photos and revisit entries from the same date in prior years.\n\n## Privacy and requirements\nThe developer says journal contents live on your own device and the app has no central journal server. Check where your journal folder is stored if you choose to sync it between devices.\n\n## Pricing\nA seven-day trial is available. The direct one-time license costs $49.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$49 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing"
+  ],
+  "relatedAppSlugs": [
+    "bear",
+    "obsidian",
+    "dayflow"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://cozyjournal.app/cozy.png",
+      "altText": "Cozy application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://cozyjournal.app/og.jpg",
+      "altText": "Cozy journal on desktop and mobile"
+    },
+    "screenshots": []
+  }
+}

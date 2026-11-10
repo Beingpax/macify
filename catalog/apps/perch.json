@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Perch",
+  "slug": "perch",
+  "websiteUrl": "https://perch.run/",
+  "tagline": "Track coding-agent sessions from the menu bar and get an alert when a session needs input.",
+  "description": "Perch gathers supported coding-agent sessions into a Mac menu-bar panel. It shows what is running, what has finished, and which sessions are waiting for a decision, with a companion app for checking in from an iPhone.\n\n## Features\n- View active sessions and usage across supported tools.\n- Receive notifications when a session needs attention.\n- Pair an iPhone to mirror activity and use supported remote actions.\n\n## Privacy and requirements\nThe Mac app requires macOS 13 or later. The developer documents local network or Tailscale pairing for the companion. Remote replies depend on the agent integration and require enabling the feature.\n\n## Pricing\nSolo is $29 for a lifetime license. Team seats are sold separately, and the optional iPhone Pro features use a subscription.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "From $29 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools",
+    "menu-bar-utilities"
+  ],
+  "relatedAppSlugs": [
+    "openusage",
+    "tinycast"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://perch.run/icon.png?icon.2ea9nc5l496lu.png",
+      "altText": "Perch application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://perch.run/og.png",
+      "altText": "Perch menu-bar monitor for coding-agent sessions"
+    },
+    "screenshots": []
+  }
+}

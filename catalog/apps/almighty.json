@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Almighty",
+  "slug": "almighty",
+  "websiteUrl": "https://indiegoodies.com/almighty",
+  "tagline": "Run Mac system tweaks and everyday utilities from a searchable panel.",
+  "description": "Almighty collects system settings, quick actions, and small utilities in one Mac app. It is useful when you repeatedly change a setting or run a small task that would otherwise take several menus or a terminal command.\n\n## Features\n- Search for tweaks and run common settings changes.\n- Access utilities such as window snapping, file search, and media tools.\n- Open and theme supported quick actions from the Mac notch.\n\n## Privacy and requirements\nThe developer says the app collects no analytics. Some actions change system settings or require additional permissions. If you enable an external AI provider, review which inputs it receives.\n\n## Pricing\nThe download includes free tweaks and a trial of Pro features. The standalone Pro license is $14.99. The Mac App Store edition offers a smaller set of tweaks.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free download, Pro from $14.99",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization",
+    "automation"
+  ],
+  "relatedAppSlugs": [
+    "supercharge",
+    "bettertouchtool"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://indiegoodies.com/icons/almighty.png",
+      "altText": "Almighty application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://user-images.githubusercontent.com/2284279/117241240-fd86cd80-ae32-11eb-9e79-c64ef6a440d8.png",
+      "altText": "Almighty showing a collection of macOS tweaks"
+    },
+    "screenshots": []
+  }
+}

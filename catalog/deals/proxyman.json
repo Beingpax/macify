@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "proxyman",
+  "discountPercent": 30,
+  "code": "BF2026",
+  "url": "https://proxyman.com/pricing",
+  "startsAt": "2026-11-19T00:00:00Z",
+  "endsAt": "2026-12-03T23:59:59Z"
+}

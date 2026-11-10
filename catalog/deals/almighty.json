@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "almighty",
+  "discountPercent": 50,
+  "code": "INDIEGOODIESBF26",
+  "url": "https://indiegoodies.com/almighty",
+  "startsAt": "2026-11-20T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}
