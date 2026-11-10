@@ -4,7 +4,7 @@
 
   .deals-hero-stage {
     min-height: 34rem;
-    grid-template-columns: minmax(0, 1.05fr) minmax(22rem, 0.8fr);
+    grid-template-columns: minmax(22rem, 0.8fr) minmax(0, 1.05fr);
     gap: 2rem;
   }
   .deals-ticket-stage { padding-right: 1rem; }
@@ -204,6 +204,9 @@
     min-height: 0;
     padding: 5.5rem 0 4.5rem;
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "tickets";
     gap: 3.5rem;
   }
   .deals-hero-copy { width: min(100%, 42rem); }

@@ -5,7 +5,7 @@ import type { getActiveDeals } from "@/lib/deals/deals-data";
 type ActiveDeal = Awaited<ReturnType<typeof getActiveDeals>>[number];
 
 export function DealsHeroTickets({ deals }: { deals: ActiveDeal[] }) {
-  if (!deals.length) return <p className="deals-hero-no-offers">New offers will appear here as they become available.</p>;
+  if (!deals.length) return <p className="deals-hero-no-offers">Featured offers will appear here as they become available.</p>;
   return (
           <div className="deals-ticket-stage" aria-label="Highlighted deals">
             {deals.map((deal, index) => (

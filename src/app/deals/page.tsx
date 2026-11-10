@@ -10,6 +10,7 @@ import { PublicShell } from "@/components/site/public-site";
 export const dynamic = "force-dynamic";
 
 const description = "Get a handpicked roundup of Black Friday offers on useful Mac apps, delivered to your inbox.";
+const heroDealSlugs = ["voiceink", "chronoid", "compressx"];
 
 export const metadata: Metadata = {
   title: "Mac app deals and Black Friday offers",
@@ -22,6 +23,9 @@ export default async function DealsPage() {
   const deals = await getHandpickedDeals();
   const activeDeals = deals.filter((deal) => !deal.isUpcoming);
   const upcomingDeals = deals.filter((deal) => deal.isUpcoming);
+  const heroDeals = heroDealSlugs
+    .map((slug) => activeDeals.find((deal) => deal.slug === slug))
+    .filter((deal) => deal !== undefined);
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -52,7 +56,7 @@ export default async function DealsPage() {
               <p className="black-friday-intro">{description}</p>
               <SignupForm />
             </div>
-            <DealsHeroTickets deals={activeDeals} />
+            <DealsHeroTickets deals={heroDeals} />
           </div>
         </section>
         <section className="black-friday-current-deals" aria-labelledby="handpicked-deals-title">

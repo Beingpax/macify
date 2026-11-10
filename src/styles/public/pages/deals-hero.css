@@ -130,7 +130,8 @@
   padding: clamp(5.5rem, 8vw, 8rem) 0 clamp(4rem, 6vw, 6rem);
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(28rem, 0.95fr);
+  grid-template-columns: minmax(28rem, 0.95fr) minmax(0, 1.05fr);
+  grid-template-areas: "tickets copy";
   align-items: center;
   gap: clamp(3rem, 6vw, 7rem);
   overflow: clip;
@@ -138,6 +139,7 @@
 }
 
 .deals-hero-copy {
+  grid-area: copy;
   min-width: 0;
   position: relative;
   z-index: 2;
@@ -209,6 +211,11 @@
   color: var(--play-blue);
   font-size: 1.1rem;
   line-height: 0.95;
+}
+
+.deals-ticket-stage,
+.deals-hero-no-offers {
+  grid-area: tickets;
 }
 
 .deals-ticket-stage {
