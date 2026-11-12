@@ -19,11 +19,11 @@
   "relatedAppSlugs": [],
   "media": {
     "icon": {
-      "sourceUrl": "PASTE_DIRECT_ICON_IMAGE_URL_HERE",
+      "sourceUrl": "https://dailyplannerstickyboard.com/assets/img/icon-64.png",
       "altText": "Daily Planner Sticky Board app icon"
     },
     "preview": {
-      "sourceUrl": "PASTE_DIRECT_PREVIEW_IMAGE_URL_HERE",
+      "sourceUrl": "https://dailyplannerstickyboard.com/assets/img/board_day.webp",
       "altText": "Daily Planner Sticky Board desktop interface"
     },
     "screenshots": []
