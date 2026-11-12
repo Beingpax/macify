@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Daily Planner: Sticky Board",
+  "slug": "daily-planner-sticky-board",
+  "websiteUrl": "https://dailyplannerstickyboard.com/",
+  "tagline": "A desktop planner with sticky notes, daily priorities and a focus timer.",
+  "description": "Daily Planner: Sticky Board is a macOS productivity app that puts your daily plan on a colourful sticky board on your desktop or a second monitor. It brings tasks, priorities and focus tools into one visible workspace.\n\nUsers can plan their day, week and month, organize tasks using sticky notes, and keep their most important priorities visible without switching between multiple windows.\n\n## Features\n\n- Desktop board with Day, Week and Month views.\n- Drag tasks between Top 3, To do and Done.\n- Natural-language quick task entry.\n- Daily schedules, workday timelines and planned hours.\n- Single-task focus mode, Pomodoro timer and break reminders.\n- Weekly and monthly priorities.\n- Progress tracking, streaks, focus time and completed-task logbook.\n- Optional Calendar events, Reminders import, widgets, Shortcuts and menu bar access.\n\n## Where it fits\n\nThe app is aimed at Mac users who want their daily tasks and priorities to remain visible on their desktop. Its sticky-board approach may suit people who prefer a visual workspace over a conventional task-list window. It also includes focus and progress-tracking features.\n\n## Privacy and requirements\n\nThe developer states that tasks stay on the Mac and that the app does not require an account or use tracking. The App Store privacy disclosure says the developer indicates that no data is collected; Apple notes that this disclosure has not been verified by Apple. The app requires macOS 26.2 or later. See the developer's privacy policy for details: https://anjumafshan.online/dpm-privacy-policy.html\n\n## Pricing\n\nThe app offers a 7-day free trial followed by optional Pro subscriptions. US App Store prices currently list Pro Weekly at $0.99, Pro Monthly at $3.99 and Pro Yearly at $34.99. Prices may vary by region.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "7-day free trial; Pro subscriptions: $0.99 weekly, $3.99 monthly, or $34.99 yearly in the US App Store.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "task-management",
+    "calendar-scheduling",
+    "focus-timers"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://dailyplannerstickyboard.com/assets/img/icon-64.png",
+      "altText": "Daily Planner Sticky Board app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://dailyplannerstickyboard.com/assets/img/board_day.webp",
+      "altText": "Daily Planner Sticky Board desktop interface"
+    },
+    "screenshots": []
+  }
+}
