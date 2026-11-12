@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "MacOSCleaner",
+  "slug": "macos-cleaner",
+  "websiteUrl": "https://alextkdev.github.io/MacOSCleaner/",
+  "tagline": "Free native Mac cleaner and app uninstaller for Apple Silicon, with review-first cleanup.",
+  "description": "MacOSCleaner is a free native SwiftUI maintenance app for Apple Silicon. It helps reclaim space from caches, developer junk, duplicate files, and leftover app remnants while keeping every deletion under the user's review.\n\nScans run locally. The only network request checks GitHub Releases for updates on every launch. There is no account and no telemetry. Current release is 2.3.0 for macOS 26 or later.\n\n## Features\n\n- Smart Cleanup across about 55 categories and thousands of path rules covering app caches, browsers, package managers, Xcode, Docker, IDEs, and AI tool caches.\n- Forensic-style app uninstaller that finds leftovers with evidence types such as Bundle ID, Team ID, Spotlight, and Launch Services, then lets you choose what goes to Trash.\n- Duplicate file finder with a staged hash pipeline and Quick Look, plus a navigable disk-space analyzer with honest APFS sizing.\n- Startup-service uninstaller for LaunchAgents and LaunchDaemons, plus a process manager with protection for critical system processes.\n- Optional on-device Apple Intelligence explanations via FoundationModels, and Siri / Shortcuts App Intents for Quick Clean, Scan Storage, and Uninstall App.\n- Interface in 14 languages, including Arabic RTL, with Liquid Glass UI aligned to current macOS.\n\n## Where it fits\n\nMacOSCleaner suits Apple Silicon Mac users who want a transparent CleanMyMac-style alternative without a subscription. It pairs well with focused tools such as Pearcleaner, Mole, and DaisyDisk when the goal is reviewed cleanup rather than one-click automation.\n\nIt is Apple Silicon only (not Intel, not Universal). The DMG is ad-hoc signed and not notarized: on first launch Gatekeeper may block it until Open Anyway in System Settings → Privacy & Security, or until quarantine is cleared with `xattr` on the official GitHub build.\n\n## Privacy and requirements\n\nRequires macOS 26.0 or later on Apple Silicon (M1 and newer). Cleanup and uninstall flows run on-device. Uninstaller and Disk Analyzer move items to Trash; Smart Cleanup removes selected caches only after confirmation. Critical paths such as `/System`, `/usr`, and `~/.ssh` stay blocked. Full Disk Access or an admin prompt may be needed for some protected locations.\n\nThe developer publishes the source under GPLv3 with the Commons Clause. That is source-available for inspection, not OSI open source, so this listing uses `closed_source` in the structured field and explains the license here.\n\n## Pricing\n\nMacOSCleaner is free for personal and non-commercial use. Source is available on GitHub under GPLv3 + Commons Clause.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": "Free for personal / non-commercial use; source-available GPLv3 + Commons Clause",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "app-uninstallers",
+    "storage-cleanup"
+  ],
+  "relatedAppSlugs": [
+    "pearcleaner",
+    "mole",
+    "daisydisk"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/logo-og.png",
+      "altText": "MacOSCleaner application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/hero-dashboard.webp",
+      "altText": "MacOSCleaner dashboard showing storage overview"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Dashboard_v2_3.webp",
+        "altText": "MacOSCleaner 2.3 dashboard with recent operations"
+      },
+      {
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Cleanup_page_v2_3.webp",
+        "altText": "MacOSCleaner Smart Cleanup categories view"
+      },
+      {
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Uninstaller_v2_3.webp",
+        "altText": "MacOSCleaner forensic app uninstaller"
+      },
+      {
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Disk_analyzer_v2_3.webp",
+        "altText": "MacOSCleaner navigable disk space analyzer"
+      }
+    ]
+  }
+}
