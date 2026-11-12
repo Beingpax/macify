@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "OpenContexts",
+  "slug": "opencontexts",
+  "websiteUrl": "https://opencontexts.app/",
+  "tagline": "Switch between individual Mac windows and organize them into saved groups.",
+  "description": "OpenContexts is a free, open-source native macOS window switcher with a persistent app bar and saved window groups. It lists individual windows rather than only applications, including multiple windows belonging to the same app.\n\n## Features\n\n- Switch windows in most-recently-used order using customizable keyboard shortcuts.\n- Search by app name or window title while using the keyboard switcher.\n- Keep a window list on the left, right, or bottom screen edge, always visible or shown on hover.\n- Create task-based groups, drag windows into groups, and pin their order.\n- Retain group names, order, and the placement of windows that can be matched after an app restart.\n\n## Where it fits\n\nUseful for Mac users who work with many windows across several applications and want to group them by task. Saved groups organize the window list; they do not reopen applications or restore desktop window sizes and positions. Trackpad switching gestures are not supported.\n\n## Privacy and requirements\n\nRequires macOS 13 or later; the developer notes that macOS 13 has not yet been verified on physical devices. Accessibility permission is required to discover and switch windows and handle shortcuts. The developer documents local storage of group information in Application Support. No account is required. Updates use Sparkle. Builds without Apple notarization may be blocked by Gatekeeper; consult the official installation instructions.\n\n## Pricing\n\nFree, with all features included and no subscription. Source code is available under the Apache License 2.0.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": "Free; all features included, no account or subscription.",
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://raw.githubusercontent.com/zshnb/open-contexts/09bf9e06a83d8c22271d99bf86e42ff41823a50e/website/assets/icon.png",
+      "altText": "OpenContexts application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://raw.githubusercontent.com/zshnb/open-contexts/09bf9e06a83d8c22271d99bf86e42ff41823a50e/docs/screenshots/window-switcher.png",
+      "altText": "OpenContexts keyboard switcher listing individual Mac windows"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://raw.githubusercontent.com/zshnb/open-contexts/09bf9e06a83d8c22271d99bf86e42ff41823a50e/docs/screenshots/sidebar-left.png",
+        "altText": "OpenContexts sidebar with saved custom window groups"
+      },
+      {
+        "sourceUrl": "https://raw.githubusercontent.com/zshnb/open-contexts/09bf9e06a83d8c22271d99bf86e42ff41823a50e/docs/screenshots/sidebar-bottom.png",
+        "altText": "OpenContexts bottom bar displaying window icons and titles"
+      }
+    ]
+  }
+}
