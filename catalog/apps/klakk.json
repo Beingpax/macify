@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Klakk",
+  "slug": "klakk",
+  "websiteUrl": "https://tryklakk.com/en/",
+  "tagline": "Add mechanical keyboard sounds to typing on your Mac, with 14 sound packs to try.",
+  "description": "Klakk plays mechanical keyboard sounds as you type in Mac applications. It is a paid, closed-source sound utility with a three-day trial from first launch. You can preview its sound styles on the website before installing.\n\n## Features\n\n- Choose from 14 included sound packs, including NovelKeys Cream, Gateron Red and Everglide Oreo.\n- Adjust playback volume and select an audio output device, including headphones.\n- Use the app across Mac applications after granting Input Monitoring permission.\n- Try all 14 packs in the installed app for three days before deciding whether to buy.\n\n## Where it fits\n\nKlakk is for people choosing an audible typing sound they enjoy without replacing their keyboard. Sound preference is personal: the website preview and installed trial let you compare the included sounds on your own audio setup. Headphones keep the added audio private; the app does not reduce the physical noise of your keyboard. Audio timing depends on the device and connection.\n\n## Privacy and requirements\n\nThe website Mac edition requires macOS 14 or later and supports Apple silicon and Intel Macs. The current direct release is 1.4.3, build 25. The preview image shows the General settings in an earlier 1.4.1 release.\n\nThe developer says keyboard events are processed locally to choose sounds; typed text is not stored and raw keystrokes are not uploaded. Input Monitoring can receive key-down, key-up and modifier events across applications. This is not a zero-communication app: Firebase receives usage analytics, and online services handle license verification and purchases. See the developer's privacy policy for the full scope.\n\n## Pricing\n\nThe website Mac edition costs US$6.99 once, plus applicable tax, after the three-day trial. A new license covers up to three compatible, personally owned Macs and allows everyday commercial work. Windows and Mac App Store purchases use separate licenses. Creem processes new website purchases.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "US$6.99 once for the website Mac edition, plus applicable tax; three-day trial from first launch; up to three personally owned compatible Macs per new license.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization",
+    "input-customization"
+  ],
+  "relatedAppSlugs": [
+    "klack",
+    "keeby"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://tryklakk.com/assets/images/logo.png",
+      "altText": "Klakk application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://tryklakk.com/assets/images/mac/klakk-general-en-1.4.1.jpg",
+      "altText": "Klakk Mac 1.4.1 General settings, showing the three-day trial and appearance controls"
+    },
+    "screenshots": []
+  }
+}
