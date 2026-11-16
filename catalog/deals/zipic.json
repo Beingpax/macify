@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "zipic",
+  "discountPercent": 33,
+  "code": "BF2026",
+  "url": "https://zipic.app/black-friday?utm_source=macify&utm_medium=deal-site&utm_campaign=bf2026",
+  "startsAt": "2026-11-20T00:00:00-08:00",
+  "endsAt": "2026-12-06T23:59:59-08:00"
+}

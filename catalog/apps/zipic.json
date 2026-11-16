@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Zipic",
+  "slug": "zipic",
+  "websiteUrl": "https://zipic.app/",
+  "tagline": "Compress, convert and resize images locally on Mac and Windows, with a CLI for scripts and AI agents.",
+  "description": "Zipic is a native image compression and format conversion app for macOS and Windows (Beta). It compresses and converts large batches of images on your device; images are never uploaded and no account is required.\n\nOn Mac it also ships a `zipic` command-line client that talks to the running app, so shell scripts, CI jobs and AI agents can use the same compression pipeline and presets.\n\n## Features\n\n- Batch compression of whole folders, with resizing to a width, height or percentage in the same pass.\n- Converts between JPEG, PNG, WebP, HEIC, AVIF, JPEG XL, TIFF, GIF, ICNS, PDF, SVG and APNG.\n- Automation: folder monitoring, clipboard auto-compress, Apple Shortcuts, Raycast, Finder menu and URL Scheme.\n- The `zipic` CLI prints one JSON line per file, returns exit codes and supports `--dry-run`.\n\n## Where it fits\n\nFor people who regularly shrink screenshots, photos or web assets and want it to happen without opening a web service, and for developers who want image compression inside scripts or agent workflows.\n\n## Privacy and requirements\n\nAll processing is on-device and works offline. Requires macOS 13 or later (Universal: Apple silicon and Intel) or Windows 10 or later (Beta, Microsoft Store). Distributed from the official site and Homebrew; Zipic is not on the Mac App Store.\n\n## Pricing\n\nFree tier with a 7-day full Pro trial, then 25 compressions a day. Pro is a one-time purchase with lifetime updates: Solo (1 device) $19.99, Personal (2 devices) $29.99, Team (10 devices) $129.99. One license works on Mac and Windows. 30-day refund.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier; Pro one-time: Solo $19.99, Personal $29.99, Team $129.99",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "media-compression-conversion"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://zipic.app/_astro/icon.CyFf7Yuu.png",
+      "altText": "Zipic application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://zipic.app/_astro/og.CxOlIbQh.png",
+      "altText": "Zipic image compression app preview"
+    },
+    "screenshots": []
+  }
+}
