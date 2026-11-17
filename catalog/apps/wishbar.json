@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Wishbar",
+  "slug": "wishbar",
+  "websiteUrl": "https://wishbar.app/",
+  "tagline": "Type what you want in plain English and your own AI builds it as a live widget in your menu bar.",
+  "description": "Wishbar is a Mac menu bar app made by Suvegasoft Limited in the UK. You type what you want in plain English, and your own AI (ChatGPT through Codex, or Claude) builds it as a live widget in your menu bar.\n\n## Features\n- Ask for what you want in plain English.\n- Your own AI does the building: ChatGPT through Codex, or Claude.\n- The result is a live widget in your menu bar.\n\n## Requirements\nWishbar needs macOS 13 or later and your own AI: ChatGPT through Codex, or Claude. It is closed source.\n\n## Pricing\nWishbar is a one-time purchase, so you pay once. The free 7-day trial needs no card.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "One-time purchase; free 7-day trial, no card needed",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "menu-bar-utilities",
+    "ai"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://wishbar.app/wishbar-logo.png",
+      "altText": "Wishbar application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://wishbar.app/og/home-2026-11.png",
+      "altText": "The words Make a wish. Get a live widget. over the Wishbar panel with a Christmas countdown and a world clock, with sunrise and Moon phase widgets beside it"
+    },
+    "screenshots": []
+  }
+}
