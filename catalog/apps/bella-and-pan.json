@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Bella and Pan",
+  "slug": "bella-and-pan",
+  "websiteUrl": "https://bellaandpan.com/",
+  "tagline": "An offline math Adventure with animated problem walkthroughs",
+  "description": "Bella and Pan is a math Adventure for children in kindergarten through fifth grade. Players choose Bella or Pan and solve arithmetic questions across three Chapters to find Pebble Village’s missing toys.\n\nFour difficulties cover addition through order of operations. The optional chalk control opens animated written steps for the current question, then returns the player to that same problem. Game text is available in English, French, German, Japanese, Polish and Spanish. Spoken audio remains in its original language.\n\nThe complete Adventure is compatible with Apple silicon Macs with M1 or later and macOS 26 or later. It also runs on iPhone, iPhone Duo and iPad. Apple Watch has a separate five question game without written learning help. The supplied promotional preview shows the mobile devices, not a Mac capture.\n\nBKRXY LLC states that the game works offline without an account, advertising, analytics or tracking. Progress and scores are saved locally.\n\nThe U.S. App Store price is $4.99 as a one time purchase with no in app purchases. Regional prices vary. The official App Store purchase page is https://apps.apple.com/us/app/bella-and-pan/id6795701835. Support and privacy information are available at https://bellaandpan.com/support and https://bellaandpan.com/privacy.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "US$4.99 in the U.S. App Store. One time purchase, no ads or in app purchases. Regional prices vary.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "education"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://bellaandpan.com/assets/bella-and-pan-app-store-icon-v2.jpg",
+      "altText": "Bella and Pan app icon showing Bella the plush rabbit"
+    },
+    "preview": {
+      "sourceUrl": "https://bellaandpan.com/assets/bella-and-pan-featured-v13.png",
+      "altText": "Official Bella and Pan artwork with iPhone, iPad and Apple Watch screens"
+    },
+    "screenshots": []
+  }
+}
