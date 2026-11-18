@@ -73,6 +73,7 @@
 | [Weatherling](https://macify.app/apps/weatherling) | 50% off | Automatic | Nov 18–30 | Worldwide App Store promotion, $0.99. [Offer](https://www.weatherling.app/) |
 | [WELTEN](https://macify.app/apps/welten) | 40% off | Automatic | Nov 18–30 PT | One-time license, €14.99. [Offer](https://welten.app/) |
 | [Wins](https://macify.app/apps/wins) | 40% off | `BF_26` | Nov 1–Dec 1 China Standard Time | New licenses and eligible update renewals. [Offer](https://wins.cool/) |
+| [Zipic](https://macify.app/apps/zipic) | 33% off | `BF2026` | Nov 20–Dec 6 PT | New Solo, Personal, and Team one-time licenses. [Offer](https://zipic.app/black-friday) |
 
 Macify uses UTC day boundaries when an announcement gives calendar dates without a time zone. Check the developer’s offer for checkout availability and eligible plans. Offers without a published start use the date they were verified. Developers announced several of these offers in the [r/macapps megathread](https://www.reddit.com/r/macapps/comments/1xyme2s/black_friday_cyber_monday_megathread/).
 
