@@ -33,19 +33,19 @@
     },
     "screenshots": [
       {
-        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Dashboard_v2_3.webp",
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Dashboard_v3.webp",
         "altText": "MacOSCleaner dashboard with recent operations"
       },
       {
-        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Cleanup_page_v2_3.webp",
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Cleanup_page_v3.webp",
         "altText": "MacOSCleaner Smart Cleanup categories view"
       },
       {
-        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Uninstaller_v2_3.webp",
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Uninstaller_v3.webp",
         "altText": "MacOSCleaner forensic app uninstaller"
       },
       {
-        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Disk_analyzer_v2_3.webp",
+        "sourceUrl": "https://alextkdev.github.io/MacOSCleaner/static/assets/screenshots/Disk_analyzer_v3.webp",
         "altText": "MacOSCleaner navigable disk space analyzer"
       }
     ]
