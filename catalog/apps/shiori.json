@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Shiori",
+  "slug": "shiori",
+  "websiteUrl": "https://shioriapp.io/",
+  "tagline": "Save and search bookmarks across your Mac, browser, and the web.",
+  "description": "Organize bookmarks with folders, tags, and saved filters. Import an existing collection or export it when needed. The Mac app requires macOS 12.4 or later. Shiori uses an account to sync bookmarks with its browser extensions and web dashboard.\n\n## Pricing\nThe lifetime license covers unlimited bookmarks and devices across supported clients.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "€49.99 one-time lifetime license",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "bookmarks-read-later"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://shioriapp.io/apple-touch-icon.png",
+      "altText": "Shiori application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://shioriapp.io/images/og-image.png",
+      "altText": "Shiori on macOS"
+    },
+    "screenshots": []
+  }
+}

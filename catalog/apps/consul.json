@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Consul",
+  "slug": "consul",
+  "websiteUrl": "https://getconsul.app/",
+  "tagline": "Convert files by changing their extension in Finder.",
+  "description": "Consul converts images, video, audio, and documents locally on your Mac. Rename a file with a supported extension to convert it, or add a suffix to perform an action such as compression.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$29 for three devices",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "media-compression-conversion"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://getconsul.app/apple-touch-icon.png",
+      "altText": "Consul application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://getconsul.app/en/opengraph-image-1syllj/og?249f0972491e8236",
+      "altText": "Consul preview"
+    },
+    "screenshots": []
+  }
+}

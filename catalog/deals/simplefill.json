@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "simplefill",
+  "discountPercent": 25,
+  "code": "LAUNCH",
+  "url": "https://simplefill.app/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-07T23:59:59Z"
+}

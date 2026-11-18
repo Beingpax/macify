@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Kakuchi",
+  "slug": "kakuchi",
+  "websiteUrl": "https://kakuchi.app/",
+  "tagline": "Put live widgets on the desktop, notch, menu bar, or lock screen.",
+  "description": "Kakuchi offers built-in Mac widgets for several areas of the interface and supports creating additional widgets through a connected AI plan.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$14.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://kakuchi.app/brand/kakuchi-icon.png",
+      "altText": "Kakuchi application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://kakuchi.app/opengraph-image.png?opengraph-image.08kw01sz98hed.png",
+      "altText": "Kakuchi preview"
+    },
+    "screenshots": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Folge",
+  "slug": "folge",
+  "websiteUrl": "https://folge.me/",
+  "tagline": "Turn a series of clicks into an illustrated guide.",
+  "description": "Folge captures a screenshot at each click. Annotate or blur each step, then export the guide as a PDF, document, or web page.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier, Personal $89 one-time",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "productivity"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://folge.me/images/favicon/apple-touch-icon.png",
+      "altText": "Folge application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://folge.me/images/og-image.png?1=1",
+      "altText": "Folge preview"
+    },
+    "screenshots": []
+  }
+}

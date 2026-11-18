@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Tracer",
+  "slug": "tracer",
+  "websiteUrl": "https://nmuxlab.com/tracer/",
+  "tagline": "Capture scrolling screenshots and search captured text.",
+  "description": "Tracer is a Mac screenshot utility with scrolling capture, screenshot history, text search, and translation.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$10 regular price",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "screenshots"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://nmuxlab.com/tracer/icon.png",
+      "altText": "Tracer application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://nmuxlab.com/tracer/hero-poster.jpg",
+      "altText": "Tracer preview"
+    },
+    "screenshots": []
+  }
+}

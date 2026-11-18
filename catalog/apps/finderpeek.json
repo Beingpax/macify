@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "FinderPeek",
+  "slug": "finderpeek",
+  "websiteUrl": "https://apps.apple.com/us/app/finderpeek-quick-code-viewer/id6761670824",
+  "tagline": "Inspect source code and structured data in Finder with Quick Look.",
+  "description": "FinderPeek adds syntax highlighting and inspection tools for supported source files, including JSON and XML, to Finder previews.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$4.99 regular price",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3b/1b/14/3b1b14f0-6439-6e53-8a04-7a27adb9c65f/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+      "altText": "FinderPeek application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d5/a8/39/d5a839d4-2697-d97b-d4dd-60deba439e18/01-press-space.png/800x500bb.jpg",
+      "altText": "FinderPeek preview"
+    },
+    "screenshots": []
+  }
+}

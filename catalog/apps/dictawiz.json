@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "DictaWiz",
+  "slug": "dictawiz",
+  "websiteUrl": "https://dictawiz.com/",
+  "tagline": "Dictate, read aloud, and organize voice notes on your Mac.",
+  "description": "DictaWiz offers on-device dictation, read-aloud tools, meeting recording, and notes. Notes can sync with its iPhone companion through iCloud.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": "Mac app temporarily free",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "dictation"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://dictawiz.com/icon.png",
+      "altText": "DictaWiz application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://dictawiz.com/og/default.png",
+      "altText": "DictaWiz preview"
+    },
+    "screenshots": []
+  }
+}

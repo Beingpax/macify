@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "enconvo",
+  "discountPercent": 35,
+  "code": "BLACKFRIDAY2026MACAPP",
+  "url": "https://www.enconvo.com/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-07T23:59:59Z"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Forma",
+  "slug": "forma",
+  "websiteUrl": "https://www.useforma.app/",
+  "tagline": "Organize notes, tasks, and projects on a digital whiteboard.",
+  "description": "Forma is a whiteboard for macOS. Arrange notes, tasks, and other material in resizable cards, and mark up the board with a drawing tool.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free download, paid upgrade",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "productivity"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.useforma.app/apple-touch-icon.png",
+      "altText": "Forma application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.useforma.app/og.png",
+      "altText": "Forma preview"
+    },
+    "screenshots": []
+  }
+}

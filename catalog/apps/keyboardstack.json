@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "KeyboardStack",
+  "slug": "keyboardstack",
+  "websiteUrl": "https://keyboardstack.com/",
+  "tagline": "Navigate, click, and scroll on your Mac using the keyboard.",
+  "description": "KeyboardStack overlays a grid for keyboard-driven pointing and clicking. Premium adds keyboard scrolling, precise cursor controls, and window hints.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier, Premium $29.99",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "input-customization"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://keyboardstack.com/favicon.ico",
+      "altText": "KeyboardStack application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://keyboardstack.com/_next/static/media/keyboardstack-grid-mode.fd5b6c95.png",
+      "altText": "KeyboardStack preview"
+    },
+    "screenshots": []
+  }
+}

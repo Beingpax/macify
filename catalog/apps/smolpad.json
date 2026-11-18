@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Smolpad",
+  "slug": "smolpad",
+  "websiteUrl": "https://smolpad.com/",
+  "tagline": "Keep Markdown notes in plain text, within reach from the menu bar.",
+  "description": "Smolpad is a menu bar notes app for Mac with companion apps on iPhone, iPad, and Apple Watch. It stores each note as a plain-text file and syncs notes across supported devices.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$29.99 lifetime",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://smolpad.com/assets/smolpad-icon.png",
+      "altText": "Smolpad application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://smolpad.com/assets/og-card.png",
+      "altText": "Smolpad preview"
+    },
+    "screenshots": []
+  }
+}

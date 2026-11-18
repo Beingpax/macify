@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "supercmd",
+  "discountPercent": 63,
+  "code": "WZZ2FBIK",
+  "url": "https://supercmd.sh/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-08T23:59:59Z"
+}

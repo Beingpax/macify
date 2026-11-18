@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "GIS Quick Viewer",
+  "slug": "gis-quick-viewer",
+  "websiteUrl": "https://apps.apple.com/us/app/gis-quick-viewer/id6762661962",
+  "tagline": "Preview geographic data in Finder with Quick Look.",
+  "description": "GIS Quick Viewer displays a map and feature attributes for supported geographic data files without opening a separate editor.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$5.99 regular price",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "file-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e9/b0/85/e9b08510-cc90-79c7-25e7-adb765671007/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+      "altText": "GIS Quick Viewer application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c9/73/a4/c973a439-b9ed-68c9-c081-22f610c1bd9b/01-press-space.png/800x500bb.jpg",
+      "altText": "GIS Quick Viewer preview"
+    },
+    "screenshots": []
+  }
+}

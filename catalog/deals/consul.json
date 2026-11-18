@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "consul",
+  "discountPercent": 34,
+  "code": null,
+  "url": "https://getconsul.app/",
+  "startsAt": "2026-11-23T00:00:00Z",
+  "endsAt": "2026-11-27T23:59:59Z"
+}

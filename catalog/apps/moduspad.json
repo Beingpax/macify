@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "ModusPad",
+  "slug": "moduspad",
+  "websiteUrl": "https://moduspad.com/",
+  "tagline": "Launch apps and switch between customized Dock layouts.",
+  "description": "ModusPad combines an app launcher with a customizable Dock. Organize apps into folders and groups and use different layouts across desktops.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$10.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "app-launchers"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://moduspad.com/apple-touch-icon.png?v=fd3b4a8a2c",
+      "altText": "ModusPad application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://moduspad.com/og.png",
+      "altText": "ModusPad preview"
+    },
+    "screenshots": []
+  }
+}

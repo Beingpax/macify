@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Refine",
+  "slug": "refine",
+  "websiteUrl": "https://refine.sh/",
+  "tagline": "Check and fix grammar offline in Mac apps.",
+  "description": "Refine checks and corrects grammar on your Mac. It runs offline and can work with text in other Mac apps.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$38 for one Mac or $68 for three",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://refine.sh/apple-touch-icon.png",
+      "altText": "Refine application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://refine.sh/api/og?v=1&locale=en&title=The+offline+AI+grammar+checker&description=Check+and+fix+grammar+in+the+Mac+apps+you+already+use.&emphasis=offline&sig=k4q_02MFasvcjhZS4C9sZ1_Ls9y8fWei6wZb13hWOtk",
+      "altText": "Refine preview"
+    },
+    "screenshots": []
+  }
+}

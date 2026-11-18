@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Weatherling",
+  "slug": "weatherling",
+  "websiteUrl": "https://www.weatherling.app/",
+  "tagline": "Add animated weather and nature effects to your desktop.",
+  "description": "Weatherling displays effects such as rain, snow, and falling leaves over the Mac desktop, with animated visitors to collect.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$1.99 regular price",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "wallpapers"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.weatherling.app/apple-touch-icon.png",
+      "altText": "Weatherling application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.weatherling.app/share/home.jpg",
+      "altText": "Weatherling preview"
+    },
+    "screenshots": []
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Trailback",
+  "slug": "trailback",
+  "websiteUrl": "https://trailback.app/",
+  "tagline": "Find files, screenshots, and clipboard items from recent activity.",
+  "description": "Trailback indexes recent activity on your Mac so you can search for files, screenshots, PDFs, and clipboard items you used earlier. Search works offline.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$19 lifetime",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "productivity"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://trailback.app/assets/icon.png",
+      "altText": "Trailback application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://trailback.app/assets/bg-demo-shot.jpg",
+      "altText": "Trailback preview"
+    },
+    "screenshots": []
+  }
+}

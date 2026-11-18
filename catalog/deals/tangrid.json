@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "tangrid",
+  "discountPercent": 25,
+  "code": "BLACK5D",
+  "url": "https://tangrid.app/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-11T23:59:59Z"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "folge",
+  "discountPercent": 25,
+  "code": "BLACKFRIDAY25",
+  "url": "https://folge.me/",
+  "startsAt": "2026-11-23T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}

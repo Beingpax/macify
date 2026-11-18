@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "ExtraDock",
+  "slug": "extradock",
+  "websiteUrl": "https://extradock.app/",
+  "tagline": "Add separate docks for apps, folders, and widgets across displays.",
+  "description": "Create a dock for a display or workflow, attach it to a screen edge, or let it float. Configure positions, sizes, and shortcuts independently. ExtraDock 5 supports macOS 26 and 27. The developer offers ExtraDock 4 for macOS 12 through 15.\n\n## Pricing\nLifetime Access includes one year of updates. Forever Edition includes future updates.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Lifetime and Forever one-time licenses available",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization",
+    "app-launchers"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://extradock.app/apple-touch-icon.png",
+      "altText": "ExtraDock application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://extradock.app/images/og.png",
+      "altText": "ExtraDock on macOS"
+    },
+    "screenshots": []
+  }
+}

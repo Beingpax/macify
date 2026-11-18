@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "SimpleFill",
+  "slug": "simplefill",
+  "websiteUrl": "https://simplefill.app/",
+  "tagline": "Expand text shortcuts and fill repetitive web forms.",
+  "description": "SimpleFill inserts saved templates into text fields and automates repeated typing and form filling on websites.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Standard $29, Pro $59",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "text-utilities"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://simplefill.app/icon.png?icon.0-mpws9p6b4me.png",
+      "altText": "SimpleFill application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://simplefill.app/_next/static/media/og-image.05-tk1v2ozmrz.png",
+      "altText": "SimpleFill preview"
+    },
+    "screenshots": []
+  }
+}

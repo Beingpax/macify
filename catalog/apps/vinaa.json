@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Vinaa",
+  "slug": "vinaa",
+  "websiteUrl": "https://www.vinaa.ai/",
+  "tagline": "Organize chats with cloud and local AI models.",
+  "description": "Vinaa provides a native Mac interface for cloud and local models. Organize chats in projects and folders, reuse prompts, and sync through iCloud.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$70 lifetime for two Macs",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ai"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.vinaa.ai/apple-touch-icon.png",
+      "altText": "Vinaa application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.vinaa.ai/og-image.jpg",
+      "altText": "Vinaa preview"
+    },
+    "screenshots": []
+  }
+}

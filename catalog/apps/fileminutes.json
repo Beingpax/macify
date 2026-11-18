@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "FileMinutes",
+  "slug": "fileminutes",
+  "websiteUrl": "https://www.fileminutes.com/",
+  "tagline": "Find files by folder or type and act on them from the results.",
+  "description": "FileMinutes narrows searches to specific folders and file types. Use the keyboard to preview, open, copy, or share matching files directly from the results.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$21 for three Macs",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "file-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.fileminutes.com/favicon.png",
+      "altText": "FileMinutes application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.fileminutes.com/opengraph.png",
+      "altText": "FileMinutes preview"
+    },
+    "screenshots": []
+  }
+}

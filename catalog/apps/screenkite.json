@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "ScreenKite",
+  "slug": "screenkite",
+  "websiteUrl": "https://www.screenkite.com/",
+  "tagline": "Record polished screencasts on your Mac.",
+  "description": "ScreenKite records the Mac screen and provides editing options for demos, walkthroughs, and other screencasts.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier with paid Pro and Founders plans",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "screen-recording"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.screenkite.com/icon.png?icon.1cy7yk2j9vlkb.png",
+      "altText": "ScreenKite application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.screenkite.com/site-b/hero.jpg",
+      "altText": "ScreenKite preview"
+    },
+    "screenshots": []
+  }
+}

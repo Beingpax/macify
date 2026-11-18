@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Tangrid",
+  "slug": "tangrid",
+  "websiteUrl": "https://tangrid.app/",
+  "tagline": "Tile, snap, and group Mac windows into tabs.",
+  "description": "Tangrid arranges windows with tiling and snapping, groups windows into tabs, and provides a window switcher and Dock previews.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$22.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "window-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://tangrid.app/AppIconPure.png",
+      "altText": "Tangrid application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://tangrid.app/home/flow-demo-poster.jpg",
+      "altText": "Tangrid preview"
+    },
+    "screenshots": []
+  }
+}

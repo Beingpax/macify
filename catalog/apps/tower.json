@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Tower",
+  "slug": "tower",
+  "websiteUrl": "https://www.git-tower.com/",
+  "tagline": "Manage Git repositories and review changes in a graphical client.",
+  "description": "Tower is a native Git client with a visual staging area, interactive rebase, and pull request tools. Its undo command can roll back many common Git actions.",
+  "pricingType": "paid",
+  "billingType": "subscription",
+  "pricingDetails": "Basic $69/year, Pro $129/year",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.git-tower.com/assets/img/favicons/apple-touch-icon@192w.1793629138.png",
+      "altText": "Tower application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.git-tower.com/assets/product-media/mac/hero/hero_screenshot.png",
+      "altText": "Tower preview"
+    },
+    "screenshots": []
+  }
+}

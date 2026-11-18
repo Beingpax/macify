@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "finderpeek",
+  "discountPercent": 40,
+  "code": null,
+  "url": "https://apps.apple.com/us/app/finderpeek-quick-code-viewer/id6761670824",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-11-28T23:59:59Z"
+}

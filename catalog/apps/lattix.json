@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Lattix",
+  "slug": "lattix",
+  "websiteUrl": "https://www.lattix.app/",
+  "tagline": "Arrange windows into custom layouts.",
+  "description": "Lattix is a Mac window manager for arranging windows and creating reusable layouts.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$19.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "window-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.lattix.app/favicon.ico",
+      "altText": "Lattix application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.lattix.app/Lattix_OG.png",
+      "altText": "Lattix preview"
+    },
+    "screenshots": []
+  }
+}

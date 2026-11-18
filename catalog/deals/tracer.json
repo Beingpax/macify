@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "tracer",
+  "discountPercent": 100,
+  "code": "BFPROMO",
+  "url": "https://apps.apple.com/redeem?ctx=offercodes&id=6785940416&code=BFPROMO",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}

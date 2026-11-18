@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "BetterMacWidgets",
+  "slug": "bettermacwidgets",
+  "websiteUrl": "https://bettermacwidgets.de/",
+  "tagline": "Customize your desktop with additional macOS widgets.",
+  "description": "BetterMacWidgets adds configurable widgets to the Mac desktop. The developer sells a Pro license and a bundle on its website.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Pro €15.99, bundle €19.99",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://bettermacwidgets.de/images/app-icon-128.webp",
+      "altText": "BetterMacWidgets application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://bettermacwidgets.de/og.png",
+      "altText": "BetterMacWidgets preview"
+    },
+    "screenshots": []
+  }
+}

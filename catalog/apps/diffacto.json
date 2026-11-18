@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Diffacto",
+  "slug": "diffacto",
+  "websiteUrl": "https://diffacto.com/",
+  "tagline": "Compare changes in code, spreadsheets, images, and other files on your Mac.",
+  "description": "Diffacto compares two versions of a file and reports the changes it identifies. It can match rows in tables, compare images visually, and inspect changes in documents and code.\n\n## Privacy and requirements\nDiffacto requires Apple Silicon and macOS 15 or later. The developer says comparisons run locally. Optional share links and cloud summaries send data when you choose those features.\n\n## Pricing\nA free tier is available. Pro is $149 as a one-time purchase with one year of updates. Monthly and annual options are also available.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free, Pro $149 one-time or $96 per year",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools",
+    "file-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://macify.app/app-icons/diffacto.webp",
+      "altText": "Diffacto application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://diffacto.com/img/hero-light.png",
+      "altText": "Diffacto on macOS"
+    },
+    "screenshots": []
+  }
+}

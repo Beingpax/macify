@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Verci",
+  "slug": "verci",
+  "websiteUrl": "https://www.verci.xyz/",
+  "tagline": "Show synchronized lyrics on your Mac lock screen.",
+  "description": "Verci shows word-by-word lyrics for Spotify and Apple Music. Use its preview window to choose a visual style for the lock screen.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$9.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "media-players"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.verci.xyz/icon-192.png",
+      "altText": "Verci application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://verci.xyz/verci-hero-poster.jpg",
+      "altText": "Verci preview"
+    },
+    "screenshots": []
+  }
+}

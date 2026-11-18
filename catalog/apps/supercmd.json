@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "SuperCmd",
+  "slug": "supercmd",
+  "websiteUrl": "https://supercmd.sh/",
+  "tagline": "Launch Mac apps, run extensions, and switch windows from the keyboard.",
+  "description": "SuperCmd is a keyboard-first launcher for macOS. It includes app switching, hotkeys, dictation, and support for Raycast extensions.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "SuperCmd v2 $39.99",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "app-launchers"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://supercmd.sh/favicon_io/apple-touch-icon.png",
+      "altText": "SuperCmd application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://supercmd.sh/supercmdv2/screenshot-poster.jpg",
+      "altText": "SuperCmd preview"
+    },
+    "screenshots": []
+  }
+}

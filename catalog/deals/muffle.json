@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "muffle",
+  "discountPercent": 50,
+  "code": "BLACKFRIDAY26",
+  "url": "https://www.getmuffle.com/",
+  "startsAt": "2026-11-18T00:00:00Z",
+  "endsAt": "2026-12-02T23:59:59Z"
+}

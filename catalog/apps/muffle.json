@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Muffle",
+  "slug": "muffle",
+  "websiteUrl": "https://www.getmuffle.com/",
+  "tagline": "Blur everything except the active window on your Mac.",
+  "description": "Muffle reduces visual distractions by blurring the windows around the active one.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$7.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "focus-tools"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.getmuffle.com/icon.png",
+      "altText": "Muffle application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.getmuffle.com/og.png",
+      "altText": "Muffle preview"
+    },
+    "screenshots": []
+  }
+}

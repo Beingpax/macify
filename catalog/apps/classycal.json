@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Classycal",
+  "slug": "classycal",
+  "websiteUrl": "https://classycal.app/mac/",
+  "tagline": "Plan calendar events and Apple Reminders together on your Mac.",
+  "description": "Classycal brings events and Apple Reminders into one planner. It supports natural-language entry, calendar views from day to year, and task lists for deadlines and priorities.\n\n## Privacy and requirements\nThe Mac app requires macOS 26 and uses the calendar and reminder accounts already configured on your device. Classycal does not require its own account.\n\n## Pricing\nBasic planning is free. Classycal Plus offers an annual subscription and a lifetime unlock that also works on iPhone.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free, Plus from $20 per year or $60 lifetime",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "calendar-scheduling",
+    "task-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://classycal.app/apple-touch-icon.png",
+      "altText": "Classycal application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://classycal.app/images/mac-white.webp",
+      "altText": "Classycal on macOS"
+    },
+    "screenshots": []
+  }
+}

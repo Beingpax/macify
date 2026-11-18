@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "My Styles",
+  "slug": "my-styles",
+  "websiteUrl": "https://apps.apple.com/us/app/my-styles-custom-website-look/id6766115872",
+  "tagline": "Change how websites look in Safari with visual controls or CSS.",
+  "description": "My Styles applies per-site styling in Safari. It includes a visual editor, custom CSS, dark mode, and a reading view.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$3.99 regular price",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/e5/b3/e8e5b3be-7360-4028-e2a3-4d3876eed08d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "altText": "My Styles application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7d/15/0d/7d150da7-7eae-d448-012f-b2eab24e889f/01-dark-mode.png/320x480bb.jpg",
+      "altText": "My Styles preview"
+    },
+    "screenshots": []
+  }
+}

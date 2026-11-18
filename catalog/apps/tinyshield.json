@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "TinyShield",
+  "slug": "tinyshield",
+  "websiteUrl": "https://tinyshield.proxyman.com/",
+  "tagline": "See which Mac apps connect to the internet and block unwanted traffic.",
+  "description": "TinyShield displays outgoing connections by app and domain. Review new connections and set rules to block individual apps or destinations.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "From $29",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "security"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://tinyshield.proxyman.com/assets/images/tinyshield-icon.webp",
+      "altText": "TinyShield application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://tinyshield.proxyman.com/assets/images/tinyshield-ogimage-v2.webp",
+      "altText": "TinyShield preview"
+    },
+    "screenshots": []
+  }
+}

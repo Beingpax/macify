@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "DockFlow",
+  "slug": "dockflow",
+  "websiteUrl": "https://dockflowapp.io/",
+  "tagline": "Save and switch between macOS Dock layouts.",
+  "description": "Save a Dock preset for each project or Focus mode. Presets can include apps, folders, files, links, and spacers. Recall them with a keyboard shortcut or an automation. DockFlow requires macOS 13.5 or later. The optional Lock Dock feature needs Accessibility permission.\n\n## Pricing\nLifetime Access includes one year of updates. Forever Edition includes future updates.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Lifetime and Forever one-time licenses available",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization",
+    "automation"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://dockflowapp.io/apple-touch-icon.png",
+      "altText": "DockFlow application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://dockflowapp.io/images/og_image.png",
+      "altText": "DockFlow on macOS"
+    },
+    "screenshots": []
+  }
+}

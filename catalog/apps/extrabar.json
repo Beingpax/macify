@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "ExtraBar",
+  "slug": "extrabar",
+  "websiteUrl": "https://extrabar.app/",
+  "tagline": "Put shortcuts, links, and repeat actions in a customizable menu bar.",
+  "description": "Group everyday actions in menus for quick access to shortcuts, apps, and deep links. A floating bar gives those actions a separate place on the desktop. The developer says the core app works without special permissions.\n\n## Pricing\nLifetime Access includes one year of updates. Forever Edition includes future updates.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Lifetime and Forever one-time licenses available",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization",
+    "menu-bar-utilities"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://extrabar.app/apple-touch-icon.png",
+      "altText": "ExtraBar application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://extrabar.app/images/og-image.webp",
+      "altText": "ExtraBar on macOS"
+    },
+    "screenshots": []
+  }
+}

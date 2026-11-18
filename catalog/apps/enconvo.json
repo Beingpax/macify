@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Enconvo",
+  "slug": "enconvo",
+  "websiteUrl": "https://www.enconvo.com/",
+  "tagline": "Use AI commands and dictation from your Mac workflow.",
+  "description": "Enconvo provides keyboard-accessible AI tools for voice input, selected text, and tasks in other apps.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free and paid plans",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ai"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.enconvo.com/logo.webp",
+      "altText": "Enconvo application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.enconvo.com/og/enconvo-speak-select-ask-v3.jpg",
+      "altText": "Enconvo preview"
+    },
+    "screenshots": []
+  }
+}

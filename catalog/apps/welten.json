@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "WELTEN",
+  "slug": "welten",
+  "websiteUrl": "https://welten.app/",
+  "tagline": "Grow a desktop forest by completing Pomodoro sessions.",
+  "description": "WELTEN is a Pomodoro timer for macOS. Each completed focus session adds a tree to a forest on your desktop.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "€24.99 one-time purchase",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "focus-timers"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://welten.app/app-icon.png",
+      "altText": "WELTEN application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://welten.app/og.jpg",
+      "altText": "WELTEN preview"
+    },
+    "screenshots": []
+  }
+}
