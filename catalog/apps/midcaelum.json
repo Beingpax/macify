@@ -1,0 +1,44 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "MidCaelum",
+  "slug": "midcaelum",
+  "websiteUrl": "https://pashartsoftware.com/midcaelum/",
+  "tagline": "Calculate, explore and print astrological charts on your Mac, with editable symbolic interpretations.",
+  "description": "MidCaelum is a native Mac application for astrological calculation and symbolic chart exploration. It combines chart drawing with an editable interpretation library.\n\n## Features\n\n- Tropical and sidereal charts with seven house systems, including Whole Sign.\n- Built-in atlas with more than 200,000 locations.\n- Current transits, solar and lunar returns, and secondary progressions.\n- Chart comparison, customizable display and printing.\n- Interface and built-in interpretations in six languages, selected through the macOS language.\n\n## Where it fits\n\nFor people studying astrological symbolism who want a local desktop workflow. Interpretations are symbolic, not guaranteed predictions or decision-making recommendations. Unregistered use limits chart dates to the year 2000 UTC and excludes solar returns.\n\n## Privacy and requirements\n\nRequires macOS 12.6 or later. According to PasHart Software, calculations and built-in texts work offline, saved charts remain local, and no online account is required. Optional online actions are user-initiated. Export for AI copies text to the clipboard; sending it to an external service is the user's choice. Purchase and activation use an email address and license key.\n\n## Pricing\n\nA personal license costs EUR 39 as a one-time purchase, with no subscription. A limited free trial is available.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "EUR 39 one-time purchase. Free trial limited to chart dates in the year 2000 UTC; solar returns require a license. No subscription.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://pashartsoftware.com/midcaelum/MidCaelum_icon.png",
+      "altText": "MidCaelum application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://pashartsoftware.com/midcaelum/images/midcaelum-hero1.jpg",
+      "altText": "MidCaelum chart interface"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://pashartsoftware.com/midcaelum/images/chart-view.jpg",
+        "altText": "Astrological chart displayed in MidCaelum"
+      },
+      {
+        "sourceUrl": "https://pashartsoftware.com/midcaelum/images/interpretation-view.jpg",
+        "altText": "MidCaelum symbolic interpretation view"
+      },
+      {
+        "sourceUrl": "https://pashartsoftware.com/midcaelum/images/lightMode.jpg",
+        "altText": "MidCaelum chart and panels in macOS Light appearance"
+      }
+    ]
+  }
+}
