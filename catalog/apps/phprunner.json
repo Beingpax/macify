@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "PHPRunner",
+  "slug": "phprunner",
+  "websiteUrl": "https://xlinesoft.com/phprunner/index.htm",
+  "tagline": "Build database-driven web applications with forms, reports and permissions.",
+  "description": "PHPRunner is a desktop application builder for developers creating internal tools and web portals around databases. The authoring application supports macOS, Windows and Linux; end users access the resulting applications in a browser.\n\nFeatures include data-entry pages, search, reports, charts, dashboards and user permissions. Events and custom code handle application-specific behavior. Deployment and database administration remain the operator's responsibility.\n\nApplications run on the customer's own web server with a compatible PHP runtime and database extensions. Microsoft Access deployments require a Windows server. The official download page lists macOS without a minimum release or hardware requirement; no native Apple Silicon claim is made. The preview image shows the Windows interface, not the Mac version.\n\nPHPRunner offers optional AI-assisted development. Do not assume AI-assisted features process data entirely on-device; review the current product documentation and applicable privacy terms for the intended workflow.\n\nPHPRunner is commercial, closed-source software. Professional Edition is US$599 per developer, including one year of email support and upgrades. The evaluation lasts 21 days.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Professional US$599 per developer; includes one year of email support and upgrades. A 21-day evaluation is available.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://xlinesoft.com/phprunner/images/phprunner32x32.gif",
+      "altText": "Official PHPRunner application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://xlinesoft.com/images/screenshots/screenshot0.png",
+      "altText": "PHPRunner database connection screen, Windows interface"
+    },
+    "screenshots": []
+  }
+}
