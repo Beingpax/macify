@@ -48,7 +48,7 @@
 | [Perch](https://macify.app/apps/perch) | 40% off | `BLACKFRIDAY2026` | Nov 2–Dec 1 PT | Mac lifetime license, $17.40, limited to the first 500 orders. [Offer](https://perch.run/black-friday) |
 | [Picmal](https://macify.app/apps/picmal) | 50% off | `BLACKFRIDAY` | Nov 23–30 PT | One-time license, $14.50. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1019) |
 | [Pimosa](https://macify.app/apps/pimosa) | 40% off | `BLACKFRIDAY40` | Nov 10–30 | Code applied at checkout. Personal $17.40, Plus $29.40. [Offer](https://pimosa.app/pricing), [sale dates](https://github.com/twf-nikhila/Awesome-Black-Friday-Cyber-Monday-deals/pull/536) |
-| [Presentify](https://macify.app/apps/presentify) | 30% off | `PRESENTIFY30` | Nov 18–Dec 2 | Direct purchase, $9.80. [Announcement](https://github.com/Pimjo/black-friday-deals/pull/76/files) |
+| [Presentify](https://macify.app/apps/presentify) | 30% off | `PRESENTIFY30` | Nov 18–Dec 2 | $9.80 with the code on direct purchases only, down from $14. Excludes the Mac App Store and Setapp. [Announcement](https://github.com/Pimjo/black-friday-deals/pull/76/files) |
 | [Proxyman](https://macify.app/apps/proxyman) | 30% off | `BF2026` | Nov 19–Dec 3 | All plans, Standard $62.30. [Announcement](https://github.com/trungdq88/Awesome-Black-Friday-Cyber-Monday/pull/2441) |
 | [Refine](https://macify.app/apps/refine) | 35% off | Automatic | Nov 17–30 PT | One-time license, $24.70 for one Mac or $44.20 for three. [Offer](https://refine.sh/writing-apps-black-friday) |
 | [RewriteBar](https://macify.app/apps/rewritebar) | 50% off | `BF2026` | Nov 2–Dec 3 | One-time licenses, extra devices, and the first year of Gateway. [Offer](https://rewritebar.com/black-friday) |
