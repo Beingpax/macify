@@ -1,0 +1,30 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "SoloPerm",
+  "slug": "soloperm",
+  "websiteUrl": "https://www.soloperm.com/",
+  "tagline": "Run private bookkeeping and business tools on one Mac, accessible from other devices through a browser.",
+  "description": "SoloPerm turns a Mac into a private, browser-accessible workspace for personal and small-business records. The Mac hosts the application and stores the data locally; phones, tablets, Windows computers, and other Macs can use it through a web browser on the local network. Remote access is possible through the user’s own VPN, without installing separate mobile clients.\n\nIts modular approach lets users begin with one fully functional module and add others as needed. Bookkeeping records income and expenses, categories, vendors, payment methods, and estimated deductible percentages. Reports can be filtered by date, vendor, and category, and existing transactions can be imported from CSV files.\n\n## Features\n\n- Record income and expenses, with searchable transaction histories and categorized reporting.\n- Estimate deductible portions of expenses and prepare printable reports for review with an accountant.\n- Keep separate records for multiple businesses, properties, or personal activities.\n- Add optional modules for invoices, supporting-file attachments, and CSV export.\n- Open the interface from other devices through a browser while one Mac runs the application.\n\n## Where it fits\n\nSoloPerm suits freelancers, sole proprietors, landlords, and households seeking straightforward recordkeeping without a recurring subscription. It is not a full enterprise accounting suite or an automatic bank-reconciliation service. The hosting Mac must remain powered on and connected for other devices to access it.\n\n## Privacy and requirements\n\nAccording to the developer, records remain on the user's Mac during normal operation; no online account is required for everyday use. Internet access is needed to download SoloPerm and obtain additional modules, and the website may collect technical request data. SoloPerm supports macOS 14 or later on Intel and Apple Silicon Macs. Users are responsible for backing up their local data.\n\n## Pricing\n\nThe application includes a choice of one fully functional module free, without a time limit, email registration, or credit card. Additional modules are sold separately as one-time purchases; there are no subscriptions.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Choose one fully functional module free, without time limits. Additional modules are one-time purchases; no subscriptions.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "personal-finance",
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.soloperm.com/images/icon.png",
+      "altText": "SoloPerm blue and green S application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.soloperm.com/images/screenshot.bk.png",
+      "altText": "SoloPerm Bookkeeping report showing transaction filters, income, expenses, and deductible amounts"
+    },
+    "screenshots": []
+  }
+}
