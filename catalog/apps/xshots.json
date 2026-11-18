@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "XShots",
+  "slug": "xshots",
+  "websiteUrl": "https://selfark.com/xshots/",
+  "tagline": "Design, localize and batch-export store screenshots on Mac",
+  "description": "XShots is a native Mac editor for independent app developers and designers preparing complete app-store screenshot sets. Build the sequence on one continuous canvas, keep localized copy with the project, preview the store listing and export the finished assets together.\n\n## Features\n\n- Arrange text, images, shapes, backgrounds and device presentations, and reuse templates across output sizes.\n- Manage project languages and CSV translation exchange; automatic Apple translation requires macOS 15 or later.\n- Preview iPhone and Mac store listings and batch-export screens, languages and sizes as PNG or JPEG.\n- Use the regular editor without an AI client. An optional local stdio MCP server can connect a compatible client for automation.\n\n## Where it fits\n\nXShots is for creating store screenshot artwork from an app's screenshots and other assets. It does not capture the Mac screen, provide cloud sync or collaboration, or upload directly to App Store Connect or other stores.\n\n## Privacy and requirements\n\nAccording to the developer, projects and source images stay on the Mac and no SelfArk account is required. An optional third-party AI or MCP client handles content under its own settings and privacy policy. XShots does not operate a hosted AI service.\n\nRequires macOS 14.0 or later; automatic Apple translation requires macOS 15.0 or later. Download through the official Mac App Store link on the website. The supplied gallery images are actual native Mac interface captures with demonstration projects and sample content.\n\n## Pricing\n\nA one-time 3-day full trial is followed by paid access: US App Store $0.99 for a non-renewing 7-Day Pass or $19.99 for Pro Lifetime. Regional prices may differ. There is no permanent free creation tier; existing projects remain readable when timed access expires. Developed by SELFARK LTD.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "One-time 3-day full trial; then US App Store $0.99 non-renewing 7-Day Pass or $19.99 Pro Lifetime. Regional prices differ; no permanent free creation tier.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "design-prototyping",
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://selfark.com/xshots-icon-1024.png",
+      "altText": "Official XShots application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://selfark.com/_astro/canvas-editor.DaBQI-S4.png",
+      "altText": "Actual native XShots Mac canvas with a demonstration three-screen project and sample content."
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://selfark.com/_astro/localization.DKijTwlV.png",
+        "altText": "Actual XShots localization dialog on Mac with demonstration project languages and a language picker."
+      }
+    ]
+  }
+}
