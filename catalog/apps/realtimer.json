@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Realtimer",
+  "slug": "realtimer",
+  "websiteUrl": "https://realtimer.ai/",
+  "tagline": "Get answers from your own price lists and documents during client calls, without a bot joining the meeting.",
+  "description": "Realtimer is a call assistant for sales, real estate and recruiting calls. It runs on the Mac next to Zoom, Google Meet, Teams, WhatsApp or any other call app, transcribes both sides of the conversation, and shows an answer from your own files when the client asks a question.\n\nNothing joins the meeting as a participant: the app captures audio on your Mac. Its window is hidden from screenshots and screen sharing, so the answers stay on your screen. After the call it writes a summary with decisions and next steps.\n\n## Features\n\n- Live transcript of both sides, or only the other side, with a vocabulary list for names and jargon.\n- Press a key for an answer from your knowledge base: PDF, Word, PowerPoint, images, and price lists as CSV or Excel.\n- Call briefs for B2B sales, SaaS, real estate and interviews, plus your own, so answers and notes fit the call.\n- Auto answer, off by default, can reply to the other side's questions without a key press.\n- Notes after every call; on Pro, calls are saved to your account with search.\n- On Pro, a Claude connector lets Claude read saved calls, prepare you for the next one and draft the follow-up email.\n\n## Where it fits\n\nRealtimer is for people who answer detailed questions on calls: sales reps, property agents and developers, and recruiters. Meeting notetakers such as Otter or Fathom summarize the call afterwards; Realtimer is built to help while the client is still talking.\n\nThe free plan needs your own API keys for transcription and AI answers (Gemini, OpenRouter, Groq, OpenAI or Claude). The app is Mac only for now; the developer expects a Windows version on 1 December 2026.\n\n## Privacy and requirements\n\nAccording to the developer, audio is never stored. On Free, nothing is saved on Realtimer's side, and transcripts and notes are optional files on your Mac. On Pro and Team, call text is kept in your account (this can be turned off) and calls and files are not used to train AI models. Transcription and answers go through cloud AI providers. The app requires an account plus Microphone and System Audio Recording permissions, and runs on macOS 14.4 or later on Apple Silicon and Intel.\n\n## Pricing\n\nFree with your own API keys. Pro costs €29 a month with AI included, 25 hours of calls and a 7-day trial. Team costs €49 per seat a month.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free with your own API keys; Pro €29/month with AI included; Team €49 per seat/month.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ai",
+    "transcription",
+    "notes-writing"
+  ],
+  "relatedAppSlugs": [
+    "macwhisper",
+    "superwhisper",
+    "meetingbar"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://realtimer.ai/logo.png",
+      "altText": "Realtimer application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://realtimer.ai/og-v2.png",
+      "altText": "Realtimer showing an answer from a price list during a buyer call"
+    },
+    "screenshots": []
+  }
+}
