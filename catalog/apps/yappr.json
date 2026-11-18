@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Yappr",
+  "slug": "yappr",
+  "websiteUrl": "https://www.useyappr.com",
+  "tagline": "Run your AI agents from the MacBook notch, and dictate into any app with a held key.",
+  "description": "Yappr puts your AI coding agents (Claude Code and Codex) in the MacBook notch. When an agent needs you, the notch shows which session is asking and what it is asking, and you answer there by click or voice. Rings show whether each session is working, done, or waiting. Yappr also does push-to-talk dictation: hold a key, speak, release, and cleaned-up text lands at the cursor in any app.\n\nYappr is made by Noan Borel in Madrid, and this listing is submitted by the maker.\n\n## Features\n\n- Shows your Claude Code and Codex sessions in the notch, with rings for working, done, and waiting.\n- When a session needs a decision, the notch shows which session it is and what it is asking; answer by click or voice.\n- Apps you connect yourself (Vercel, GitHub, Supabase, Stripe) can bring a failed deploy to the notch with a \"Fix with Claude\" button.\n- Push-to-talk dictation: hold a key, talk, and cleaned text lands at the cursor in any app.\n\n## Where it fits\n\nYappr is for people who run several AI coding agents at once and want to see and answer them without switching windows, and who also want fast dictation in whatever app they are using.\n\n## Privacy and requirements\n\nRequires macOS 15 or later on a Mac with Apple silicon. The app is signed and notarized by Apple and downloaded directly from the website. Yappr is closed source. What data Yappr handles is described by the developer in its privacy policy: https://www.useyappr.com/privacy. Terms are at https://www.useyappr.com/terms.\n\n## Pricing\n\nThe Free plan covers plain dictation, up to 2,000 words a week. Pro is a monthly subscription at a founder price of $10/month, with a 14-day trial. The first 50 people get Pro free forever when they share Yappr with 2 friends. Current plans are listed at https://www.useyappr.com/pricing.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free plan: dictation, 2,000 words a week. Pro: $10/month founder price, 14-day trial.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notch-utilities",
+    "dictation",
+    "ai"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.useyappr.com/icon.png",
+      "altText": "Yappr application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.useyappr.com/macpip/agents.jpg",
+      "altText": "Yappr showing AI agent sessions in the MacBook notch"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://www.useyappr.com/macpip/question.jpg",
+        "altText": "Yappr notch showing which session is asking a question and the question itself"
+      },
+      {
+        "sourceUrl": "https://www.useyappr.com/macpip/deploy.jpg",
+        "altText": "Yappr notch showing a failed deploy with a Fix with Claude button"
+      },
+      {
+        "sourceUrl": "https://www.useyappr.com/macpip/edge.jpg",
+        "altText": "Yappr showing a Claude Code prompt being dictated while the notch shows live sessions"
+      }
+    ]
+  }
+}
