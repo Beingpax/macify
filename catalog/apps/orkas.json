@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Orkas",
+  "slug": "orkas",
+  "websiteUrl": "https://orkas.ai/?source=dir_macify",
+  "tagline": "Turn project files into reports and editable slides with a coordinated desktop AI team.",
+  "description": "Orkas turns project source files into work you can inspect and continue editing, including reports, spreadsheets and slide decks. It is a local-first desktop AI team for macOS and Windows: Commander coordinates specialist agents around your goal, project context and files.\n\nFor example, a small team could supply meeting notes and a cost sheet, ask for a concise report and an editable presentation, then check the generated documents before sharing. This is an illustrative workflow, not a recorded benchmark. Keeping the project goal, memory and files together helps the next task start with the same context.\n\n## Features\n\n- Coordinate research, office documents and presentations through Commander and specialist agents such as OfficeWorker and PptMaker.\n- Reuse project files, rules, memory, Library sources and skills across ongoing work.\n- Choose Orkas-managed models or connect a supported provider through its available authorization method; external local coding agents retain their own setup.\n- Organize project to-dos and enable supported automatic advancement or scheduled preparation on the assigned computer when those workflows are wanted.\n\n## Where it fits\n\nOrkas suits people who need connected research and document work to produce files they can revise, rather than only a chat response. It is a desktop client, and scheduled work needs the assigned computer to run. Model access, authorized tools and the quality of the supplied sources bound what a task can accomplish. Check the facts and calculations in generated work before relying on it.\n\n## Privacy and requirements\n\nThe current official Mac download supports macOS 12 Monterey or later on Apple silicon and Intel Macs. Windows builds are also available. The packaged app uses an Orkas account; the MIT source build can run without an Orkas account with your own supported provider setup.\n\nAccording to Orkas, project files, conversations and many credentials stay on your device by default. Direct-provider requests send the required content to that provider. Managed models and managed tools route the content needed for the selected request through Orkas and upstream services; optional cloud sync uploads the data it synchronizes. Local-first therefore does not mean every task stays offline. The privacy policy also describes anonymous usage statistics and service activity records. Give agents only the file and connected-service access needed for the work.\n\n## Pricing\n\nThe MIT desktop core is free. The packaged service has a free tier plus optional subscription plans and managed-model credit packs; your own provider bills its usage separately. Paid hosted features and account allowances vary by plan, and are separate from the account-free source build. Check the current official pricing page before choosing a plan.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free MIT desktop core; optional hosted subscription plans and managed-model credit packs. Own-provider usage is billed separately.",
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ai",
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://orkas.ai/res/orkas.png",
+      "altText": "Orkas application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://raw.githubusercontent.com/Orkas-AI/Orkas/main/resources/app-ui/task-en.png",
+      "altText": "Official Orkas interface illustration showing a project task conversation and generated files"
+    },
+    "screenshots": []
+  }
+}
