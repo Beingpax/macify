@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "LocArk",
+  "slug": "locark",
+  "websiteUrl": "https://locark.com/",
+  "tagline": "Local-first notes, password records and Inbox, with optional Pro boards and mind maps.",
+  "description": "LocArk is a local-first personal workspace for Markdown notes, password records and quick captures, with optional Pro creation of kanban boards and mind maps. Its Mac app is distributed through the Mac App Store; Windows, iPhone, iPad and Android versions are also available through their official stores.\n\n## Features\n\n- Write and organize Markdown notes with preview, spaces, categories and nested folders.\n- Keep password records with templates, quick copy and auto-lock, and collect ideas in an Inbox.\n- Create personal kanban boards and mind maps with Pro; notes, password records and Inbox remain part of the free plan.\n- Store the workspace in a folder you choose. A compatible third-party sync folder is optional; LocArk does not provide hosted cloud sync.\n\n## Where it fits\n\nLocArk suits individuals organizing their own notes and personal information across desktop and mobile. It is not a team collaboration service, and it does not provide browser or system autofill.\n\n## Privacy and requirements\n\nAccording to the developer, new workspaces use local encryption with a master password; older unencrypted workspaces remain supported. Core workspace features work offline. Everyday use does not require a LocArk account; Pro activation or verification can require an email code and an internet connection.\n\nThe Mac app requires macOS 12.0 or later, supports Intel Macs and runs natively on Apple silicon without Rosetta. The developer and publisher is SELFARK LTD, registered in England and Wales.\n\n## Pricing\n\nThe core notes, password records and Inbox are free. Website Pro pricing is US$4.90 per year, renewing annually, or US$24.90 as a one-time lifetime purchase. Both paid options unlock the same Pro features. App Store and Google Play prices, renewal terms and refunds follow their respective stores. See https://locark.com/pricing/.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free core; Pro US$4.90/year (annual renewal) or US$24.90 lifetime via website. Same Pro features; store prices and terms may differ.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://locark.com/_astro/locark-icon.DIVQoSRS.png",
+      "altText": "LocArk application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://locark.com/_astro/note.z1moIo6T.png",
+      "altText": "LocArk on macOS showing a Markdown note with demonstration content."
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://locark.com/_astro/pwd.BHC5w3me.png",
+        "altText": "LocArk on macOS showing a password record with demonstration data."
+      }
+    ]
+  }
+}
