@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Shake It On",
+  "slug": "shake-it-on",
+  "websiteUrl": "https://shakeiton.app/?ref=macify",
+  "tagline": "A menu bar app that keeps your Mac awake with natural mouse movement, and pauses itself for calls, Focus and battery.",
+  "description": "Shake It On is a Mac menu bar app that keeps your computer awake by moving the mouse in a smooth, organic sine-wave pattern, so your Mac sees real input. Your Mac stays awake, remote desktop sessions stay connected and long downloads or renders keep running.\n\n## Features\n\n- Organic mouse movement with a distance from 5 to 420 pixels and six intervals from 5 seconds to 1 hour.\n- Run it all the time, or only when the Mac is idle.\n- Six \"only shake if\" conditions: audio is playing, a chosen app is running, a specific Wi-Fi network, an external display, CPU above a threshold, or an external disk attached.\n- Six \"paused when\" conditions: display off or locked, screensaver running, Focus or Do Not Disturb on, camera in use, a chosen app in front, or the Mac on battery.\n- Schedules by time range and day of the week, snooze with presets or a custom duration, and a global keyboard shortcut.\n- Shake stats for today, all-time and your longest session.\n\n## Where it fits\n\nIt suits people who need the Mac to stay awake during remote work, long transfers or presentations, and who want it to stop on its own for calls, Focus modes and battery instead of running all day. Apps like Amphetamine and Caffeine prevent sleep with a system assertion; Shake It On keeps the Mac awake by moving the pointer.\n\n## Privacy and requirements\n\nRequires macOS 14 or later and is available in 14 languages. It is distributed as a direct download with automatic updates through Sparkle.\n\n## Pricing\n\n$9.99 one-time purchase for a lifetime license, with updates included.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$9.99 one-time purchase, lifetime license with updates included.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": ["menu-bar-utilities", "automation"],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {"sourceUrl": "https://shakeiton.app/app-icon.png", "altText": "Shake It On application icon"},
+    "preview": {"sourceUrl": "https://shakeiton.app/og-image.png", "altText": "Shake It On menu bar window"},
+    "screenshots": [
+      {"sourceUrl": "https://shakeiton.app/screenshot-light.png", "altText": "Shake It On settings in light mode"},
+      {"sourceUrl": "https://shakeiton.app/screenshot-dark.png", "altText": "Shake It On settings in dark mode"}
+    ]
+  }
+}
