@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "PitchTap",
+  "slug": "pitchtap",
+  "websiteUrl": "https://gkudva96.github.io/pitchtap/",
+  "tagline": "Change the pitch of any Mac app's audio, or all system audio, live from the menu bar, without changing the tempo.",
+  "description": "PitchTap is a menu-bar app that changes the pitch of the audio your Mac plays, live, without changing the tempo. You can shift a single app, such as Spotify, Apple Music or a browser, or all system audio, by up to 12 semitones up or down, with fine tuning in cents.\n\nThe workflow is short: switch PitchTap on, pick a source, and move the key slider or press a global shortcut. The menu-bar icon shows the current shift (for example +3 or −2), and Original | Shifted buttons flip between the original key and the shifted one for a quick comparison.\n\n## Features\n\n- Shift one app's audio or all system audio, −12 to +12 semitones, without changing the tempo.\n- Fine tune from −50 to +50 cents, with tuning presets for A = 440 Hz, A = 432 Hz, and recordings tuned to A = 442 Hz.\n- Original | Shifted buttons for an instant before-and-after comparison.\n- A capo or retuning hint so guitar, ukulele and other fretted players can keep the original chord shapes.\n- Global keyboard shortcuts for key up, key down, Original | Shifted and reset.\n- When the chosen app is closed, PitchTap waits and starts shifting as soon as that app plays again.\n- Built-in updates (Sparkle), with launch at login.\n\n## Where it fits\n\nPitchTap is made for hobby musicians and singers: singing or doing karaoke in a comfortable range, or playing along with recordings in a key that suits an instrument or its tuning. It works at the system level through macOS audio taps, so it covers any app that plays sound without a browser extension or a virtual audio driver.\n\nThe shifted sound plays about 0.15 seconds behind the original. That is unnoticeable for music, but it can show as a slight lip-sync offset on video close-ups. It shifts the whole mix; it does not separate vocals from instruments.\n\n## Privacy and requirements\n\nAccording to the developer, audio is processed on the Mac as it plays and nothing is recorded, saved or sent anywhere; there is no account and no tracking. macOS asks once for the system audio recording permission, which PitchTap uses to hear and shift other apps' sound.\n\nPitchTap requires macOS 14.4 (Sonoma) or later on Apple silicon (M1 or later). The app is self-signed and not notarized by Apple, so on first launch macOS asks you to allow it once in System Settings › Privacy & Security (Open Anyway); the website explains the steps.\n\n## Pricing\n\nPitchTap is free and open source under the GPL-3.0 licence, with no ads or in-app purchases.",
+  "pricingType": "free",
+  "billingType": null,
+  "pricingDetails": "Free and open source (GPL-3.0)",
+  "sourceType": "open_source",
+  "youtubeUrl": null,
+  "categories": [
+    "menu-bar-utilities"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://gkudva96.github.io/pitchtap/logo.png",
+      "altText": "PitchTap application icon: a music note whose stem becomes a tuning fork"
+    },
+    "preview": {
+      "sourceUrl": "https://gkudva96.github.io/pitchtap/menu.png",
+      "altText": "PitchTap menu shifting Spotify down three semitones, with Original and Shifted buttons and tuning options"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://gkudva96.github.io/pitchtap/menubar-light.png",
+        "altText": "PitchTap menu-bar icon when off, and when on showing a shift of +3 semitones"
+      }
+    ]
+  }
+}
