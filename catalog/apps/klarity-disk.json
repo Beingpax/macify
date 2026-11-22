@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Klarity Disk",
+  "slug": "klarity-disk",
+  "websiteUrl": "https://www.klaritydisk.com/",
+  "tagline": "See what is filling your Mac: a map of your disk, coloured by how long since each folder changed.",
+  "description": "Klarity Disk is a disk space analyzer for the Mac. It scans your home folder, the whole disk or an external drive and draws the result as a map: every folder is a rectangle sized by the space it takes on disk and coloured by how long ago it last changed, from blue for this month to red for three years or more.\n\nThe age colours are the point. A large red block is something big that nobody has touched in years, which is usually the easiest space to win back. You can switch the map to an icicle chart, colour it by file type instead of age, and drill into any folder.\n\n## Features\n\n- Treemap or icicle chart of any folder, the startup disk or an external drive.\n- Colour by age (five steps, from this month to three years or more) or by file type.\n- A Large Files list of the biggest single files, largest first, with how long ago each changed.\n- An inspector for the selected item: size, share of its parent, last changed, and the largest items inside.\n- Move to Trash from the app. It always asks first, asks twice for risky locations, uses a slide-to-confirm for folders of 1 GB or more, and refuses system folders.\n- A small memory monitor in the menu bar.\n\n## Where it fits\n\nKlarity Disk suits the moment when storage settings says the disk is nearly full but not which folders are responsible. It is not a cleaner: it does not look for duplicates or caches to clear, and it deletes nothing by itself. Everything it removes goes to the Trash, only after you confirm.\n\nCompared with DaisyDisk, it has no administrator scan and cannot see inside Time Machine local snapshots; its own points are the age colours, the Large Files list and having no network access.\n\n## Privacy and requirements\n\nThe developer says the app is sandboxed, has no network access and needs no account; scan results stay on the Mac. Folders outside your home folder, and deleting, need you to grant access once through a standard macOS folder dialog. Requires macOS 14.6 or later. Light and dark appearance.\n\n## Pricing\n\nKlarity Disk is a one-time purchase of $6.99 on the Mac App Store, with no subscription and no in-app purchases.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$6.99 one-time purchase on the Mac App Store",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "storage-cleanup"
+  ],
+  "relatedAppSlugs": [
+    "daisydisk"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.klaritydisk.com/icon-180.png",
+      "altText": "Klarity Disk application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.klaritydisk.com/og-image.png",
+      "altText": "Klarity Disk application preview"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://www.klaritydisk.com/img/press/klarity-disk-01-disk-map.png",
+        "altText": "Klarity Disk showing a home folder as a treemap coloured by age"
+      },
+      {
+        "sourceUrl": "https://www.klaritydisk.com/img/press/klarity-disk-03-large-files.png",
+        "altText": "Klarity Disk's Large Files list, largest first"
+      },
+      {
+        "sourceUrl": "https://www.klaritydisk.com/img/press/klarity-disk-04-safe-trash.png",
+        "altText": "Klarity Disk asking for confirmation before moving a folder to the Trash"
+      }
+    ]
+  }
+}
