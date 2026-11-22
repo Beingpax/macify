@@ -1,0 +1,50 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "MightyBench",
+  "slug": "mightybench",
+  "websiteUrl": "https://mightybench.com/",
+  "tagline": "49 private Mac tools for video, audio, images, PDFs and on-device AI, running locally with nothing uploaded.",
+  "description": "MightyBench is a native Mac app that brings 49 everyday file tools into one window: video, audio, images, PDFs and on-device intelligence. Everything runs on the Mac, so files are never uploaded to a server.\n\nA keyboard-first launcher (Control-Option-Space from anywhere) finds a tool by name, and Smart Drop suggests the right tools for whatever files you drop in. Each job gets one focused window, and results can be passed on to the next tool.\n\n## Features\n\n- Video: compress, trim, resize, crop and rotate, change speed, merge, mute, replace audio, burn in subtitles, convert, make GIFs, record the screen and download video.\n- Audio: record, trim, clean up, extract, convert and text to speech.\n- Images: compress, resize, convert formats and remove backgrounds.\n- PDFs: merge, split, compress, sign, add watermarks and passwords, and delete pages.\n- On-device intelligence: text recognition, transcription, translation, summaries and file search using Apple frameworks.\n\n## Where it fits\n\nIt suits people who handle files all day and prefer not to use a different website or app for each small job. Its tradeoff is breadth over depth: each tool is focused on the common job rather than offering a full editor.\n\n## Privacy and requirements\n\nAccording to the developer, there is no account, no cloud processing and no analytics. The one tool that uses the internet is Download Video, which talks directly to the site you paste. It requires macOS 26 or later. The video and audio tools that convert or re-encode need FFmpeg, which MightyBench can install through Homebrew in one click or use from an existing copy; Download Video also uses yt-dlp, installed the same way.\n\n## Pricing\n\nA one-time purchase with no subscription. A 14-day refund is available by email.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "One-time purchase from $19 for 1 Mac; 3 Macs $29, 5 Macs $39, team plans from $69. No subscription. 14-day refund.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "media-compression-conversion",
+    "app-launchers",
+    "video-editing"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://mightybench.com/listing/mightybench-icon.png",
+      "altText": "MightyBench application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://mightybench.com/listing/mightybench-preview.jpg",
+      "altText": "MightyBench: every tool your Mac was missing, with tool icons on a dark background"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://mightybench.com/listing/mightybench-home.jpg",
+        "altText": "MightyBench home screen with a search box, Smart Drop area and the video tools"
+      },
+      {
+        "sourceUrl": "https://mightybench.com/listing/mightybench-launcher.jpg",
+        "altText": "MightyBench launcher searching for compress and listing compress video, images and PDF"
+      },
+      {
+        "sourceUrl": "https://mightybench.com/listing/mightybench-compress-video.jpg",
+        "altText": "MightyBench Compress Video tool with a video loaded"
+      },
+      {
+        "sourceUrl": "https://mightybench.com/listing/mightybench-remove-background.jpg",
+        "altText": "MightyBench Remove Background tool showing an image before and after"
+      }
+    ]
+  }
+}
