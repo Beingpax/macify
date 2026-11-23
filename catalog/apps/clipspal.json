@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "ClipsPal",
+  "slug": "clipspal",
+  "websiteUrl": "https://www.clipspal.com/",
+  "tagline": "Cut bad takes, caption a recording and turn it into vertical shorts.",
+  "description": "ClipsPal edits talking-head videos from a transcript. Record your screen and camera on Mac or import footage, let the editor remove failed takes and silences, then adjust the cuts on the timeline. Export a finished MP4 or continue editing in Premiere Pro or DaVinci Resolve.\n\nTranscription runs on the computer. Only the transcript goes to the chosen AI provider. The Mac app runs on Intel and Apple Silicon with macOS 14 or later.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Lifetime license for two computers, including updates.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "video-editing",
+    "screen-recording"
+  ],
+  "relatedAppSlugs": [
+    "screen-studio",
+    "capcut"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.clipspal.com/preview/clipspal-icon.png",
+      "altText": "ClipsPal app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.clipspal.com/preview/launch/editor.jpg",
+      "altText": "ClipsPal video editing timeline"
+    },
+    "screenshots": []
+  }
+}
