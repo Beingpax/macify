@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Nexus Shell",
+  "slug": "nexus-shell",
+  "websiteUrl": "https://nexusshell.app/?utm_source=macify&utm_medium=directory&utm_campaign=external_listing",
+  "tagline": "SSH, SFTP and remote Docker workflows in a native Mac app.",
+  "description": "Nexus Shell is a native Mac client for working with servers you administer. Open an SSH session, move files between your Mac and a server, and check a container's logs from the same app.\n\n## Features\n- Organize saved connections and work across multiple SSH terminal tabs.\n- Use Pro's dual-pane SFTP browser to compare local and remote files, queue transfers, and open remote files in a local editor.\n- Inspect container logs and manage containers remotely with Pro's Docker tools on a configured host.\n\n## Where it fits\nNexus Shell is useful for developers and small teams that regularly switch between terminal sessions, file transfers, and container maintenance. Its Mac app requires Apple Silicon and macOS 14.2 or later. Docker workflows need a remote host running Docker and appropriate access.\n\n## Privacy and requirements\nThe developer documents account and data handling in its [privacy policy](https://nexusshell.app/privacy). The direct download uses a Nexus Shell account for paid licensing. The Mac App Store handles its purchases through the Apple Account.\n\n## Pricing\nThe direct Mac download includes basic SSH for personal, non-commercial use. Website Pro is a one-time US$24.99 purchase. The Mac App Store edition has separate lifetime and annual options, with regional prices shown in the store. iPhone and iPad have their own App Store versions requiring iOS or iPadOS 26 or later. The screenshots below show the Mac file workflow in v1.7.6.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Basic SSH is free for personal, non-commercial use. Website Pro is US$24.99 once. Mac App Store purchases use separate regional pricing.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools",
+    "file-transfer"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://nexusshell.app/assets/img/app-icon-macos.png",
+      "altText": "Nexus Shell icon for macOS"
+    },
+    "preview": {
+      "sourceUrl": "https://nexusshell.app/assets/img/guides/winscp/w1200/dual-pane-sftp.webp",
+      "altText": "Nexus Shell v1.7.6 on Mac showing local and remote files side by side"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://nexusshell.app/assets/img/guides/remote-editing/w1200/open-external-editor.webp",
+        "altText": "Nexus Shell v1.7.6 for Mac showing the remote file menu and external editor options"
+      }
+    ]
+  }
+}
