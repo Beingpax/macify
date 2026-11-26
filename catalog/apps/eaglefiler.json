@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "EagleFiler",
+  "slug": "eaglefiler",
+  "websiteUrl": "https://c-command.com/eaglefiler/",
+  "tagline": "Archive emails, web pages and documents in a searchable Mac library.",
+  "description": "EagleFiler collects files, web pages, notes and email into libraries. Use tags, folders and saved searches to organize an archive and retrieve items later.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Free trial, then $69.99 for one user.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "file-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://c-command.com/eaglefiler/images/eaglefiler-icon%402x.png",
+      "altText": "EagleFiler application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://c-command.com/eaglefiler/images/main-window@2x.png",
+      "altText": "EagleFiler on macOS"
+    },
+    "screenshots": []
+  }
+}

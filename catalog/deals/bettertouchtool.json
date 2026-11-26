@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "bettertouchtool",
+  "discountPercent": 40,
+  "code": null,
+  "url": "https://folivora.ai/buy/?license=lifetime",
+  "startsAt": "2026-11-24T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}

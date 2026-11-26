@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Darkroom",
+  "slug": "darkroom",
+  "websiteUrl": "https://darkroom.co/",
+  "tagline": "Edit photos and videos directly from your Apple Photos library.",
+  "description": "Darkroom edits photos and videos on Mac, iPhone and iPad. It works with the Apple Photos library and supports RAW editing, curves, masks and color grading. A Darkroom+ membership is required to export edits that use premium tools.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free download, Darkroom+ Yearly $39.99.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "design-prototyping"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://darkroom.co/apple-touch-icon.png",
+      "altText": "Darkroom application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://darkroom.co/assets/images/social/dr-open-graph.jpg",
+      "altText": "Darkroom on macOS"
+    },
+    "screenshots": []
+  }
+}

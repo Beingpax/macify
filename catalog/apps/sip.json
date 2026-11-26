@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Sip",
+  "slug": "sip",
+  "websiteUrl": "https://sipapp.io/",
+  "tagline": "Pick colors from your Mac screen and organize them into palettes.",
+  "description": "Sip collects colors from any part of the screen and copies them in formats suited to design or development. It keeps palette collections in reach through its Color Dock and includes a contrast checker.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Per-seat license with one year of updates. 15-day free trial.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "design-prototyping"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://sipapp.io/assets/img/favicon/192x192.png",
+      "altText": "Sip application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://sipapp.io/assets/img/artboard/card.png",
+      "altText": "Sip on macOS"
+    },
+    "screenshots": []
+  }
+}

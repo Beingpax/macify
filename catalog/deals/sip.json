@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "sip",
+  "discountPercent": 50,
+  "code": "BLACKFRIDAY26",
+  "url": "https://sipapp.io/blackfriday/",
+  "startsAt": "2026-11-27T00:00:00Z",
+  "endsAt": "2026-11-29T23:59:59Z"
+}

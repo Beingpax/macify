@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "LensOCR",
+  "slug": "lensocr",
+  "websiteUrl": "https://lensocr.app/",
+  "tagline": "Copy text from screenshots and screen regions on your Mac.",
+  "description": "LensOCR recognizes text in images and screen regions, then makes it available to copy. It runs recognition locally on the Mac. A lifetime Pro unlock and subscription options are available.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free download with paid Pro options.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "ocr-text-capture"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://lensocr.app/assets/icon.png?v=2",
+      "altText": "LensOCR application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://lensocr.app/assets/screenshot-1.jpg",
+      "altText": "LensOCR on macOS"
+    },
+    "screenshots": []
+  }
+}

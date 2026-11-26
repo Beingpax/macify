@@ -12,8 +12,11 @@
 | App | Discount | Code | Dates (2026) | Offer terms |
 | --- | --- | --- | --- | --- |
 | [ActionClip](https://macify.app/apps/actionclip) | 25% off | Automatic | Nov 5–29 | One-Mac lifetime license, $9. [Offer](https://actionclip.app/black-friday-deal) |
+| [AlDente](https://macify.app/apps/aldente) | 30% off | Automatic | Nov 25–Dec 1, 09:00 CET | Pro Lifetime and the first year of Pro Yearly. [Offer](https://apphousekitchen.com/aldente-overview/pricing/) |
 | [Almighty](https://macify.app/apps/almighty) | 50% off | `INDIEGOODIESBF26` | Nov 20–30 | Standalone lifetime license, $7.49. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1060) |
 | [BetterMacWidgets](https://macify.app/apps/bettermacwidgets) | 25% off | `BLACKFRIDAY25` | Nov 17–Dec 1 | Direct purchase only. Pro €11.99 or bundle €14.99. [Offer](https://bettermacwidgets.de/) |
+| [BetterTouchTool](https://macify.app/apps/bettertouchtool) | 40% off | Automatic | Nov 24–30 | Lifetime $15 (40% off). Standard $10.50 (30% off), with two years of updates. [Offer](https://folivora.ai/buy/?license=lifetime) |
+| [Blip AI](https://macify.app/apps/blip-ai) | 50% off | `BLACKFRIDAY2026` | Nov 23–Dec 1 PT | Pro and Team plans. The developer advertises 50% off each renewal. Annual Pro is $72 per year. [Offer](https://www.blipai.app/#pricing) |
 | [Bloom](https://macify.app/apps/bloom) | 25% off | `BLACKFRIDAY2026` | Nov 18–30 | One-time license, $12. [Offer](https://bloomapp.club/) |
 | [Chronoid](https://macify.app/apps/chronoid) | 50% off | `BLACKFRIDAY26` | Nov 4–Dec 3 | Personal, Lifetime, and the bundle. [Offer](https://www.chronoid.app/pricing) |
 | [Classycal](https://macify.app/apps/classycal) | 67% off | Automatic | Nov 7–30 | 67% off lifetime ($20). Yearly is also 50% off ($10/year while subscribed). Mac and iPhone. [Offer](https://classycal.app/mac/) |
@@ -22,9 +25,12 @@
 | [Consul](https://macify.app/apps/consul) | 34% off | Automatic | Nov 23–27 | Three-device license, $19. [Offer](https://getconsul.app/) |
 | [CoolDock](https://macify.app/apps/cooldock) | 50% off | Automatic | Nov 12–Dec 1 | Lifetime Access and Forever Edition. [Offer](https://cooldock.app/) |
 | [Cozy](https://macify.app/apps/cozy) | 50% off | `BLACKFRIDAY` | Nov 23–30 PT | One-time license, $24.50. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1019) |
+| [Darkroom](https://macify.app/apps/darkroom) | 50% off | `BLACKFRIDAY26` | Nov 13–Dec 3 | Darkroom+ Yearly, $19.99 for the first year, then $39.99/year. The offer button opens App Store redemption. [Offer](https://darkroom.co/black-friday) |
 | [DictaWiz](https://macify.app/apps/dictawiz) | 100% off | Automatic | Nov 18–Jan 1 2027 | Mac version free during the promotion. [Offer](https://dictawiz.com/) |
 | [Diffacto](https://macify.app/apps/diffacto) | 40% off | Automatic | Nov 23–Dec 1 | Pro one-time $89.40 or Pro yearly $57.60 for the first year, then $96/year. Discount appears at in-app checkout. [Offer](https://diffacto.com/#sale) |
 | [DockFlow](https://macify.app/apps/dockflow) | 50% off | Automatic | Nov 12–Dec 1 | Lifetime Access and Forever Edition. [Offer](https://dockflowapp.io/) |
+| [DropDMG](https://macify.app/apps/dropdmg) | 25% off | `BLACKFRIDAY2026` | Nov 20–30 | Single license, $18.74 before tax. [Offer](https://c-command.com/store/sale) |
+| [EagleFiler](https://macify.app/apps/eaglefiler) | 25% off | `BLACKFRIDAY2026` | Nov 20–30 | Single license, $52.49 before tax. [Offer](https://c-command.com/store/sale) |
 | [Enconvo](https://macify.app/apps/enconvo) | 35% off | `BLACKFRIDAY2026MACAPP` | Nov 18–Dec 7 | Lifetime $38.35 or Premium $77.35. [Offer](https://www.enconvo.com/) |
 | [ExtraBar](https://macify.app/apps/extrabar) | 50% off | Automatic | Nov 12–Dec 1 | Lifetime Access and Forever Edition. [Offer](https://extrabar.app/) |
 | [ExtraDock](https://macify.app/apps/extradock) | 50% off | Automatic | Nov 12–Dec 1 | Lifetime Access and Forever Edition. [Offer](https://extradock.app/) |
@@ -35,15 +41,18 @@
 | [Folge](https://macify.app/apps/folge) | 25% off | `BLACKFRIDAY25` | Nov 23–30 | Personal $66.75. The code also applies to Business licenses. [Offer](https://folge.me/) |
 | [Forma](https://macify.app/apps/forma) | 47% off | `BLACKFRIDAY50` | Nov 18–Dec 1 | One-time purchase, $7.99. [Offer](https://www.useforma.app/) |
 | [GIS Quick Viewer](https://macify.app/apps/gis-quick-viewer) | 33% off | Automatic | Nov 18–28 | App Store purchase, $3.99. [Offer](https://apps.apple.com/us/app/gis-quick-viewer/id6762661962) |
+| [Gorby](https://macify.app/apps/gorby) | 30% off | `GORBYBF26` | Nov 20–Dec 15 | One-time payments. One-year license $52.50 or lifetime $105. [Offer](https://gorby.app/offers/black-friday-2026/) |
 | [JuxtaCode](https://macify.app/apps/juxtacode) | 40% off | `BLACKFRIDAY26` | Nov 20–Dec 1 PT | Direct purchase, $24. [Offer](https://juxtacode.app/black-friday/) |
 | [Kakuchi](https://macify.app/apps/kakuchi) | 25% off | `BLACKFRIDAY25` | Nov 18–30 | One-time purchase, $11.24. [Offer](https://kakuchi.app/) |
 | [KeyboardStack](https://macify.app/apps/keyboardstack) | 50% off | Automatic | Nov 18–Dec 1 | Premium one-time license for three Macs, $14.99. [Offer](https://keyboardstack.com/) |
 | [KeyScreen](https://macify.app/apps/keyscreen) | 30% off | `KEYSCREEN30` | Nov 18–Dec 2 | Direct purchase, $4.19. [Announcement](https://github.com/Pimjo/black-friday-deals/pull/76/files) |
 | [Lattix](https://macify.app/apps/lattix) | 50% off | `BLACKFRIDAY26` | Nov 18–Dec 2 | One-time purchase, $9.99. [Offer](https://www.lattix.app/) |
+| [LensOCR](https://macify.app/apps/lensocr) | 50% off | Automatic | Nov 24–30 | Pro lifetime Mac App Store unlock, $29.99 instead of $59.99 in the US. [Developer-confirmed terms](https://indiemarkdowns.com/deals/lensocr/). [Offer](https://lensocr.app/) |
 | [ModusPad](https://macify.app/apps/moduspad) | 60% off | `BLACKFRIDAY2026` | Nov 18–Dec 5 | One-time purchase, $4.40. [Offer](https://moduspad.com/) |
 | [Muffle](https://macify.app/apps/muffle) | 50% off | `BLACKFRIDAY26` | Nov 18–Dec 2 | One-time purchase, $3.99. [Offer](https://www.getmuffle.com/) |
 | [My Styles](https://macify.app/apps/my-styles) | 38% off | Automatic | Nov 18–28 | App Store purchase, $2.49. [Offer](https://apps.apple.com/us/app/my-styles-custom-website-look/id6766115872) |
 | [Overcal](https://macify.app/apps/overcal) | 50% off | `INDIEGOODIESBF26` | Nov 20–30 | Lifetime license, $3.99. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1060) |
+| [Paste](https://macify.app/apps/paste) | 50% off | `BLACKFRIDAY2026` | Nov 20–Dec 1 | Website annual plan. First year $14.99, then regular pricing. Code prefilled. [Offer](https://pasteapp.io/black-friday-2026) |
 | [PastePal](https://macify.app/apps/pastepal) | 50% off | `INDIEGOODIESBF26` | Nov 20–30 | Standalone Mac lifetime license, $7.49. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1060) |
 | [Perch](https://macify.app/apps/perch) | 40% off | `BLACKFRIDAY2026` | Nov 2–Dec 1 PT | Mac lifetime license, $17.40, limited to the first 500 orders. [Offer](https://perch.run/black-friday) |
 | [Picmal](https://macify.app/apps/picmal) | 50% off | `BLACKFRIDAY` | Nov 23–30 PT | One-time license, $14.50. [Announcement](https://github.com/mRs-/Black-Friday-Deals/pull/1019) |
@@ -56,7 +65,10 @@
 | [ShiftPlus](https://macify.app/apps/shiftplus) | 40% off | `BF2026` | Nov 20–Dec 2 | One-Mac and two-Mac lifetime licenses, code applied at checkout. [Offer](https://shiftplus.app/black-friday/) |
 | [Shiori](https://macify.app/apps/shiori) | 50% off | Automatic | Nov 12–Dec 1 | Lifetime license. [Offer](https://shioriapp.io/) |
 | [SimpleFill](https://macify.app/apps/simplefill) | 25% off | `LAUNCH` | Nov 18–Dec 7 | One-time licenses. Standard $21.75 or Pro $44.25. [Offer](https://simplefill.app/) |
+| [Sip](https://macify.app/apps/sip) | 50% off | `BLACKFRIDAY26` | Nov 27–29 | Per-seat license with one year of updates. The linked sale page leads to discounted checkout. [Offer](https://sipapp.io/blackfriday/) |
 | [Smolpad](https://macify.app/apps/smolpad) | 50% off | `BLACKFRIDAY` | Nov 18–Dec 1 | Lifetime license, $14.99, via App Store redemption. [Offer](https://apps.apple.com/redeem?code=BLACKFRIDAY&ctx=offercodes&id=6792438749) |
+| [SnowWall](https://macify.app/apps/snowwall) | 33% off | Automatic | Nov 27–Dec 1 | Pro one-time Mac App Store unlock, $9.99 instead of $14.99 in the US. [Offer](https://snowwall.app/black-friday/) |
+| [SpamSieve](https://macify.app/apps/spamsieve) | 25% off | `BLACKFRIDAY2026` | Nov 20–30 | Single license, $29.99 before tax. [Offer](https://c-command.com/store/sale) |
 | [SuperCmd](https://macify.app/apps/supercmd) | 63% off | `WZZ2FBIK` | Nov 18–Dec 8 | SuperCmd v2, $14.99. [Offer](https://supercmd.sh/) |
 | [TablePlus](https://macify.app/apps/tableplus) | 25% off | `BLACK_FRIDAY_2026` | Nov 19–Dec 3 | Basic one-time license, $74.25. [Announcement](https://github.com/trungdq88/Awesome-Black-Friday-Cyber-Monday/pull/2469/files) |
 | [TablePro](https://macify.app/apps/tablepro) | 40% off | `BLACKFRIDAY2026` | Nov 24–Dec 1, ends 08:00 UTC | Pro one-time license or the first year of Pro annual. [Offer](https://tablepro.app/black-friday) |

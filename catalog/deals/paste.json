@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "paste",
+  "discountPercent": 50,
+  "code": "BLACKFRIDAY2026",
+  "url": "https://pasteapp.io/black-friday-2026",
+  "startsAt": "2026-11-20T00:00:00Z",
+  "endsAt": "2026-12-01T23:59:59Z"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "SnowWall",
+  "slug": "snowwall",
+  "websiteUrl": "https://snowwall.app/",
+  "tagline": "Add snow, rain and seasonal effects to your Mac desktop.",
+  "description": "SnowWall is a menu bar app that renders weather effects over the desktop. Snow can gather along window edges and ambient effects can be paused from the menu bar. It requires macOS 26 or later.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free download, Pro $14.99 one-time.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "wallpapers"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://snowwall.app/icon.png",
+      "altText": "SnowWall application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://snowwall.app/og/og-en.png",
+      "altText": "SnowWall on macOS"
+    },
+    "screenshots": []
+  }
+}

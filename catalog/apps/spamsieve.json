@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "SpamSieve",
+  "slug": "spamsieve",
+  "websiteUrl": "https://c-command.com/spamsieve/",
+  "tagline": "Filter junk mail in supported Mac email clients.",
+  "description": "SpamSieve adds Bayesian spam filtering to Apple Mail, Outlook and other supported clients. It learns from messages you mark as junk or legitimate and supports IMAP, Exchange and POP accounts through compatible clients.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Free trial, then $39.99 for one user.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "email-clients"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://c-command.com/spamsieve/images/spamsieve-icon%402x.png",
+      "altText": "SpamSieve application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://c-command.com/spamsieve/images/settings-filters@2x.png",
+      "altText": "SpamSieve on macOS"
+    },
+    "screenshots": []
+  }
+}

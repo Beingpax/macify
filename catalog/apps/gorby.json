@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Gorby",
+  "slug": "gorby",
+  "websiteUrl": "https://gorby.app/desktop-app/",
+  "tagline": "Find hard-to-read passages, repeated phrases and long sentences in drafts.",
+  "description": "Gorby is a writing editor with readability metrics, sentence-length highlighting and checks for repeated or redundant wording. Its Mac desktop app requires Apple silicon. Local writing checks can run offline, while optional AI features require a connection.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier. One-year license $75 or lifetime $150.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notes-writing"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://gorby.app/_astro/GorbyLogo.BDVaAWRZ_19Ein6.webp",
+      "altText": "Gorby application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://gorby.app/images/features/tc-text-checks-overview.png",
+      "altText": "Gorby on macOS"
+    },
+    "screenshots": []
+  }
+}

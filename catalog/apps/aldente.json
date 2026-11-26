@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "AlDente",
+  "slug": "aldente",
+  "websiteUrl": "https://apphousekitchen.com/",
+  "tagline": "Control charging and monitor battery health on a MacBook.",
+  "description": "AlDente lets you set a charging limit and monitor battery conditions from the menu bar. The paid Pro edition adds options such as charging schedules, heat protection and calibration. Check the developer’s compatibility guidance for your MacBook model.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier. Pro available yearly or as a lifetime license.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "system-monitoring"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://apphousekitchen.com/wp-content/uploads/2026/04/AlDente-Icon.webp",
+      "altText": "AlDente application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://apphousekitchen.com/wp-content/uploads/2026/11/aldente-popover-edit-mode.png",
+      "altText": "AlDente on macOS"
+    },
+    "screenshots": []
+  }
+}

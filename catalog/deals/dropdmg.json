@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "dropdmg",
+  "discountPercent": 25,
+  "code": "BLACKFRIDAY2026",
+  "url": "https://c-command.com/store/sale",
+  "startsAt": "2026-11-20T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}

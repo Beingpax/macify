@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Blip AI",
+  "slug": "blip-ai",
+  "websiteUrl": "https://www.blipai.app/",
+  "tagline": "Dictate and format text across Mac apps.",
+  "description": "Blip AI turns speech into text across Mac apps. It supports voice formatting commands, personal vocabulary and meeting transcription. Paid plans raise usage limits and add model options.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free tier with Pro and Team subscriptions.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "dictation"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.blipai.app/images/logo.png",
+      "altText": "Blip AI application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.blipai.app/og-image.png",
+      "altText": "Blip AI on macOS"
+    },
+    "screenshots": []
+  }
+}

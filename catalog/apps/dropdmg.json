@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "DropDMG",
+  "slug": "dropdmg",
+  "websiteUrl": "https://c-command.com/dropdmg/",
+  "tagline": "Create, convert and manage disk images on your Mac.",
+  "description": "DropDMG creates macOS disk images and archive files. It can save reusable settings, encrypt disk images and build disk images with custom icon layouts for distributing apps.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Free trial, then $24.99 for one user.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "archive-utilities"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://c-command.com/dropdmg/images/dropdmg-icon%402x.png",
+      "altText": "DropDMG application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://c-command.com/dropdmg/images/dropdmg-window@2x.png",
+      "altText": "DropDMG on macOS"
+    },
+    "screenshots": []
+  }
+}
