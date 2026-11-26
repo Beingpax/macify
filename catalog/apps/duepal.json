@@ -1,0 +1,47 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "DuePal",
+  "slug": "duepal",
+  "websiteUrl": "https://duepal.app/",
+  "tagline": "Automatic rolling visual countdown clock in your Mac menu bar and desk display for ADHD time blindness.",
+  "description": "DuePal is a visual countdown clock built for ADHD time blindness that shows how much time remains until your next fixed transition rather than only displaying the current time of day. Instead of requiring manual timer restarts or full-day task checklists, it counts down automatically from one recurring daily anchor to the next.\n\nYou configure 3 to 6 immovable times once—such as stand-up, lunch, or work wrap-up—and DuePal keeps the remaining minutes visible in the macOS menu bar even when the main window is closed, or expands into a floating or full-screen desk clock on a secondary monitor.\n\n## Features\n\n- Live macOS menu bar countdown that stays visible when the main window is closed, paired with keyboard shortcuts (`⌘N` new due, `⇧⌘N` quick timer, `⌘[` / `⌘]` switch clock faces, `⌥⌘D` toggle desk clock).\n- Automatic rolling handover between recurring daily and weekday anchors without cluttering Apple or Google Calendar with personal breaks.\n- 22 visual clock faces and 12 high-contrast color themes, including a shrinking Pie Disk, Progress Ring, Flip Clock, Hourglass, Candle, Nixie, Words, Terminal, and Living Photo Windows.\n- Automatic public-holiday skipping across 20 countries and regions (including mainland China and Taiwan make-up workdays), plus date countdowns for upcoming trips, paydays, or deadlines.\n- Desktop widgets and iCloud sync across Mac, iPhone, iPad, and Apple Watch, alongside a free browser countdown timer at duepal.app/timer.\n\n## Where it fits\n\nDuePal is aimed at Mac users—especially adults with ADHD—who abandon full-day timeline planners after a few days or forget to start manual one-off menu bar timers during hyperfocus. Compared with calendar-driven menu bar tools like MeetingBar or Dato, DuePal runs standalone on fixed daily anchors without requiring every break or transition to live in your calendar. Its primary tradeoffs are that it is closed-source, focused on Apple platforms (no native Windows or Android desktop app yet), and intentionally omits calendar-event syncing and complex task backlogs.\n\n## Privacy and requirements\n\nAccording to the developer (ElevenApril), DuePal contains no ads, requires no user account, and stores your dues and countdowns locally on-device with optional private Apple iCloud sync. Distributed via the Apple App Store as a universal Apple app (`id6756181712`) for Mac, iPhone, iPad, and Apple Watch; also offers an install-free web timer at duepal.app/timer.\n\n## Pricing\n\nDuePal is freemium. The free tier includes 2 active daily dues, 2 date countdowns, the live Mac menu bar countdown, the Current Due widget, and the unlimited browser timer. DuePal Premium unlocks unlimited dues and countdowns, all 22 clock faces and 12 color themes, the Mac floating/full-screen desk clock, Apple Watch app and complications, 20-country public-holiday skipping, and Ring as Alarm (iOS 26+) via weekly, monthly, or yearly subscription (3-day free trial) or a one-time Lifetime purchase ($29.99 standard US price).",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free tier (2 active dues, 2 countdowns, Mac menu bar, Current Due widget, free web timer); Premium via weekly/monthly/yearly subscription or $29.99 one-time Lifetime.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "focus-timers",
+    "menu-bar-utilities",
+    "productivity"
+  ],
+  "relatedAppSlugs": [
+    "deskminder",
+    "meetingbar",
+    "dato",
+    "session"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://duepal.app/images/DuePalLogo.png",
+      "altText": "DuePal application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://duepal.app/images/og-cover.png",
+      "altText": "DuePal overview showing the Mac menu bar countdown chip, main countdown screen, and Lock Screen Live Activity"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://duepal.app/images/screens/hero-main.webp",
+        "altText": "DuePal main countdown screen showing time remaining to the current anchor and upcoming schedule queue"
+      },
+      {
+        "sourceUrl": "https://duepal.app/images/screens/hero-lockscreen.webp",
+        "altText": "DuePal Lock Screen Live Activity showing live countdown to the next anchor with Skip control"
+      }
+    ]
+  }
+}
