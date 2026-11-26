@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "shotspa",
+  "discountPercent": 17,
+  "code": null,
+  "url": "https://www.anuragsoni.com/shotspa?ref=macify-bf",
+  "startsAt": "2026-11-27T08:00:00Z",
+  "endsAt": "2026-12-01T08:00:00Z"
+}
