@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Bass Plus",
+  "slug": "bass-plus",
+  "websiteUrl": "https://bassplus.clideck.com/",
+  "tagline": "System-wide bass boost and EQ for Mac",
+  "description": "Bass Plus adds a bass dial, volume boost, and an equalizer to the Mac menu bar. It works across apps, so you can adjust the same headphones or speakers while switching between music, video, and games.\n\nSound Studio offers a 10-band and a 31-band graphic EQ, plus a 12-band parametric EQ with controls for frequency, gain, and bandwidth. Bass Plus processes playback locally and uses macOS audio APIs. The screenshot shows the current Chromatic Liquid theme.\n\nBass Plus requires macOS 14.4 or later. The Mac App Store download includes a seven-day full trial. Continued use costs $14.99 as a one-time purchase in the US, with no subscription.\n\n[Mac App Store](https://apps.apple.com/us/app/bass-plus/id6818408560) | [Privacy](https://bassplus.clideck.com/privacy) | [Support](https://bassplus.clideck.com/support)",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Bass Plus requires macOS 14.4 or later. The Mac App Store download includes a seven-day full trial. Continued use costs $14.99 as a one-time purchase in the US, with no subscription.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "menu-bar-utilities"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://bassplus.clideck.com/images/bass-plus/icon.png",
+      "altText": "Bass Plus app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://tools.launchllama.co/images/listings/bass-plus/chromatic-liquid-2026-11-15.jpg",
+      "altText": "Bass Plus window with the Chromatic Liquid theme"
+    },
+    "screenshots": []
+  }
+}
