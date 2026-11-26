@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "SnapApp",
+  "slug": "snapapp",
+  "websiteUrl": "https://snapapp.im/",
+  "tagline": "Snip any part of your screen, mark it up with arrows, shapes and text, and copy it in one step.",
+  "description": "SnapApp is a native snipping tool for the Mac, built for people who explain things with screenshots: support answers, bug reports, how-tos and quick notes to a colleague. Press a shortcut, drag over an area, and the snip opens straight in an editor, ready to mark up and copy.\n\nIt follows the habit many people bring from Windows' Snipping Tool (snip, mark up, paste), with the screen frozen at the moment you press the shortcut so open menus and hover states stay in the capture.\n\n## Features\n\n- Capture an area with a global shortcut (Command + Shift + 2 by default, or one you record); the screen freezes first.\n- Mark up with arrows, lines, rectangles, ovals, a pen, text and highlights, in a clean Formal style or a hand-drawn Doodle style. Drawing past an edge grows the canvas.\n- Command + C copies the marked-up image and closes the editor; drag the thumbnail into a chat, an email or Finder.\n- Every snip and every edit is saved automatically as a PNG in a SnapApp folder inside Pictures.\n- With SnapApp Pro: blur and pixelate an area or recognized words, Redact in solid black, copy the text in a snip with on-device text recognition, and numbered steps for how-to guides.\n- The interface is available in 19 languages.\n\n## Where it fits\n\nSnapApp fits quick explain-and-share screenshots: a lighter, focused alternative to larger capture suites such as CleanShot X, and a Mac replacement for Windows' Snipping Tool, Lightshot or Greenshot. It does not record video, capture scrolling pages or upload to a cloud.\n\n## Privacy and requirements\n\nAccording to the developer, capturing, markup and text recognition run on the Mac and snips are never uploaded; no account is needed. SnapApp requires macOS 14 Sonoma or later on Apple silicon or Intel Macs and asks for Screen Recording permission. It is available on the Mac App Store and as a notarized direct download from snapapp.im.\n\n## Pricing\n\nSnapApp is free to download and free for capturing and marking up. SnapApp Pro adds blur, redaction, text recognition and numbered steps: $2.90 a month or $29 a year, each with a 14-day free trial, or $89 once.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free to snip and mark up. SnapApp Pro: $2.90/month or $29/year with a 14-day free trial, or $89 once.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "screenshots",
+    "screen-annotation",
+    "menu-bar-utilities"
+  ],
+  "relatedAppSlugs": [
+    "shottr",
+    "cleanshot-x"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/05/42/1d/05421d9d-531b-c960-9ffc-59b3ca4684e1/AppIcon.png/512x512bb.png",
+      "altText": "SnapApp application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://snapapp.im/images/snipping-tool-editor.webp",
+      "altText": "SnapApp's editor with a snip of a download page marked up with a red arrow, a note and a yellow highlight"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1b/9a/d5/1b9ad5dd-5f2b-b919-23fe-efb5434f1d6f/snapapp-1.png/1280x800bb.jpg",
+        "altText": "SnapApp editor with arrows, a box and text on a snip"
+      },
+      {
+        "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fa/bb/c5/fabbc5bb-d817-0a88-d414-14043a063bf3/snapapp-2.png/1280x800bb.jpg",
+        "altText": "SnapApp tools for marking up a screenshot"
+      },
+      {
+        "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d1/52/be/d152be64-4334-0f2f-10ed-3335ff7c5291/snapapp-3.png/1280x800bb.jpg",
+        "altText": "SnapApp settings with the capture shortcut"
+      }
+    ]
+  }
+}
