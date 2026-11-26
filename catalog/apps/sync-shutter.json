@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Sync Shutter",
+  "slug": "sync-shutter",
+  "websiteUrl": "https://syncshutter.app/",
+  "tagline": "Automatically back up camera cards to multiple destinations on Mac.",
+  "description": "Sync Shutter is a Mac menu bar app for photographers and videographers who copy camera cards to the same places after each shoot. When automatic backup is enabled, inserting a recognized card starts the copy to the selected destinations. The app shows the result for each destination so you can check the backup before reusing the card.\n\n## Features\n\n- Copy a shoot to a Mac folder and a separate external drive in one run.\n- Skip files already backed up on repeat imports.\n- Use SFTP or S3-compatible storage for NAS backups with Pro.\n\n## Requirements and privacy\n\nThe Mac app requires macOS 14 or later. The card must be readable by the Mac, and each destination requires its own access. The developer says photos and videos go directly to the chosen destinations. See the [privacy policy](https://syncshutter.app/privacy) for details.\n\n## Pricing\n\n[Free on the Mac App Store](https://apps.apple.com/us/app/sync-shutter-sd-card-backup/id6758906685), with an optional one-time Pro upgrade.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free to download, with an optional one-time Pro purchase.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": ["file-transfer", "menu-bar-utilities"],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://syncshutter.app/media/apple-touch-icon.png",
+      "altText": "Sync Shutter app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://syncshutter.app/media/film-poster.jpg",
+      "altText": "Sync Shutter on Mac showing a completed camera card backup"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://syncshutter.app/media/tile-parallel-poster.jpg",
+        "altText": "Backup progress across six Mac destinations"
+      }
+    ]
+  }
+}
