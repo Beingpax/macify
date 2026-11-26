@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "dockmagic",
+  "discountPercent": 48,
+  "code": null,
+  "url": "https://dockmagic.app/?utm_source=macify&utm_medium=deals&utm_campaign=bf2026#dm-pricing",
+  "startsAt": "2026-11-03T00:00:00Z",
+  "endsAt": "2026-11-30T23:59:59Z"
+}
