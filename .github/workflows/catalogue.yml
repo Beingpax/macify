@@ -41,7 +41,7 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          mapfile -t changes < <(git diff --name-status "$BASE_SHA" "$HEAD_SHA")
+          mapfile -t changes < <(git diff --name-status "$BASE_SHA...$HEAD_SHA")
           if [[ ${#changes[@]} -lt 1 || ${#changes[@]} -gt 2 ]]; then
             echo "Public pull requests may add one app, one deal, or one new app with its matching deal."
             printf '%s\n' "${changes[@]}"

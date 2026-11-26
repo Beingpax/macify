@@ -18,11 +18,11 @@
   "relatedAppSlugs": [],
   "media": {
     "icon": {
-      "sourceUrl": "https://www.soloperm.com/images/icon.png",
+      "sourceUrl": "https://raw.githubusercontent.com/markspbt/soloperm-assets/6dcb478bc6b11c4ee937d6941985d27e5ad8ffba/icon.png",
       "altText": "SoloPerm blue and green S application icon"
     },
     "preview": {
-      "sourceUrl": "https://www.soloperm.com/images/screenshot.bk.png",
+      "sourceUrl": "https://raw.githubusercontent.com/markspbt/soloperm-assets/6dcb478bc6b11c4ee937d6941985d27e5ad8ffba/screenshot.bk.png",
       "altText": "SoloPerm Bookkeeping report showing transaction filters, income, expenses, and deductible amounts"
     },
     "screenshots": []
