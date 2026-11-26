@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Mouse Jiggler for Mac",
+  "slug": "mouse-jiggler-for-mac",
+  "websiteUrl": "https://mousejigglermac.com/",
+  "tagline": "Keep your Mac awake from the menu bar, with or without scheduled cursor movement.",
+  "description": "Keep your Mac awake during presentations, webinars, live streams, and long downloads with Mouse Jiggler for Mac. Use the Prevent Sleep setting without moving the cursor, or set the app to move your mouse automatically after a period of inactivity.\n\nChoose how often and how far the cursor moves. Set a recurring schedule, such as weekdays from 9 AM to 6 PM, or pick a stop time for a single session. Manage it all from the macOS menu bar.\n\n## Features\n\n- Natural or Silent movement modes, with an adjustable idle delay, interval, and movement range.\n- A weekday schedule, or a stop after a set duration or at a clock time.\n- Only While App rules: run while selected apps are running, in front, or not in front.\n- Optional clicks, scrolling, or a key press for apps that need more than movement.\n- Prevent Sleep While Active, Pause When Screen Is Locked, and Deactivate on Low Battery switches.\n- A keyboard shortcut to toggle it, 15 menu bar icons, and launch at login. There is no Dock icon.\n\n## Where it fits\n\nMouse Jiggler suits people who read long documents, watch dashboards, or run downloads and remote sessions without touching the mouse. Compared with Energy settings or the caffeinate command, it adds cursor movement, a weekday schedule, and stop conditions while leaving system sleep settings unchanged. If you only need the Mac to stay awake, a simple keep-awake toggle may be enough. The developer advises not relying on it to keep a MacBook awake with the lid closed.\n\n## Privacy and requirements\n\nRequires macOS 12 or later. Moving the pointer needs the input permission that macOS requests in Privacy & Security, and it can be revoked at any time. According to the developer, typed text is never recorded and settings are stored locally on the Mac. The App Store privacy label states that the developer does not collect any data from the app.\n\n## Pricing\n\nFree to download. Optional PRO features, including scheduling, app-specific controls, movement modes, and multiple click positions, are unlocked with a one-time in-app purchase. There is no subscription.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free download; optional PRO features via a one-time in-app purchase. No subscription.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "menu-bar-utilities",
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c8/e6/65/c8e66543-01e9-29c3-05a8-a15c27179d07/Placeholder.mill/1024x1024bb.png",
+      "altText": "Mouse Jiggler for Mac application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8a/f3/21/8af32149-65fc-12fd-7f45-92aca97b3456/Mouse_Jiggler_Hero_2560x1600.png/2560x1600bb.png",
+      "altText": "Mouse Jiggler for Mac menu bar panel with movement settings"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1e/5a/c5/1e5ac56d-7969-f203-b95a-0b091ac1adb3/Mouse_Jiggler_Schedule_2560x1600.png/2560x1600bb.png",
+        "altText": "Mouse Jiggler for Mac schedule settings with start and stop times"
+      },
+      {
+        "sourceUrl": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/c6/88/5bc68854-2b9d-bada-42f9-12857601f1cf/Mouse_Jiggler_OnlyWhileApp_2560x1600.png/2560x1600bb.png",
+        "altText": "Mouse Jiggler for Mac Only While App settings for selected apps"
+      }
+    ]
+  }
+}
