@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "MoneyWiz",
+  "slug": "moneywiz",
+  "websiteUrl": "https://www.wiz.money/",
+  "tagline": "Personal finance for Mac, iPhone, iPad and Apple Watch: accounts, budgets, bills, reports and investments.",
+  "description": "MoneyWiz is a personal finance app for Mac, iPhone, iPad, and Apple Watch from SilverWiz LLC. It is built to bring checking, savings, credit cards, and other accounts into one view, then budget, track bills, run reports, and keep investments beside everyday money.\n\nYou can download it and explore with sample data before adding your own. Bank connections are optional and available with Premium for supported institutions; manual accounts and file imports are also supported. iCloud sync keeps a database across Apple devices, and a database can be shared with someone you plan with.\n\n## Features\n\n- Bring checking, savings, credit cards, and other accounts into one view of what you have, what you owe, and how it adds up.\n- Plan a budget around income and expenses by category or tag.\n- Give upcoming bills and income a place on a bills calendar, and press and hold a future date to see a forecast of where each account will stand. Scheduled items without an amount are not counted.\n- Explore spending, net worth, cash flow, and profit and loss reports.\n- Track stocks, crypto, and forex beside everyday accounts. UK HMRC reporting is available with Premium.\n- Connect supported banks through the site's listed providers, use Apple Wallet on iOS, keep manual accounts, and import CSV, QIF, OFX, QFX, or MT940 files.\n- Use optional WizAI, the built-in assistant, or, on Mac, Mac AI Connections (MCP) with a compatible AI app.\n- Sync via iCloud across Mac, iPhone, and iPad. Check an account balance or budget progress on Apple Watch (Watch works with MoneyWiz on iPhone).\n\n## Where it fits\n\nMoneyWiz fits a person or household that wants one Apple-only finance app for accounts, budgets, bills, reports, and investments, with optional bank sync. It is not a Windows or Android app. Automatic bank connections depend on the institution, region, and connection provider.\n\n## Privacy and requirements\n\nAccording to the current MoneyWiz privacy policy (updated 31 October 2026), financial data is designed to be saved locally on the device; iCloud Sync stores and exchanges database information through Apple's iCloud when you use that feature. Optional WizAI asks for permission on each device before sending questions and financial information through MoneyWiz's service to OpenAI. The policy states the company is not in the business of selling customer data or creating a financial profile of you. Current device and operating-system requirements are listed on the App Store.\n\n## Pricing\n\nMoneyWiz is free to download and can be explored with demo data. Paid plans (US reference prices on the official pricing page): Standard $29.99/year; Premium $59.99/year; Premium monthly $5.99/month. Premium adds bank connections, iCloud sharing, and HMRC tools. Manage a web subscription in FastSpring and an App Store subscription in the Apple account.",
+  "pricingType": "paid",
+  "billingType": "subscription",
+  "pricingDetails": "US reference prices: Standard $29.99/year; Premium $59.99/year; Premium monthly $5.99/month. Free to download; explore with demo data.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "personal-finance"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.wiz.money/images/moneywiz-mark.png",
+      "altText": "MoneyWiz application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.wiz.money/images/mac-overview-ui-20261102.png",
+      "altText": "MoneyWiz on Mac showing the accounts overview"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://www.wiz.money/images/budgets-ui-20261102.png",
+        "altText": "MoneyWiz budgets view with sample data"
+      },
+      {
+        "sourceUrl": "https://www.wiz.money/images/bills-ui-20261102.png",
+        "altText": "MoneyWiz bills calendar with sample data"
+      }
+    ]
+  }
+}
