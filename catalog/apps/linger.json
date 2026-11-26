@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "Linger",
+  "slug": "linger",
+  "websiteUrl": "https://withlinger.com/",
+  "tagline": "Keep visual references, original links, and notes in a local Mac library.",
+  "description": "Linger is a local-first image organizer for designers and other people who collect visual references. It keeps source links and notes with saved images, so it is easier to remember why a reference mattered and to return to its original context.\n\nThe app can bring saved images together on a project canvas. Use text, tags, or a remembered color to find a reference again without needing its filename.\n\n## Features\n- Save images and screenshots with their original links and your own notes.\n- Keep a managed library on your Mac and leave original Finder files in place.\n- Search by saved text, tags, or color, and arrange references on a canvas.\n\n## Where it fits\nLinger is for individuals building a private reference library for creative work. Each Mac has a separate library, so projects that need shared folders or team editing need a different collaboration workflow.\n\n## Privacy and requirements\nThe developer describes the library as local to your Mac, with no built-in cloud sync. The app requires macOS 14 or later and Apple Silicon. The seven-day full trial starts without signing in or providing payment details. Optional email sign-in adds 23 days, for 30 days total. The library works offline after activation.\n\n## Pricing\nTo keep adding references after the trial, Linger requires a one-time purchase. Existing references, notes and source links remain accessible, with basic search and export. The Personal and Lifetime licenses have regular prices of US$39 and US$79, respectively. The official pricing page lists current offers.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Seven-day full trial without sign-in. Optional email sign-in adds 23 days. One-time purchase: Personal US$39 or Lifetime US$79 at regular prices.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "knowledge-management"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://withlinger.com/favicon.svg",
+      "altText": "Linger brand mark"
+    },
+    "preview": {
+      "sourceUrl": "https://withlinger.com/assets/product-demo/wall.jpg",
+      "altText": "Linger library showing a collection of visual references"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://withlinger.com/assets/product-demo/workflow-notes.jpg",
+        "altText": "A Linger reference with a note, tags, and its original source"
+      },
+      {
+        "sourceUrl": "https://withlinger.com/assets/product-demo/workflow-canvas.jpg",
+        "altText": "Two visual references arranged with a note on a Linger canvas"
+      }
+    ]
+  }
+}
