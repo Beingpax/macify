@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema/deal.schema.json",
+  "schemaVersion": 1,
+  "appSlug": "focus-train",
+  "discountPercent": 30,
+  "code": "BLACKFRIDAY",
+  "url": "https://focustrain.app/pricing",
+  "startsAt": "2026-11-19T00:00:00Z",
+  "endsAt": "2026-12-01T08:00:00Z"
+}

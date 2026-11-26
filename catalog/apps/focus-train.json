@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Focus Train",
+  "slug": "focus-train",
+  "websiteUrl": "https://focustrain.app/",
+  "tagline": "Turn 25 to 120-minute focus sessions into scenic global railway journeys across Mac, iPhone, iPad, Watch, and Web.",
+  "description": "Focus Train is a Pomodoro and deep-work timer for macOS, iPhone, iPad, Apple Watch, and the web that turns focus sessions into real-world train journeys across 119 countries, 3,096 stations, and 4,603 curated rail segments. Instead of staring at a plain countdown clock, you choose a route that matches your work block—25, 45, 60, 90, or 120 minutes, or a custom duration—punch a ticket, and ride toward arrival while you work.\n\nUnlike loss-aversion timers that kill a virtual tree or erase progress if you are interrupted, Focus Train uses non-punitive momentum: stopping early only forfeits that single boarding pass while past station stamps, mileage, and a 1-day rebooking grace remain intact.\n\n## Features\n\n- Native macOS split-view desk companion with wall-clock timing that stays accurate while switching Spaces, resizing windows, or working full-screen.\n- Starry 3D Terrain Globe, real-time 3D trackside window view, and 53 widescreen 4K landscape sceneries that glide past while you focus.\n- 20 locally stored offline cabin soundscapes—including Train Rhythm, Rain on Glass, Brown Noise, Distant Storm, and Hearth Fireplace—with independent multi-layer volume sliders (2 layers free across 5 tracks; up to 3 layers across all 20 tracks on Premium).\n- Collectible regional boarding passes, station stamps, postcards, Trends, and a Journey Map atlas synced privately across Mac, iPhone, iPad, and Apple Watch via Apple iCloud.\n- Companion unlimited free, ad-free, no-signup browser timer at focustrain.app/timer (with a 50/10 & 90-minute Study Timetable Planner and optional Share Co-Ride links) for desktop sessions on any computer.\n\n## Where it fits\n\nFocus Train fits students, writers, developers, and ADHD-prone desk workers who want calm visual forward momentum and non-lyrical acoustic masking rather than rigid time-tracking spreadsheets or punitive streak mechanics.\n\nTradeoffs to note: Apple Screen Time app blocking (Baggage, included free) and Dynamic Island Live Activities are iOS and iPadOS system features rather than macOS-level blockers, so Mac users who want phone-distraction shielding pair the Mac timer with Focus Train on iPhone. Native Windows and Android apps are not yet available (those platforms use the web timer).\n\n## Privacy and requirements\n\nAccording to the developer (ElevenApril), Focus Train requires no user account, includes no ad SDKs, and keeps session history on-device and in the user's private Apple iCloud account. Optional location access is requested once during setup to suggest a nearby home station. The native Mac app requires macOS 15.0 or later and is distributed as a Universal Purchase via the Apple App Store.\n\n## Pricing\n\nFocus Train is freemium. The web timer at focustrain.app/timer is free and unlimited with no sign-up. The native Apple app is free to download with a 3-day newcomer pass (2 new-route rides per day plus a 3-day 4K window preview), permanently unlocked unlimited free commute route replays, 2 weekly new-route tickets after Day 3, 5 free soundscapes with 2-layer mixing, and free Baggage Screen Time blocking on iPhone and iPad. Optional Focus Train Premium is available as a monthly or annual subscription or a $49.99 one-time Lifetime Pass with Apple Family Sharing.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free tier + unlimited web timer; Premium available via monthly/annual subscription or $49.99 one-time Lifetime Pass.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "focus-timers",
+    "productivity",
+    "time-tracking"
+  ],
+  "relatedAppSlugs": [
+    "cold-turkey-blocker",
+    "session"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://focustrain.app/images/FocusTrainLogo.png",
+      "altText": "Focus Train application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://focustrain.app/images/screens/hero-mac.webp",
+      "altText": "Focus Train native macOS Journey Map interface showing routes, focus time, and mileage"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://focustrain.app/images/screens/focustrain-screen-1.webp",
+        "altText": "Focus Train collectible international railway tickets earned from completed study blocks"
+      },
+      {
+        "sourceUrl": "https://focustrain.app/images/screens/focustrain-screen-2.webp",
+        "altText": "Focus Train real-world railway timetables, Lock Screen Live Activities, and widgets"
+      },
+      {
+        "sourceUrl": "https://focustrain.app/images/screens/focustrain-screen-3.webp",
+        "altText": "Focus Train universal Apple app synced over iCloud across Mac, iPad, iPhone, and Apple Watch"
+      },
+      {
+        "sourceUrl": "https://focustrain.app/images/og/og-home.png",
+        "altText": "Focus Train overview highlighting 119 countries, 3,096 stations, and free browser timer"
+      }
+    ]
+  }
+}
