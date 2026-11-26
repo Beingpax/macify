@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Lunille",
+  "slug": "lunille",
+  "websiteUrl": "https://lunille.com/?ref=macify",
+  "tagline": "A little moon lives in the MacBook notch and reacts to your Mac, with music, calls and notifications around it.",
+  "description": "Lunille puts Luni, a little cartoon moon, in the MacBook notch behind the camera. Luni reacts to what the Mac is doing: it dances to music, puts on earbuds when AirPods connect, holds an umbrella when it rains, follows tonight's real moon phase and the weather, and falls asleep at bedtime. It hides during calls and whenever the camera is on.\n\nClick the notch and it opens into a full notch app, so the character sits on top of the everyday notch jobs rather than replacing them.\n\n## Features\n\n- Now Playing for Music, Spotify and browser audio, with synced lyrics for songs from music players.\n- AirPods and other accessories in 3D in their real colours, with battery per part.\n- FaceTime, iPhone and WhatsApp calls, and notifications that wait during calls and screen sharing.\n- Calendar with meeting controls, a file tray with AirDrop, clipboard history, quick notes and a Pomodoro timer.\n- Luni cheers when a coding assistant finishes, and covers its ears at full volume.\n\n## Where it fits\n\nFor people who want the notch to feel personal and calm, with one character tying the moments together. People who want a free or open-source notch app will prefer Boring Notch; people who want Lock Screen widgets may prefer Alcove.\n\n## Privacy and requirements\n\nThe developer states there is no account, no analytics and no tracking, and lists on its privacy page what leaves the Mac: rounded location for the weather, song details for lyrics (LRCLIB), Spotify artwork, license activation and a daily update check. Requires macOS 14 Sonoma or later; universal (Apple silicon and Intel). Notarized direct download with automatic updates. On Macs without a notch it shows as a small pill at the top of the screen.\n\n## Pricing\n\nPaid, one-time purchase of $14.99 for up to 3 Macs, with future updates included and a 14-day free trial that needs no account. Refunds within 14 days.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$14.99 one-time for up to 3 Macs; launch price $9.99 until November 30, 2026. 14-day free trial, no account.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "notch-utilities",
+    "customization"
+  ],
+  "relatedAppSlugs": [
+    "alcove",
+    "droppy"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://lunille.com/assets/icon-512.png",
+      "altText": "Lunille application icon, a little moon"
+    },
+    "preview": {
+      "sourceUrl": "https://lunille.com/assets/og.png",
+      "altText": "Lunille preview with Luni, the little moon in the MacBook notch"
+    },
+    "screenshots": []
+  }
+}
