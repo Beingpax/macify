@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "PasteNotch",
+  "slug": "pastenotch",
+  "websiteUrl": "https://pastenotch.com/",
+  "tagline": "A clipboard manager that lives in the notch, keeping every clip searchable and one shortcut away.",
+  "description": "PasteNotch is a clipboard manager for Mac that lives in the notch. It keeps a history of what you copy so you can carry on working and find an earlier clip later, either from the notch or with the ⇧⌘V shortcut.\n\nIt works on Macs with or without a notch.\n\n## Features\n\n- Keep an unlimited clipboard history of text, links, images, and files.\n- Find earlier clips with search and filters.\n- Organise clips with pins and Pages.\n- Open the history from the notch or with ⇧⌘V.\n- Sync clipboard history through iCloud.\n\n## Where it fits\n\nPasteNotch fits people who want a clipboard history that opens from the notch area of the screen rather than from a menu bar icon or a separate window. It is a one-time purchase rather than a subscription.\n\n## Privacy and requirements\n\nPasteNotch requires macOS 14 Sonoma or later and works on Macs with or without a notch. History sync uses iCloud. The 14-day free trial does not require an account.\n\n## Pricing\n\nPasteNotch is a one-time purchase of $4.99 with a 14-day free trial and a full refund within 14 days. An optional PasteNotch Cloud subscription is also available.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$4.99 one-time purchase; 14-day free trial.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "clipboard-managers"
+  ],
+  "relatedAppSlugs": [
+    "maccy",
+    "paste",
+    "pastepal"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://pastenotch.com/assets/pastenotch-icon.png",
+      "altText": "PasteNotch application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://pastenotch.com/assets/og-home.jpg",
+      "altText": "PasteNotch clipboard manager in the Mac notch"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://pastenotch.com/assets/mac-history.png",
+        "altText": "PasteNotch clipboard history on Mac"
+      }
+    ]
+  }
+}
