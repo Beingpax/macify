@@ -1,0 +1,58 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "DockMagic",
+  "slug": "dockmagic",
+  "websiteUrl": "https://dockmagic.app/?utm_source=macify&utm_medium=directory&utm_campaign=bf2026",
+  "tagline": "A second Dock for your Mac with live widgets",
+  "description": "DockMagic adds a second, independent Dock to your Mac. It sits at the bottom, left or right edge of a display you choose, beside the Apple Dock, and holds live widgets you arrange yourself. It does not replace or control the Apple Dock.\n\n## Features\n\n- Keep an eye on local Claude and Codex agent sessions, grouped by what needs you, what is running and what is finished, and on those tools' usage limits. The widgets only monitor sessions; they do not control the agents.\n- Track revenue from Stripe, Polar, Dodo Payments and Lemon Squeezy in one view.\n- System widgets show CPU, memory and related activity. A website monitor checks uptime from your Mac, and Cloudflare analytics widgets show traffic and security for your zones.\n- Capture an area screenshot and annotate it with blur, arrows, text and highlights. Record a display, window or area, then refine the video in a timeline editor with auto zoom that follows your clicks.\n- Switch between Dock profiles for different kinds of work, pin Mac apps next to your widgets, and arrange the frontmost window into halves, thirds, quarters and more. Everyday tools include clipboard history, calendar views, an emoji picker, reminders and wallpaper controls.\n\n## Where it fits\n\nDockMagic is for people who want glanceable information and tools next to the Apple Dock, rather than replacing the Dock or filling the desktop with floating panels. Some widgets are free; a one-time license unlocks the rest. It is not a menu bar app, and it is not an agent that runs or steers Claude or Codex.\n\n## Privacy and requirements\n\nRequires macOS 14 or later, on Apple silicon or Intel. Window management needs Accessibility permission. Screenshot and recording tools need Screen Recording permission when those features are used. Revenue, Cloudflare, website monitoring and similar widgets need a network connection. The website monitor runs from the local Mac while DockMagic is open; it is not an external 24/7 service. According to the developer, Claude and Codex widgets monitor local sessions and usage limits only.\n\n## Pricing\n\nSome widgets are free. A one-time lifetime license unlocks the rest, including future updates: 1 Mac $25, 2 Macs $40, 3 Macs $60. No subscription.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Some widgets are free. A one-time lifetime license unlocks the rest, including future updates: 1 Mac $25, 2 Macs $40, 3 Macs $60. No subscription.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "customization",
+    "productivity",
+    "window-management"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://dockmagic.app/brand/dockmagic-logo.png",
+      "altText": "DockMagic application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://dockmagic.app/media/screenshots/dock-overview.webp",
+      "altText": "DockMagic second Dock along the bottom of a Mac desktop, with live widgets beside the Apple Dock"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://dockmagic.app/media/features/gallery/ai-usage-dock.webp",
+        "altText": "Claude and Codex usage limit widgets on the DockMagic Dock"
+      },
+      {
+        "sourceUrl": "https://dockmagic.app/media/features/gallery/revenue-dock.webp",
+        "altText": "Payment revenue widgets on the DockMagic Dock"
+      },
+      {
+        "sourceUrl": "https://dockmagic.app/media/features/screen-recording/editor.webp",
+        "altText": "DockMagic screen recording timeline editor"
+      },
+      {
+        "sourceUrl": "https://dockmagic.app/media/features/gallery/screenshot-detail.webp",
+        "altText": "DockMagic screenshot annotation with arrows and blur"
+      },
+      {
+        "sourceUrl": "https://dockmagic.app/media/features/gallery/cloudflare-popup.webp",
+        "altText": "Cloudflare traffic and security widgets open from the Dock"
+      },
+      {
+        "sourceUrl": "https://dockmagic.app/media/features/gallery/pomodoro-popup.webp",
+        "altText": "Pomodoro timer widget open from the Dock"
+      }
+    ]
+  }
+}
