@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "NearWord",
+  "slug": "nearword",
+  "websiteUrl": "https://nearword.app/?utm_source=macify",
+  "tagline": "Point at any word on screen, even in a game or a scanned PDF, and see what it means right next to it.",
+  "description": "NearWord is a dictionary for text you can't select. Point at a word and press a shortcut, or Force Click on a trackpad. NearWord reads the text around the cursor and shows the dictionary entry in a small panel next to the word. The app you're reading stays in front.\n\nLook Up on the Mac and browser dictionary extensions need text you can select. NearWord recognizes the text on screen with Apple Vision instead. So it works in game dialogue, subtitles burned into a video, scanned books, screenshots and the menus of an app in another language.\n\n## Features\n\n- Offline dictionaries for several language pairs, mostly into English. The current list is on nearword.app.\n- AI Context explains what a word means in that sentence. It helps with idioms and phrasal verbs.\n- Every word you look up is saved to a history on your Mac, with a screenshot of where you found it. You can export it to Anki, CSV or JSON.\n- The app stays in the menu bar after you close its window.\n\n## Who it's for\n\nNearWord is for people who read or play in a second language. It explains one word or phrase at a time. It doesn't translate whole pages. The text has to be visible on screen. Video from DRM players such as Netflix captures as a black frame.\n\n## Privacy and requirements\n\nText recognition and dictionary lookups happen on the Mac. AI Context needs an account. It sends the recognized text and a small crop around the cursor to NearWord's server, where the requests are stored. The app asks for Screen Recording and Accessibility permissions. It needs macOS 13 or later and runs on Apple silicon and Intel. Privacy policy: https://nearword.app/privacy\n\n## Pricing\n\nLookup, the offline dictionaries and history are free without an account. A free account includes AI Context lookups to try it. Pro removes the limit. Current prices are on https://nearword.app/pricing",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Lookup, the offline dictionaries and history are free without an account. A free account includes AI Context lookups to try it. Pro removes the limit.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://nearword.app/web-app-manifest-512x512.png",
+      "altText": "NearWord app icon with the letters NW wrapped in green vines"
+    },
+    "preview": {
+      "sourceUrl": "https://nearword.app/og-default.png",
+      "altText": "NearWord website card with a Spanish to English dictionary panel"
+    },
+    "screenshots": []
+  }
+}
