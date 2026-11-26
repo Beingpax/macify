@@ -1,0 +1,48 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Shotspa",
+  "slug": "shotspa",
+  "websiteUrl": "https://www.anuragsoni.com/shotspa?ref=macify",
+  "tagline": "Every screenshot you take comes out polished.",
+  "description": "Press ⌘⇧4 like you always do. Before you even paste it, your screenshot already has a backdrop, a soft shadow and a real 3D tilt, and your email is already hidden. No editing step. Shotspa is a Mac menu bar app for anyone who posts screenshots: founders, developers, designers and writers.\n\n## What it does\n\n- Adds a backdrop, rounded corners, a soft shadow and an optional 3D tilt to every screenshot you take.\n- Hides private details like emails, phone numbers, card numbers, API keys and faces before you share.\n- Sizes and centres your shot for X, LinkedIn and Product Hunt.\n- Handpicked looks, a backdrop that matches your screenshot's colours, and a few clean frames.\n- Everything runs locally on your Mac, nothing is uploaded. Pay once, no subscription.\n\n## Where it fits\n\nIf you take screenshots and share them, post them on X or LinkedIn, put them in docs, or paste them into ChatGPT or Claude, Shotspa is for you. No more opening every shot in Figma or Canva just to make it look good.\n\nIt doesn't replace your screenshot tool. You keep using ⌘⇧4, and it doesn't record your screen or take scrolling captures.\n\n## Privacy and requirements\n\nNeeds macOS 14 or later, works on Apple silicon and Intel. Your screenshots never leave your Mac. It sends anonymous usage counts, which you can turn off in Settings, and crash reports. Your original screenshot is never changed or deleted.\n\n## Pricing\n\n$24 one-time launch price for the first 50 copies, then $48. Covers 2 Macs, with free updates. Try it free for 7 days, no card needed.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "$24 one-time launch price for the first 50 copies (regular $48). 7-day free trial, no card.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "screenshots",
+    "menu-bar-utilities"
+  ],
+  "relatedAppSlugs": [
+    "cleanshot-x",
+    "shottr"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://www.anuragsoni.com/shotspa/img/apple-touch-icon.png",
+      "altText": "Shotspa application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://www.anuragsoni.com/products/shotspa-og.jpg",
+      "altText": "Shotspa banner: Stop editing your screenshots, with two tilted app screenshots"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://www.anuragsoni.com/shotspa/img/look-04-hero-left.webp",
+        "altText": "A screenshot tilted in 3D on a soft backdrop by Shotspa"
+      },
+      {
+        "sourceUrl": "https://www.anuragsoni.com/shotspa/img/app-editor.webp",
+        "altText": "Shotspa's editor with looks, backdrop and tilt controls"
+      },
+      {
+        "sourceUrl": "https://www.anuragsoni.com/shotspa/img/hide-on.webp",
+        "altText": "An account page with the email, card number and API key blurred by Shotspa"
+      }
+    ]
+  }
+}
