@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "RDPMaster",
+  "slug": "rdpmaster",
+  "websiteUrl": "https://rdpmaster.macosland.com/",
+  "tagline": "Connect to Windows, Linux, and Mac servers over RDP, SSH, and VNC from one Mac app.",
+  "description": "RDPMaster is a remote access client for Mac that brings RDP, SSH, and VNC into one app. Add a server, connect to Windows, Linux, or Mac machines, and keep every connection in one organized list instead of switching between separate tools.\n\nIt supports sessions with Network Level Authentication (NLA), TLS, and RD Gateway, and it can record sessions for later review. A menu bar shortcut gives quick access to saved connections.\n\n## Features\n\n- Connect over RDP, SSH, and VNC from one window.\n- Organize connections with groups, favorites, and search, and import or export .rdp files.\n- Record sessions: RDP and VNC as .mov video, SSH as .txt text, with up to 1 GB per recording, according to the developer.\n- Edit the Windows registry over SSH on Windows servers.\n- Share the clipboard, folders, and sound during sessions.\n- Use ssh-agent and entries from ~/.ssh/config for SSH connections.\n- Use the app in English, Turkish, or Spanish.\n\n## Where it fits\n\nRDPMaster fits administrators, developers, and support staff who manage a mix of Windows, Linux, and Mac machines and want one client for all three protocols. Its main tradeoff is that it is a closed-source app with a short trial and a paid license, and the registry editor works only with Windows servers.\n\n## Privacy and requirements\n\nThe developer states that RDPMaster connects only to the servers you add and that sessions do not pass through its servers. According to the developer, data stays on your Mac, there is no account or tracking, passwords are stored in the macOS Keychain, and recordings stay on your Mac. The app requires macOS 14 or later and supports both Apple Silicon and Intel Macs.\n\n## Pricing\n\nRDPMaster offers a 14-day free trial with all features unlocked and no card required. After the trial, a one-time $5 license covers one Mac for life, with no subscription. The developer also lists a 14-day money-back guarantee.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "14-day free trial; $5 one-time lifetime license for one Mac",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://rdpmaster.macosland.com/apple-touch-icon.png",
+      "altText": "RDPMaster application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://rdpmaster.macosland.com/screenshots/en/session.jpg",
+      "altText": "RDPMaster showing an active remote desktop session"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://rdpmaster.macosland.com/screenshots/en/connections.jpg",
+        "altText": "RDPMaster connection list with groups, favorites, and search"
+      },
+      {
+        "sourceUrl": "https://rdpmaster.macosland.com/screenshots/en/history.jpg",
+        "altText": "RDPMaster session history view"
+      }
+    ]
+  }
+}
