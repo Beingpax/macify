@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "name": "XicoClean",
+  "slug": "xicoclean",
+  "websiteUrl": "https://xicoclean.com/en",
+  "tagline": "See what is using Mac storage, review cleanup candidates, and track system activity.",
+  "description": "XicoClean is a native macOS utility for storage analysis, app removal, and system monitoring. It can show which folders take up space before you decide what to remove.\n\n## Features\n- Use Space Lens to visualize folder sizes and explore the folders taking up the most space.\n- Review large and duplicate files, and choose which items to remove.\n- Uninstall an app and review related files that it left behind.\n- Check CPU, memory, and network activity from the optional menu bar monitor.\n\n## Where it fits\nXicoClean can help Mac users track down large project folders, find old exports, or check system usage without opening several utilities. Core disk analysis runs on the Mac, and cleanup requires review and confirmation. Some scans may request system permissions to read protected locations. The universal installer supports Apple silicon and Intel Macs running macOS 12 or later. See the [privacy policy](https://xicoclean.com/en/privacy) and [support page](https://xicoclean.com/en/support) for details.\n\n## Pricing\nAll features are available in a 15-day trial with no sign-up. A one-time purchase covers the current major version and its updates. See [official pricing](https://xicoclean.com/en/pricing) for the available license options.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "One-time purchase with a 15-day full-featured trial. Individual and family licenses are available.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "storage-cleanup",
+    "app-uninstallers",
+    "system-monitoring"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://xicoclean.com/brand/xicoclean-aircraft-v1-192.png",
+      "altText": "XicoClean airplane app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://cdn.xicoai.com/mac/product/skylight/live/en/space-lens-1280.webp",
+      "altText": "Space Lens showing a disk usage chart and a list of folders"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://cdn.xicoai.com/mac/product/skylight/live/en/uninstaller-1280.webp",
+        "altText": "XicoClean Uninstaller showing installed Mac apps and related files"
+      },
+      {
+        "sourceUrl": "https://cdn.xicoai.com/mac/product/skylight/live/en/menu-bar-1280.webp",
+        "altText": "XicoClean system activity in the macOS menu bar"
+      }
+    ]
+  }
+}
