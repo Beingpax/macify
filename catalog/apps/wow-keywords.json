@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Wow Keywords",
+  "slug": "wow-keywords",
+  "websiteUrl": "https://wowkeywords.com/",
+  "tagline": "Research App Store and Google Play keywords by country.",
+  "description": "Wow Keywords helps mobile developers choose search terms for their store listings. Compare keyword volume, difficulty and competing apps across countries, then track changes in rank over time.\n\nDevelopers can draft localized metadata, edit it and upload it to App Store Connect or Google Play. The keyword database stays on the computer. The Mac app supports Intel and Apple Silicon on macOS 14 or later.",
+  "pricingType": "paid",
+  "billingType": "one_time",
+  "pricingDetails": "Lifetime license for two computers, including updates.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "developer-tools"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://wowkeywords.com/icon.png",
+      "altText": "Wow Keywords app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://wowkeywords.com/screens/board.jpg",
+      "altText": "Wow Keywords keyword research board"
+    },
+    "screenshots": []
+  }
+}
