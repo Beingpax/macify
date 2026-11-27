@@ -1,0 +1,44 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Email Me",
+  "slug": "email-me",
+  "websiteUrl": "https://emailmeapp.net/",
+  "tagline": "Email yourself notes in one tap, by voice or text.",
+  "description": "Email yourself notes in one tap, by voice or text. Capture notes, voice memos, links and photos using the app, Siri, widgets or the share sheet. Available on Mac and other Apple devices.",
+  "pricingType": "freemium",
+  "billingType": "subscription",
+  "pricingDetails": "Free download. Premium yearly plan: $12.99/year.",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "productivity"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://emailmeapp.net/logo.png",
+      "altText": "Email Me app icon"
+    },
+    "preview": {
+      "sourceUrl": "https://emailmeapp.net/shared/images/hero/hero-devices.png",
+      "altText": "Email Me on iPhone, iPad and Apple Watch"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://emailmeapp.net/shared/images/tiles/siri.jpeg",
+        "altText": "Sending a note with Siri in Email Me"
+      },
+      {
+        "sourceUrl": "https://emailmeapp.net/shared/images/tiles/widget.png",
+        "altText": "Email Me home screen widget"
+      },
+      {
+        "sourceUrl": "https://emailmeapp.net/shared/images/tiles/watch.png",
+        "altText": "Email Me on Apple Watch"
+      }
+    ]
+  }
+}
