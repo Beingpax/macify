@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "Pocket Screen",
+  "slug": "pocket-screen",
+  "websiteUrl": "https://lp.toybird.com/en/pocket-screen/",
+  "tagline": "Keep a live reference window visible while working on your Mac.",
+  "description": "Pocket Screen creates a separate, resizable live view of a supported Mac window while the original stays in place. Keep a PDF, browser, instructions or dashboard visible alongside your work. Window content is processed locally on your Mac.\n\n## Requirements\n\nmacOS 14 or later, Apple silicon and Intel. Screen Recording permission is required.\n\n## Pricing\n\nFree repeated 10-minute sessions, with optional Unlimited access through a one-time purchase of US$9.99 or a monthly subscription of US$2.99. Prices are from the US Mac App Store.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free repeated 10-minute sessions. Optional Unlimited access: US$9.99 one-time purchase or US$2.99/month (US Mac App Store).",
+  "sourceType": "closed_source",
+  "youtubeUrl": null,
+  "categories": [
+    "window-management"
+  ],
+  "relatedAppSlugs": [],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://lp.toybird.com/pocket-screen/assets/app-icon.png",
+      "altText": "Pocket Screen application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://lp.toybird.com/en/pocket-screen/assets/index2-v2-hero.jpg",
+      "altText": "Pocket Screen with multiple live reference views arranged around a Mac workspace"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://lp.toybird.com/en/pocket-screen/assets/index2-v2-focus.jpg",
+        "altText": "Pocket Screen displaying selected focus areas from a browser in multiple reference views"
+      }
+    ]
+  }
+}
