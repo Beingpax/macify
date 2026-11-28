@@ -1,0 +1,51 @@
+{
+  "$schema": "../schema/application.schema.json",
+  "schemaVersion": 1,
+  "isFeatured": false,
+  "isEditorsPick": false,
+  "name": "MotionShine",
+  "slug": "motionshine",
+  "websiteUrl": "https://motionshine.com/",
+  "tagline": "Free Mac screen recorder with auto zoom and a camera bubble.",
+  "description": "MotionShine is a screen recorder for Mac that records your screen and lets you edit the same recording inside the app. It adds an automatic zoom on every click and a smooth cursor you can restyle, so a tutorial or product demo looks polished without a separate editor.\n\n## Features\n\n- Auto zoom on every click. Each zoom is a block you can move, change or delete.\n- A smooth cursor you can restyle: style, colour and size, plus click effects or your own picture.\n- A camera bubble, or a camera layout you can change after you record.\n- Records your microphone and the Mac's own sound together, each with its own volume.\n- Captions made on the Mac in more than 40 languages. Every word can be fixed, and captions export in the video or as .srt and .vtt files.\n- Export to MP4 or GIF.\n\n## Where it fits\n\nMotionShine is for people who make tutorials, product demos and walkthroughs and want zoom, cursor and camera control in one app. It exports files only; there are no share links.\n\n## Privacy and requirements\n\nRequires macOS 13 or later. Captions are generated on the Mac, according to the developer. Downloading asks for an email address, which then receives a free licence key.\n\n## Pricing\n\nFree has every feature, with no watermark and no time limit, and exports up to 720p at 30 fps. Pro is a one-time payment with no subscription, for 1080p up to 4K and up to 60 fps. See motionshine.com/#pricing for current prices.",
+  "pricingType": "freemium",
+  "billingType": "one_time",
+  "pricingDetails": "Free plan with every feature, exports up to 720p. Pro is a one-time payment for 1080p to 4K, no subscription.",
+  "sourceType": "closed_source",
+  "youtubeUrl": "https://www.youtube.com/watch?v=IvhgaiKJSM4",
+  "categories": [
+    "screen-recording",
+    "video-editing"
+  ],
+  "relatedAppSlugs": [
+    "screen-studio"
+  ],
+  "media": {
+    "icon": {
+      "sourceUrl": "https://motionshine.com/img/apple-touch-icon-ms.png",
+      "altText": "MotionShine application icon"
+    },
+    "preview": {
+      "sourceUrl": "https://motionshine.com/img/app/editor-full-v1.webp",
+      "altText": "MotionShine editor showing a recording with zoom blocks on the timeline"
+    },
+    "screenshots": [
+      {
+        "sourceUrl": "https://motionshine.com/img/app/zoom-auto-v2.webp",
+        "altText": "MotionShine auto zoom blocks on a recording"
+      },
+      {
+        "sourceUrl": "https://motionshine.com/img/app/cursor-custom-v1.webp",
+        "altText": "MotionShine cursor style settings"
+      },
+      {
+        "sourceUrl": "https://motionshine.com/img/app/camera-layouts-v1.webp",
+        "altText": "MotionShine camera layouts"
+      },
+      {
+        "sourceUrl": "https://motionshine.com/img/app/captions-panel-v2.webp",
+        "altText": "MotionShine captions panel"
+      }
+    ]
+  }
+}
